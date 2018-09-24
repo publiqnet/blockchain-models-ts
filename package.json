@@ -4,7 +4,9 @@
   "description": "Models for request to blockchain",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ts:compile": "./node_modules/.bin/tsc",
+    "build": "npm install && npm run ts:compile",
+    "publish": "git pull && npm run build && git add . && git commit -m=\"cpp build\" && git push"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/PUBLIQNetwork/blockchain-models-ts/issues"
   },
-  "homepage": "https://github.com/PUBLIQNetwork/blockchain-models-ts#readme"
+  "homepage": "https://github.com/PUBLIQNetwork/blockchain-models-ts#readme",
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
 }
