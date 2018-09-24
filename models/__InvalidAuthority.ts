@@ -1,0 +1,25 @@
+import BaseModel from '../BaseModel';
+
+
+export default class __InvalidAuthority extends BaseModel {
+
+    authorityProvided: string;
+    authorityRequired: string;
+
+    constructor(data) {
+        super();
+        this.authorityProvided = data.authority_provided;
+        this.authorityRequired = data.authority_required;
+    }
+
+    static get PropertyMap () {
+        return {
+            authorityProvided : 'authority_provided',
+            authorityRequired : 'authority_required',
+        }
+    }
+
+  static get Rtt () {
+    return 14
+  }
+}
