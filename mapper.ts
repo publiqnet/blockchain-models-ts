@@ -12,3 +12,4 @@ export const parceToModel = jsonData => {
 export const parceToJson = typedData => {
      return JSON.stringify(typedData.toJson())
 };
+
