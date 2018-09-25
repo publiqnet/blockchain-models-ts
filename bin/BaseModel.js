@@ -4,12 +4,12 @@ var dateToFormatString = function (d) {
     var addZero = function (d) {
         return d.length == 2 ? d : "0" + d;
     };
-    var year = d.getFullYear().toString();
-    var month = (d.getMonth() + 1).toString();
-    var day = d.getDate().toString();
-    var hours = d.getHours().toString();
-    var minutes = d.getMinutes().toString();
-    var seconds = d.getSeconds().toString();
+    var year = d.getUTCFullYear().toString();
+    var month = (d.getUTCMonth() + 1).toString();
+    var day = d.getUTCDate().toString();
+    var hours = d.getUTCHours().toString();
+    var minutes = d.getUTCMinutes().toString();
+    var seconds = d.getUTCSeconds().toString();
     return year + "-" + addZero(month) + "-" + addZero(day) + " " + addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds);
 };
 var BaseModel = /** @class */ (function () {
