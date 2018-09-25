@@ -1,84 +1,84 @@
-import __Coin from './models/__Coin';
-import __Broadcast from './models/__Broadcast';
-import __Reward from './models/__Reward';
-import __Transfer from './models/__Transfer';
-import __File from './models/__File';
-import __Page from './models/__Page';
-import __Transaction from './models/__Transaction';
-import __SignedTransaction from './models/__SignedTransaction';
-import __BlockHeader from './models/__BlockHeader';
-import __Block from './models/__Block';
-import __SignedBlock from './models/__SignedBlock';
-import __DigestRequest from './models/__DigestRequest';
-import __Digest from './models/__Digest';
-import __LoggedTransaction from './models/__LoggedTransaction';
-import __LoggedTransactionsRequest from './models/__LoggedTransactionsRequest';
-import __LoggedTransactions from './models/__LoggedTransactions';
-import __MasterKeyRequest from './models/__MasterKeyRequest';
-import __MasterKey from './models/__MasterKey';
-import __KeyPairRequest from './models/__KeyPairRequest';
-import __KeyPair from './models/__KeyPair';
-import __SignRequest from './models/__SignRequest';
-import __Signature from './models/__Signature';
-import __SyncInfo from './models/__SyncInfo';
-import __SyncRequest from './models/__SyncRequest';
-import __SyncResponse from './models/__SyncResponse';
-import __BlockHeaderRequest from './models/__BlockHeaderRequest';
-import __BlockHeaderResponse from './models/__BlockHeaderResponse';
-import __BlockChainRequest from './models/__BlockChainRequest';
-import __BlockChainResponse from './models/__BlockChainResponse';
-import __Done from './models/__Done';
-import __InvalidPublicKey from './models/__InvalidPublicKey';
-import __InvalidPrivateKey from './models/__InvalidPrivateKey';
-import __InvalidSignature from './models/__InvalidSignature';
-import __InvalidAuthority from './models/__InvalidAuthority';
-import __FileNotFound from './models/__FileNotFound';
-import __RemoteError from './models/__RemoteError';
-import __LogTransaction from './models/__LogTransaction';
-import __StorageFile from './models/__StorageFile';
-import __StorageFileAddress from './models/__StorageFileAddress';
+import PubliqCoin from './models/PubliqCoin';
+import PubliqBroadcast from './models/PubliqBroadcast';
+import PubliqReward from './models/PubliqReward';
+import PubliqTransfer from './models/PubliqTransfer';
+import PubliqFile from './models/PubliqFile';
+import PubliqPage from './models/PubliqPage';
+import PubliqTransaction from './models/PubliqTransaction';
+import PubliqSignedTransaction from './models/PubliqSignedTransaction';
+import PubliqBlockHeader from './models/PubliqBlockHeader';
+import PubliqBlock from './models/PubliqBlock';
+import PubliqSignedBlock from './models/PubliqSignedBlock';
+import PubliqDigestRequest from './models/PubliqDigestRequest';
+import PubliqDigest from './models/PubliqDigest';
+import PubliqLoggedTransaction from './models/PubliqLoggedTransaction';
+import PubliqLoggedTransactionsRequest from './models/PubliqLoggedTransactionsRequest';
+import PubliqLoggedTransactions from './models/PubliqLoggedTransactions';
+import PubliqMasterKeyRequest from './models/PubliqMasterKeyRequest';
+import PubliqMasterKey from './models/PubliqMasterKey';
+import PubliqKeyPairRequest from './models/PubliqKeyPairRequest';
+import PubliqKeyPair from './models/PubliqKeyPair';
+import PubliqSignRequest from './models/PubliqSignRequest';
+import PubliqSignature from './models/PubliqSignature';
+import PubliqSyncInfo from './models/PubliqSyncInfo';
+import PubliqSyncRequest from './models/PubliqSyncRequest';
+import PubliqSyncResponse from './models/PubliqSyncResponse';
+import PubliqBlockHeaderRequest from './models/PubliqBlockHeaderRequest';
+import PubliqBlockHeaderResponse from './models/PubliqBlockHeaderResponse';
+import PubliqBlockChainRequest from './models/PubliqBlockChainRequest';
+import PubliqBlockChainResponse from './models/PubliqBlockChainResponse';
+import PubliqDone from './models/PubliqDone';
+import PubliqInvalidPublicKey from './models/PubliqInvalidPublicKey';
+import PubliqInvalidPrivateKey from './models/PubliqInvalidPrivateKey';
+import PubliqInvalidSignature from './models/PubliqInvalidSignature';
+import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
+import PubliqFileNotFound from './models/PubliqFileNotFound';
+import PubliqRemoteError from './models/PubliqRemoteError';
+import PubliqLogTransaction from './models/PubliqLogTransaction';
+import PubliqStorageFile from './models/PubliqStorageFile';
+import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
 
 
 const MODELS_TYPES = [ 
-    __Coin,
-    __Broadcast,
-    __Reward,
-    __Transfer,
-    __File,
-    __Page,
-    __Transaction,
-    __SignedTransaction,
-    __BlockHeader,
-    __Block,
-    __SignedBlock,
-    __DigestRequest,
-    __Digest,
-    __LoggedTransaction,
-    __LoggedTransactionsRequest,
-    __LoggedTransactions,
-    __MasterKeyRequest,
-    __MasterKey,
-    __KeyPairRequest,
-    __KeyPair,
-    __SignRequest,
-    __Signature,
-    __SyncInfo,
-    __SyncRequest,
-    __SyncResponse,
-    __BlockHeaderRequest,
-    __BlockHeaderResponse,
-    __BlockChainRequest,
-    __BlockChainResponse,
-    __Done,
-    __InvalidPublicKey,
-    __InvalidPrivateKey,
-    __InvalidSignature,
-    __InvalidAuthority,
-    __FileNotFound,
-    __RemoteError,
-    __LogTransaction,
-    __StorageFile,
-    __StorageFileAddress,
+    PubliqCoin,
+    PubliqBroadcast,
+    PubliqReward,
+    PubliqTransfer,
+    PubliqFile,
+    PubliqPage,
+    PubliqTransaction,
+    PubliqSignedTransaction,
+    PubliqBlockHeader,
+    PubliqBlock,
+    PubliqSignedBlock,
+    PubliqDigestRequest,
+    PubliqDigest,
+    PubliqLoggedTransaction,
+    PubliqLoggedTransactionsRequest,
+    PubliqLoggedTransactions,
+    PubliqMasterKeyRequest,
+    PubliqMasterKey,
+    PubliqKeyPairRequest,
+    PubliqKeyPair,
+    PubliqSignRequest,
+    PubliqSignature,
+    PubliqSyncInfo,
+    PubliqSyncRequest,
+    PubliqSyncResponse,
+    PubliqBlockHeaderRequest,
+    PubliqBlockHeaderResponse,
+    PubliqBlockChainRequest,
+    PubliqBlockChainResponse,
+    PubliqDone,
+    PubliqInvalidPublicKey,
+    PubliqInvalidPrivateKey,
+    PubliqInvalidSignature,
+    PubliqInvalidAuthority,
+    PubliqFileNotFound,
+    PubliqRemoteError,
+    PubliqLogTransaction,
+    PubliqStorageFile,
+    PubliqStorageFileAddress,
 ];
 
 export const createInstanceFromJson = data => {
