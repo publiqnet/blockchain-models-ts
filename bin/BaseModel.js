@@ -28,7 +28,7 @@ var BaseModel = /** @class */ (function () {
         toObject[pn] = propertyValue;
     };
     BaseModel.hasRtt = function (type) {
-        if (type.Rtt) {
+        if (type.Rtt !== undefined) {
             return true;
         }
         return false;

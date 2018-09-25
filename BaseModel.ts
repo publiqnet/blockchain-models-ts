@@ -41,7 +41,7 @@
     }
 
     static hasRtt (type) {
-        if(type.Rtt) {
+        if(type.Rtt !== undefined) {
           return true;
         }
         return false;

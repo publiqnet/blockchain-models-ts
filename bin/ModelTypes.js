@@ -83,6 +83,9 @@ var MODELS_TYPES = [
     __StorageFileAddress_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
+    if (data.constructor.Rtt !== undefined) {
+        return data;
+    }
     var ModelClass = MODELS_TYPES[data.rtt];
     if (!ModelClass) {
         throw new Error("invalid model class");
