@@ -1,11 +1,13 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __RemoteError extends BaseModel {
 
     message: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.message = data.message;
     }
@@ -15,7 +17,9 @@ export default class __RemoteError extends BaseModel {
             message : 'message',
         }
     }
-  static get Rtt () {
-    return 27
-  }
-}
+
+    static get Rtt () {
+        return 35;
+    }
+
+} 

@@ -37,7 +37,7 @@ var __Signature = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Signature, "Rtt", {
         get: function () {
-            return 31;
+            return 21;
         },
         enumerable: true,
         configurable: true

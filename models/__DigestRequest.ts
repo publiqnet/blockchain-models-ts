@@ -1,11 +1,13 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __DigestRequest extends BaseModel {
 
     package: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.package = createInstanceFromJson(data.package);
     }
@@ -16,8 +18,8 @@ export default class __DigestRequest extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 10
-  }
+    static get Rtt () {
+        return 11;
+    }
 
-}
+} 

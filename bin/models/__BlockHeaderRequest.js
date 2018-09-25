@@ -34,7 +34,7 @@ var __BlockHeaderRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(__BlockHeaderRequest, "Rtt", {
         get: function () {
-            return 5;
+            return 25;
         },
         enumerable: true,
         configurable: true

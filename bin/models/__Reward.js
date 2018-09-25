@@ -35,7 +35,7 @@ var __Reward = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Reward, "Rtt", {
         get: function () {
-            return 29;
+            return 2;
         },
         enumerable: true,
         configurable: true

@@ -32,7 +32,7 @@ var __RemoteError = /** @class */ (function (_super) {
     });
     Object.defineProperty(__RemoteError, "Rtt", {
         get: function () {
-            return 27;
+            return 35;
         },
         enumerable: true,
         configurable: true

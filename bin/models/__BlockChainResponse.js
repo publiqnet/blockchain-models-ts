@@ -33,7 +33,7 @@ var __BlockChainResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(__BlockChainResponse, "Rtt", {
         get: function () {
-            return 3;
+            return 28;
         },
         enumerable: true,
         configurable: true

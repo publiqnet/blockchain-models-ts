@@ -28,7 +28,7 @@ var __SyncRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(__SyncRequest, "Rtt", {
         get: function () {
-            return 37;
+            return 23;
         },
         enumerable: true,
         configurable: true

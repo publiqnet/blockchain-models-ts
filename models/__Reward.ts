@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __Coin from './__Coin';
 
 export default class __Reward extends BaseModel {
@@ -7,7 +9,7 @@ export default class __Reward extends BaseModel {
     amount: __Coin;
     to: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.amount = new __Coin(data.amount);
         this.to = data.to;
@@ -20,7 +22,8 @@ export default class __Reward extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 29
-  }
-}
+    static get Rtt () {
+        return 2;
+    }
+
+} 

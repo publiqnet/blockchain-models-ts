@@ -32,7 +32,7 @@ var __LoggedTransactionsRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(__LoggedTransactionsRequest, "Rtt", {
         get: function () {
-            return 22;
+            return 14;
         },
         enumerable: true,
         configurable: true

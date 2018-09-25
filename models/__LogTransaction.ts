@@ -1,11 +1,13 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __LogTransaction extends BaseModel {
 
     action: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.action = createInstanceFromJson(data.action);
     }
@@ -16,7 +18,8 @@ export default class __LogTransaction extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 23
-  }
-}
+    static get Rtt () {
+        return 36;
+    }
+
+} 

@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __Coin from './__Coin';
 
 export default class __Transfer extends BaseModel {
@@ -8,7 +10,7 @@ export default class __Transfer extends BaseModel {
     to: string;
     amount: __Coin;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.from = data.from;
         this.to = data.to;
@@ -23,7 +25,8 @@ export default class __Transfer extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 40
-  }
-}
+    static get Rtt () {
+        return 3;
+    }
+
+} 

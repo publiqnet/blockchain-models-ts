@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __BlockHeader extends BaseModel {
 
@@ -10,7 +12,7 @@ export default class __BlockHeader extends BaseModel {
     prevHash: string;
     signTime: Date;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.blockNumber = data.block_number;
         this.delta = data.delta;
@@ -31,8 +33,8 @@ export default class __BlockHeader extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 4
-  }
+    static get Rtt () {
+        return 8;
+    }
 
-}
+} 

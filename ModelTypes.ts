@@ -20,6 +20,7 @@ import __KeyPairRequest from './models/__KeyPairRequest';
 import __KeyPair from './models/__KeyPair';
 import __SignRequest from './models/__SignRequest';
 import __Signature from './models/__Signature';
+import __SyncInfo from './models/__SyncInfo';
 import __SyncRequest from './models/__SyncRequest';
 import __SyncResponse from './models/__SyncResponse';
 import __BlockHeaderRequest from './models/__BlockHeaderRequest';
@@ -34,13 +35,11 @@ import __InvalidAuthority from './models/__InvalidAuthority';
 import __FileNotFound from './models/__FileNotFound';
 import __RemoteError from './models/__RemoteError';
 import __LogTransaction from './models/__LogTransaction';
-import __RevertLastLoggedAction from './models/__RevertLastLoggedAction';
-import __Shutdown from './models/__Shutdown';
 import __StorageFile from './models/__StorageFile';
 import __StorageFileAddress from './models/__StorageFileAddress';
 
 
-const MODELS_TYPES = [
+const MODELS_TYPES = [ 
     __Coin,
     __Broadcast,
     __Reward,
@@ -63,6 +62,7 @@ const MODELS_TYPES = [
     __KeyPair,
     __SignRequest,
     __Signature,
+    __SyncInfo,
     __SyncRequest,
     __SyncResponse,
     __BlockHeaderRequest,
@@ -77,26 +77,17 @@ const MODELS_TYPES = [
     __FileNotFound,
     __RemoteError,
     __LogTransaction,
-    __RevertLastLoggedAction,
-    __Shutdown,
     __StorageFile,
     __StorageFileAddress,
 ];
 
-
 export const createInstanceFromJson = data => {
 
-  if(data.constructor.Rtt !== undefined){
-      return  data;
-  }
-
-  const ModelClass = MODELS_TYPES[data.rtt];
-
-  if(!ModelClass){
-    throw new Error("invalid model class");
-  }
-
-  return new ModelClass(data);
+    const ModelClass = MODELS_TYPES[data.rtt];
+        if(!ModelClass){
+            throw new Error("invalid model class");
+    }
+    return new ModelClass(data);
 
 };
 

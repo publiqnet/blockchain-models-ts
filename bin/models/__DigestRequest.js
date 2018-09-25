@@ -33,7 +33,7 @@ var __DigestRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(__DigestRequest, "Rtt", {
         get: function () {
-            return 10;
+            return 11;
         },
         enumerable: true,
         configurable: true

@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __Coin extends BaseModel {
 
     whole: number;
     fraction: number;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.whole = data.whole;
         this.fraction = data.fraction;
@@ -19,7 +21,8 @@ export default class __Coin extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 8
-  }
-}
+    static get Rtt () {
+        return 0;
+    }
+
+} 

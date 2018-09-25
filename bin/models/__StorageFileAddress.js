@@ -32,7 +32,7 @@ var __StorageFileAddress = /** @class */ (function (_super) {
     });
     Object.defineProperty(__StorageFileAddress, "Rtt", {
         get: function () {
-            return 36;
+            return 38;
         },
         enumerable: true,
         configurable: true

@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __InvalidAuthority extends BaseModel {
 
     authorityProvided: string;
     authorityRequired: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.authorityProvided = data.authority_provided;
         this.authorityRequired = data.authority_required;
@@ -19,7 +21,8 @@ export default class __InvalidAuthority extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 14
-  }
-}
+    static get Rtt () {
+        return 33;
+    }
+
+} 

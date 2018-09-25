@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __Transaction from './__Transaction';
 
 export default class __SignedTransaction extends BaseModel {
@@ -8,7 +10,7 @@ export default class __SignedTransaction extends BaseModel {
     authority: string;
     signature: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.transactionDetails = new __Transaction(data.transaction_details);
         this.authority = data.authority;
@@ -22,7 +24,9 @@ export default class __SignedTransaction extends BaseModel {
             signature : 'signature',
         }
     }
-  static get Rtt () {
-    return 33
-  }
-}
+
+    static get Rtt () {
+        return 7;
+    }
+
+} 

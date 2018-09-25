@@ -33,7 +33,7 @@ var __InvalidSignature = /** @class */ (function (_super) {
     });
     Object.defineProperty(__InvalidSignature, "Rtt", {
         get: function () {
-            return 17;
+            return 32;
         },
         enumerable: true,
         configurable: true

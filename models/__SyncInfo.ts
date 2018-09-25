@@ -3,23 +3,26 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class __StorageFileAddress extends BaseModel {
+export default class __SyncInfo extends BaseModel {
 
-    uri: string;
+    number: number;
+    cSum: number;
 
     constructor(data) { 
         super();
-        this.uri = data.uri;
+        this.number = data.number;
+        this.cSum = data.c_sum;
     }
 
     static get PropertyMap () {
         return {
-            uri : 'uri',
+            number : 'number',
+            cSum : 'c_sum',
         }
     }
 
     static get Rtt () {
-        return 38;
+        return 22;
     }
 
 } 

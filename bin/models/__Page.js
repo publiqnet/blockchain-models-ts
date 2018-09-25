@@ -34,7 +34,7 @@ var __Page = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Page, "Rtt", {
         get: function () {
-            return 26;
+            return 5;
         },
         enumerable: true,
         configurable: true

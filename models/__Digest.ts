@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __Digest extends BaseModel {
 
     base58Hash: string;
     package: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.base58Hash = data.base58_hash;
         this.package = createInstanceFromJson(data.package);
@@ -19,7 +21,8 @@ export default class __Digest extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 9
-  }
-}
+    static get Rtt () {
+        return 12;
+    }
+
+} 

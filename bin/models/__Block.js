@@ -39,7 +39,7 @@ var __Block = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Block, "Rtt", {
         get: function () {
-            return 1;
+            return 9;
         },
         enumerable: true,
         configurable: true

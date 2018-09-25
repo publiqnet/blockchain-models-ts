@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __LoggedTransaction extends BaseModel {
 
@@ -7,7 +9,7 @@ export default class __LoggedTransaction extends BaseModel {
     index: number;
     action: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.appliedReverted = data.applied_reverted;
         this.index = data.index;
@@ -21,7 +23,9 @@ export default class __LoggedTransaction extends BaseModel {
             action : 'action',
         }
     }
-  static get Rtt () {
-    return 20
-  }
-}
+
+    static get Rtt () {
+        return 13;
+    }
+
+} 

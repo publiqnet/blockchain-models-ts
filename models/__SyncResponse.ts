@@ -1,26 +1,31 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __SyncResponse extends BaseModel {
 
-    blockNumber: number;
-    consensusSum: number;
+    number: number;
+    cSum: number;
+    syncInfo: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
-        this.blockNumber = data.block_number;
-        this.consensusSum = data.consensus_sum;
+        this.number = data.number;
+        this.cSum = data.c_sum;
+        this.syncInfo = createInstanceFromJson(data.sync_info);
     }
 
     static get PropertyMap () {
         return {
-            blockNumber : 'block_number',
-            consensusSum : 'consensus_sum',
+            number : 'number',
+            cSum : 'c_sum',
+            syncInfo : 'sync_info',
         }
     }
 
-  static get Rtt () {
-    return 38
-  }
+    static get Rtt () {
+        return 24;
+    }
 
-}
+} 

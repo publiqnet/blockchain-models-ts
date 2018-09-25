@@ -37,7 +37,7 @@ var __SignedTransaction = /** @class */ (function (_super) {
     });
     Object.defineProperty(__SignedTransaction, "Rtt", {
         get: function () {
-            return 33;
+            return 7;
         },
         enumerable: true,
         configurable: true

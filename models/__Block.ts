@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __BlockHeader from './__BlockHeader';
 import __Reward from './__Reward';
 import __SignedTransaction from './__SignedTransaction';
@@ -10,7 +12,7 @@ export default class __Block extends BaseModel {
     rewards: Array<__Reward>;
     signedTransactions: Array<__SignedTransaction>;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.header = new __BlockHeader(data.header);
         this.rewards = data.rewards.map(d => new __Reward(d));
@@ -26,7 +28,7 @@ export default class __Block extends BaseModel {
     }
 
     static get Rtt () {
-      return 1
+        return 9;
     }
 
-}
+} 

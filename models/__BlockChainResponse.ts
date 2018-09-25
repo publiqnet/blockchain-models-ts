@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __SignedBlock from './__SignedBlock';
 
 export default class __BlockChainResponse extends BaseModel {
 
     signedBlocks: Array<__SignedBlock>;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.signedBlocks = data.signed_blocks.map(d => new __SignedBlock(d));
     }
@@ -18,6 +20,7 @@ export default class __BlockChainResponse extends BaseModel {
     }
 
     static get Rtt () {
-      return 3
+        return 28;
     }
-}
+
+} 

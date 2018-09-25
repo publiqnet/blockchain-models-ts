@@ -34,7 +34,7 @@ var __StorageFile = /** @class */ (function (_super) {
     });
     Object.defineProperty(__StorageFile, "Rtt", {
         get: function () {
-            return 35;
+            return 37;
         },
         enumerable: true,
         configurable: true

@@ -42,7 +42,7 @@ var __BlockHeader = /** @class */ (function (_super) {
     });
     Object.defineProperty(__BlockHeader, "Rtt", {
         get: function () {
-            return 4;
+            return 8;
         },
         enumerable: true,
         configurable: true

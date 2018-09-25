@@ -32,7 +32,7 @@ var __MasterKey = /** @class */ (function (_super) {
     });
     Object.defineProperty(__MasterKey, "Rtt", {
         get: function () {
-            return 24;
+            return 17;
         },
         enumerable: true,
         configurable: true

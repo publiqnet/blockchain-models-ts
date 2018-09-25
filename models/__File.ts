@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __File extends BaseModel {
 
     author: string;
     uri: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.author = data.author;
         this.uri = data.uri;
@@ -19,8 +21,8 @@ export default class __File extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 12
-  }
+    static get Rtt () {
+        return 4;
+    }
 
-}
+} 

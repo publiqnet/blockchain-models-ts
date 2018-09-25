@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __KeyPair extends BaseModel {
 
@@ -8,7 +10,7 @@ export default class __KeyPair extends BaseModel {
     publicKey: string;
     privateKey: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.masterKey = data.master_key;
         this.index = data.index;
@@ -25,7 +27,8 @@ export default class __KeyPair extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 18
-  }
-}
+    static get Rtt () {
+        return 19;
+    }
+
+} 

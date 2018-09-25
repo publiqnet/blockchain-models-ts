@@ -34,7 +34,7 @@ var __File = /** @class */ (function (_super) {
     });
     Object.defineProperty(__File, "Rtt", {
         get: function () {
-            return 12;
+            return 4;
         },
         enumerable: true,
         configurable: true

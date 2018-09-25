@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __SignedBlock extends BaseModel {
 
@@ -7,7 +9,7 @@ export default class __SignedBlock extends BaseModel {
     authority: string;
     signature: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.blockDetails = createInstanceFromJson(data.block_details);
         this.authority = data.authority;
@@ -22,7 +24,8 @@ export default class __SignedBlock extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 32
-  }
-}
+    static get Rtt () {
+        return 10;
+    }
+
+} 

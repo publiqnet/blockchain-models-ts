@@ -22,6 +22,7 @@ var __KeyPairRequest_1 = require("./models/__KeyPairRequest");
 var __KeyPair_1 = require("./models/__KeyPair");
 var __SignRequest_1 = require("./models/__SignRequest");
 var __Signature_1 = require("./models/__Signature");
+var __SyncInfo_1 = require("./models/__SyncInfo");
 var __SyncRequest_1 = require("./models/__SyncRequest");
 var __SyncResponse_1 = require("./models/__SyncResponse");
 var __BlockHeaderRequest_1 = require("./models/__BlockHeaderRequest");
@@ -36,8 +37,6 @@ var __InvalidAuthority_1 = require("./models/__InvalidAuthority");
 var __FileNotFound_1 = require("./models/__FileNotFound");
 var __RemoteError_1 = require("./models/__RemoteError");
 var __LogTransaction_1 = require("./models/__LogTransaction");
-var __RevertLastLoggedAction_1 = require("./models/__RevertLastLoggedAction");
-var __Shutdown_1 = require("./models/__Shutdown");
 var __StorageFile_1 = require("./models/__StorageFile");
 var __StorageFileAddress_1 = require("./models/__StorageFileAddress");
 var MODELS_TYPES = [
@@ -63,6 +62,7 @@ var MODELS_TYPES = [
     __KeyPair_1.default,
     __SignRequest_1.default,
     __Signature_1.default,
+    __SyncInfo_1.default,
     __SyncRequest_1.default,
     __SyncResponse_1.default,
     __BlockHeaderRequest_1.default,
@@ -77,15 +77,10 @@ var MODELS_TYPES = [
     __FileNotFound_1.default,
     __RemoteError_1.default,
     __LogTransaction_1.default,
-    __RevertLastLoggedAction_1.default,
-    __Shutdown_1.default,
     __StorageFile_1.default,
     __StorageFileAddress_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
-    if (data.constructor.Rtt !== undefined) {
-        return data;
-    }
     var ModelClass = MODELS_TYPES[data.rtt];
     if (!ModelClass) {
         throw new Error("invalid model class");

@@ -32,7 +32,7 @@ var __FileNotFound = /** @class */ (function (_super) {
     });
     Object.defineProperty(__FileNotFound, "Rtt", {
         get: function () {
-            return 13;
+            return 34;
         },
         enumerable: true,
         configurable: true

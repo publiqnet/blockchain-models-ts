@@ -35,7 +35,7 @@ var __Broadcast = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Broadcast, "Rtt", {
         get: function () {
-            return 7;
+            return 1;
         },
         enumerable: true,
         configurable: true

@@ -32,7 +32,7 @@ var __InvalidPrivateKey = /** @class */ (function (_super) {
     });
     Object.defineProperty(__InvalidPrivateKey, "Rtt", {
         get: function () {
-            return 15;
+            return 31;
         },
         enumerable: true,
         configurable: true

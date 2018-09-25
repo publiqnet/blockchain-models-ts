@@ -32,7 +32,7 @@ var __InvalidPublicKey = /** @class */ (function (_super) {
     });
     Object.defineProperty(__InvalidPublicKey, "Rtt", {
         get: function () {
-            return 16;
+            return 30;
         },
         enumerable: true,
         configurable: true

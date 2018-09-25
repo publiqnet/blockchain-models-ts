@@ -38,7 +38,7 @@ var __KeyPair = /** @class */ (function (_super) {
     });
     Object.defineProperty(__KeyPair, "Rtt", {
         get: function () {
-            return 18;
+            return 19;
         },
         enumerable: true,
         configurable: true

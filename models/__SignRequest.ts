@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __SignRequest extends BaseModel {
 
     privateKey: string;
     package: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.privateKey = data.private_key;
         this.package = createInstanceFromJson(data.package);
@@ -19,7 +21,8 @@ export default class __SignRequest extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 34
-  }
-}
+    static get Rtt () {
+        return 20;
+    }
+
+} 

@@ -28,7 +28,7 @@ var __MasterKeyRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(__MasterKeyRequest, "Rtt", {
         get: function () {
-            return 25;
+            return 16;
         },
         enumerable: true,
         configurable: true

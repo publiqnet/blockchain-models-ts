@@ -40,7 +40,7 @@ var __Transaction = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Transaction, "Rtt", {
         get: function () {
-            return 39;
+            return 6;
         },
         enumerable: true,
         configurable: true

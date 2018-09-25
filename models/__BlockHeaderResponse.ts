@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __BlockHeader from './__BlockHeader';
 
 export default class __BlockHeaderResponse extends BaseModel {
 
     blockHeaders: Array<__BlockHeader>;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.blockHeaders = data.block_headers.map(d => new __BlockHeader(d));
     }
@@ -17,8 +19,8 @@ export default class __BlockHeaderResponse extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 6
-  }
+    static get Rtt () {
+        return 26;
+    }
 
-}
+} 

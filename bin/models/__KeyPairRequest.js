@@ -34,7 +34,7 @@ var __KeyPairRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(__KeyPairRequest, "Rtt", {
         get: function () {
-            return 19;
+            return 18;
         },
         enumerable: true,
         configurable: true

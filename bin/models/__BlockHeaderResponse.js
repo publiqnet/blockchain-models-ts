@@ -33,7 +33,7 @@ var __BlockHeaderResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(__BlockHeaderResponse, "Rtt", {
         get: function () {
-            return 6;
+            return 26;
         },
         enumerable: true,
         configurable: true

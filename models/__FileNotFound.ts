@@ -1,11 +1,13 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __FileNotFound extends BaseModel {
 
     uri: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.uri = data.uri;
     }
@@ -16,8 +18,8 @@ export default class __FileNotFound extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 13
-  }
+    static get Rtt () {
+        return 34;
+    }
 
-}
+} 

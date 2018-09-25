@@ -34,7 +34,7 @@ var __Coin = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Coin, "Rtt", {
         get: function () {
-            return 8;
+            return 0;
         },
         enumerable: true,
         configurable: true

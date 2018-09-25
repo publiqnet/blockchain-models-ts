@@ -14,19 +14,22 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var ModelTypes_1 = require("../ModelTypes");
 var __SyncResponse = /** @class */ (function (_super) {
     __extends(__SyncResponse, _super);
     function __SyncResponse(data) {
         var _this = _super.call(this) || this;
-        _this.blockNumber = data.block_number;
-        _this.consensusSum = data.consensus_sum;
+        _this.number = data.number;
+        _this.cSum = data.c_sum;
+        _this.syncInfo = ModelTypes_1.createInstanceFromJson(data.sync_info);
         return _this;
     }
     Object.defineProperty(__SyncResponse, "PropertyMap", {
         get: function () {
             return {
-                blockNumber: 'block_number',
-                consensusSum: 'consensus_sum',
+                number: 'number',
+                cSum: 'c_sum',
+                syncInfo: 'sync_info',
             };
         },
         enumerable: true,
@@ -34,7 +37,7 @@ var __SyncResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(__SyncResponse, "Rtt", {
         get: function () {
-            return 38;
+            return 24;
         },
         enumerable: true,
         configurable: true

@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __Page extends BaseModel {
 
     channel: string;
     fileUris: Array<String>;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.channel = data.channel;
         this.fileUris = data.file_uris;
@@ -18,7 +20,9 @@ export default class __Page extends BaseModel {
             fileUris : 'file_uris',
         }
     }
-  static get Rtt () {
-    return 26
-  }
-}
+
+    static get Rtt () {
+        return 5;
+    }
+
+} 

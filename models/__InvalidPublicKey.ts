@@ -1,11 +1,13 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __InvalidPublicKey extends BaseModel {
 
     publicKey: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.publicKey = data.public_key;
     }
@@ -15,7 +17,9 @@ export default class __InvalidPublicKey extends BaseModel {
             publicKey : 'public_key',
         }
     }
-  static get Rtt () {
-    return 16
-  }
-}
+
+    static get Rtt () {
+        return 30;
+    }
+
+} 

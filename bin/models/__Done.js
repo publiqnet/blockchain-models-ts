@@ -28,7 +28,7 @@ var __Done = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Done, "Rtt", {
         get: function () {
-            return 11;
+            return 29;
         },
         enumerable: true,
         configurable: true

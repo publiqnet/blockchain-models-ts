@@ -28,7 +28,7 @@ var __RevertLastLoggedAction = /** @class */ (function (_super) {
     });
     Object.defineProperty(__RevertLastLoggedAction, "Rtt", {
         get: function () {
-            return 28;
+            return -1;
         },
         enumerable: true,
         configurable: true

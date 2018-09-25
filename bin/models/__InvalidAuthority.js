@@ -34,7 +34,7 @@ var __InvalidAuthority = /** @class */ (function (_super) {
     });
     Object.defineProperty(__InvalidAuthority, "Rtt", {
         get: function () {
-            return 14;
+            return 33;
         },
         enumerable: true,
         configurable: true

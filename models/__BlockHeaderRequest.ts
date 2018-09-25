@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __BlockHeaderRequest extends BaseModel {
 
     blocksFrom: number;
     blocksTo: number;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.blocksFrom = data.blocks_from;
         this.blocksTo = data.blocks_to;
@@ -19,8 +21,8 @@ export default class __BlockHeaderRequest extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 5
-  }
+    static get Rtt () {
+        return 25;
+    }
 
-}
+} 

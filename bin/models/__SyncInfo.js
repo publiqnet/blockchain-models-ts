@@ -14,32 +14,31 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var ModelTypes_1 = require("../ModelTypes");
-var __SignRequest = /** @class */ (function (_super) {
-    __extends(__SignRequest, _super);
-    function __SignRequest(data) {
+var __SyncInfo = /** @class */ (function (_super) {
+    __extends(__SyncInfo, _super);
+    function __SyncInfo(data) {
         var _this = _super.call(this) || this;
-        _this.privateKey = data.private_key;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        _this.number = data.number;
+        _this.cSum = data.c_sum;
         return _this;
     }
-    Object.defineProperty(__SignRequest, "PropertyMap", {
+    Object.defineProperty(__SyncInfo, "PropertyMap", {
         get: function () {
             return {
-                privateKey: 'private_key',
-                package: 'package',
+                number: 'number',
+                cSum: 'c_sum',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(__SignRequest, "Rtt", {
+    Object.defineProperty(__SyncInfo, "Rtt", {
         get: function () {
-            return 20;
+            return 22;
         },
         enumerable: true,
         configurable: true
     });
-    return __SignRequest;
+    return __SyncInfo;
 }(BaseModel_1.default));
-exports.default = __SignRequest;
+exports.default = __SyncInfo;

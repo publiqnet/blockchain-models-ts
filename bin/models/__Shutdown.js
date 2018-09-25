@@ -28,7 +28,7 @@ var __Shutdown = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Shutdown, "Rtt", {
         get: function () {
-            return 30;
+            return -1;
         },
         enumerable: true,
         configurable: true

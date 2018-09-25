@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 import __LoggedTransaction from './__LoggedTransaction';
 
 export default class __LoggedTransactions extends BaseModel {
 
     actions: Array<__LoggedTransaction>;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.actions = data.actions.map(d => new __LoggedTransaction(d));
     }
@@ -16,7 +18,9 @@ export default class __LoggedTransactions extends BaseModel {
             actions : 'actions',
         }
     }
-  static get Rtt () {
-    return 21
-  }
-}
+
+    static get Rtt () {
+        return 15;
+    }
+
+} 

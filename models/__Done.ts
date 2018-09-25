@@ -1,10 +1,12 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __Done extends BaseModel {
 
 
-    constructor(data) {
+    constructor(data) { 
         super();
     }
 
@@ -13,7 +15,8 @@ export default class __Done extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 11
-  }
-}
+    static get Rtt () {
+        return 29;
+    }
+
+} 

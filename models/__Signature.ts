@@ -1,5 +1,7 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __Signature extends BaseModel {
 
@@ -7,7 +9,7 @@ export default class __Signature extends BaseModel {
     signature: string;
     package: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.publicKey = data.public_key;
         this.signature = data.signature;
@@ -22,7 +24,8 @@ export default class __Signature extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 31
-  }
-}
+    static get Rtt () {
+        return 21;
+    }
+
+} 

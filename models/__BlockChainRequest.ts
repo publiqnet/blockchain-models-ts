@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __BlockChainRequest extends BaseModel {
 
     blocksFrom: number;
     blocksTo: number;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.blocksFrom = data.blocks_from;
         this.blocksTo = data.blocks_to;
@@ -18,7 +20,9 @@ export default class __BlockChainRequest extends BaseModel {
             blocksTo : 'blocks_to',
         }
     }
+
     static get Rtt () {
-      return 2
+        return 27;
     }
-}
+
+} 

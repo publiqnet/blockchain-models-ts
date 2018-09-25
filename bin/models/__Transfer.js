@@ -37,7 +37,7 @@ var __Transfer = /** @class */ (function (_super) {
     });
     Object.defineProperty(__Transfer, "Rtt", {
         get: function () {
-            return 40;
+            return 3;
         },
         enumerable: true,
         configurable: true

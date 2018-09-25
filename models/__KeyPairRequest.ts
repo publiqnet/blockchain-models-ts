@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __KeyPairRequest extends BaseModel {
 
     masterKey: string;
     index: number;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.masterKey = data.master_key;
         this.index = data.index;
@@ -18,7 +20,9 @@ export default class __KeyPairRequest extends BaseModel {
             index : 'index',
         }
     }
-  static get Rtt () {
-    return 19
-  }
-}
+
+    static get Rtt () {
+        return 18;
+    }
+
+} 

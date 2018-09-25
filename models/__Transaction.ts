@@ -1,4 +1,5 @@
 import BaseModel from '../BaseModel';
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 import __Coin from './__Coin';
@@ -10,7 +11,7 @@ export default class __Transaction extends BaseModel {
     fee: __Coin;
     action: Object;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.creation = new Date(data.creation);
         this.expiry = new Date(data.expiry);
@@ -27,8 +28,8 @@ export default class __Transaction extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 39
-  }
+    static get Rtt () {
+        return 6;
+    }
 
-}
+} 

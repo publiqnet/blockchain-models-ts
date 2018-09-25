@@ -37,7 +37,7 @@ var __SignedBlock = /** @class */ (function (_super) {
     });
     Object.defineProperty(__SignedBlock, "Rtt", {
         get: function () {
-            return 32;
+            return 10;
         },
         enumerable: true,
         configurable: true

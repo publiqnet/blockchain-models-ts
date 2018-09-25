@@ -1,12 +1,14 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __StorageFile extends BaseModel {
 
     mimeType: string;
     data: string;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.mimeType = data.mime_type;
         this.data = data.data;
@@ -19,8 +21,8 @@ export default class __StorageFile extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 35
-  }
+    static get Rtt () {
+        return 37;
+    }
 
-}
+} 

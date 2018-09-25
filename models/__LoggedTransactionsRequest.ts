@@ -1,11 +1,13 @@
 import BaseModel from '../BaseModel';
 
+import {createInstanceFromJson} from '../ModelTypes'
+
 
 export default class __LoggedTransactionsRequest extends BaseModel {
 
     startIndex: number;
 
-    constructor(data) {
+    constructor(data) { 
         super();
         this.startIndex = data.start_index;
     }
@@ -16,7 +18,8 @@ export default class __LoggedTransactionsRequest extends BaseModel {
         }
     }
 
-  static get Rtt () {
-    return 22
-  }
-}
+    static get Rtt () {
+        return 14;
+    }
+
+} 
