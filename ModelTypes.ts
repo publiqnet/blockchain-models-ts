@@ -83,10 +83,16 @@ const MODELS_TYPES = [
 
 export const createInstanceFromJson = data => {
 
-    const ModelClass = MODELS_TYPES[data.rtt];
-        if(!ModelClass){
-            throw new Error("invalid model class");
+    if(data.constructor.Rtt !== undefined){
+        return  data;
     }
+
+    const ModelClass = MODELS_TYPES[data.rtt];
+
+    if(!ModelClass){
+        throw new Error("invalid model class");
+    }
+
     return new ModelClass(data);
 
 };
