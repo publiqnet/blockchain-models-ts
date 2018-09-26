@@ -15,29 +15,36 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var ModelTypes_1 = require("../ModelTypes");
-var PubliqLogTransaction = /** @class */ (function (_super) {
-    __extends(PubliqLogTransaction, _super);
-    function PubliqLogTransaction(data) {
+var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqTransactionInfo = /** @class */ (function (_super) {
+    __extends(PubliqTransactionInfo, _super);
+    function PubliqTransactionInfo(data) {
         var _this = _super.call(this) || this;
+        _this.fee = new PubliqCoin_1.default(data.fee);
         _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+        _this.creationTime = new Date(data.creation_time);
+        _this.transactionHash = data.transaction_hash;
         return _this;
     }
-    Object.defineProperty(PubliqLogTransaction, "PropertyMap", {
+    Object.defineProperty(PubliqTransactionInfo, "PropertyMap", {
         get: function () {
             return {
+                fee: 'fee',
                 action: 'action',
+                creationTime: 'creation_time',
+                transactionHash: 'transaction_hash',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqLogTransaction, "Rtt", {
+    Object.defineProperty(PubliqTransactionInfo, "Rtt", {
         get: function () {
-            return 36;
+            return 38;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqLogTransaction;
+    return PubliqTransactionInfo;
 }(BaseModel_1.default));
-exports.default = PubliqLogTransaction;
+exports.default = PubliqTransactionInfo;

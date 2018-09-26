@@ -19,7 +19,7 @@ export default class PubliqStorageFileAddress extends BaseModel {
     }
 
     static get Rtt () {
-        return 38;
+        return 40;
     }
 
 } 

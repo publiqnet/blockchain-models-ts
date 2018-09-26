@@ -36,7 +36,9 @@ var PubliqInvalidSignature_1 = require("./models/PubliqInvalidSignature");
 var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
 var PubliqFileNotFound_1 = require("./models/PubliqFileNotFound");
 var PubliqRemoteError_1 = require("./models/PubliqRemoteError");
-var PubliqLogTransaction_1 = require("./models/PubliqLogTransaction");
+var PubliqBlockInfo_1 = require("./models/PubliqBlockInfo");
+var PubliqRewardInfo_1 = require("./models/PubliqRewardInfo");
+var PubliqTransactionInfo_1 = require("./models/PubliqTransactionInfo");
 var PubliqStorageFile_1 = require("./models/PubliqStorageFile");
 var PubliqStorageFileAddress_1 = require("./models/PubliqStorageFileAddress");
 var MODELS_TYPES = [
@@ -76,7 +78,9 @@ var MODELS_TYPES = [
     PubliqInvalidAuthority_1.default,
     PubliqFileNotFound_1.default,
     PubliqRemoteError_1.default,
-    PubliqLogTransaction_1.default,
+    PubliqBlockInfo_1.default,
+    PubliqRewardInfo_1.default,
+    PubliqTransactionInfo_1.default,
     PubliqStorageFile_1.default,
     PubliqStorageFileAddress_1.default,
 ];

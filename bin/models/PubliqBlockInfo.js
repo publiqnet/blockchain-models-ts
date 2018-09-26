@@ -14,29 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqStorageFileAddress = /** @class */ (function (_super) {
-    __extends(PubliqStorageFileAddress, _super);
-    function PubliqStorageFileAddress(data) {
+var PubliqBlockInfo = /** @class */ (function (_super) {
+    __extends(PubliqBlockInfo, _super);
+    function PubliqBlockInfo(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
+        _this.authority = data.authority;
+        _this.blockHash = data.block_hash;
+        _this.signTime = new Date(data.sign_time);
         return _this;
     }
-    Object.defineProperty(PubliqStorageFileAddress, "PropertyMap", {
+    Object.defineProperty(PubliqBlockInfo, "PropertyMap", {
         get: function () {
             return {
-                uri: 'uri',
+                authority: 'authority',
+                blockHash: 'block_hash',
+                signTime: 'sign_time',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqStorageFileAddress, "Rtt", {
+    Object.defineProperty(PubliqBlockInfo, "Rtt", {
         get: function () {
-            return 40;
+            return 36;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqStorageFileAddress;
+    return PubliqBlockInfo;
 }(BaseModel_1.default));
-exports.default = PubliqStorageFileAddress;
+exports.default = PubliqBlockInfo;
