@@ -34,9 +34,9 @@ import PubliqInvalidSignature from './models/PubliqInvalidSignature';
 import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
 import PubliqFileNotFound from './models/PubliqFileNotFound';
 import PubliqRemoteError from './models/PubliqRemoteError';
-import PubliqBlockInfo from './models/PubliqBlockInfo';
 import PubliqRewardInfo from './models/PubliqRewardInfo';
 import PubliqTransactionInfo from './models/PubliqTransactionInfo';
+import PubliqBlockInfo from './models/PubliqBlockInfo';
 import PubliqStorageFile from './models/PubliqStorageFile';
 import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
 
@@ -78,9 +78,9 @@ const MODELS_TYPES = [
     PubliqInvalidAuthority,
     PubliqFileNotFound,
     PubliqRemoteError,
-    PubliqBlockInfo,
     PubliqRewardInfo,
     PubliqTransactionInfo,
+    PubliqBlockInfo,
     PubliqStorageFile,
     PubliqStorageFileAddress,
 ];
