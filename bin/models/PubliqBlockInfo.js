@@ -22,7 +22,7 @@ var PubliqBlockInfo = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         _this.authority = data.authority;
         _this.blockHash = data.block_hash;
-        _this.signTime = new Date(data.sign_time);
+        _this.timeSigned = new Date(data.time_signed);
         _this.rewards = data.rewards.map(function (d) { return new PubliqRewardInfo_1.default(d); });
         _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionInfo_1.default(d); });
         return _this;
@@ -32,7 +32,7 @@ var PubliqBlockInfo = /** @class */ (function (_super) {
             return {
                 authority: 'authority',
                 blockHash: 'block_hash',
-                signTime: 'sign_time',
+                timeSigned: 'time_signed',
                 rewards: 'rewards',
                 transactions: 'transactions',
             };
@@ -42,7 +42,7 @@ var PubliqBlockInfo = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqBlockInfo, "Rtt", {
         get: function () {
-            return 13;
+            return 9;
         },
         enumerable: true,
         configurable: true

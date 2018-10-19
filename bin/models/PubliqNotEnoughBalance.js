@@ -14,31 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqLoggedTransactionsRequest = /** @class */ (function (_super) {
-    __extends(PubliqLoggedTransactionsRequest, _super);
-    function PubliqLoggedTransactionsRequest(data) {
+var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqNotEnoughBalance = /** @class */ (function (_super) {
+    __extends(PubliqNotEnoughBalance, _super);
+    function PubliqNotEnoughBalance(data) {
         var _this = _super.call(this) || this;
-        _this.startIndex = data.start_index;
-        _this.maxCount = data.max_count;
+        _this.balance = new PubliqCoin_1.default(data.balance);
+        _this.spending = new PubliqCoin_1.default(data.spending);
         return _this;
     }
-    Object.defineProperty(PubliqLoggedTransactionsRequest, "PropertyMap", {
+    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
         get: function () {
             return {
-                startIndex: 'start_index',
-                maxCount: 'max_count',
+                balance: 'balance',
+                spending: 'spending',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqLoggedTransactionsRequest, "Rtt", {
+    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
         get: function () {
-            return 16;
+            return 37;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqLoggedTransactionsRequest;
+    return PubliqNotEnoughBalance;
 }(BaseModel_1.default));
-exports.default = PubliqLoggedTransactionsRequest;
+exports.default = PubliqNotEnoughBalance;

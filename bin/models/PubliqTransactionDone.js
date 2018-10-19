@@ -14,31 +14,29 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqLoggedTransactionsRequest = /** @class */ (function (_super) {
-    __extends(PubliqLoggedTransactionsRequest, _super);
-    function PubliqLoggedTransactionsRequest(data) {
+var PubliqTransactionDone = /** @class */ (function (_super) {
+    __extends(PubliqTransactionDone, _super);
+    function PubliqTransactionDone(data) {
         var _this = _super.call(this) || this;
-        _this.startIndex = data.start_index;
-        _this.maxCount = data.max_count;
+        _this.txHash = data.tx_hash;
         return _this;
     }
-    Object.defineProperty(PubliqLoggedTransactionsRequest, "PropertyMap", {
+    Object.defineProperty(PubliqTransactionDone, "PropertyMap", {
         get: function () {
             return {
-                startIndex: 'start_index',
-                maxCount: 'max_count',
+                txHash: 'tx_hash',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqLoggedTransactionsRequest, "Rtt", {
+    Object.defineProperty(PubliqTransactionDone, "Rtt", {
         get: function () {
-            return 16;
+            return 37;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqLoggedTransactionsRequest;
+    return PubliqTransactionDone;
 }(BaseModel_1.default));
-exports.default = PubliqLoggedTransactionsRequest;
+exports.default = PubliqTransactionDone;

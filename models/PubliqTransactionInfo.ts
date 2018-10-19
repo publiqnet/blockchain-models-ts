@@ -9,14 +9,14 @@ export default class PubliqTransactionInfo extends BaseModel {
     fee: PubliqCoin;
     action: Object;
     transactionHash: string;
-    signTime: Date;
+    timeSigned: Date;
 
     constructor(data) { 
         super();
         this.fee = new PubliqCoin(data.fee);
         this.action = createInstanceFromJson(data.action);
         this.transactionHash = data.transaction_hash;
-        this.signTime = new Date(data.sign_time);
+        this.timeSigned = new Date(data.time_signed);
     }
 
     static get PropertyMap () {
@@ -24,12 +24,12 @@ export default class PubliqTransactionInfo extends BaseModel {
             fee : 'fee',
             action : 'action',
             transactionHash : 'transaction_hash',
-            signTime : 'sign_time',
+            timeSigned : 'time_signed',
         }
     }
 
     static get Rtt () {
-        return 12;
+        return 8;
     }
 
 } 

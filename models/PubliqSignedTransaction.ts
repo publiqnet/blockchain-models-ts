@@ -26,7 +26,7 @@ export default class PubliqSignedTransaction extends BaseModel {
     }
 
     static get Rtt () {
-        return 7;
+        return 3;
     }
 
 } 

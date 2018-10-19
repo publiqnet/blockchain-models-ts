@@ -10,7 +10,7 @@ export default class PubliqBlockHeader extends BaseModel {
     cSum: number;
     cConst: number;
     prevHash: string;
-    signTime: Date;
+    timeSigned: Date;
 
     constructor(data) { 
         super();
@@ -19,7 +19,7 @@ export default class PubliqBlockHeader extends BaseModel {
         this.cSum = data.c_sum;
         this.cConst = data.c_const;
         this.prevHash = data.prev_hash;
-        this.signTime = new Date(data.sign_time);
+        this.timeSigned = new Date(data.time_signed);
     }
 
     static get PropertyMap () {
@@ -29,12 +29,12 @@ export default class PubliqBlockHeader extends BaseModel {
             cSum : 'c_sum',
             cConst : 'c_const',
             prevHash : 'prev_hash',
-            signTime : 'sign_time',
+            timeSigned : 'time_signed',
         }
     }
 
     static get Rtt () {
-        return 8;
+        return 4;
     }
 
 } 

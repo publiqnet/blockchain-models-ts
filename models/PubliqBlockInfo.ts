@@ -9,7 +9,7 @@ export default class PubliqBlockInfo extends BaseModel {
 
     authority: string;
     blockHash: string;
-    signTime: Date;
+    timeSigned: Date;
     rewards: Array<PubliqRewardInfo>;
     transactions: Array<PubliqTransactionInfo>;
 
@@ -17,7 +17,7 @@ export default class PubliqBlockInfo extends BaseModel {
         super();
         this.authority = data.authority;
         this.blockHash = data.block_hash;
-        this.signTime = new Date(data.sign_time);
+        this.timeSigned = new Date(data.time_signed);
         this.rewards = data.rewards.map(d => new PubliqRewardInfo(d));
         this.transactions = data.transactions.map(d => new PubliqTransactionInfo(d));
     }
@@ -26,14 +26,14 @@ export default class PubliqBlockInfo extends BaseModel {
         return {
             authority : 'authority',
             blockHash : 'block_hash',
-            signTime : 'sign_time',
+            timeSigned : 'time_signed',
             rewards : 'rewards',
             transactions : 'transactions',
         }
     }
 
     static get Rtt () {
-        return 13;
+        return 9;
     }
 
 } 

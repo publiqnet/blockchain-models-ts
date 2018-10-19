@@ -35,7 +35,7 @@ var PubliqReward = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqReward, "Rtt", {
         get: function () {
-            return 2;
+            return 10;
         },
         enumerable: true,
         configurable: true

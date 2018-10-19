@@ -34,7 +34,7 @@ var PubliqFile = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqFile, "Rtt", {
         get: function () {
-            return 4;
+            return 12;
         },
         enumerable: true,
         configurable: true

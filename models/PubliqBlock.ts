@@ -28,7 +28,7 @@ export default class PubliqBlock extends BaseModel {
     }
 
     static get Rtt () {
-        return 9;
+        return 5;
     }
 
 } 

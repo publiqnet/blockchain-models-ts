@@ -2,16 +2,17 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
+import PubliqBlock from './PubliqBlock';
 
 export default class PubliqSignedBlock extends BaseModel {
 
-    blockDetails: Object;
+    blockDetails: PubliqBlock;
     authority: string;
     signature: string;
 
     constructor(data) { 
         super();
-        this.blockDetails = createInstanceFromJson(data.block_details);
+        this.blockDetails = new PubliqBlock(data.block_details);
         this.authority = data.authority;
         this.signature = data.signature;
     }
@@ -25,7 +26,7 @@ export default class PubliqSignedBlock extends BaseModel {
     }
 
     static get Rtt () {
-        return 10;
+        return 6;
     }
 
 } 

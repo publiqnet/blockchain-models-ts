@@ -3,23 +3,23 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqRemoteError extends BaseModel {
+export default class PubliqTransactionDone extends BaseModel {
 
-    message: string;
+    txHash: string;
 
     constructor(data) { 
         super();
-        this.message = data.message;
+        this.txHash = data.tx_hash;
     }
 
     static get PropertyMap () {
         return {
-            message : 'message',
+            txHash : 'tx_hash',
         }
     }
 
     static get Rtt () {
-        return 39;
+        return 37;
     }
 
 } 

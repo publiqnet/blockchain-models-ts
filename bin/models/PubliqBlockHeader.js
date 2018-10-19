@@ -23,7 +23,7 @@ var PubliqBlockHeader = /** @class */ (function (_super) {
         _this.cSum = data.c_sum;
         _this.cConst = data.c_const;
         _this.prevHash = data.prev_hash;
-        _this.signTime = new Date(data.sign_time);
+        _this.timeSigned = new Date(data.time_signed);
         return _this;
     }
     Object.defineProperty(PubliqBlockHeader, "PropertyMap", {
@@ -34,7 +34,7 @@ var PubliqBlockHeader = /** @class */ (function (_super) {
                 cSum: 'c_sum',
                 cConst: 'c_const',
                 prevHash: 'prev_hash',
-                signTime: 'sign_time',
+                timeSigned: 'time_signed',
             };
         },
         enumerable: true,
@@ -42,7 +42,7 @@ var PubliqBlockHeader = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqBlockHeader, "Rtt", {
         get: function () {
-            return 8;
+            return 4;
         },
         enumerable: true,
         configurable: true

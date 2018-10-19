@@ -34,7 +34,7 @@ var PubliqPage = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqPage, "Rtt", {
         get: function () {
-            return 5;
+            return 13;
         },
         enumerable: true,
         configurable: true

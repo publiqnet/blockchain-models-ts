@@ -14,12 +14,12 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var ModelTypes_1 = require("../ModelTypes");
+var PubliqBlock_1 = require("./PubliqBlock");
 var PubliqSignedBlock = /** @class */ (function (_super) {
     __extends(PubliqSignedBlock, _super);
     function PubliqSignedBlock(data) {
         var _this = _super.call(this) || this;
-        _this.blockDetails = ModelTypes_1.createInstanceFromJson(data.block_details);
+        _this.blockDetails = new PubliqBlock_1.default(data.block_details);
         _this.authority = data.authority;
         _this.signature = data.signature;
         return _this;
@@ -37,7 +37,7 @@ var PubliqSignedBlock = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqSignedBlock, "Rtt", {
         get: function () {
-            return 10;
+            return 6;
         },
         enumerable: true,
         configurable: true

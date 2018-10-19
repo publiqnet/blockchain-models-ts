@@ -22,7 +22,7 @@ export default class PubliqFile extends BaseModel {
     }
 
     static get Rtt () {
-        return 4;
+        return 12;
     }
 
 } 

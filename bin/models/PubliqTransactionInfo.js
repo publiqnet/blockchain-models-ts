@@ -23,7 +23,7 @@ var PubliqTransactionInfo = /** @class */ (function (_super) {
         _this.fee = new PubliqCoin_1.default(data.fee);
         _this.action = ModelTypes_1.createInstanceFromJson(data.action);
         _this.transactionHash = data.transaction_hash;
-        _this.signTime = new Date(data.sign_time);
+        _this.timeSigned = new Date(data.time_signed);
         return _this;
     }
     Object.defineProperty(PubliqTransactionInfo, "PropertyMap", {
@@ -32,7 +32,7 @@ var PubliqTransactionInfo = /** @class */ (function (_super) {
                 fee: 'fee',
                 action: 'action',
                 transactionHash: 'transaction_hash',
-                signTime: 'sign_time',
+                timeSigned: 'time_signed',
             };
         },
         enumerable: true,
@@ -40,7 +40,7 @@ var PubliqTransactionInfo = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTransactionInfo, "Rtt", {
         get: function () {
-            return 12;
+            return 8;
         },
         enumerable: true,
         configurable: true

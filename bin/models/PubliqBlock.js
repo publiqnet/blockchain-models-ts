@@ -39,7 +39,7 @@ var PubliqBlock = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqBlock, "Rtt", {
         get: function () {
-            return 9;
+            return 5;
         },
         enumerable: true,
         configurable: true

@@ -26,7 +26,7 @@ export default class PubliqTransfer extends BaseModel {
     }
 
     static get Rtt () {
-        return 3;
+        return 11;
     }
 
 } 

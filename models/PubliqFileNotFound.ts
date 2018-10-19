@@ -19,7 +19,7 @@ export default class PubliqFileNotFound extends BaseModel {
     }
 
     static get Rtt () {
-        return 37;
+        return 38;
     }
 
 } 

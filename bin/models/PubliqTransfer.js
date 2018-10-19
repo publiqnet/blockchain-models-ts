@@ -37,7 +37,7 @@ var PubliqTransfer = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTransfer, "Rtt", {
         get: function () {
-            return 3;
+            return 11;
         },
         enumerable: true,
         configurable: true
