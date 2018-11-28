@@ -14,20 +14,20 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqRewardInfo_1 = require("./PubliqRewardInfo");
-var PubliqTransactionInfo_1 = require("./PubliqTransactionInfo");
-var PubliqBlockInfo = /** @class */ (function (_super) {
-    __extends(PubliqBlockInfo, _super);
-    function PubliqBlockInfo(data) {
+var PubliqRewardLog_1 = require("./PubliqRewardLog");
+var PubliqTransactionLog_1 = require("./PubliqTransactionLog");
+var PubliqBlockLog = /** @class */ (function (_super) {
+    __extends(PubliqBlockLog, _super);
+    function PubliqBlockLog(data) {
         var _this = _super.call(this) || this;
         _this.authority = data.authority;
         _this.blockHash = data.block_hash;
         _this.timeSigned = new Date(data.time_signed);
-        _this.rewards = data.rewards.map(function (d) { return new PubliqRewardInfo_1.default(d); });
-        _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionInfo_1.default(d); });
+        _this.rewards = data.rewards.map(function (d) { return new PubliqRewardLog_1.default(d); });
+        _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionLog_1.default(d); });
         return _this;
     }
-    Object.defineProperty(PubliqBlockInfo, "PropertyMap", {
+    Object.defineProperty(PubliqBlockLog, "PropertyMap", {
         get: function () {
             return {
                 authority: 'authority',
@@ -40,13 +40,13 @@ var PubliqBlockInfo = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqBlockInfo, "Rtt", {
+    Object.defineProperty(PubliqBlockLog, "Rtt", {
         get: function () {
             return 9;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqBlockInfo;
+    return PubliqBlockLog;
 }(BaseModel_1.default));
-exports.default = PubliqBlockInfo;
+exports.default = PubliqBlockLog;

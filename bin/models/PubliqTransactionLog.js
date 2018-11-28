@@ -14,31 +14,37 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqKeyPairRequest = /** @class */ (function (_super) {
-    __extends(PubliqKeyPairRequest, _super);
-    function PubliqKeyPairRequest(data) {
+var ModelTypes_1 = require("../ModelTypes");
+var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqTransactionLog = /** @class */ (function (_super) {
+    __extends(PubliqTransactionLog, _super);
+    function PubliqTransactionLog(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
+        _this.fee = new PubliqCoin_1.default(data.fee);
+        _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+        _this.transactionHash = data.transaction_hash;
+        _this.timeSigned = new Date(data.time_signed);
         return _this;
     }
-    Object.defineProperty(PubliqKeyPairRequest, "PropertyMap", {
+    Object.defineProperty(PubliqTransactionLog, "PropertyMap", {
         get: function () {
             return {
-                masterKey: 'master_key',
-                index: 'index',
+                fee: 'fee',
+                action: 'action',
+                transactionHash: 'transaction_hash',
+                timeSigned: 'time_signed',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqKeyPairRequest, "Rtt", {
+    Object.defineProperty(PubliqTransactionLog, "Rtt", {
         get: function () {
-            return 27;
+            return 8;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqKeyPairRequest;
+    return PubliqTransactionLog;
 }(BaseModel_1.default));
-exports.default = PubliqKeyPairRequest;
+exports.default = PubliqTransactionLog;

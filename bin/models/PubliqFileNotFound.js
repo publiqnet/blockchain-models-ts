@@ -32,7 +32,7 @@ var PubliqFileNotFound = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqFileNotFound, "Rtt", {
         get: function () {
-            return 38;
+            return 45;
         },
         enumerable: true,
         configurable: true

@@ -2,24 +2,24 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqRewardInfo from './PubliqRewardInfo';
-import PubliqTransactionInfo from './PubliqTransactionInfo';
+import PubliqRewardLog from './PubliqRewardLog';
+import PubliqTransactionLog from './PubliqTransactionLog';
 
-export default class PubliqBlockInfo extends BaseModel {
+export default class PubliqBlockLog extends BaseModel {
 
     authority: string;
     blockHash: string;
     timeSigned: Date;
-    rewards: Array<PubliqRewardInfo>;
-    transactions: Array<PubliqTransactionInfo>;
+    rewards: Array<PubliqRewardLog>;
+    transactions: Array<PubliqTransactionLog>;
 
     constructor(data) { 
         super();
         this.authority = data.authority;
         this.blockHash = data.block_hash;
         this.timeSigned = new Date(data.time_signed);
-        this.rewards = data.rewards.map(d => new PubliqRewardInfo(d));
-        this.transactions = data.transactions.map(d => new PubliqTransactionInfo(d));
+        this.rewards = data.rewards.map(d => new PubliqRewardLog(d));
+        this.transactions = data.transactions.map(d => new PubliqTransactionLog(d));
     }
 
     static get PropertyMap () {

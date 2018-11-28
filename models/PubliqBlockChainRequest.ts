@@ -3,7 +3,7 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqBlockChainRequest extends BaseModel {
+export default class PubliqBlockchainRequest extends BaseModel {
 
     blocksFrom: number;
     blocksTo: number;
@@ -22,7 +22,7 @@ export default class PubliqBlockChainRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 30;
+        return 36;
     }
 
 } 

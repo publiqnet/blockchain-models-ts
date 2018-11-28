@@ -4,7 +4,7 @@ import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqSignedBlock from './PubliqSignedBlock';
 
-export default class PubliqBlockChainResponse extends BaseModel {
+export default class PubliqBlockchainResponse extends BaseModel {
 
     signedBlocks: Array<PubliqSignedBlock>;
 
@@ -20,7 +20,7 @@ export default class PubliqBlockChainResponse extends BaseModel {
     }
 
     static get Rtt () {
-        return 31;
+        return 37;
     }
 
 } 

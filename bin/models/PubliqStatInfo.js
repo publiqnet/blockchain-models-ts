@@ -14,31 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqKeyPairRequest = /** @class */ (function (_super) {
-    __extends(PubliqKeyPairRequest, _super);
-    function PubliqKeyPairRequest(data) {
+var PubliqStatItem_1 = require("./PubliqStatItem");
+var PubliqStatInfo = /** @class */ (function (_super) {
+    __extends(PubliqStatInfo, _super);
+    function PubliqStatInfo(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
+        _this.blockHash = data.block_hash;
+        _this.items = data.items.map(function (d) { return new PubliqStatItem_1.default(d); });
         return _this;
     }
-    Object.defineProperty(PubliqKeyPairRequest, "PropertyMap", {
+    Object.defineProperty(PubliqStatInfo, "PropertyMap", {
         get: function () {
             return {
-                masterKey: 'master_key',
-                index: 'index',
+                blockHash: 'block_hash',
+                items: 'items',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqKeyPairRequest, "Rtt", {
+    Object.defineProperty(PubliqStatInfo, "Rtt", {
         get: function () {
-            return 27;
+            return 19;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqKeyPairRequest;
+    return PubliqStatInfo;
 }(BaseModel_1.default));
-exports.default = PubliqKeyPairRequest;
+exports.default = PubliqStatInfo;

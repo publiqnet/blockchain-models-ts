@@ -14,31 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqKeyPairRequest = /** @class */ (function (_super) {
-    __extends(PubliqKeyPairRequest, _super);
-    function PubliqKeyPairRequest(data) {
+var PubliqNodeType_1 = require("./PubliqNodeType");
+var PubliqContract = /** @class */ (function (_super) {
+    __extends(PubliqContract, _super);
+    function PubliqContract(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
+        _this.owner = data.owner;
+        _this.role = PubliqNodeType_1.default.toNumber(data.role);
         return _this;
     }
-    Object.defineProperty(PubliqKeyPairRequest, "PropertyMap", {
+    Object.defineProperty(PubliqContract, "PropertyMap", {
         get: function () {
             return {
-                masterKey: 'master_key',
-                index: 'index',
+                owner: 'owner',
+                role: 'role',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqKeyPairRequest, "Rtt", {
+    Object.defineProperty(PubliqContract, "Rtt", {
         get: function () {
-            return 27;
+            return 14;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqKeyPairRequest;
+    return PubliqContract;
 }(BaseModel_1.default));
-exports.default = PubliqKeyPairRequest;
+exports.default = PubliqContract;

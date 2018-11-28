@@ -14,31 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqKeyPairRequest = /** @class */ (function (_super) {
-    __extends(PubliqKeyPairRequest, _super);
-    function PubliqKeyPairRequest(data) {
+var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqRewardLog = /** @class */ (function (_super) {
+    __extends(PubliqRewardLog, _super);
+    function PubliqRewardLog(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
+        _this.to = data.to;
+        _this.amount = new PubliqCoin_1.default(data.amount);
         return _this;
     }
-    Object.defineProperty(PubliqKeyPairRequest, "PropertyMap", {
+    Object.defineProperty(PubliqRewardLog, "PropertyMap", {
         get: function () {
             return {
-                masterKey: 'master_key',
-                index: 'index',
+                to: 'to',
+                amount: 'amount',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqKeyPairRequest, "Rtt", {
+    Object.defineProperty(PubliqRewardLog, "Rtt", {
         get: function () {
-            return 27;
+            return 7;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqKeyPairRequest;
+    return PubliqRewardLog;
 }(BaseModel_1.default));
-exports.default = PubliqKeyPairRequest;
+exports.default = PubliqRewardLog;

@@ -4,7 +4,7 @@ import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqCoin from './PubliqCoin';
 
-export default class PubliqTransactionInfo extends BaseModel {
+export default class PubliqTransactionLog extends BaseModel {
 
     fee: PubliqCoin;
     action: Object;

@@ -37,7 +37,7 @@ var PubliqSyncResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqSyncResponse, "Rtt", {
         get: function () {
-            return 27;
+            return 33;
         },
         enumerable: true,
         configurable: true

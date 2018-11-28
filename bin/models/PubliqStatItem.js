@@ -14,31 +14,35 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqKeyPairRequest = /** @class */ (function (_super) {
-    __extends(PubliqKeyPairRequest, _super);
-    function PubliqKeyPairRequest(data) {
+var PubliqStatItem = /** @class */ (function (_super) {
+    __extends(PubliqStatItem, _super);
+    function PubliqStatItem(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
+        _this.nodeName = data.node_name;
+        _this.contentHash = data.content_hash;
+        _this.passCount = data.pass_count;
+        _this.failCount = data.fail_count;
         return _this;
     }
-    Object.defineProperty(PubliqKeyPairRequest, "PropertyMap", {
+    Object.defineProperty(PubliqStatItem, "PropertyMap", {
         get: function () {
             return {
-                masterKey: 'master_key',
-                index: 'index',
+                nodeName: 'node_name',
+                contentHash: 'content_hash',
+                passCount: 'pass_count',
+                failCount: 'fail_count',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqKeyPairRequest, "Rtt", {
+    Object.defineProperty(PubliqStatItem, "Rtt", {
         get: function () {
-            return 27;
+            return 18;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqKeyPairRequest;
+    return PubliqStatItem;
 }(BaseModel_1.default));
-exports.default = PubliqKeyPairRequest;
+exports.default = PubliqStatItem;

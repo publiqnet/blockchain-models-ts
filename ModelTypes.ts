@@ -5,13 +5,19 @@ import PubliqSignedTransaction from './models/PubliqSignedTransaction';
 import PubliqBlockHeader from './models/PubliqBlockHeader';
 import PubliqBlock from './models/PubliqBlock';
 import PubliqSignedBlock from './models/PubliqSignedBlock';
-import PubliqRewardInfo from './models/PubliqRewardInfo';
-import PubliqTransactionInfo from './models/PubliqTransactionInfo';
-import PubliqBlockInfo from './models/PubliqBlockInfo';
+import PubliqRewardLog from './models/PubliqRewardLog';
+import PubliqTransactionLog from './models/PubliqTransactionLog';
+import PubliqBlockLog from './models/PubliqBlockLog';
 import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
 import PubliqFile from './models/PubliqFile';
 import PubliqPage from './models/PubliqPage';
+import PubliqContract from './models/PubliqContract';
+import PubliqAddressInfo from './models/PubliqAddressInfo';
+import PubliqBoostInfo from './models/PubliqBoostInfo';
+import PubliqContentInfo from './models/PubliqContentInfo';
+import PubliqStatItem from './models/PubliqStatItem';
+import PubliqStatInfo from './models/PubliqStatInfo';
 import PubliqDigestRequest from './models/PubliqDigestRequest';
 import PubliqDigest from './models/PubliqDigest';
 import PubliqLoggedTransactionsRequest from './models/PubliqLoggedTransactionsRequest';
@@ -28,13 +34,14 @@ import PubliqSyncRequest from './models/PubliqSyncRequest';
 import PubliqSyncResponse from './models/PubliqSyncResponse';
 import PubliqBlockHeaderRequest from './models/PubliqBlockHeaderRequest';
 import PubliqBlockHeaderResponse from './models/PubliqBlockHeaderResponse';
-import PubliqBlockChainRequest from './models/PubliqBlockChainRequest';
-import PubliqBlockChainResponse from './models/PubliqBlockChainResponse';
+import PubliqBlockchainRequest from './models/PubliqBlockchainRequest';
+import PubliqBlockchainResponse from './models/PubliqBlockchainResponse';
 import PubliqDone from './models/PubliqDone';
 import PubliqInvalidPublicKey from './models/PubliqInvalidPublicKey';
 import PubliqInvalidPrivateKey from './models/PubliqInvalidPrivateKey';
 import PubliqInvalidSignature from './models/PubliqInvalidSignature';
 import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
+import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
 import PubliqTransactionDone from './models/PubliqTransactionDone';
 import PubliqFileNotFound from './models/PubliqFileNotFound';
 import PubliqRemoteError from './models/PubliqRemoteError';
@@ -50,13 +57,19 @@ const MODELS_TYPES = [
     PubliqBlockHeader,
     PubliqBlock,
     PubliqSignedBlock,
-    PubliqRewardInfo,
-    PubliqTransactionInfo,
-    PubliqBlockInfo,
+    PubliqRewardLog,
+    PubliqTransactionLog,
+    PubliqBlockLog,
     PubliqReward,
     PubliqTransfer,
     PubliqFile,
     PubliqPage,
+    PubliqContract,
+    PubliqAddressInfo,
+    PubliqBoostInfo,
+    PubliqContentInfo,
+    PubliqStatItem,
+    PubliqStatInfo,
     PubliqDigestRequest,
     PubliqDigest,
     PubliqLoggedTransactionsRequest,
@@ -73,13 +86,14 @@ const MODELS_TYPES = [
     PubliqSyncResponse,
     PubliqBlockHeaderRequest,
     PubliqBlockHeaderResponse,
-    PubliqBlockChainRequest,
-    PubliqBlockChainResponse,
+    PubliqBlockchainRequest,
+    PubliqBlockchainResponse,
     PubliqDone,
     PubliqInvalidPublicKey,
     PubliqInvalidPrivateKey,
     PubliqInvalidSignature,
     PubliqInvalidAuthority,
+    PubliqNotEnoughBalance,
     PubliqTransactionDone,
     PubliqFileNotFound,
     PubliqRemoteError,

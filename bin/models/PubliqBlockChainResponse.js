@@ -15,14 +15,14 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqSignedBlock_1 = require("./PubliqSignedBlock");
-var PubliqBlockChainResponse = /** @class */ (function (_super) {
-    __extends(PubliqBlockChainResponse, _super);
-    function PubliqBlockChainResponse(data) {
+var PubliqBlockchainResponse = /** @class */ (function (_super) {
+    __extends(PubliqBlockchainResponse, _super);
+    function PubliqBlockchainResponse(data) {
         var _this = _super.call(this) || this;
         _this.signedBlocks = data.signed_blocks.map(function (d) { return new PubliqSignedBlock_1.default(d); });
         return _this;
     }
-    Object.defineProperty(PubliqBlockChainResponse, "PropertyMap", {
+    Object.defineProperty(PubliqBlockchainResponse, "PropertyMap", {
         get: function () {
             return {
                 signedBlocks: 'signed_blocks',
@@ -31,13 +31,13 @@ var PubliqBlockChainResponse = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqBlockChainResponse, "Rtt", {
+    Object.defineProperty(PubliqBlockchainResponse, "Rtt", {
         get: function () {
-            return 31;
+            return 37;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqBlockChainResponse;
+    return PubliqBlockchainResponse;
 }(BaseModel_1.default));
-exports.default = PubliqBlockChainResponse;
+exports.default = PubliqBlockchainResponse;

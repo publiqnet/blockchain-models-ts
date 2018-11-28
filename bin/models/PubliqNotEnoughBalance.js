@@ -15,31 +15,31 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqRewardInfo = /** @class */ (function (_super) {
-    __extends(PubliqRewardInfo, _super);
-    function PubliqRewardInfo(data) {
+var PubliqNotEnoughBalance = /** @class */ (function (_super) {
+    __extends(PubliqNotEnoughBalance, _super);
+    function PubliqNotEnoughBalance(data) {
         var _this = _super.call(this) || this;
-        _this.to = data.to;
-        _this.amount = new PubliqCoin_1.default(data.amount);
+        _this.balance = new PubliqCoin_1.default(data.balance);
+        _this.spending = new PubliqCoin_1.default(data.spending);
         return _this;
     }
-    Object.defineProperty(PubliqRewardInfo, "PropertyMap", {
+    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
         get: function () {
             return {
-                to: 'to',
-                amount: 'amount',
+                balance: 'balance',
+                spending: 'spending',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqRewardInfo, "Rtt", {
+    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
         get: function () {
-            return 7;
+            return 43;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqRewardInfo;
+    return PubliqNotEnoughBalance;
 }(BaseModel_1.default));
-exports.default = PubliqRewardInfo;
+exports.default = PubliqNotEnoughBalance;

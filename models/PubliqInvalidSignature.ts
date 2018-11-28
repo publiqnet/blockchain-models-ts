@@ -20,7 +20,7 @@ export default class PubliqInvalidSignature extends BaseModel {
     }
 
     static get Rtt () {
-        return 35;
+        return 41;
     }
 
 } 

@@ -7,13 +7,19 @@ var PubliqSignedTransaction_1 = require("./models/PubliqSignedTransaction");
 var PubliqBlockHeader_1 = require("./models/PubliqBlockHeader");
 var PubliqBlock_1 = require("./models/PubliqBlock");
 var PubliqSignedBlock_1 = require("./models/PubliqSignedBlock");
-var PubliqRewardInfo_1 = require("./models/PubliqRewardInfo");
-var PubliqTransactionInfo_1 = require("./models/PubliqTransactionInfo");
-var PubliqBlockInfo_1 = require("./models/PubliqBlockInfo");
+var PubliqRewardLog_1 = require("./models/PubliqRewardLog");
+var PubliqTransactionLog_1 = require("./models/PubliqTransactionLog");
+var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
 var PubliqReward_1 = require("./models/PubliqReward");
 var PubliqTransfer_1 = require("./models/PubliqTransfer");
 var PubliqFile_1 = require("./models/PubliqFile");
 var PubliqPage_1 = require("./models/PubliqPage");
+var PubliqContract_1 = require("./models/PubliqContract");
+var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
+var PubliqBoostInfo_1 = require("./models/PubliqBoostInfo");
+var PubliqContentInfo_1 = require("./models/PubliqContentInfo");
+var PubliqStatItem_1 = require("./models/PubliqStatItem");
+var PubliqStatInfo_1 = require("./models/PubliqStatInfo");
 var PubliqDigestRequest_1 = require("./models/PubliqDigestRequest");
 var PubliqDigest_1 = require("./models/PubliqDigest");
 var PubliqLoggedTransactionsRequest_1 = require("./models/PubliqLoggedTransactionsRequest");
@@ -30,13 +36,14 @@ var PubliqSyncRequest_1 = require("./models/PubliqSyncRequest");
 var PubliqSyncResponse_1 = require("./models/PubliqSyncResponse");
 var PubliqBlockHeaderRequest_1 = require("./models/PubliqBlockHeaderRequest");
 var PubliqBlockHeaderResponse_1 = require("./models/PubliqBlockHeaderResponse");
-var PubliqBlockChainRequest_1 = require("./models/PubliqBlockChainRequest");
-var PubliqBlockChainResponse_1 = require("./models/PubliqBlockChainResponse");
+var PubliqBlockchainRequest_1 = require("./models/PubliqBlockchainRequest");
+var PubliqBlockchainResponse_1 = require("./models/PubliqBlockchainResponse");
 var PubliqDone_1 = require("./models/PubliqDone");
 var PubliqInvalidPublicKey_1 = require("./models/PubliqInvalidPublicKey");
 var PubliqInvalidPrivateKey_1 = require("./models/PubliqInvalidPrivateKey");
 var PubliqInvalidSignature_1 = require("./models/PubliqInvalidSignature");
 var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
+var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
 var PubliqTransactionDone_1 = require("./models/PubliqTransactionDone");
 var PubliqFileNotFound_1 = require("./models/PubliqFileNotFound");
 var PubliqRemoteError_1 = require("./models/PubliqRemoteError");
@@ -50,13 +57,19 @@ var MODELS_TYPES = [
     PubliqBlockHeader_1.default,
     PubliqBlock_1.default,
     PubliqSignedBlock_1.default,
-    PubliqRewardInfo_1.default,
-    PubliqTransactionInfo_1.default,
-    PubliqBlockInfo_1.default,
+    PubliqRewardLog_1.default,
+    PubliqTransactionLog_1.default,
+    PubliqBlockLog_1.default,
     PubliqReward_1.default,
     PubliqTransfer_1.default,
     PubliqFile_1.default,
     PubliqPage_1.default,
+    PubliqContract_1.default,
+    PubliqAddressInfo_1.default,
+    PubliqBoostInfo_1.default,
+    PubliqContentInfo_1.default,
+    PubliqStatItem_1.default,
+    PubliqStatInfo_1.default,
     PubliqDigestRequest_1.default,
     PubliqDigest_1.default,
     PubliqLoggedTransactionsRequest_1.default,
@@ -73,13 +86,14 @@ var MODELS_TYPES = [
     PubliqSyncResponse_1.default,
     PubliqBlockHeaderRequest_1.default,
     PubliqBlockHeaderResponse_1.default,
-    PubliqBlockChainRequest_1.default,
-    PubliqBlockChainResponse_1.default,
+    PubliqBlockchainRequest_1.default,
+    PubliqBlockchainResponse_1.default,
     PubliqDone_1.default,
     PubliqInvalidPublicKey_1.default,
     PubliqInvalidPrivateKey_1.default,
     PubliqInvalidSignature_1.default,
     PubliqInvalidAuthority_1.default,
+    PubliqNotEnoughBalance_1.default,
     PubliqTransactionDone_1.default,
     PubliqFileNotFound_1.default,
     PubliqRemoteError_1.default,

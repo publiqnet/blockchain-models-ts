@@ -22,7 +22,7 @@ export default class PubliqSignRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 23;
+        return 29;
     }
 
 } 

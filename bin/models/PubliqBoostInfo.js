@@ -14,37 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var ModelTypes_1 = require("../ModelTypes");
-var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqTransactionInfo = /** @class */ (function (_super) {
-    __extends(PubliqTransactionInfo, _super);
-    function PubliqTransactionInfo(data) {
+var PubliqBoostInfo = /** @class */ (function (_super) {
+    __extends(PubliqBoostInfo, _super);
+    function PubliqBoostInfo(data) {
         var _this = _super.call(this) || this;
-        _this.fee = new PubliqCoin_1.default(data.fee);
-        _this.action = ModelTypes_1.createInstanceFromJson(data.action);
-        _this.transactionHash = data.transaction_hash;
-        _this.timeSigned = new Date(data.time_signed);
+        _this.author = data.author;
+        _this.channel = data.channel;
+        _this.contentHash = data.content_hash;
         return _this;
     }
-    Object.defineProperty(PubliqTransactionInfo, "PropertyMap", {
+    Object.defineProperty(PubliqBoostInfo, "PropertyMap", {
         get: function () {
             return {
-                fee: 'fee',
-                action: 'action',
-                transactionHash: 'transaction_hash',
-                timeSigned: 'time_signed',
+                author: 'author',
+                channel: 'channel',
+                contentHash: 'content_hash',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqTransactionInfo, "Rtt", {
+    Object.defineProperty(PubliqBoostInfo, "Rtt", {
         get: function () {
-            return 8;
+            return 16;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqTransactionInfo;
+    return PubliqBoostInfo;
 }(BaseModel_1.default));
-exports.default = PubliqTransactionInfo;
+exports.default = PubliqBoostInfo;
