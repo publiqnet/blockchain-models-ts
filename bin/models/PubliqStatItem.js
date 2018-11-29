@@ -18,19 +18,17 @@ var PubliqStatItem = /** @class */ (function (_super) {
     __extends(PubliqStatItem, _super);
     function PubliqStatItem(data) {
         var _this = _super.call(this) || this;
-        _this.nodeName = data.node_name;
-        _this.contentHash = data.content_hash;
-        _this.passCount = data.pass_count;
-        _this.failCount = data.fail_count;
+        _this.node = data.node;
+        _this.passed = data.passed;
+        _this.failed = data.failed;
         return _this;
     }
     Object.defineProperty(PubliqStatItem, "PropertyMap", {
         get: function () {
             return {
-                nodeName: 'node_name',
-                contentHash: 'content_hash',
-                passCount: 'pass_count',
-                failCount: 'fail_count',
+                node: 'node',
+                passed: 'passed',
+                failed: 'failed',
             };
         },
         enumerable: true,

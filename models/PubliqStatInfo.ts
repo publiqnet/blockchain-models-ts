@@ -6,18 +6,18 @@ import PubliqStatItem from './PubliqStatItem';
 
 export default class PubliqStatInfo extends BaseModel {
 
-    blockHash: string;
+    hash: string;
     items: Array<PubliqStatItem>;
 
     constructor(data) { 
         super();
-        this.blockHash = data.block_hash;
+        this.hash = data.hash;
         this.items = data.items.map(d => new PubliqStatItem(d));
     }
 
     static get PropertyMap () {
         return {
-            blockHash : 'block_hash',
+            hash : 'hash',
             items : 'items',
         }
     }

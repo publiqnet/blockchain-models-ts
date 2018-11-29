@@ -19,14 +19,14 @@ var PubliqStatInfo = /** @class */ (function (_super) {
     __extends(PubliqStatInfo, _super);
     function PubliqStatInfo(data) {
         var _this = _super.call(this) || this;
-        _this.blockHash = data.block_hash;
+        _this.hash = data.hash;
         _this.items = data.items.map(function (d) { return new PubliqStatItem_1.default(d); });
         return _this;
     }
     Object.defineProperty(PubliqStatInfo, "PropertyMap", {
         get: function () {
             return {
-                blockHash: 'block_hash',
+                hash: 'hash',
                 items: 'items',
             };
         },

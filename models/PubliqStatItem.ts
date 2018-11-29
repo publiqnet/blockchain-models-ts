@@ -5,25 +5,22 @@ import {createInstanceFromJson} from '../ModelTypes'
 
 export default class PubliqStatItem extends BaseModel {
 
-    nodeName: string;
-    contentHash: string;
-    passCount: number;
-    failCount: number;
+    node: string;
+    passed: number;
+    failed: number;
 
     constructor(data) { 
         super();
-        this.nodeName = data.node_name;
-        this.contentHash = data.content_hash;
-        this.passCount = data.pass_count;
-        this.failCount = data.fail_count;
+        this.node = data.node;
+        this.passed = data.passed;
+        this.failed = data.failed;
     }
 
     static get PropertyMap () {
         return {
-            nodeName : 'node_name',
-            contentHash : 'content_hash',
-            passCount : 'pass_count',
-            failCount : 'fail_count',
+            node : 'node',
+            passed : 'passed',
+            failed : 'failed',
         }
     }
 
