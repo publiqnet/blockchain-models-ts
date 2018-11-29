@@ -42,7 +42,7 @@
 
     static hasRtt (type) {
         if(type.Rtt !== undefined) {
-          return true;
+            return true;
         }
         return false;
     }

@@ -1,86 +1,104 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var __Coin_1 = require("./models/__Coin");
-var __Broadcast_1 = require("./models/__Broadcast");
-var __Reward_1 = require("./models/__Reward");
-var __Transfer_1 = require("./models/__Transfer");
-var __File_1 = require("./models/__File");
-var __Page_1 = require("./models/__Page");
-var __Transaction_1 = require("./models/__Transaction");
-var __SignedTransaction_1 = require("./models/__SignedTransaction");
-var __BlockHeader_1 = require("./models/__BlockHeader");
-var __Block_1 = require("./models/__Block");
-var __SignedBlock_1 = require("./models/__SignedBlock");
-var __DigestRequest_1 = require("./models/__DigestRequest");
-var __Digest_1 = require("./models/__Digest");
-var __LoggedTransaction_1 = require("./models/__LoggedTransaction");
-var __LoggedTransactionsRequest_1 = require("./models/__LoggedTransactionsRequest");
-var __LoggedTransactions_1 = require("./models/__LoggedTransactions");
-var __MasterKeyRequest_1 = require("./models/__MasterKeyRequest");
-var __MasterKey_1 = require("./models/__MasterKey");
-var __KeyPairRequest_1 = require("./models/__KeyPairRequest");
-var __KeyPair_1 = require("./models/__KeyPair");
-var __SignRequest_1 = require("./models/__SignRequest");
-var __Signature_1 = require("./models/__Signature");
-var __SyncRequest_1 = require("./models/__SyncRequest");
-var __SyncResponse_1 = require("./models/__SyncResponse");
-var __BlockHeaderRequest_1 = require("./models/__BlockHeaderRequest");
-var __BlockHeaderResponse_1 = require("./models/__BlockHeaderResponse");
-var __BlockChainRequest_1 = require("./models/__BlockChainRequest");
-var __BlockChainResponse_1 = require("./models/__BlockChainResponse");
-var __Done_1 = require("./models/__Done");
-var __InvalidPublicKey_1 = require("./models/__InvalidPublicKey");
-var __InvalidPrivateKey_1 = require("./models/__InvalidPrivateKey");
-var __InvalidSignature_1 = require("./models/__InvalidSignature");
-var __InvalidAuthority_1 = require("./models/__InvalidAuthority");
-var __FileNotFound_1 = require("./models/__FileNotFound");
-var __RemoteError_1 = require("./models/__RemoteError");
-var __LogTransaction_1 = require("./models/__LogTransaction");
-var __RevertLastLoggedAction_1 = require("./models/__RevertLastLoggedAction");
-var __Shutdown_1 = require("./models/__Shutdown");
-var __StorageFile_1 = require("./models/__StorageFile");
-var __StorageFileAddress_1 = require("./models/__StorageFileAddress");
+var PubliqCoin_1 = require("./models/PubliqCoin");
+var PubliqBroadcast_1 = require("./models/PubliqBroadcast");
+var PubliqTransaction_1 = require("./models/PubliqTransaction");
+var PubliqSignedTransaction_1 = require("./models/PubliqSignedTransaction");
+var PubliqBlockHeader_1 = require("./models/PubliqBlockHeader");
+var PubliqBlock_1 = require("./models/PubliqBlock");
+var PubliqSignedBlock_1 = require("./models/PubliqSignedBlock");
+var PubliqRewardLog_1 = require("./models/PubliqRewardLog");
+var PubliqTransactionLog_1 = require("./models/PubliqTransactionLog");
+var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
+var PubliqReward_1 = require("./models/PubliqReward");
+var PubliqTransfer_1 = require("./models/PubliqTransfer");
+var PubliqFile_1 = require("./models/PubliqFile");
+var PubliqPage_1 = require("./models/PubliqPage");
+var PubliqContract_1 = require("./models/PubliqContract");
+var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
+var PubliqBoostInfo_1 = require("./models/PubliqBoostInfo");
+var PubliqContentInfo_1 = require("./models/PubliqContentInfo");
+var PubliqStatItem_1 = require("./models/PubliqStatItem");
+var PubliqStatInfo_1 = require("./models/PubliqStatInfo");
+var PubliqDigestRequest_1 = require("./models/PubliqDigestRequest");
+var PubliqDigest_1 = require("./models/PubliqDigest");
+var PubliqLoggedTransactionsRequest_1 = require("./models/PubliqLoggedTransactionsRequest");
+var PubliqLoggedTransactions_1 = require("./models/PubliqLoggedTransactions");
+var PubliqLoggedTransaction_1 = require("./models/PubliqLoggedTransaction");
+var PubliqMasterKeyRequest_1 = require("./models/PubliqMasterKeyRequest");
+var PubliqMasterKey_1 = require("./models/PubliqMasterKey");
+var PubliqKeyPairRequest_1 = require("./models/PubliqKeyPairRequest");
+var PubliqKeyPair_1 = require("./models/PubliqKeyPair");
+var PubliqSignRequest_1 = require("./models/PubliqSignRequest");
+var PubliqSignature_1 = require("./models/PubliqSignature");
+var PubliqSyncInfo_1 = require("./models/PubliqSyncInfo");
+var PubliqSyncRequest_1 = require("./models/PubliqSyncRequest");
+var PubliqSyncResponse_1 = require("./models/PubliqSyncResponse");
+var PubliqBlockHeaderRequest_1 = require("./models/PubliqBlockHeaderRequest");
+var PubliqBlockHeaderResponse_1 = require("./models/PubliqBlockHeaderResponse");
+var PubliqBlockchainRequest_1 = require("./models/PubliqBlockchainRequest");
+var PubliqBlockchainResponse_1 = require("./models/PubliqBlockchainResponse");
+var PubliqDone_1 = require("./models/PubliqDone");
+var PubliqInvalidPublicKey_1 = require("./models/PubliqInvalidPublicKey");
+var PubliqInvalidPrivateKey_1 = require("./models/PubliqInvalidPrivateKey");
+var PubliqInvalidSignature_1 = require("./models/PubliqInvalidSignature");
+var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
+var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
+var PubliqTransactionDone_1 = require("./models/PubliqTransactionDone");
+var PubliqFileNotFound_1 = require("./models/PubliqFileNotFound");
+var PubliqRemoteError_1 = require("./models/PubliqRemoteError");
+var PubliqStorageFile_1 = require("./models/PubliqStorageFile");
+var PubliqStorageFileAddress_1 = require("./models/PubliqStorageFileAddress");
 var MODELS_TYPES = [
-    __Coin_1.default,
-    __Broadcast_1.default,
-    __Reward_1.default,
-    __Transfer_1.default,
-    __File_1.default,
-    __Page_1.default,
-    __Transaction_1.default,
-    __SignedTransaction_1.default,
-    __BlockHeader_1.default,
-    __Block_1.default,
-    __SignedBlock_1.default,
-    __DigestRequest_1.default,
-    __Digest_1.default,
-    __LoggedTransaction_1.default,
-    __LoggedTransactionsRequest_1.default,
-    __LoggedTransactions_1.default,
-    __MasterKeyRequest_1.default,
-    __MasterKey_1.default,
-    __KeyPairRequest_1.default,
-    __KeyPair_1.default,
-    __SignRequest_1.default,
-    __Signature_1.default,
-    __SyncRequest_1.default,
-    __SyncResponse_1.default,
-    __BlockHeaderRequest_1.default,
-    __BlockHeaderResponse_1.default,
-    __BlockChainRequest_1.default,
-    __BlockChainResponse_1.default,
-    __Done_1.default,
-    __InvalidPublicKey_1.default,
-    __InvalidPrivateKey_1.default,
-    __InvalidSignature_1.default,
-    __InvalidAuthority_1.default,
-    __FileNotFound_1.default,
-    __RemoteError_1.default,
-    __LogTransaction_1.default,
-    __RevertLastLoggedAction_1.default,
-    __Shutdown_1.default,
-    __StorageFile_1.default,
-    __StorageFileAddress_1.default,
+    PubliqCoin_1.default,
+    PubliqBroadcast_1.default,
+    PubliqTransaction_1.default,
+    PubliqSignedTransaction_1.default,
+    PubliqBlockHeader_1.default,
+    PubliqBlock_1.default,
+    PubliqSignedBlock_1.default,
+    PubliqRewardLog_1.default,
+    PubliqTransactionLog_1.default,
+    PubliqBlockLog_1.default,
+    PubliqReward_1.default,
+    PubliqTransfer_1.default,
+    PubliqFile_1.default,
+    PubliqPage_1.default,
+    PubliqContract_1.default,
+    PubliqAddressInfo_1.default,
+    PubliqBoostInfo_1.default,
+    PubliqContentInfo_1.default,
+    PubliqStatItem_1.default,
+    PubliqStatInfo_1.default,
+    PubliqDigestRequest_1.default,
+    PubliqDigest_1.default,
+    PubliqLoggedTransactionsRequest_1.default,
+    PubliqLoggedTransactions_1.default,
+    PubliqLoggedTransaction_1.default,
+    PubliqMasterKeyRequest_1.default,
+    PubliqMasterKey_1.default,
+    PubliqKeyPairRequest_1.default,
+    PubliqKeyPair_1.default,
+    PubliqSignRequest_1.default,
+    PubliqSignature_1.default,
+    PubliqSyncInfo_1.default,
+    PubliqSyncRequest_1.default,
+    PubliqSyncResponse_1.default,
+    PubliqBlockHeaderRequest_1.default,
+    PubliqBlockHeaderResponse_1.default,
+    PubliqBlockchainRequest_1.default,
+    PubliqBlockchainResponse_1.default,
+    PubliqDone_1.default,
+    PubliqInvalidPublicKey_1.default,
+    PubliqInvalidPrivateKey_1.default,
+    PubliqInvalidSignature_1.default,
+    PubliqInvalidAuthority_1.default,
+    PubliqNotEnoughBalance_1.default,
+    PubliqTransactionDone_1.default,
+    PubliqFileNotFound_1.default,
+    PubliqRemoteError_1.default,
+    PubliqStorageFile_1.default,
+    PubliqStorageFileAddress_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
     if (data.constructor.Rtt !== undefined) {
