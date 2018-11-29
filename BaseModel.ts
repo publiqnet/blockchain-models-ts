@@ -5,12 +5,12 @@
          return d.length == 2 ? d : `0${d}`;
       };
 
-     const year = d.getFullYear().toString();
-     const month = (d.getMonth()+1).toString();
-     const day = d.getDate().toString();
-     const hours = d.getHours().toString();
-     const minutes = d.getMinutes().toString();
-     const seconds = d.getSeconds().toString();
+     const year = d.getUTCFullYear().toString();
+     const month = (d.getUTCMonth()+1).toString();
+     const day = d.getUTCDate().toString();
+     const hours = d.getUTCHours().toString();
+     const minutes = d.getUTCMinutes().toString();
+     const seconds = d.getUTCSeconds().toString();
 
      return `${
        year
