@@ -6,7 +6,8 @@
   "scripts": {
     "ts:compile": "./node_modules/.bin/tsc",
     "build": "npm install && npm run ts:compile",
-    "publish": "git pull && npm run build && git add . && git commit -m=\"cpp build\" && git push"
+    "publish": "git pull && npm run build && git add . && git commit -m \"cpp build\" && git push",
+    "test": "./node_modules/.bin/tsc --project ./test/tsconfig.json && node ./test_bin/test/index.js"
   },
   "repository": {
     "type": "git",
