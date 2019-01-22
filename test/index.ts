@@ -1,5 +1,6 @@
 import {parceToJson, parceToModel} from "../mapper";
 import {JSON_DATA} from "./test-data";
+import PubliqTransaction from "../models/PubliqTransaction";
 
 
 
@@ -19,5 +20,23 @@ const tetsJson = () =>{
         console.log( parceToJson(obj), '\n');
     }
 };
-tetsJson();
+// tetsJson();
+
+
+const testPubliqTransaction = () => {
+    const now = new Date();
+    const now_1h = new Date(now.getTime() + (60 * 60 * 1000));
+
+    const transactionObj = new PubliqTransaction({
+        creation: +now,
+        expiry: +now_1h,
+        fee: {
+            whole: 0, fraction: 0
+        },
+        action: {}//transferObj,
+    });
+    console.log(transactionObj.toJson())
+};
+
+testPubliqTransaction();
 
