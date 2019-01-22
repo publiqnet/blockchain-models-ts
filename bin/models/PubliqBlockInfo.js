@@ -14,29 +14,39 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqStorageFileAddress = /** @class */ (function (_super) {
-    __extends(PubliqStorageFileAddress, _super);
-    function PubliqStorageFileAddress(data) {
+var PubliqRewardInfo_1 = require("./PubliqRewardInfo");
+var PubliqTransactionInfo_1 = require("./PubliqTransactionInfo");
+var PubliqBlockInfo = /** @class */ (function (_super) {
+    __extends(PubliqBlockInfo, _super);
+    function PubliqBlockInfo(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
+        _this.authority = data.authority;
+        _this.blockHash = data.block_hash;
+        _this.timeSigned = new Date(data.time_signed);
+        _this.rewards = data.rewards.map(function (d) { return new PubliqRewardInfo_1.default(d); });
+        _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionInfo_1.default(d); });
         return _this;
     }
-    Object.defineProperty(PubliqStorageFileAddress, "PropertyMap", {
+    Object.defineProperty(PubliqBlockInfo, "PropertyMap", {
         get: function () {
             return {
-                uri: 'uri',
+                authority: 'authority',
+                blockHash: 'block_hash',
+                timeSigned: 'time_signed',
+                rewards: 'rewards',
+                transactions: 'transactions',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqStorageFileAddress, "Rtt", {
+    Object.defineProperty(PubliqBlockInfo, "Rtt", {
         get: function () {
-            return 42;
+            return 9;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqStorageFileAddress;
+    return PubliqBlockInfo;
 }(BaseModel_1.default));
-exports.default = PubliqStorageFileAddress;
+exports.default = PubliqBlockInfo;

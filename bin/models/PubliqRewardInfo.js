@@ -14,29 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqStorageFileAddress = /** @class */ (function (_super) {
-    __extends(PubliqStorageFileAddress, _super);
-    function PubliqStorageFileAddress(data) {
+var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqRewardInfo = /** @class */ (function (_super) {
+    __extends(PubliqRewardInfo, _super);
+    function PubliqRewardInfo(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
+        _this.to = data.to;
+        _this.amount = new PubliqCoin_1.default(data.amount);
         return _this;
     }
-    Object.defineProperty(PubliqStorageFileAddress, "PropertyMap", {
+    Object.defineProperty(PubliqRewardInfo, "PropertyMap", {
         get: function () {
             return {
-                uri: 'uri',
+                to: 'to',
+                amount: 'amount',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqStorageFileAddress, "Rtt", {
+    Object.defineProperty(PubliqRewardInfo, "Rtt", {
         get: function () {
-            return 42;
+            return 7;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqStorageFileAddress;
+    return PubliqRewardInfo;
 }(BaseModel_1.default));
-exports.default = PubliqStorageFileAddress;
+exports.default = PubliqRewardInfo;

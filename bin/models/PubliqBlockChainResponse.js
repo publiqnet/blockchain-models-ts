@@ -33,7 +33,7 @@ var PubliqBlockchainResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqBlockchainResponse, "Rtt", {
         get: function () {
-            return 37;
+            return 31;
         },
         enumerable: true,
         configurable: true

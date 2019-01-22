@@ -28,7 +28,7 @@ var PubliqMasterKeyRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqMasterKeyRequest, "Rtt", {
         get: function () {
-            return 25;
+            return 19;
         },
         enumerable: true,
         configurable: true

@@ -35,7 +35,7 @@ var PubliqNotEnoughBalance = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
         get: function () {
-            return 43;
+            return 37;
         },
         enumerable: true,
         configurable: true

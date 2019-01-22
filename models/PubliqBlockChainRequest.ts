@@ -22,7 +22,7 @@ export default class PubliqBlockchainRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 36;
+        return 30;
     }
 
 } 

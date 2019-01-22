@@ -5,19 +5,13 @@ import PubliqSignedTransaction from './models/PubliqSignedTransaction';
 import PubliqBlockHeader from './models/PubliqBlockHeader';
 import PubliqBlock from './models/PubliqBlock';
 import PubliqSignedBlock from './models/PubliqSignedBlock';
-import PubliqRewardLog from './models/PubliqRewardLog';
-import PubliqTransactionLog from './models/PubliqTransactionLog';
-import PubliqBlockLog from './models/PubliqBlockLog';
+import PubliqRewardInfo from './models/PubliqRewardInfo';
+import PubliqTransactionInfo from './models/PubliqTransactionInfo';
+import PubliqBlockInfo from './models/PubliqBlockInfo';
 import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
 import PubliqFile from './models/PubliqFile';
 import PubliqPage from './models/PubliqPage';
-import PubliqContract from './models/PubliqContract';
-import PubliqAddressInfo from './models/PubliqAddressInfo';
-import PubliqBoostInfo from './models/PubliqBoostInfo';
-import PubliqContentInfo from './models/PubliqContentInfo';
-import PubliqStatItem from './models/PubliqStatItem';
-import PubliqStatInfo from './models/PubliqStatInfo';
 import PubliqDigestRequest from './models/PubliqDigestRequest';
 import PubliqDigest from './models/PubliqDigest';
 import PubliqLoggedTransactionsRequest from './models/PubliqLoggedTransactionsRequest';
@@ -57,19 +51,13 @@ const MODELS_TYPES = [
     PubliqBlockHeader,
     PubliqBlock,
     PubliqSignedBlock,
-    PubliqRewardLog,
-    PubliqTransactionLog,
-    PubliqBlockLog,
+    PubliqRewardInfo,
+    PubliqTransactionInfo,
+    PubliqBlockInfo,
     PubliqReward,
     PubliqTransfer,
     PubliqFile,
     PubliqPage,
-    PubliqContract,
-    PubliqAddressInfo,
-    PubliqBoostInfo,
-    PubliqContentInfo,
-    PubliqStatItem,
-    PubliqStatInfo,
     PubliqDigestRequest,
     PubliqDigest,
     PubliqLoggedTransactionsRequest,
@@ -110,8 +98,7 @@ export const createInstanceFromJson = data => {
     const ModelClass = MODELS_TYPES[data.rtt];
 
     if(!ModelClass){
-        console.log( "error rtt: ", data.rtt, " data: ", data);
-        throw new Error("invalid model class" );
+        throw new Error("invalid model class");
     }
 
     return new ModelClass(data);

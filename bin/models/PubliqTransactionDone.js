@@ -32,7 +32,7 @@ var PubliqTransactionDone = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTransactionDone, "Rtt", {
         get: function () {
-            return 44;
+            return 38;
         },
         enumerable: true,
         configurable: true

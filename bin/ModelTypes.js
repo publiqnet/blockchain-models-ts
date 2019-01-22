@@ -7,19 +7,13 @@ var PubliqSignedTransaction_1 = require("./models/PubliqSignedTransaction");
 var PubliqBlockHeader_1 = require("./models/PubliqBlockHeader");
 var PubliqBlock_1 = require("./models/PubliqBlock");
 var PubliqSignedBlock_1 = require("./models/PubliqSignedBlock");
-var PubliqRewardLog_1 = require("./models/PubliqRewardLog");
-var PubliqTransactionLog_1 = require("./models/PubliqTransactionLog");
-var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
+var PubliqRewardInfo_1 = require("./models/PubliqRewardInfo");
+var PubliqTransactionInfo_1 = require("./models/PubliqTransactionInfo");
+var PubliqBlockInfo_1 = require("./models/PubliqBlockInfo");
 var PubliqReward_1 = require("./models/PubliqReward");
 var PubliqTransfer_1 = require("./models/PubliqTransfer");
 var PubliqFile_1 = require("./models/PubliqFile");
 var PubliqPage_1 = require("./models/PubliqPage");
-var PubliqContract_1 = require("./models/PubliqContract");
-var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
-var PubliqBoostInfo_1 = require("./models/PubliqBoostInfo");
-var PubliqContentInfo_1 = require("./models/PubliqContentInfo");
-var PubliqStatItem_1 = require("./models/PubliqStatItem");
-var PubliqStatInfo_1 = require("./models/PubliqStatInfo");
 var PubliqDigestRequest_1 = require("./models/PubliqDigestRequest");
 var PubliqDigest_1 = require("./models/PubliqDigest");
 var PubliqLoggedTransactionsRequest_1 = require("./models/PubliqLoggedTransactionsRequest");
@@ -57,19 +51,13 @@ var MODELS_TYPES = [
     PubliqBlockHeader_1.default,
     PubliqBlock_1.default,
     PubliqSignedBlock_1.default,
-    PubliqRewardLog_1.default,
-    PubliqTransactionLog_1.default,
-    PubliqBlockLog_1.default,
+    PubliqRewardInfo_1.default,
+    PubliqTransactionInfo_1.default,
+    PubliqBlockInfo_1.default,
     PubliqReward_1.default,
     PubliqTransfer_1.default,
     PubliqFile_1.default,
     PubliqPage_1.default,
-    PubliqContract_1.default,
-    PubliqAddressInfo_1.default,
-    PubliqBoostInfo_1.default,
-    PubliqContentInfo_1.default,
-    PubliqStatItem_1.default,
-    PubliqStatInfo_1.default,
     PubliqDigestRequest_1.default,
     PubliqDigest_1.default,
     PubliqLoggedTransactionsRequest_1.default,
@@ -101,7 +89,7 @@ var MODELS_TYPES = [
     PubliqStorageFileAddress_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
-    if (data.constructor.Rtt !== undefined) {
+    if (data.constructor.Rtt === undefined) {
         return data;
     }
     var ModelClass = MODELS_TYPES[data.rtt];
