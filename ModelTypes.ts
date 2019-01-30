@@ -91,17 +91,32 @@ const MODELS_TYPES = [
 
 export const createInstanceFromJson = data => {
 
-    if(data.constructor.Rtt === undefined){
+    if(data.constructor.Rtt !== undefined){
         return  data;
     }
 
-    const ModelClass = MODELS_TYPES[data.rtt];
+    if(data.rtt !== undefined){
+        const ModelClass = MODELS_TYPES[data.rtt];
 
-    if(!ModelClass){
-        throw new Error("invalid model class");
+        if(!ModelClass){
+            throw new Error("invalid model class");
+        }
+
+        return new ModelClass(data);
     }
 
-    return new ModelClass(data);
+    return  data;
+    // if(data.constructor.Rtt === undefined){
+    //     return  data;
+    // }
+
+    // const ModelClass = MODELS_TYPES[data.rtt];
+    //
+    // if(!ModelClass){
+    //     throw new Error("invalid model class");
+    // }
+    //
+    // return new ModelClass(data);
 
 };
 

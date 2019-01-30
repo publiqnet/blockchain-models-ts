@@ -89,13 +89,26 @@ var MODELS_TYPES = [
     PubliqStorageFileAddress_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
-    if (data.constructor.Rtt === undefined) {
+    if (data.constructor.Rtt !== undefined) {
         return data;
     }
-    var ModelClass = MODELS_TYPES[data.rtt];
-    if (!ModelClass) {
-        throw new Error("invalid model class");
+    if (data.rtt !== undefined) {
+        var ModelClass = MODELS_TYPES[data.rtt];
+        if (!ModelClass) {
+            throw new Error("invalid model class");
+        }
+        return new ModelClass(data);
     }
-    return new ModelClass(data);
+    return data;
+    // if(data.constructor.Rtt === undefined){
+    //     return  data;
+    // }
+    // const ModelClass = MODELS_TYPES[data.rtt];
+    //
+    // if(!ModelClass){
+    //     throw new Error("invalid model class");
+    // }
+    //
+    // return new ModelClass(data);
 };
 exports.default = MODELS_TYPES;
