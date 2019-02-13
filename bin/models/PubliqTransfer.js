@@ -22,6 +22,7 @@ var PubliqTransfer = /** @class */ (function (_super) {
         _this.from = data.from;
         _this.to = data.to;
         _this.amount = new PubliqCoin_1.default(data.amount);
+        _this.message = data.message;
         return _this;
     }
     Object.defineProperty(PubliqTransfer, "PropertyMap", {
@@ -30,6 +31,7 @@ var PubliqTransfer = /** @class */ (function (_super) {
                 from: 'from',
                 to: 'to',
                 amount: 'amount',
+                message: 'message',
             };
         },
         enumerable: true,

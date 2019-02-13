@@ -15,19 +15,22 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqRewardType_1 = require("./PubliqRewardType");
 var PubliqReward = /** @class */ (function (_super) {
     __extends(PubliqReward, _super);
     function PubliqReward(data) {
         var _this = _super.call(this) || this;
-        _this.amount = new PubliqCoin_1.default(data.amount);
         _this.to = data.to;
+        _this.amount = new PubliqCoin_1.default(data.amount);
+        _this.rewardType = PubliqRewardType_1.default.toNumber(data.reward_type);
         return _this;
     }
     Object.defineProperty(PubliqReward, "PropertyMap", {
         get: function () {
             return {
-                amount: 'amount',
                 to: 'to',
+                amount: 'amount',
+                rewardType: 'reward_type',
             };
         },
         enumerable: true,

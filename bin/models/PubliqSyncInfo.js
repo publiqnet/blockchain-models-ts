@@ -20,7 +20,6 @@ var PubliqSyncInfo = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         _this.number = data.number;
         _this.cSum = data.c_sum;
-        _this.authority = data.authority;
         return _this;
     }
     Object.defineProperty(PubliqSyncInfo, "PropertyMap", {
@@ -28,7 +27,6 @@ var PubliqSyncInfo = /** @class */ (function (_super) {
             return {
                 number: 'number',
                 cSum: 'c_sum',
-                authority: 'authority',
             };
         },
         enumerable: true,
@@ -36,7 +34,7 @@ var PubliqSyncInfo = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqSyncInfo, "Rtt", {
         get: function () {
-            return 25;
+            return 31;
         },
         enumerable: true,
         configurable: true
