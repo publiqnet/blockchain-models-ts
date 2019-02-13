@@ -136,4 +136,3 @@ export const createInstanceFromJson = data => {
   return  data;
 };
 
-export default MODELS_TYPES;
