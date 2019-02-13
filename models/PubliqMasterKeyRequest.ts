@@ -16,7 +16,7 @@ export default class PubliqMasterKeyRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 19;
+        return 25;
     }
 
 } 

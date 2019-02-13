@@ -5,13 +5,19 @@ import PubliqSignedTransaction from './models/PubliqSignedTransaction';
 import PubliqBlockHeader from './models/PubliqBlockHeader';
 import PubliqBlock from './models/PubliqBlock';
 import PubliqSignedBlock from './models/PubliqSignedBlock';
-import PubliqRewardInfo from './models/PubliqRewardInfo';
-import PubliqTransactionInfo from './models/PubliqTransactionInfo';
-import PubliqBlockInfo from './models/PubliqBlockInfo';
+import PubliqRewardLog from './models/PubliqRewardLog';
+import PubliqTransactionLog from './models/PubliqTransactionLog';
+import PubliqBlockLog from './models/PubliqBlockLog';
 import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
 import PubliqFile from './models/PubliqFile';
 import PubliqPage from './models/PubliqPage';
+import PubliqContract from './models/PubliqContract';
+import PubliqAddressInfo from './models/PubliqAddressInfo';
+import PubliqArticleInfo from './models/PubliqArticleInfo';
+import PubliqContentInfo from './models/PubliqContentInfo';
+import PubliqStatItem from './models/PubliqStatItem';
+import PubliqStatInfo from './models/PubliqStatInfo';
 import PubliqDigestRequest from './models/PubliqDigestRequest';
 import PubliqDigest from './models/PubliqDigest';
 import PubliqLoggedTransactionsRequest from './models/PubliqLoggedTransactionsRequest';
@@ -36,11 +42,19 @@ import PubliqInvalidPrivateKey from './models/PubliqInvalidPrivateKey';
 import PubliqInvalidSignature from './models/PubliqInvalidSignature';
 import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
 import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
+import PubliqTooLongString from './models/PubliqTooLongString';
 import PubliqTransactionDone from './models/PubliqTransactionDone';
 import PubliqFileNotFound from './models/PubliqFileNotFound';
 import PubliqRemoteError from './models/PubliqRemoteError';
 import PubliqStorageFile from './models/PubliqStorageFile';
 import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
+import PubliqGetStorageFile from './models/PubliqGetStorageFile';
+import PubliqIPDestination from './models/PubliqIPDestination';
+import PubliqIPAddress from './models/PubliqIPAddress';
+import PubliqPing from './models/PubliqPing';
+import PubliqPong from './models/PubliqPong';
+import PubliqTaskRequest from './models/PubliqTaskRequest';
+import PubliqTaskResponse from './models/PubliqTaskResponse';
 
 
 const MODELS_TYPES = [ 
@@ -51,13 +65,19 @@ const MODELS_TYPES = [
     PubliqBlockHeader,
     PubliqBlock,
     PubliqSignedBlock,
-    PubliqRewardInfo,
-    PubliqTransactionInfo,
-    PubliqBlockInfo,
+    PubliqRewardLog,
+    PubliqTransactionLog,
+    PubliqBlockLog,
     PubliqReward,
     PubliqTransfer,
     PubliqFile,
     PubliqPage,
+    PubliqContract,
+    PubliqAddressInfo,
+    PubliqArticleInfo,
+    PubliqContentInfo,
+    PubliqStatItem,
+    PubliqStatInfo,
     PubliqDigestRequest,
     PubliqDigest,
     PubliqLoggedTransactionsRequest,
@@ -82,11 +102,19 @@ const MODELS_TYPES = [
     PubliqInvalidSignature,
     PubliqInvalidAuthority,
     PubliqNotEnoughBalance,
+    PubliqTooLongString,
     PubliqTransactionDone,
     PubliqFileNotFound,
     PubliqRemoteError,
     PubliqStorageFile,
     PubliqStorageFileAddress,
+    PubliqGetStorageFile,
+    PubliqIPDestination,
+    PubliqIPAddress,
+    PubliqPing,
+    PubliqPong,
+    PubliqTaskRequest,
+    PubliqTaskResponse,
 ];
 
 export const createInstanceFromJson = data => {

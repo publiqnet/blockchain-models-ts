@@ -22,7 +22,7 @@ export default class PubliqInvalidAuthority extends BaseModel {
     }
 
     static get Rtt () {
-        return 36;
+        return 42;
     }
 
 } 

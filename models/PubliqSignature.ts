@@ -25,7 +25,7 @@ export default class PubliqSignature extends BaseModel {
     }
 
     static get Rtt () {
-        return 24;
+        return 30;
     }
 
 } 
