@@ -19,8 +19,10 @@ var PubliqContract = /** @class */ (function (_super) {
     __extends(PubliqContract, _super);
     function PubliqContract(data) {
         var _this = _super.call(this) || this;
-        _this.owner = data.owner;
-        _this.role = PubliqNodeType_1.default.toNumber(data.role);
+        if (data !== undefined) {
+            _this.owner = data.owner;
+            _this.role = PubliqNodeType_1.default.toNumber(data.role);
+        }
         return _this;
     }
     Object.defineProperty(PubliqContract, "PropertyMap", {

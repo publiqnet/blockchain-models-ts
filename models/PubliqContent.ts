@@ -3,15 +3,17 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqPage extends BaseModel {
+export default class PubliqContent extends BaseModel {
 
     channel: string;
     fileUris: Array<String>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.channel = data.channel;
-        this.fileUris = data.file_uris;
+        if (data !== undefined) {
+            this.channel = data.channel;
+            this.fileUris = data.file_uris === undefined ?  data.fileUris: data.file_uris;
+        }
     }
 
     static get PropertyMap () {

@@ -19,8 +19,10 @@ var PubliqDigest = /** @class */ (function (_super) {
     __extends(PubliqDigest, _super);
     function PubliqDigest(data) {
         var _this = _super.call(this) || this;
-        _this.base58Hash = data.base58_hash;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            _this.base58Hash = data.base58_hash === undefined ? data.base58Hash : data.base58_hash;
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        }
         return _this;
     }
     Object.defineProperty(PubliqDigest, "PropertyMap", {

@@ -19,9 +19,11 @@ var PubliqSignature = /** @class */ (function (_super) {
     __extends(PubliqSignature, _super);
     function PubliqSignature(data) {
         var _this = _super.call(this) || this;
-        _this.publicKey = data.public_key;
-        _this.signature = data.signature;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            _this.publicKey = data.public_key === undefined ? data.publicKey : data.public_key;
+            _this.signature = data.signature;
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        }
         return _this;
     }
     Object.defineProperty(PubliqSignature, "PropertyMap", {

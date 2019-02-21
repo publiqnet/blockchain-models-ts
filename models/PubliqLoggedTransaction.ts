@@ -10,11 +10,13 @@ export default class PubliqLoggedTransaction extends BaseModel {
     index: number;
     action: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.loggingType = PubliqLoggingType.toNumber(data.logging_type);
-        this.index = data.index;
-        this.action = createInstanceFromJson(data.action);
+        if (data !== undefined) {
+            this.loggingType = PubliqLoggingType.toNumber(data.logging_type === undefined ?  data.loggingType: data.logging_type);
+            this.index = data.index;
+            this.action = createInstanceFromJson(data.action);
+        }
     }
 
     static get PropertyMap () {

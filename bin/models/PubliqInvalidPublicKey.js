@@ -18,7 +18,9 @@ var PubliqInvalidPublicKey = /** @class */ (function (_super) {
     __extends(PubliqInvalidPublicKey, _super);
     function PubliqInvalidPublicKey(data) {
         var _this = _super.call(this) || this;
-        _this.publicKey = data.public_key;
+        if (data !== undefined) {
+            _this.publicKey = data.public_key === undefined ? data.publicKey : data.public_key;
+        }
         return _this;
     }
     Object.defineProperty(PubliqInvalidPublicKey, "PropertyMap", {

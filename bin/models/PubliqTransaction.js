@@ -20,10 +20,12 @@ var PubliqTransaction = /** @class */ (function (_super) {
     __extends(PubliqTransaction, _super);
     function PubliqTransaction(data) {
         var _this = _super.call(this) || this;
-        _this.creation = new Date(data.creation);
-        _this.expiry = new Date(data.expiry);
-        _this.fee = new PubliqCoin_1.default(data.fee);
-        _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+        if (data !== undefined) {
+            _this.creation = new Date(data.creation);
+            _this.expiry = new Date(data.expiry);
+            _this.fee = new PubliqCoin_1.default(data.fee);
+            _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+        }
         return _this;
     }
     Object.defineProperty(PubliqTransaction, "PropertyMap", {

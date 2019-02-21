@@ -9,11 +9,13 @@ export default class PubliqArticleInfo extends BaseModel {
     author: string;
     channel: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.uri = data.uri;
-        this.author = data.author;
-        this.channel = data.channel;
+        if (data !== undefined) {
+            this.uri = data.uri;
+            this.author = data.author;
+            this.channel = data.channel;
+        }
     }
 
     static get PropertyMap () {

@@ -7,9 +7,11 @@ export default class PubliqMasterKey extends BaseModel {
 
     masterKey: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.masterKey = data.master_key;
+        if (data !== undefined) {
+            this.masterKey = data.master_key === undefined ?  data.masterKey: data.master_key;
+        }
     }
 
     static get PropertyMap () {

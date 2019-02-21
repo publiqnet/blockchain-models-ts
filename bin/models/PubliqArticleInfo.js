@@ -18,9 +18,11 @@ var PubliqArticleInfo = /** @class */ (function (_super) {
     __extends(PubliqArticleInfo, _super);
     function PubliqArticleInfo(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
-        _this.author = data.author;
-        _this.channel = data.channel;
+        if (data !== undefined) {
+            _this.uri = data.uri;
+            _this.author = data.author;
+            _this.channel = data.channel;
+        }
         return _this;
     }
     Object.defineProperty(PubliqArticleInfo, "PropertyMap", {

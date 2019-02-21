@@ -18,7 +18,9 @@ var PubliqFileNotFound = /** @class */ (function (_super) {
     __extends(PubliqFileNotFound, _super);
     function PubliqFileNotFound(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
+        if (data !== undefined) {
+            _this.uri = data.uri;
+        }
         return _this;
     }
     Object.defineProperty(PubliqFileNotFound, "PropertyMap", {
@@ -32,7 +34,7 @@ var PubliqFileNotFound = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqFileNotFound, "Rtt", {
         get: function () {
-            return 46;
+            return 45;
         },
         enumerable: true,
         configurable: true

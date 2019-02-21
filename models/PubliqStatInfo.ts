@@ -9,10 +9,12 @@ export default class PubliqStatInfo extends BaseModel {
     hash: string;
     items: Array<PubliqStatItem>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.hash = data.hash;
-        this.items = data.items.map(d => new PubliqStatItem(d));
+        if (data !== undefined) {
+            this.hash = data.hash;
+            this.items = data.items.map(d => new PubliqStatItem(d));
+        }
     }
 
     static get PropertyMap () {

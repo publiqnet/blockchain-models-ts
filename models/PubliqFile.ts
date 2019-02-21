@@ -8,10 +8,12 @@ export default class PubliqFile extends BaseModel {
     author: string;
     uri: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.author = data.author;
-        this.uri = data.uri;
+        if (data !== undefined) {
+            this.author = data.author;
+            this.uri = data.uri;
+        }
     }
 
     static get PropertyMap () {

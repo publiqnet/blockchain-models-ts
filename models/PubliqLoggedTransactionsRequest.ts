@@ -8,10 +8,12 @@ export default class PubliqLoggedTransactionsRequest extends BaseModel {
     startIndex: number;
     maxCount: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.startIndex = data.start_index;
-        this.maxCount = data.max_count;
+        if (data !== undefined) {
+            this.startIndex = data.start_index === undefined ?  data.startIndex: data.start_index;
+            this.maxCount = data.max_count === undefined ?  data.maxCount: data.max_count;
+        }
     }
 
     static get PropertyMap () {

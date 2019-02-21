@@ -8,10 +8,12 @@ export default class PubliqIPDestination extends BaseModel {
     port: number;
     address: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.port = data.port;
-        this.address = data.address;
+        if (data !== undefined) {
+            this.port = data.port;
+            this.address = data.address;
+        }
     }
 
     static get PropertyMap () {
@@ -22,7 +24,7 @@ export default class PubliqIPDestination extends BaseModel {
     }
 
     static get Rtt () {
-        return 51;
+        return 50;
     }
 
 } 

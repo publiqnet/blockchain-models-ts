@@ -18,8 +18,10 @@ var PubliqStorageFileAddress = /** @class */ (function (_super) {
     __extends(PubliqStorageFileAddress, _super);
     function PubliqStorageFileAddress(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
-        _this.node = data.node;
+        if (data !== undefined) {
+            _this.uri = data.uri;
+            _this.node = data.node;
+        }
         return _this;
     }
     Object.defineProperty(PubliqStorageFileAddress, "PropertyMap", {
@@ -34,7 +36,7 @@ var PubliqStorageFileAddress = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqStorageFileAddress, "Rtt", {
         get: function () {
-            return 49;
+            return 48;
         },
         enumerable: true,
         configurable: true

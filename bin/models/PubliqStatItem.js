@@ -18,9 +18,11 @@ var PubliqStatItem = /** @class */ (function (_super) {
     __extends(PubliqStatItem, _super);
     function PubliqStatItem(data) {
         var _this = _super.call(this) || this;
-        _this.node = data.node;
-        _this.passed = data.passed;
-        _this.failed = data.failed;
+        if (data !== undefined) {
+            _this.node = data.node;
+            _this.passed = data.passed;
+            _this.failed = data.failed;
+        }
         return _this;
     }
     Object.defineProperty(PubliqStatItem, "PropertyMap", {

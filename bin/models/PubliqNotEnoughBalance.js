@@ -19,8 +19,10 @@ var PubliqNotEnoughBalance = /** @class */ (function (_super) {
     __extends(PubliqNotEnoughBalance, _super);
     function PubliqNotEnoughBalance(data) {
         var _this = _super.call(this) || this;
-        _this.balance = new PubliqCoin_1.default(data.balance);
-        _this.spending = new PubliqCoin_1.default(data.spending);
+        if (data !== undefined) {
+            _this.balance = new PubliqCoin_1.default(data.balance);
+            _this.spending = new PubliqCoin_1.default(data.spending);
+        }
         return _this;
     }
     Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {

@@ -8,10 +8,12 @@ export default class PubliqSyncInfo extends BaseModel {
     number: number;
     cSum: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.number = data.number;
-        this.cSum = data.c_sum;
+        if (data !== undefined) {
+            this.number = data.number;
+            this.cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
+        }
     }
 
     static get PropertyMap () {

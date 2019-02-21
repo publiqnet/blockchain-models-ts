@@ -20,11 +20,13 @@ var PubliqTransactionLog = /** @class */ (function (_super) {
     __extends(PubliqTransactionLog, _super);
     function PubliqTransactionLog(data) {
         var _this = _super.call(this) || this;
-        _this.fee = new PubliqCoin_1.default(data.fee);
-        _this.action = ModelTypes_1.createInstanceFromJson(data.action);
-        _this.transactionHash = data.transaction_hash;
-        _this.transactionSize = data.transaction_size;
-        _this.timeSigned = new Date(data.time_signed);
+        if (data !== undefined) {
+            _this.fee = new PubliqCoin_1.default(data.fee);
+            _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+            _this.transactionHash = data.transaction_hash === undefined ? data.transactionHash : data.transaction_hash;
+            _this.transactionSize = data.transaction_size === undefined ? data.transactionSize : data.transaction_size;
+            _this.timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
+        }
         return _this;
     }
     Object.defineProperty(PubliqTransactionLog, "PropertyMap", {

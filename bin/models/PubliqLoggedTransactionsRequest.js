@@ -18,8 +18,10 @@ var PubliqLoggedTransactionsRequest = /** @class */ (function (_super) {
     __extends(PubliqLoggedTransactionsRequest, _super);
     function PubliqLoggedTransactionsRequest(data) {
         var _this = _super.call(this) || this;
-        _this.startIndex = data.start_index;
-        _this.maxCount = data.max_count;
+        if (data !== undefined) {
+            _this.startIndex = data.start_index === undefined ? data.startIndex : data.start_index;
+            _this.maxCount = data.max_count === undefined ? data.maxCount : data.max_count;
+        }
         return _this;
     }
     Object.defineProperty(PubliqLoggedTransactionsRequest, "PropertyMap", {

@@ -9,11 +9,13 @@ export default class PubliqPong extends BaseModel {
     stamp: Date;
     signature: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.nodeid = data.nodeid;
-        this.stamp = new Date(data.stamp);
-        this.signature = data.signature;
+        if (data !== undefined) {
+            this.nodeid = data.nodeid;
+            this.stamp = new Date(data.stamp);
+            this.signature = data.signature;
+        }
     }
 
     static get PropertyMap () {
@@ -25,7 +27,7 @@ export default class PubliqPong extends BaseModel {
     }
 
     static get Rtt () {
-        return 54;
+        return 53;
     }
 
 } 

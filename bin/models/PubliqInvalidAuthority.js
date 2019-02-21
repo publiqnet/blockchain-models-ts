@@ -18,8 +18,10 @@ var PubliqInvalidAuthority = /** @class */ (function (_super) {
     __extends(PubliqInvalidAuthority, _super);
     function PubliqInvalidAuthority(data) {
         var _this = _super.call(this) || this;
-        _this.authorityProvided = data.authority_provided;
-        _this.authorityRequired = data.authority_required;
+        if (data !== undefined) {
+            _this.authorityProvided = data.authority_provided === undefined ? data.authorityProvided : data.authority_provided;
+            _this.authorityRequired = data.authority_required === undefined ? data.authorityRequired : data.authority_required;
+        }
         return _this;
     }
     Object.defineProperty(PubliqInvalidAuthority, "PropertyMap", {

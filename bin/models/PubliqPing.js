@@ -17,7 +17,10 @@ var BaseModel_1 = require("../BaseModel");
 var PubliqPing = /** @class */ (function (_super) {
     __extends(PubliqPing, _super);
     function PubliqPing(data) {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        if (data !== undefined) {
+        }
+        return _this;
     }
     Object.defineProperty(PubliqPing, "PropertyMap", {
         get: function () {
@@ -28,7 +31,7 @@ var PubliqPing = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqPing, "Rtt", {
         get: function () {
-            return 53;
+            return 52;
         },
         enumerable: true,
         configurable: true

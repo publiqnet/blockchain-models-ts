@@ -8,10 +8,12 @@ export default class PubliqTaskResponse extends BaseModel {
     package: Object;
     taskId: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.package = createInstanceFromJson(data.package);
-        this.taskId = data.task_id;
+        if (data !== undefined) {
+            this.package = createInstanceFromJson(data.package);
+            this.taskId = data.task_id === undefined ?  data.taskId: data.task_id;
+        }
     }
 
     static get PropertyMap () {
@@ -22,7 +24,7 @@ export default class PubliqTaskResponse extends BaseModel {
     }
 
     static get Rtt () {
-        return 56;
+        return 55;
     }
 
 } 

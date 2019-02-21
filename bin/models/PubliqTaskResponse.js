@@ -19,8 +19,10 @@ var PubliqTaskResponse = /** @class */ (function (_super) {
     __extends(PubliqTaskResponse, _super);
     function PubliqTaskResponse(data) {
         var _this = _super.call(this) || this;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
-        _this.taskId = data.task_id;
+        if (data !== undefined) {
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            _this.taskId = data.task_id === undefined ? data.taskId : data.task_id;
+        }
         return _this;
     }
     Object.defineProperty(PubliqTaskResponse, "PropertyMap", {
@@ -35,7 +37,7 @@ var PubliqTaskResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTaskResponse, "Rtt", {
         get: function () {
-            return 56;
+            return 55;
         },
         enumerable: true,
         configurable: true

@@ -19,7 +19,9 @@ var PubliqBlockHeaderResponse = /** @class */ (function (_super) {
     __extends(PubliqBlockHeaderResponse, _super);
     function PubliqBlockHeaderResponse(data) {
         var _this = _super.call(this) || this;
-        _this.blockHeaders = data.block_headers.map(function (d) { return new PubliqBlockHeader_1.default(d); });
+        if (data !== undefined) {
+            _this.blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(function (d) { return new PubliqBlockHeader_1.default(d); }) : data.block_headers.map(function (d) { return new PubliqBlockHeader_1.default(d); });
+        }
         return _this;
     }
     Object.defineProperty(PubliqBlockHeaderResponse, "PropertyMap", {

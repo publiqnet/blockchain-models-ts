@@ -18,8 +18,10 @@ var PubliqFile = /** @class */ (function (_super) {
     __extends(PubliqFile, _super);
     function PubliqFile(data) {
         var _this = _super.call(this) || this;
-        _this.author = data.author;
-        _this.uri = data.uri;
+        if (data !== undefined) {
+            _this.author = data.author;
+            _this.uri = data.uri;
+        }
         return _this;
     }
     Object.defineProperty(PubliqFile, "PropertyMap", {

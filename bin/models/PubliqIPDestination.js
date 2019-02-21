@@ -18,8 +18,10 @@ var PubliqIPDestination = /** @class */ (function (_super) {
     __extends(PubliqIPDestination, _super);
     function PubliqIPDestination(data) {
         var _this = _super.call(this) || this;
-        _this.port = data.port;
-        _this.address = data.address;
+        if (data !== undefined) {
+            _this.port = data.port;
+            _this.address = data.address;
+        }
         return _this;
     }
     Object.defineProperty(PubliqIPDestination, "PropertyMap", {
@@ -34,7 +36,7 @@ var PubliqIPDestination = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqIPDestination, "Rtt", {
         get: function () {
-            return 51;
+            return 50;
         },
         enumerable: true,
         configurable: true

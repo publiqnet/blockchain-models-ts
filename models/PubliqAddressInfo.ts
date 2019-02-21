@@ -9,10 +9,12 @@ export default class PubliqAddressInfo extends BaseModel {
     nodeId: string;
     ipAddress: PubliqIPAddress;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.nodeId = data.node_id;
-        this.ipAddress = new PubliqIPAddress(data.ip_address);
+        if (data !== undefined) {
+            this.nodeId = data.node_id === undefined ?  data.nodeId: data.node_id;
+            this.ipAddress = new PubliqIPAddress(data.ip_address === undefined ?  data.ipAddress: data.ip_address);
+        }
     }
 
     static get PropertyMap () {

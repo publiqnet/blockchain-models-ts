@@ -18,8 +18,10 @@ var PubliqCoin = /** @class */ (function (_super) {
     __extends(PubliqCoin, _super);
     function PubliqCoin(data) {
         var _this = _super.call(this) || this;
-        _this.whole = data.whole;
-        _this.fraction = data.fraction;
+        if (data !== undefined) {
+            _this.whole = data.whole;
+            _this.fraction = data.fraction;
+        }
         return _this;
     }
     Object.defineProperty(PubliqCoin, "PropertyMap", {

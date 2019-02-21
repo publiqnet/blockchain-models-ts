@@ -9,11 +9,13 @@ export default class PubliqSyncResponse extends BaseModel {
     cSum: number;
     syncInfo: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.number = data.number;
-        this.cSum = data.c_sum;
-        this.syncInfo = createInstanceFromJson(data.sync_info);
+        if (data !== undefined) {
+            this.number = data.number;
+            this.cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
+            this.syncInfo = createInstanceFromJson(data.sync_info === undefined ?  data.syncInfo: data.sync_info);
+        }
     }
 
     static get PropertyMap () {

@@ -8,9 +8,11 @@ export default class PubliqLoggedTransactions extends BaseModel {
 
     actions: Array<PubliqLoggedTransaction>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.actions = data.actions.map(d => new PubliqLoggedTransaction(d));
+        if (data !== undefined) {
+            this.actions = data.actions.map(d => new PubliqLoggedTransaction(d));
+        }
     }
 
     static get PropertyMap () {

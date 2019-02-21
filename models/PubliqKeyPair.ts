@@ -10,12 +10,14 @@ export default class PubliqKeyPair extends BaseModel {
     publicKey: string;
     privateKey: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.masterKey = data.master_key;
-        this.index = data.index;
-        this.publicKey = data.public_key;
-        this.privateKey = data.private_key;
+        if (data !== undefined) {
+            this.masterKey = data.master_key === undefined ?  data.masterKey: data.master_key;
+            this.index = data.index;
+            this.publicKey = data.public_key === undefined ?  data.publicKey: data.public_key;
+            this.privateKey = data.private_key === undefined ?  data.privateKey: data.private_key;
+        }
     }
 
     static get PropertyMap () {

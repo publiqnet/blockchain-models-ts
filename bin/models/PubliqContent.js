@@ -14,15 +14,17 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqPage = /** @class */ (function (_super) {
-    __extends(PubliqPage, _super);
-    function PubliqPage(data) {
+var PubliqContent = /** @class */ (function (_super) {
+    __extends(PubliqContent, _super);
+    function PubliqContent(data) {
         var _this = _super.call(this) || this;
-        _this.channel = data.channel;
-        _this.fileUris = data.file_uris;
+        if (data !== undefined) {
+            _this.channel = data.channel;
+            _this.fileUris = data.file_uris === undefined ? data.fileUris : data.file_uris;
+        }
         return _this;
     }
-    Object.defineProperty(PubliqPage, "PropertyMap", {
+    Object.defineProperty(PubliqContent, "PropertyMap", {
         get: function () {
             return {
                 channel: 'channel',
@@ -32,13 +34,13 @@ var PubliqPage = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqPage, "Rtt", {
+    Object.defineProperty(PubliqContent, "Rtt", {
         get: function () {
             return 13;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqPage;
+    return PubliqContent;
 }(BaseModel_1.default));
-exports.default = PubliqPage;
+exports.default = PubliqContent;

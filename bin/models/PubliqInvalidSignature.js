@@ -19,7 +19,9 @@ var PubliqInvalidSignature = /** @class */ (function (_super) {
     __extends(PubliqInvalidSignature, _super);
     function PubliqInvalidSignature(data) {
         var _this = _super.call(this) || this;
-        _this.details = new PubliqSignature_1.default(data.details);
+        if (data !== undefined) {
+            _this.details = new PubliqSignature_1.default(data.details);
+        }
         return _this;
     }
     Object.defineProperty(PubliqInvalidSignature, "PropertyMap", {

@@ -18,8 +18,10 @@ var PubliqKeyPairRequest = /** @class */ (function (_super) {
     __extends(PubliqKeyPairRequest, _super);
     function PubliqKeyPairRequest(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
+        if (data !== undefined) {
+            _this.masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
+            _this.index = data.index;
+        }
         return _this;
     }
     Object.defineProperty(PubliqKeyPairRequest, "PropertyMap", {

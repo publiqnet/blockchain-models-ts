@@ -17,7 +17,10 @@ var BaseModel_1 = require("../BaseModel");
 var PubliqMasterKeyRequest = /** @class */ (function (_super) {
     __extends(PubliqMasterKeyRequest, _super);
     function PubliqMasterKeyRequest(data) {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        if (data !== undefined) {
+        }
+        return _this;
     }
     Object.defineProperty(PubliqMasterKeyRequest, "PropertyMap", {
         get: function () {

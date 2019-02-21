@@ -18,8 +18,10 @@ var PubliqStorageFile = /** @class */ (function (_super) {
     __extends(PubliqStorageFile, _super);
     function PubliqStorageFile(data) {
         var _this = _super.call(this) || this;
-        _this.mimeType = data.mime_type;
-        _this.data = data.data;
+        if (data !== undefined) {
+            _this.mimeType = data.mime_type === undefined ? data.mimeType : data.mime_type;
+            _this.data = data.data;
+        }
         return _this;
     }
     Object.defineProperty(PubliqStorageFile, "PropertyMap", {
@@ -34,7 +36,7 @@ var PubliqStorageFile = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqStorageFile, "Rtt", {
         get: function () {
-            return 48;
+            return 47;
         },
         enumerable: true,
         configurable: true

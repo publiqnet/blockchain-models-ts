@@ -19,7 +19,9 @@ var PubliqBlockchainResponse = /** @class */ (function (_super) {
     __extends(PubliqBlockchainResponse, _super);
     function PubliqBlockchainResponse(data) {
         var _this = _super.call(this) || this;
-        _this.signedBlocks = data.signed_blocks.map(function (d) { return new PubliqSignedBlock_1.default(d); });
+        if (data !== undefined) {
+            _this.signedBlocks = data.signed_blocks === undefined ? data.signedBlocks.map(function (d) { return new PubliqSignedBlock_1.default(d); }) : data.signed_blocks.map(function (d) { return new PubliqSignedBlock_1.default(d); });
+        }
         return _this;
     }
     Object.defineProperty(PubliqBlockchainResponse, "PropertyMap", {

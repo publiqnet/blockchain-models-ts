@@ -17,7 +17,10 @@ var BaseModel_1 = require("../BaseModel");
 var PubliqSyncRequest = /** @class */ (function (_super) {
     __extends(PubliqSyncRequest, _super);
     function PubliqSyncRequest(data) {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        if (data !== undefined) {
+        }
+        return _this;
     }
     Object.defineProperty(PubliqSyncRequest, "PropertyMap", {
         get: function () {

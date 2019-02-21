@@ -18,9 +18,11 @@ var PubliqPong = /** @class */ (function (_super) {
     __extends(PubliqPong, _super);
     function PubliqPong(data) {
         var _this = _super.call(this) || this;
-        _this.nodeid = data.nodeid;
-        _this.stamp = new Date(data.stamp);
-        _this.signature = data.signature;
+        if (data !== undefined) {
+            _this.nodeid = data.nodeid;
+            _this.stamp = new Date(data.stamp);
+            _this.signature = data.signature;
+        }
         return _this;
     }
     Object.defineProperty(PubliqPong, "PropertyMap", {
@@ -36,7 +38,7 @@ var PubliqPong = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqPong, "Rtt", {
         get: function () {
-            return 54;
+            return 53;
         },
         enumerable: true,
         configurable: true

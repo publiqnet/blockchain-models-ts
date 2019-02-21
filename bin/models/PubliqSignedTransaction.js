@@ -19,9 +19,11 @@ var PubliqSignedTransaction = /** @class */ (function (_super) {
     __extends(PubliqSignedTransaction, _super);
     function PubliqSignedTransaction(data) {
         var _this = _super.call(this) || this;
-        _this.transactionDetails = new PubliqTransaction_1.default(data.transaction_details);
-        _this.authority = data.authority;
-        _this.signature = data.signature;
+        if (data !== undefined) {
+            _this.transactionDetails = new PubliqTransaction_1.default(data.transaction_details === undefined ? data.transactionDetails : data.transaction_details);
+            _this.authority = data.authority;
+            _this.signature = data.signature;
+        }
         return _this;
     }
     Object.defineProperty(PubliqSignedTransaction, "PropertyMap", {

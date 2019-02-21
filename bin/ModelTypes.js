@@ -13,7 +13,7 @@ var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
 var PubliqReward_1 = require("./models/PubliqReward");
 var PubliqTransfer_1 = require("./models/PubliqTransfer");
 var PubliqFile_1 = require("./models/PubliqFile");
-var PubliqPage_1 = require("./models/PubliqPage");
+var PubliqContent_1 = require("./models/PubliqContent");
 var PubliqContract_1 = require("./models/PubliqContract");
 var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
 var PubliqArticleInfo_1 = require("./models/PubliqArticleInfo");
@@ -45,7 +45,6 @@ var PubliqInvalidSignature_1 = require("./models/PubliqInvalidSignature");
 var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
 var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
 var PubliqTooLongString_1 = require("./models/PubliqTooLongString");
-var PubliqTransactionDone_1 = require("./models/PubliqTransactionDone");
 var PubliqFileNotFound_1 = require("./models/PubliqFileNotFound");
 var PubliqRemoteError_1 = require("./models/PubliqRemoteError");
 var PubliqStorageFile_1 = require("./models/PubliqStorageFile");
@@ -71,7 +70,7 @@ var MODELS_TYPES = [
     PubliqReward_1.default,
     PubliqTransfer_1.default,
     PubliqFile_1.default,
-    PubliqPage_1.default,
+    PubliqContent_1.default,
     PubliqContract_1.default,
     PubliqAddressInfo_1.default,
     PubliqArticleInfo_1.default,
@@ -103,7 +102,6 @@ var MODELS_TYPES = [
     PubliqInvalidAuthority_1.default,
     PubliqNotEnoughBalance_1.default,
     PubliqTooLongString_1.default,
-    PubliqTransactionDone_1.default,
     PubliqFileNotFound_1.default,
     PubliqRemoteError_1.default,
     PubliqStorageFile_1.default,

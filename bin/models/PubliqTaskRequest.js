@@ -19,10 +19,12 @@ var PubliqTaskRequest = /** @class */ (function (_super) {
     __extends(PubliqTaskRequest, _super);
     function PubliqTaskRequest(data) {
         var _this = _super.call(this) || this;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
-        _this.taskId = data.task_id;
-        _this.signature = data.signature;
-        _this.timeSigned = new Date(data.time_signed);
+        if (data !== undefined) {
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            _this.taskId = data.task_id === undefined ? data.taskId : data.task_id;
+            _this.signature = data.signature;
+            _this.timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
+        }
         return _this;
     }
     Object.defineProperty(PubliqTaskRequest, "PropertyMap", {
@@ -39,7 +41,7 @@ var PubliqTaskRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTaskRequest, "Rtt", {
         get: function () {
-            return 55;
+            return 54;
         },
         enumerable: true,
         configurable: true

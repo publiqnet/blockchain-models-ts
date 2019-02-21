@@ -19,9 +19,11 @@ var PubliqSignedBlock = /** @class */ (function (_super) {
     __extends(PubliqSignedBlock, _super);
     function PubliqSignedBlock(data) {
         var _this = _super.call(this) || this;
-        _this.blockDetails = new PubliqBlock_1.default(data.block_details);
-        _this.authority = data.authority;
-        _this.signature = data.signature;
+        if (data !== undefined) {
+            _this.blockDetails = new PubliqBlock_1.default(data.block_details === undefined ? data.blockDetails : data.block_details);
+            _this.authority = data.authority;
+            _this.signature = data.signature;
+        }
         return _this;
     }
     Object.defineProperty(PubliqSignedBlock, "PropertyMap", {

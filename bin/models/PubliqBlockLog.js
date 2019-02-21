@@ -20,13 +20,15 @@ var PubliqBlockLog = /** @class */ (function (_super) {
     __extends(PubliqBlockLog, _super);
     function PubliqBlockLog(data) {
         var _this = _super.call(this) || this;
-        _this.authority = data.authority;
-        _this.blockHash = data.block_hash;
-        _this.blockNumber = data.block_number;
-        _this.blockSize = data.block_size;
-        _this.timeSigned = new Date(data.time_signed);
-        _this.rewards = data.rewards.map(function (d) { return new PubliqRewardLog_1.default(d); });
-        _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionLog_1.default(d); });
+        if (data !== undefined) {
+            _this.authority = data.authority;
+            _this.blockHash = data.block_hash === undefined ? data.blockHash : data.block_hash;
+            _this.blockNumber = data.block_number === undefined ? data.blockNumber : data.block_number;
+            _this.blockSize = data.block_size === undefined ? data.blockSize : data.block_size;
+            _this.timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
+            _this.rewards = data.rewards.map(function (d) { return new PubliqRewardLog_1.default(d); });
+            _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionLog_1.default(d); });
+        }
         return _this;
     }
     Object.defineProperty(PubliqBlockLog, "PropertyMap", {

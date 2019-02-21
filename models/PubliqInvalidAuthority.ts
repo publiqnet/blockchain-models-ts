@@ -8,10 +8,12 @@ export default class PubliqInvalidAuthority extends BaseModel {
     authorityProvided: string;
     authorityRequired: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.authorityProvided = data.authority_provided;
-        this.authorityRequired = data.authority_required;
+        if (data !== undefined) {
+            this.authorityProvided = data.authority_provided === undefined ?  data.authorityProvided: data.authority_provided;
+            this.authorityRequired = data.authority_required === undefined ?  data.authorityRequired: data.authority_required;
+        }
     }
 
     static get PropertyMap () {

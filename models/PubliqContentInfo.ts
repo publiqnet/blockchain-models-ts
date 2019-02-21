@@ -8,10 +8,12 @@ export default class PubliqContentInfo extends BaseModel {
     uri: string;
     storage: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.uri = data.uri;
-        this.storage = data.storage;
+        if (data !== undefined) {
+            this.uri = data.uri;
+            this.storage = data.storage;
+        }
     }
 
     static get PropertyMap () {

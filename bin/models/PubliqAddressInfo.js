@@ -19,8 +19,10 @@ var PubliqAddressInfo = /** @class */ (function (_super) {
     __extends(PubliqAddressInfo, _super);
     function PubliqAddressInfo(data) {
         var _this = _super.call(this) || this;
-        _this.nodeId = data.node_id;
-        _this.ipAddress = new PubliqIPAddress_1.default(data.ip_address);
+        if (data !== undefined) {
+            _this.nodeId = data.node_id === undefined ? data.nodeId : data.node_id;
+            _this.ipAddress = new PubliqIPAddress_1.default(data.ip_address === undefined ? data.ipAddress : data.ip_address);
+        }
         return _this;
     }
     Object.defineProperty(PubliqAddressInfo, "PropertyMap", {

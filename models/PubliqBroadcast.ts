@@ -8,10 +8,12 @@ export default class PubliqBroadcast extends BaseModel {
     echoes: number;
     package: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.echoes = data.echoes;
-        this.package = createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            this.echoes = data.echoes;
+            this.package = createInstanceFromJson(data.package);
+        }
     }
 
     static get PropertyMap () {

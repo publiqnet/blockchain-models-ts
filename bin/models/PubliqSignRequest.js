@@ -19,8 +19,10 @@ var PubliqSignRequest = /** @class */ (function (_super) {
     __extends(PubliqSignRequest, _super);
     function PubliqSignRequest(data) {
         var _this = _super.call(this) || this;
-        _this.privateKey = data.private_key;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        }
         return _this;
     }
     Object.defineProperty(PubliqSignRequest, "PropertyMap", {

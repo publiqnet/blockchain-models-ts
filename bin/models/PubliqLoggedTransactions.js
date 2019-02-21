@@ -19,7 +19,9 @@ var PubliqLoggedTransactions = /** @class */ (function (_super) {
     __extends(PubliqLoggedTransactions, _super);
     function PubliqLoggedTransactions(data) {
         var _this = _super.call(this) || this;
-        _this.actions = data.actions.map(function (d) { return new PubliqLoggedTransaction_1.default(d); });
+        if (data !== undefined) {
+            _this.actions = data.actions.map(function (d) { return new PubliqLoggedTransaction_1.default(d); });
+        }
         return _this;
     }
     Object.defineProperty(PubliqLoggedTransactions, "PropertyMap", {

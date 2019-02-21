@@ -19,10 +19,12 @@ var PubliqTransfer = /** @class */ (function (_super) {
     __extends(PubliqTransfer, _super);
     function PubliqTransfer(data) {
         var _this = _super.call(this) || this;
-        _this.from = data.from;
-        _this.to = data.to;
-        _this.amount = new PubliqCoin_1.default(data.amount);
-        _this.message = data.message;
+        if (data !== undefined) {
+            _this.from = data.from;
+            _this.to = data.to;
+            _this.amount = new PubliqCoin_1.default(data.amount);
+            _this.message = data.message;
+        }
         return _this;
     }
     Object.defineProperty(PubliqTransfer, "PropertyMap", {

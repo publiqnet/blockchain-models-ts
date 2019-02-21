@@ -7,9 +7,11 @@ export default class PubliqRemoteError extends BaseModel {
 
     message: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.message = data.message;
+        if (data !== undefined) {
+            this.message = data.message;
+        }
     }
 
     static get PropertyMap () {
@@ -19,7 +21,7 @@ export default class PubliqRemoteError extends BaseModel {
     }
 
     static get Rtt () {
-        return 47;
+        return 46;
     }
 
 } 

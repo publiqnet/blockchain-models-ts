@@ -18,8 +18,10 @@ var PubliqGetStorageFile = /** @class */ (function (_super) {
     __extends(PubliqGetStorageFile, _super);
     function PubliqGetStorageFile(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
-        _this.node = data.node;
+        if (data !== undefined) {
+            _this.uri = data.uri;
+            _this.node = data.node;
+        }
         return _this;
     }
     Object.defineProperty(PubliqGetStorageFile, "PropertyMap", {
@@ -34,7 +36,7 @@ var PubliqGetStorageFile = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqGetStorageFile, "Rtt", {
         get: function () {
-            return 50;
+            return 49;
         },
         enumerable: true,
         configurable: true

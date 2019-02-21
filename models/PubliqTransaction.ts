@@ -11,12 +11,14 @@ export default class PubliqTransaction extends BaseModel {
     fee: PubliqCoin;
     action: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.creation = new Date(data.creation);
-        this.expiry = new Date(data.expiry);
-        this.fee = new PubliqCoin(data.fee);
-        this.action = createInstanceFromJson(data.action);
+        if (data !== undefined) {
+            this.creation = new Date(data.creation);
+            this.expiry = new Date(data.expiry);
+            this.fee = new PubliqCoin(data.fee);
+            this.action = createInstanceFromJson(data.action);
+        }
     }
 
     static get PropertyMap () {

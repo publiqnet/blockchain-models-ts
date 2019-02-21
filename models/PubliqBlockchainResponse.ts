@@ -8,9 +8,11 @@ export default class PubliqBlockchainResponse extends BaseModel {
 
     signedBlocks: Array<PubliqSignedBlock>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.signedBlocks = data.signed_blocks.map(d => new PubliqSignedBlock(d));
+        if (data !== undefined) {
+            this.signedBlocks = data.signed_blocks === undefined ? data.signedBlocks.map(d => new PubliqSignedBlock(d)) : data.signed_blocks.map(d => new PubliqSignedBlock(d));
+        }
     }
 
     static get PropertyMap () {

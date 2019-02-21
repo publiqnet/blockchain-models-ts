@@ -19,7 +19,9 @@ var PubliqDigestRequest = /** @class */ (function (_super) {
     __extends(PubliqDigestRequest, _super);
     function PubliqDigestRequest(data) {
         var _this = _super.call(this) || this;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        }
         return _this;
     }
     Object.defineProperty(PubliqDigestRequest, "PropertyMap", {

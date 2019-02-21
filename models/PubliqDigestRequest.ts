@@ -7,9 +7,11 @@ export default class PubliqDigestRequest extends BaseModel {
 
     package: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.package = createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            this.package = createInstanceFromJson(data.package);
+        }
     }
 
     static get PropertyMap () {

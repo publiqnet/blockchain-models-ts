@@ -10,11 +10,13 @@ export default class PubliqSignedTransaction extends BaseModel {
     authority: string;
     signature: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.transactionDetails = new PubliqTransaction(data.transaction_details);
-        this.authority = data.authority;
-        this.signature = data.signature;
+        if (data !== undefined) {
+            this.transactionDetails = new PubliqTransaction(data.transaction_details === undefined ?  data.transactionDetails: data.transaction_details);
+            this.authority = data.authority;
+            this.signature = data.signature;
+        }
     }
 
     static get PropertyMap () {

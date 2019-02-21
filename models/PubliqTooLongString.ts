@@ -8,10 +8,12 @@ export default class PubliqTooLongString extends BaseModel {
     usedString: string;
     maxLength: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.usedString = data.used_string;
-        this.maxLength = data.max_length;
+        if (data !== undefined) {
+            this.usedString = data.used_string === undefined ?  data.usedString: data.used_string;
+            this.maxLength = data.max_length === undefined ?  data.maxLength: data.max_length;
+        }
     }
 
     static get PropertyMap () {

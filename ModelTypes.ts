@@ -11,7 +11,7 @@ import PubliqBlockLog from './models/PubliqBlockLog';
 import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
 import PubliqFile from './models/PubliqFile';
-import PubliqPage from './models/PubliqPage';
+import PubliqContent from './models/PubliqContent';
 import PubliqContract from './models/PubliqContract';
 import PubliqAddressInfo from './models/PubliqAddressInfo';
 import PubliqArticleInfo from './models/PubliqArticleInfo';
@@ -43,7 +43,6 @@ import PubliqInvalidSignature from './models/PubliqInvalidSignature';
 import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
 import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
 import PubliqTooLongString from './models/PubliqTooLongString';
-import PubliqTransactionDone from './models/PubliqTransactionDone';
 import PubliqFileNotFound from './models/PubliqFileNotFound';
 import PubliqRemoteError from './models/PubliqRemoteError';
 import PubliqStorageFile from './models/PubliqStorageFile';
@@ -71,7 +70,7 @@ const MODELS_TYPES = [
     PubliqReward,
     PubliqTransfer,
     PubliqFile,
-    PubliqPage,
+    PubliqContent,
     PubliqContract,
     PubliqAddressInfo,
     PubliqArticleInfo,
@@ -103,7 +102,6 @@ const MODELS_TYPES = [
     PubliqInvalidAuthority,
     PubliqNotEnoughBalance,
     PubliqTooLongString,
-    PubliqTransactionDone,
     PubliqFileNotFound,
     PubliqRemoteError,
     PubliqStorageFile,

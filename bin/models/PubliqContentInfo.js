@@ -18,8 +18,10 @@ var PubliqContentInfo = /** @class */ (function (_super) {
     __extends(PubliqContentInfo, _super);
     function PubliqContentInfo(data) {
         var _this = _super.call(this) || this;
-        _this.uri = data.uri;
-        _this.storage = data.storage;
+        if (data !== undefined) {
+            _this.uri = data.uri;
+            _this.storage = data.storage;
+        }
         return _this;
     }
     Object.defineProperty(PubliqContentInfo, "PropertyMap", {

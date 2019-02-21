@@ -12,13 +12,15 @@ export default class PubliqTransactionLog extends BaseModel {
     transactionSize: number;
     timeSigned: Date;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.fee = new PubliqCoin(data.fee);
-        this.action = createInstanceFromJson(data.action);
-        this.transactionHash = data.transaction_hash;
-        this.transactionSize = data.transaction_size;
-        this.timeSigned = new Date(data.time_signed);
+        if (data !== undefined) {
+            this.fee = new PubliqCoin(data.fee);
+            this.action = createInstanceFromJson(data.action);
+            this.transactionHash = data.transaction_hash === undefined ?  data.transactionHash: data.transaction_hash;
+            this.transactionSize = data.transaction_size === undefined ?  data.transactionSize: data.transaction_size;
+            this.timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
+        }
     }
 
     static get PropertyMap () {

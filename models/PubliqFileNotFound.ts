@@ -7,9 +7,11 @@ export default class PubliqFileNotFound extends BaseModel {
 
     uri: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.uri = data.uri;
+        if (data !== undefined) {
+            this.uri = data.uri;
+        }
     }
 
     static get PropertyMap () {
@@ -19,7 +21,7 @@ export default class PubliqFileNotFound extends BaseModel {
     }
 
     static get Rtt () {
-        return 46;
+        return 45;
     }
 
 } 

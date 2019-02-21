@@ -15,15 +15,17 @@ export default class PubliqBlockLog extends BaseModel {
     rewards: Array<PubliqRewardLog>;
     transactions: Array<PubliqTransactionLog>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.authority = data.authority;
-        this.blockHash = data.block_hash;
-        this.blockNumber = data.block_number;
-        this.blockSize = data.block_size;
-        this.timeSigned = new Date(data.time_signed);
-        this.rewards = data.rewards.map(d => new PubliqRewardLog(d));
-        this.transactions = data.transactions.map(d => new PubliqTransactionLog(d));
+        if (data !== undefined) {
+            this.authority = data.authority;
+            this.blockHash = data.block_hash === undefined ?  data.blockHash: data.block_hash;
+            this.blockNumber = data.block_number === undefined ?  data.blockNumber: data.block_number;
+            this.blockSize = data.block_size === undefined ?  data.blockSize: data.block_size;
+            this.timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
+            this.rewards = data.rewards.map(d => new PubliqRewardLog(d));
+            this.transactions = data.transactions.map(d => new PubliqTransactionLog(d));
+        }
     }
 
     static get PropertyMap () {

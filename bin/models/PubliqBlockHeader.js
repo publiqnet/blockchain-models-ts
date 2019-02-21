@@ -18,12 +18,14 @@ var PubliqBlockHeader = /** @class */ (function (_super) {
     __extends(PubliqBlockHeader, _super);
     function PubliqBlockHeader(data) {
         var _this = _super.call(this) || this;
-        _this.blockNumber = data.block_number;
-        _this.delta = data.delta;
-        _this.cSum = data.c_sum;
-        _this.cConst = data.c_const;
-        _this.prevHash = data.prev_hash;
-        _this.timeSigned = new Date(data.time_signed);
+        if (data !== undefined) {
+            _this.blockNumber = data.block_number === undefined ? data.blockNumber : data.block_number;
+            _this.delta = data.delta;
+            _this.cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
+            _this.cConst = data.c_const === undefined ? data.cConst : data.c_const;
+            _this.prevHash = data.prev_hash === undefined ? data.prevHash : data.prev_hash;
+            _this.timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
+        }
         return _this;
     }
     Object.defineProperty(PubliqBlockHeader, "PropertyMap", {

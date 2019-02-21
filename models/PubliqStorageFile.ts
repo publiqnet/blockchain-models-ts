@@ -8,10 +8,12 @@ export default class PubliqStorageFile extends BaseModel {
     mimeType: string;
     data: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.mimeType = data.mime_type;
-        this.data = data.data;
+        if (data !== undefined) {
+            this.mimeType = data.mime_type === undefined ?  data.mimeType: data.mime_type;
+            this.data = data.data;
+        }
     }
 
     static get PropertyMap () {
@@ -22,7 +24,7 @@ export default class PubliqStorageFile extends BaseModel {
     }
 
     static get Rtt () {
-        return 48;
+        return 47;
     }
 
 } 

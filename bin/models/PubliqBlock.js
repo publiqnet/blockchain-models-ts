@@ -21,9 +21,11 @@ var PubliqBlock = /** @class */ (function (_super) {
     __extends(PubliqBlock, _super);
     function PubliqBlock(data) {
         var _this = _super.call(this) || this;
-        _this.header = new PubliqBlockHeader_1.default(data.header);
-        _this.rewards = data.rewards.map(function (d) { return new PubliqReward_1.default(d); });
-        _this.signedTransactions = data.signed_transactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); });
+        if (data !== undefined) {
+            _this.header = new PubliqBlockHeader_1.default(data.header);
+            _this.rewards = data.rewards.map(function (d) { return new PubliqReward_1.default(d); });
+            _this.signedTransactions = data.signed_transactions === undefined ? data.signedTransactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); }) : data.signed_transactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); });
+        }
         return _this;
     }
     Object.defineProperty(PubliqBlock, "PropertyMap", {

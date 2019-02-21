@@ -8,10 +8,12 @@ export default class PubliqGetStorageFile extends BaseModel {
     uri: string;
     node: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.uri = data.uri;
-        this.node = data.node;
+        if (data !== undefined) {
+            this.uri = data.uri;
+            this.node = data.node;
+        }
     }
 
     static get PropertyMap () {
@@ -22,7 +24,7 @@ export default class PubliqGetStorageFile extends BaseModel {
     }
 
     static get Rtt () {
-        return 50;
+        return 49;
     }
 
 } 

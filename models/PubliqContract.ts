@@ -9,10 +9,12 @@ export default class PubliqContract extends BaseModel {
     owner: string;
     role: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.owner = data.owner;
-        this.role = PubliqNodeType.toNumber(data.role);
+        if (data !== undefined) {
+            this.owner = data.owner;
+            this.role = PubliqNodeType.toNumber(data.role);
+        }
     }
 
     static get PropertyMap () {

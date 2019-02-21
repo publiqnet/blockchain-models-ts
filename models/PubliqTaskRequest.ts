@@ -10,12 +10,14 @@ export default class PubliqTaskRequest extends BaseModel {
     signature: string;
     timeSigned: Date;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.package = createInstanceFromJson(data.package);
-        this.taskId = data.task_id;
-        this.signature = data.signature;
-        this.timeSigned = new Date(data.time_signed);
+        if (data !== undefined) {
+            this.package = createInstanceFromJson(data.package);
+            this.taskId = data.task_id === undefined ?  data.taskId: data.task_id;
+            this.signature = data.signature;
+            this.timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
+        }
     }
 
     static get PropertyMap () {
@@ -28,7 +30,7 @@ export default class PubliqTaskRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 55;
+        return 54;
     }
 
 } 

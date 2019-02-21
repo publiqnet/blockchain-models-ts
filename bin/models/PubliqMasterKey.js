@@ -18,7 +18,9 @@ var PubliqMasterKey = /** @class */ (function (_super) {
     __extends(PubliqMasterKey, _super);
     function PubliqMasterKey(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
+        if (data !== undefined) {
+            _this.masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
+        }
         return _this;
     }
     Object.defineProperty(PubliqMasterKey, "PropertyMap", {

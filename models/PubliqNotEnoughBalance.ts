@@ -9,10 +9,12 @@ export default class PubliqNotEnoughBalance extends BaseModel {
     balance: PubliqCoin;
     spending: PubliqCoin;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.balance = new PubliqCoin(data.balance);
-        this.spending = new PubliqCoin(data.spending);
+        if (data !== undefined) {
+            this.balance = new PubliqCoin(data.balance);
+            this.spending = new PubliqCoin(data.spending);
+        }
     }
 
     static get PropertyMap () {

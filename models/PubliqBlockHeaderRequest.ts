@@ -8,10 +8,12 @@ export default class PubliqBlockHeaderRequest extends BaseModel {
     blocksFrom: number;
     blocksTo: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.blocksFrom = data.blocks_from;
-        this.blocksTo = data.blocks_to;
+        if (data !== undefined) {
+            this.blocksFrom = data.blocks_from === undefined ?  data.blocksFrom: data.blocks_from;
+            this.blocksTo = data.blocks_to === undefined ?  data.blocksTo: data.blocks_to;
+        }
     }
 
     static get PropertyMap () {

@@ -8,10 +8,12 @@ export default class PubliqKeyPairRequest extends BaseModel {
     masterKey: string;
     index: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.masterKey = data.master_key;
-        this.index = data.index;
+        if (data !== undefined) {
+            this.masterKey = data.master_key === undefined ?  data.masterKey: data.master_key;
+            this.index = data.index;
+        }
     }
 
     static get PropertyMap () {

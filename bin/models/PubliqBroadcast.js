@@ -19,8 +19,10 @@ var PubliqBroadcast = /** @class */ (function (_super) {
     __extends(PubliqBroadcast, _super);
     function PubliqBroadcast(data) {
         var _this = _super.call(this) || this;
-        _this.echoes = data.echoes;
-        _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            _this.echoes = data.echoes;
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+        }
         return _this;
     }
     Object.defineProperty(PubliqBroadcast, "PropertyMap", {

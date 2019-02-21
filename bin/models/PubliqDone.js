@@ -17,7 +17,10 @@ var BaseModel_1 = require("../BaseModel");
 var PubliqDone = /** @class */ (function (_super) {
     __extends(PubliqDone, _super);
     function PubliqDone(data) {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        if (data !== undefined) {
+        }
+        return _this;
     }
     Object.defineProperty(PubliqDone, "PropertyMap", {
         get: function () {

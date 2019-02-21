@@ -20,9 +20,11 @@ var PubliqLoggedTransaction = /** @class */ (function (_super) {
     __extends(PubliqLoggedTransaction, _super);
     function PubliqLoggedTransaction(data) {
         var _this = _super.call(this) || this;
-        _this.loggingType = PubliqLoggingType_1.default.toNumber(data.logging_type);
-        _this.index = data.index;
-        _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+        if (data !== undefined) {
+            _this.loggingType = PubliqLoggingType_1.default.toNumber(data.logging_type === undefined ? data.loggingType : data.logging_type);
+            _this.index = data.index;
+            _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+        }
         return _this;
     }
     Object.defineProperty(PubliqLoggedTransaction, "PropertyMap", {

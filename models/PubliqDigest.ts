@@ -8,10 +8,12 @@ export default class PubliqDigest extends BaseModel {
     base58Hash: string;
     package: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.base58Hash = data.base58_hash;
-        this.package = createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            this.base58Hash = data.base58_hash === undefined ?  data.base58Hash: data.base58_hash;
+            this.package = createInstanceFromJson(data.package);
+        }
     }
 
     static get PropertyMap () {

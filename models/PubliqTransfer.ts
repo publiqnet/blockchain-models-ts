@@ -11,12 +11,14 @@ export default class PubliqTransfer extends BaseModel {
     amount: PubliqCoin;
     message: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.from = data.from;
-        this.to = data.to;
-        this.amount = new PubliqCoin(data.amount);
-        this.message = data.message;
+        if (data !== undefined) {
+            this.from = data.from;
+            this.to = data.to;
+            this.amount = new PubliqCoin(data.amount);
+            this.message = data.message;
+        }
     }
 
     static get PropertyMap () {

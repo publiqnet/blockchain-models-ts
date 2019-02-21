@@ -10,11 +10,13 @@ export default class PubliqSignedBlock extends BaseModel {
     authority: string;
     signature: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.blockDetails = new PubliqBlock(data.block_details);
-        this.authority = data.authority;
-        this.signature = data.signature;
+        if (data !== undefined) {
+            this.blockDetails = new PubliqBlock(data.block_details === undefined ?  data.blockDetails: data.block_details);
+            this.authority = data.authority;
+            this.signature = data.signature;
+        }
     }
 
     static get PropertyMap () {

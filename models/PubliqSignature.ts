@@ -9,11 +9,13 @@ export default class PubliqSignature extends BaseModel {
     signature: string;
     package: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.publicKey = data.public_key;
-        this.signature = data.signature;
-        this.package = createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            this.publicKey = data.public_key === undefined ?  data.publicKey: data.public_key;
+            this.signature = data.signature;
+            this.package = createInstanceFromJson(data.package);
+        }
     }
 
     static get PropertyMap () {

@@ -19,9 +19,11 @@ var PubliqSyncResponse = /** @class */ (function (_super) {
     __extends(PubliqSyncResponse, _super);
     function PubliqSyncResponse(data) {
         var _this = _super.call(this) || this;
-        _this.number = data.number;
-        _this.cSum = data.c_sum;
-        _this.syncInfo = ModelTypes_1.createInstanceFromJson(data.sync_info);
+        if (data !== undefined) {
+            _this.number = data.number;
+            _this.cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
+            _this.syncInfo = ModelTypes_1.createInstanceFromJson(data.sync_info === undefined ? data.syncInfo : data.sync_info);
+        }
         return _this;
     }
     Object.defineProperty(PubliqSyncResponse, "PropertyMap", {

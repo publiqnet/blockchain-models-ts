@@ -8,10 +8,12 @@ export default class PubliqSignRequest extends BaseModel {
     privateKey: string;
     package: Object;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.privateKey = data.private_key;
-        this.package = createInstanceFromJson(data.package);
+        if (data !== undefined) {
+            this.privateKey = data.private_key === undefined ?  data.privateKey: data.private_key;
+            this.package = createInstanceFromJson(data.package);
+        }
     }
 
     static get PropertyMap () {

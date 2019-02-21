@@ -11,11 +11,13 @@ export default class PubliqRewardLog extends BaseModel {
     amount: PubliqCoin;
     rewardType: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.to = data.to;
-        this.amount = new PubliqCoin(data.amount);
-        this.rewardType = PubliqRewardType.toNumber(data.reward_type);
+        if (data !== undefined) {
+            this.to = data.to;
+            this.amount = new PubliqCoin(data.amount);
+            this.rewardType = PubliqRewardType.toNumber(data.reward_type === undefined ?  data.rewardType: data.reward_type);
+        }
     }
 
     static get PropertyMap () {

@@ -12,14 +12,16 @@ export default class PubliqBlockHeader extends BaseModel {
     prevHash: string;
     timeSigned: Date;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.blockNumber = data.block_number;
-        this.delta = data.delta;
-        this.cSum = data.c_sum;
-        this.cConst = data.c_const;
-        this.prevHash = data.prev_hash;
-        this.timeSigned = new Date(data.time_signed);
+        if (data !== undefined) {
+            this.blockNumber = data.block_number === undefined ?  data.blockNumber: data.block_number;
+            this.delta = data.delta;
+            this.cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
+            this.cConst = data.c_const === undefined ?  data.cConst: data.c_const;
+            this.prevHash = data.prev_hash === undefined ?  data.prevHash: data.prev_hash;
+            this.timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
+        }
     }
 
     static get PropertyMap () {

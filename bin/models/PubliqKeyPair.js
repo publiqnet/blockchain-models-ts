@@ -18,10 +18,12 @@ var PubliqKeyPair = /** @class */ (function (_super) {
     __extends(PubliqKeyPair, _super);
     function PubliqKeyPair(data) {
         var _this = _super.call(this) || this;
-        _this.masterKey = data.master_key;
-        _this.index = data.index;
-        _this.publicKey = data.public_key;
-        _this.privateKey = data.private_key;
+        if (data !== undefined) {
+            _this.masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
+            _this.index = data.index;
+            _this.publicKey = data.public_key === undefined ? data.publicKey : data.public_key;
+            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+        }
         return _this;
     }
     Object.defineProperty(PubliqKeyPair, "PropertyMap", {

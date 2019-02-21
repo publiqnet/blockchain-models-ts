@@ -18,8 +18,10 @@ var PubliqBlockHeaderRequest = /** @class */ (function (_super) {
     __extends(PubliqBlockHeaderRequest, _super);
     function PubliqBlockHeaderRequest(data) {
         var _this = _super.call(this) || this;
-        _this.blocksFrom = data.blocks_from;
-        _this.blocksTo = data.blocks_to;
+        if (data !== undefined) {
+            _this.blocksFrom = data.blocks_from === undefined ? data.blocksFrom : data.blocks_from;
+            _this.blocksTo = data.blocks_to === undefined ? data.blocksTo : data.blocks_to;
+        }
         return _this;
     }
     Object.defineProperty(PubliqBlockHeaderRequest, "PropertyMap", {

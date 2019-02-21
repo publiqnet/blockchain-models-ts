@@ -6,8 +6,10 @@ import {createInstanceFromJson} from '../ModelTypes'
 export default class PubliqDone extends BaseModel {
 
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
+        if (data !== undefined) {
+        }
     }
 
     static get PropertyMap () {

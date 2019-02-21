@@ -6,8 +6,10 @@ import {createInstanceFromJson} from '../ModelTypes'
 export default class PubliqPing extends BaseModel {
 
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
+        if (data !== undefined) {
+        }
     }
 
     static get PropertyMap () {
@@ -16,7 +18,7 @@ export default class PubliqPing extends BaseModel {
     }
 
     static get Rtt () {
-        return 53;
+        return 52;
     }
 
 } 

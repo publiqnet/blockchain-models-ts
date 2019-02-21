@@ -8,10 +8,12 @@ export default class PubliqCoin extends BaseModel {
     whole: number;
     fraction: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.whole = data.whole;
-        this.fraction = data.fraction;
+        if (data !== undefined) {
+            this.whole = data.whole;
+            this.fraction = data.fraction;
+        }
     }
 
     static get PropertyMap () {

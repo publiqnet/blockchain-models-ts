@@ -9,11 +9,13 @@ export default class PubliqStatItem extends BaseModel {
     passed: number;
     failed: number;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.node = data.node;
-        this.passed = data.passed;
-        this.failed = data.failed;
+        if (data !== undefined) {
+            this.node = data.node;
+            this.passed = data.passed;
+            this.failed = data.failed;
+        }
     }
 
     static get PropertyMap () {

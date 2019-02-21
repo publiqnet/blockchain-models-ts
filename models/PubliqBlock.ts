@@ -12,11 +12,13 @@ export default class PubliqBlock extends BaseModel {
     rewards: Array<PubliqReward>;
     signedTransactions: Array<PubliqSignedTransaction>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.header = new PubliqBlockHeader(data.header);
-        this.rewards = data.rewards.map(d => new PubliqReward(d));
-        this.signedTransactions = data.signed_transactions.map(d => new PubliqSignedTransaction(d));
+        if (data !== undefined) {
+            this.header = new PubliqBlockHeader(data.header);
+            this.rewards = data.rewards.map(d => new PubliqReward(d));
+            this.signedTransactions = data.signed_transactions === undefined ? data.signedTransactions.map(d => new PubliqSignedTransaction(d)) : data.signed_transactions.map(d => new PubliqSignedTransaction(d));
+        }
     }
 
     static get PropertyMap () {

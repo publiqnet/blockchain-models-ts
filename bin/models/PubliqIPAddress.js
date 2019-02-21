@@ -20,9 +20,11 @@ var PubliqIPAddress = /** @class */ (function (_super) {
     __extends(PubliqIPAddress, _super);
     function PubliqIPAddress(data) {
         var _this = _super.call(this) || this;
-        _this.ipType = PubliqIPType_1.default.toNumber(data.ip_type);
-        _this.local = new PubliqIPDestination_1.default(data.local);
-        _this.remote = new PubliqIPDestination_1.default(data.remote);
+        if (data !== undefined) {
+            _this.ipType = PubliqIPType_1.default.toNumber(data.ip_type === undefined ? data.ipType : data.ip_type);
+            _this.local = new PubliqIPDestination_1.default(data.local);
+            _this.remote = new PubliqIPDestination_1.default(data.remote);
+        }
         return _this;
     }
     Object.defineProperty(PubliqIPAddress, "PropertyMap", {
@@ -38,7 +40,7 @@ var PubliqIPAddress = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqIPAddress, "Rtt", {
         get: function () {
-            return 52;
+            return 51;
         },
         enumerable: true,
         configurable: true

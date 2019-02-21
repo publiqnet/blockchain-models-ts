@@ -20,9 +20,11 @@ var PubliqRewardLog = /** @class */ (function (_super) {
     __extends(PubliqRewardLog, _super);
     function PubliqRewardLog(data) {
         var _this = _super.call(this) || this;
-        _this.to = data.to;
-        _this.amount = new PubliqCoin_1.default(data.amount);
-        _this.rewardType = PubliqRewardType_1.default.toNumber(data.reward_type);
+        if (data !== undefined) {
+            _this.to = data.to;
+            _this.amount = new PubliqCoin_1.default(data.amount);
+            _this.rewardType = PubliqRewardType_1.default.toNumber(data.reward_type === undefined ? data.rewardType : data.reward_type);
+        }
         return _this;
     }
     Object.defineProperty(PubliqRewardLog, "PropertyMap", {

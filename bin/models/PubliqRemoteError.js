@@ -18,7 +18,9 @@ var PubliqRemoteError = /** @class */ (function (_super) {
     __extends(PubliqRemoteError, _super);
     function PubliqRemoteError(data) {
         var _this = _super.call(this) || this;
-        _this.message = data.message;
+        if (data !== undefined) {
+            _this.message = data.message;
+        }
         return _this;
     }
     Object.defineProperty(PubliqRemoteError, "PropertyMap", {
@@ -32,7 +34,7 @@ var PubliqRemoteError = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqRemoteError, "Rtt", {
         get: function () {
-            return 47;
+            return 46;
         },
         enumerable: true,
         configurable: true

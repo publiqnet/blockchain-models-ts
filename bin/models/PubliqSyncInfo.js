@@ -18,8 +18,10 @@ var PubliqSyncInfo = /** @class */ (function (_super) {
     __extends(PubliqSyncInfo, _super);
     function PubliqSyncInfo(data) {
         var _this = _super.call(this) || this;
-        _this.number = data.number;
-        _this.cSum = data.c_sum;
+        if (data !== undefined) {
+            _this.number = data.number;
+            _this.cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
+        }
         return _this;
     }
     Object.defineProperty(PubliqSyncInfo, "PropertyMap", {

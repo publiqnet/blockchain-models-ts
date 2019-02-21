@@ -18,8 +18,10 @@ var PubliqTooLongString = /** @class */ (function (_super) {
     __extends(PubliqTooLongString, _super);
     function PubliqTooLongString(data) {
         var _this = _super.call(this) || this;
-        _this.usedString = data.used_string;
-        _this.maxLength = data.max_length;
+        if (data !== undefined) {
+            _this.usedString = data.used_string === undefined ? data.usedString : data.used_string;
+            _this.maxLength = data.max_length === undefined ? data.maxLength : data.max_length;
+        }
         return _this;
     }
     Object.defineProperty(PubliqTooLongString, "PropertyMap", {

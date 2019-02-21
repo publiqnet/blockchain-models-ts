@@ -7,9 +7,11 @@ export default class PubliqInvalidPrivateKey extends BaseModel {
 
     privateKey: string;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.privateKey = data.private_key;
+        if (data !== undefined) {
+            this.privateKey = data.private_key === undefined ?  data.privateKey: data.private_key;
+        }
     }
 
     static get PropertyMap () {

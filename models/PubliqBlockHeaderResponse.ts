@@ -8,9 +8,11 @@ export default class PubliqBlockHeaderResponse extends BaseModel {
 
     blockHeaders: Array<PubliqBlockHeader>;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.blockHeaders = data.block_headers.map(d => new PubliqBlockHeader(d));
+        if (data !== undefined) {
+            this.blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(d => new PubliqBlockHeader(d)) : data.block_headers.map(d => new PubliqBlockHeader(d));
+        }
     }
 
     static get PropertyMap () {

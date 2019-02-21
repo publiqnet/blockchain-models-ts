@@ -11,11 +11,13 @@ export default class PubliqIPAddress extends BaseModel {
     local: PubliqIPDestination;
     remote: PubliqIPDestination;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.ipType = PubliqIPType.toNumber(data.ip_type);
-        this.local = new PubliqIPDestination(data.local);
-        this.remote = new PubliqIPDestination(data.remote);
+        if (data !== undefined) {
+            this.ipType = PubliqIPType.toNumber(data.ip_type === undefined ?  data.ipType: data.ip_type);
+            this.local = new PubliqIPDestination(data.local);
+            this.remote = new PubliqIPDestination(data.remote);
+        }
     }
 
     static get PropertyMap () {
@@ -27,7 +29,7 @@ export default class PubliqIPAddress extends BaseModel {
     }
 
     static get Rtt () {
-        return 52;
+        return 51;
     }
 
 } 

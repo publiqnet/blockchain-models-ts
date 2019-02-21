@@ -8,9 +8,11 @@ export default class PubliqInvalidSignature extends BaseModel {
 
     details: PubliqSignature;
 
-    constructor(data) { 
+    constructor(data?: any) { 
         super();
-        this.details = new PubliqSignature(data.details);
+        if (data !== undefined) {
+            this.details = new PubliqSignature(data.details);
+        }
     }
 
     static get PropertyMap () {
