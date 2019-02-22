@@ -19,7 +19,7 @@ var PubliqPong = /** @class */ (function (_super) {
     function PubliqPong(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.nodeid = data.nodeid;
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
             _this.stamp = new Date(data.stamp);
             _this.signature = data.signature;
         }
@@ -28,7 +28,7 @@ var PubliqPong = /** @class */ (function (_super) {
     Object.defineProperty(PubliqPong, "PropertyMap", {
         get: function () {
             return {
-                nodeid: 'nodeid',
+                nodeAddress: 'node_address',
                 stamp: 'stamp',
                 signature: 'signature',
             };

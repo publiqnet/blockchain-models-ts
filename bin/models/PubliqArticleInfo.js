@@ -20,8 +20,8 @@ var PubliqArticleInfo = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.uri = data.uri;
-            _this.author = data.author;
-            _this.channel = data.channel;
+            _this.authorAddress = data.author_address === undefined ? data.authorAddress : data.author_address;
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
         }
         return _this;
     }
@@ -29,8 +29,8 @@ var PubliqArticleInfo = /** @class */ (function (_super) {
         get: function () {
             return {
                 uri: 'uri',
-                author: 'author',
-                channel: 'channel',
+                authorAddress: 'author_address',
+                channelAddress: 'channel_address',
             };
         },
         enumerable: true,

@@ -20,7 +20,7 @@ var PubliqGetStorageFile = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.uri = data.uri;
-            _this.node = data.node;
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
         }
         return _this;
     }
@@ -28,7 +28,7 @@ var PubliqGetStorageFile = /** @class */ (function (_super) {
         get: function () {
             return {
                 uri: 'uri',
-                node: 'node',
+                nodeAddress: 'node_address',
             };
         },
         enumerable: true,

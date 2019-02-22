@@ -5,14 +5,14 @@ import {createInstanceFromJson} from '../ModelTypes'
 
 export default class PubliqPong extends BaseModel {
 
-    nodeid: string;
+    nodeAddress: string;
     stamp: Date;
     signature: string;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.nodeid = data.nodeid;
+            this.nodeAddress = data.node_address === undefined ?  data.nodeAddress: data.node_address;
             this.stamp = new Date(data.stamp);
             this.signature = data.signature;
         }
@@ -20,7 +20,7 @@ export default class PubliqPong extends BaseModel {
 
     static get PropertyMap () {
         return {
-            nodeid : 'nodeid',
+            nodeAddress : 'node_address',
             stamp : 'stamp',
             signature : 'signature',
         }

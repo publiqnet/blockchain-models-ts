@@ -15,33 +15,33 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqNodeType_1 = require("./PubliqNodeType");
-var PubliqContract = /** @class */ (function (_super) {
-    __extends(PubliqContract, _super);
-    function PubliqContract(data) {
+var PubliqRole = /** @class */ (function (_super) {
+    __extends(PubliqRole, _super);
+    function PubliqRole(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.owner = data.owner;
-            _this.role = PubliqNodeType_1.default.toNumber(data.role);
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
+            _this.nodeType = PubliqNodeType_1.default.toNumber(data.node_type === undefined ? data.nodeType : data.node_type);
         }
         return _this;
     }
-    Object.defineProperty(PubliqContract, "PropertyMap", {
+    Object.defineProperty(PubliqRole, "PropertyMap", {
         get: function () {
             return {
-                owner: 'owner',
-                role: 'role',
+                nodeAddress: 'node_address',
+                nodeType: 'node_type',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqContract, "Rtt", {
+    Object.defineProperty(PubliqRole, "Rtt", {
         get: function () {
             return 14;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqContract;
+    return PubliqRole;
 }(BaseModel_1.default));
-exports.default = PubliqContract;
+exports.default = PubliqRole;

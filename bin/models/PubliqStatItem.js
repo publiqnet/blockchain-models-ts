@@ -19,7 +19,7 @@ var PubliqStatItem = /** @class */ (function (_super) {
     function PubliqStatItem(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.node = data.node;
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
             _this.passed = data.passed;
             _this.failed = data.failed;
         }
@@ -28,7 +28,7 @@ var PubliqStatItem = /** @class */ (function (_super) {
     Object.defineProperty(PubliqStatItem, "PropertyMap", {
         get: function () {
             return {
-                node: 'node',
+                nodeAddress: 'node_address',
                 passed: 'passed',
                 failed: 'failed',
             };

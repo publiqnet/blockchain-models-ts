@@ -12,7 +12,7 @@ import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
 import PubliqFile from './models/PubliqFile';
 import PubliqContent from './models/PubliqContent';
-import PubliqContract from './models/PubliqContract';
+import PubliqRole from './models/PubliqRole';
 import PubliqAddressInfo from './models/PubliqAddressInfo';
 import PubliqArticleInfo from './models/PubliqArticleInfo';
 import PubliqContentInfo from './models/PubliqContentInfo';
@@ -71,7 +71,7 @@ const MODELS_TYPES = [
     PubliqTransfer,
     PubliqFile,
     PubliqContent,
-    PubliqContract,
+    PubliqRole,
     PubliqAddressInfo,
     PubliqArticleInfo,
     PubliqContentInfo,

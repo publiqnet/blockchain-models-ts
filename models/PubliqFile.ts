@@ -5,20 +5,20 @@ import {createInstanceFromJson} from '../ModelTypes'
 
 export default class PubliqFile extends BaseModel {
 
-    author: string;
+    authorAddress: string;
     uri: string;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.author = data.author;
+            this.authorAddress = data.author_address === undefined ?  data.authorAddress: data.author_address;
             this.uri = data.uri;
         }
     }
 
     static get PropertyMap () {
         return {
-            author : 'author',
+            authorAddress : 'author_address',
             uri : 'uri',
         }
     }

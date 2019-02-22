@@ -19,7 +19,7 @@ var PubliqFile = /** @class */ (function (_super) {
     function PubliqFile(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.author = data.author;
+            _this.authorAddress = data.author_address === undefined ? data.authorAddress : data.author_address;
             _this.uri = data.uri;
         }
         return _this;
@@ -27,7 +27,7 @@ var PubliqFile = /** @class */ (function (_super) {
     Object.defineProperty(PubliqFile, "PropertyMap", {
         get: function () {
             return {
-                author: 'author',
+                authorAddress: 'author_address',
                 uri: 'uri',
             };
         },

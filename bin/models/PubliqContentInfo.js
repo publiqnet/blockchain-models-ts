@@ -20,7 +20,7 @@ var PubliqContentInfo = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.uri = data.uri;
-            _this.storage = data.storage;
+            _this.storageAddress = data.storage_address === undefined ? data.storageAddress : data.storage_address;
         }
         return _this;
     }
@@ -28,7 +28,7 @@ var PubliqContentInfo = /** @class */ (function (_super) {
         get: function () {
             return {
                 uri: 'uri',
-                storage: 'storage',
+                storageAddress: 'storage_address',
             };
         },
         enumerable: true,

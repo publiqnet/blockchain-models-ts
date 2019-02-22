@@ -6,20 +6,20 @@ import {createInstanceFromJson} from '../ModelTypes'
 export default class PubliqStorageFileAddress extends BaseModel {
 
     uri: string;
-    node: string;
+    nodeAddress: string;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.uri = data.uri;
-            this.node = data.node;
+            this.nodeAddress = data.node_address === undefined ?  data.nodeAddress: data.node_address;
         }
     }
 
     static get PropertyMap () {
         return {
             uri : 'uri',
-            node : 'node',
+            nodeAddress : 'node_address',
         }
     }
 

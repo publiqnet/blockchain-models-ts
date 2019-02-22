@@ -19,7 +19,7 @@ var PubliqContent = /** @class */ (function (_super) {
     function PubliqContent(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.channel = data.channel;
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
             _this.fileUris = data.file_uris === undefined ? data.fileUris : data.file_uris;
         }
         return _this;
@@ -27,7 +27,7 @@ var PubliqContent = /** @class */ (function (_super) {
     Object.defineProperty(PubliqContent, "PropertyMap", {
         get: function () {
             return {
-                channel: 'channel',
+                channelAddress: 'channel_address',
                 fileUris: 'file_uris',
             };
         },
