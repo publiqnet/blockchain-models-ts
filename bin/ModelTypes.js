@@ -13,6 +13,7 @@ var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
 var PubliqReward_1 = require("./models/PubliqReward");
 var PubliqTransfer_1 = require("./models/PubliqTransfer");
 var PubliqFile_1 = require("./models/PubliqFile");
+var PubliqContentUnit_1 = require("./models/PubliqContentUnit");
 var PubliqContent_1 = require("./models/PubliqContent");
 var PubliqRole_1 = require("./models/PubliqRole");
 var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
@@ -70,6 +71,7 @@ var MODELS_TYPES = [
     PubliqReward_1.default,
     PubliqTransfer_1.default,
     PubliqFile_1.default,
+    PubliqContentUnit_1.default,
     PubliqContent_1.default,
     PubliqRole_1.default,
     PubliqAddressInfo_1.default,

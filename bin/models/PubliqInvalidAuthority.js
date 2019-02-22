@@ -36,7 +36,7 @@ var PubliqInvalidAuthority = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqInvalidAuthority, "Rtt", {
         get: function () {
-            return 42;
+            return 43;
         },
         enumerable: true,
         configurable: true

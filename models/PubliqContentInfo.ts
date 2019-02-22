@@ -24,7 +24,7 @@ export default class PubliqContentInfo extends BaseModel {
     }
 
     static get Rtt () {
-        return 17;
+        return 18;
     }
 
 } 

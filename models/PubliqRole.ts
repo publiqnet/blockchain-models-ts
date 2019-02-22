@@ -25,7 +25,7 @@ export default class PubliqRole extends BaseModel {
     }
 
     static get Rtt () {
-        return 14;
+        return 15;
     }
 
 } 

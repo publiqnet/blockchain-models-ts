@@ -39,7 +39,7 @@ var PubliqSignature = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqSignature, "Rtt", {
         get: function () {
-            return 30;
+            return 31;
         },
         enumerable: true,
         configurable: true

@@ -20,7 +20,8 @@ var PubliqContent = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
-            _this.fileUris = data.file_uris === undefined ? data.fileUris : data.file_uris;
+            _this.contentId = data.content_id === undefined ? data.contentId : data.content_id;
+            _this.contentUnitUris = data.content_unit_uris === undefined ? data.contentUnitUris : data.content_unit_uris;
         }
         return _this;
     }
@@ -28,7 +29,8 @@ var PubliqContent = /** @class */ (function (_super) {
         get: function () {
             return {
                 channelAddress: 'channel_address',
-                fileUris: 'file_uris',
+                contentId: 'content_id',
+                contentUnitUris: 'content_unit_uris',
             };
         },
         enumerable: true,
@@ -36,7 +38,7 @@ var PubliqContent = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqContent, "Rtt", {
         get: function () {
-            return 13;
+            return 14;
         },
         enumerable: true,
         configurable: true

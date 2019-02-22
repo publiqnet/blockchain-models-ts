@@ -14,32 +14,39 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqSignature_1 = require("./PubliqSignature");
-var PubliqInvalidSignature = /** @class */ (function (_super) {
-    __extends(PubliqInvalidSignature, _super);
-    function PubliqInvalidSignature(data) {
+var PubliqContentUnit = /** @class */ (function (_super) {
+    __extends(PubliqContentUnit, _super);
+    function PubliqContentUnit(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.details = new PubliqSignature_1.default(data.details);
+            _this.authorAddress = data.author_address === undefined ? data.authorAddress : data.author_address;
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
+            _this.contentId = data.content_id === undefined ? data.contentId : data.content_id;
+            _this.uri = data.uri;
+            _this.fileUris = data.file_uris === undefined ? data.fileUris : data.file_uris;
         }
         return _this;
     }
-    Object.defineProperty(PubliqInvalidSignature, "PropertyMap", {
+    Object.defineProperty(PubliqContentUnit, "PropertyMap", {
         get: function () {
             return {
-                details: 'details',
+                authorAddress: 'author_address',
+                channelAddress: 'channel_address',
+                contentId: 'content_id',
+                uri: 'uri',
+                fileUris: 'file_uris',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqInvalidSignature, "Rtt", {
+    Object.defineProperty(PubliqContentUnit, "Rtt", {
         get: function () {
-            return 42;
+            return 13;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqInvalidSignature;
+    return PubliqContentUnit;
 }(BaseModel_1.default));
-exports.default = PubliqInvalidSignature;
+exports.default = PubliqContentUnit;

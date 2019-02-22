@@ -40,7 +40,7 @@ var PubliqKeyPair = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqKeyPair, "Rtt", {
         get: function () {
-            return 28;
+            return 29;
         },
         enumerable: true,
         configurable: true

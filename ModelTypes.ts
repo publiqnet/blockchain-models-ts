@@ -11,6 +11,7 @@ import PubliqBlockLog from './models/PubliqBlockLog';
 import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
 import PubliqFile from './models/PubliqFile';
+import PubliqContentUnit from './models/PubliqContentUnit';
 import PubliqContent from './models/PubliqContent';
 import PubliqRole from './models/PubliqRole';
 import PubliqAddressInfo from './models/PubliqAddressInfo';
@@ -70,6 +71,7 @@ const MODELS_TYPES = [
     PubliqReward,
     PubliqTransfer,
     PubliqFile,
+    PubliqContentUnit,
     PubliqContent,
     PubliqRole,
     PubliqAddressInfo,

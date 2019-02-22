@@ -36,7 +36,7 @@ var PubliqContentInfo = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqContentInfo, "Rtt", {
         get: function () {
-            return 17;
+            return 18;
         },
         enumerable: true,
         configurable: true
