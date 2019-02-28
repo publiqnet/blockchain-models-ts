@@ -19,7 +19,9 @@ var PubliqContentInfo = /** @class */ (function (_super) {
     function PubliqContentInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.uri = data.uri;
+            _this.status = data.status;
+            _this.contentId = data.content_id === undefined ? data.contentId : data.content_id;
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
             _this.storageAddress = data.storage_address === undefined ? data.storageAddress : data.storage_address;
         }
         return _this;
@@ -27,7 +29,9 @@ var PubliqContentInfo = /** @class */ (function (_super) {
     Object.defineProperty(PubliqContentInfo, "PropertyMap", {
         get: function () {
             return {
-                uri: 'uri',
+                status: 'status',
+                contentId: 'content_id',
+                channelAddress: 'channel_address',
                 storageAddress: 'storage_address',
             };
         },
@@ -36,7 +40,7 @@ var PubliqContentInfo = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqContentInfo, "Rtt", {
         get: function () {
-            return 18;
+            return 17;
         },
         enumerable: true,
         configurable: true

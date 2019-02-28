@@ -19,8 +19,8 @@ var PubliqContent = /** @class */ (function (_super) {
     function PubliqContent(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
             _this.contentId = data.content_id === undefined ? data.contentId : data.content_id;
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
             _this.contentUnitUris = data.content_unit_uris === undefined ? data.contentUnitUris : data.content_unit_uris;
         }
         return _this;
@@ -28,8 +28,8 @@ var PubliqContent = /** @class */ (function (_super) {
     Object.defineProperty(PubliqContent, "PropertyMap", {
         get: function () {
             return {
-                channelAddress: 'channel_address',
                 contentId: 'content_id',
+                channelAddress: 'channel_address',
                 contentUnitUris: 'content_unit_uris',
             };
         },

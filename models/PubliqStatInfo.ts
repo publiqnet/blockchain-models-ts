@@ -25,7 +25,7 @@ export default class PubliqStatInfo extends BaseModel {
     }
 
     static get Rtt () {
-        return 20;
+        return 19;
     }
 
 } 

@@ -27,7 +27,7 @@ export default class PubliqSyncResponse extends BaseModel {
     }
 
     static get Rtt () {
-        return 34;
+        return 33;
     }
 
 } 

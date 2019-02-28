@@ -30,7 +30,7 @@ export default class PubliqKeyPair extends BaseModel {
     }
 
     static get Rtt () {
-        return 29;
+        return 28;
     }
 
 } 

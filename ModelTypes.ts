@@ -15,7 +15,6 @@ import PubliqContentUnit from './models/PubliqContentUnit';
 import PubliqContent from './models/PubliqContent';
 import PubliqRole from './models/PubliqRole';
 import PubliqAddressInfo from './models/PubliqAddressInfo';
-import PubliqArticleInfo from './models/PubliqArticleInfo';
 import PubliqContentInfo from './models/PubliqContentInfo';
 import PubliqStatItem from './models/PubliqStatItem';
 import PubliqStatInfo from './models/PubliqStatInfo';
@@ -75,7 +74,6 @@ const MODELS_TYPES = [
     PubliqContent,
     PubliqRole,
     PubliqAddressInfo,
-    PubliqArticleInfo,
     PubliqContentInfo,
     PubliqStatItem,
     PubliqStatInfo,

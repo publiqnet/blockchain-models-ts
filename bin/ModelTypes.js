@@ -17,7 +17,6 @@ var PubliqContentUnit_1 = require("./models/PubliqContentUnit");
 var PubliqContent_1 = require("./models/PubliqContent");
 var PubliqRole_1 = require("./models/PubliqRole");
 var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
-var PubliqArticleInfo_1 = require("./models/PubliqArticleInfo");
 var PubliqContentInfo_1 = require("./models/PubliqContentInfo");
 var PubliqStatItem_1 = require("./models/PubliqStatItem");
 var PubliqStatInfo_1 = require("./models/PubliqStatInfo");
@@ -75,7 +74,6 @@ var MODELS_TYPES = [
     PubliqContent_1.default,
     PubliqRole_1.default,
     PubliqAddressInfo_1.default,
-    PubliqArticleInfo_1.default,
     PubliqContentInfo_1.default,
     PubliqStatItem_1.default,
     PubliqStatInfo_1.default,

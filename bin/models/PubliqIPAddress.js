@@ -40,7 +40,7 @@ var PubliqIPAddress = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqIPAddress, "Rtt", {
         get: function () {
-            return 52;
+            return 51;
         },
         enumerable: true,
         configurable: true

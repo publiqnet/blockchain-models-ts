@@ -24,7 +24,7 @@ export default class PubliqBlockHeaderRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 35;
+        return 34;
     }
 
 } 
