@@ -14,12 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var PubliqInfoType_1 = require("./PubliqInfoType");
 var PubliqContentInfo = /** @class */ (function (_super) {
     __extends(PubliqContentInfo, _super);
     function PubliqContentInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.status = data.status;
+            _this.status = PubliqInfoType_1.default.toNumber(data.status);
             _this.contentId = data.content_id === undefined ? data.contentId : data.content_id;
             _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
             _this.storageAddress = data.storage_address === undefined ? data.storageAddress : data.storage_address;

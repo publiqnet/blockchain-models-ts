@@ -20,6 +20,7 @@ var PubliqStatInfo = /** @class */ (function (_super) {
     function PubliqStatInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.reporterAddress = data.reporter_address === undefined ? data.reporterAddress : data.reporter_address;
             _this.hash = data.hash;
             _this.items = data.items.map(function (d) { return new PubliqStatItem_1.default(d); });
         }
@@ -28,6 +29,7 @@ var PubliqStatInfo = /** @class */ (function (_super) {
     Object.defineProperty(PubliqStatInfo, "PropertyMap", {
         get: function () {
             return {
+                reporterAddress: 'reporter_address',
                 hash: 'hash',
                 items: 'items',
             };
