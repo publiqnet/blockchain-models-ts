@@ -14,34 +14,36 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqNotEnoughBalance = /** @class */ (function (_super) {
-    __extends(PubliqNotEnoughBalance, _super);
-    function PubliqNotEnoughBalance(data) {
+var PubliqSyncInfo_1 = require("./PubliqSyncInfo");
+var PubliqSyncResponse2 = /** @class */ (function (_super) {
+    __extends(PubliqSyncResponse2, _super);
+    function PubliqSyncResponse2(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.balance = new PubliqCoin_1.default(data.balance);
-            _this.spending = new PubliqCoin_1.default(data.spending);
+            _this.number = data.number;
+            _this.cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
+            _this.syncInfo = new PubliqSyncInfo_1.default(data.sync_info === undefined ? data.syncInfo : data.sync_info);
         }
         return _this;
     }
-    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
+    Object.defineProperty(PubliqSyncResponse2, "PropertyMap", {
         get: function () {
             return {
-                balance: 'balance',
-                spending: 'spending',
+                number: 'number',
+                cSum: 'c_sum',
+                syncInfo: 'sync_info',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
+    Object.defineProperty(PubliqSyncResponse2, "Rtt", {
         get: function () {
-            return 49;
+            return 39;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqNotEnoughBalance;
+    return PubliqSyncResponse2;
 }(BaseModel_1.default));
-exports.default = PubliqNotEnoughBalance;
+exports.default = PubliqSyncResponse2;

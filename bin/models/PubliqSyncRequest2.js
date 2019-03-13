@@ -14,34 +14,28 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqNotEnoughBalance = /** @class */ (function (_super) {
-    __extends(PubliqNotEnoughBalance, _super);
-    function PubliqNotEnoughBalance(data) {
+var PubliqSyncRequest2 = /** @class */ (function (_super) {
+    __extends(PubliqSyncRequest2, _super);
+    function PubliqSyncRequest2(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.balance = new PubliqCoin_1.default(data.balance);
-            _this.spending = new PubliqCoin_1.default(data.spending);
         }
         return _this;
     }
-    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
+    Object.defineProperty(PubliqSyncRequest2, "PropertyMap", {
         get: function () {
-            return {
-                balance: 'balance',
-                spending: 'spending',
-            };
+            return {};
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
+    Object.defineProperty(PubliqSyncRequest2, "Rtt", {
         get: function () {
-            return 49;
+            return 38;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqNotEnoughBalance;
+    return PubliqSyncRequest2;
 }(BaseModel_1.default));
-exports.default = PubliqNotEnoughBalance;
+exports.default = PubliqSyncRequest2;

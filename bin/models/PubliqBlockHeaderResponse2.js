@@ -14,34 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqNotEnoughBalance = /** @class */ (function (_super) {
-    __extends(PubliqNotEnoughBalance, _super);
-    function PubliqNotEnoughBalance(data) {
+var PubliqBlockHeader_1 = require("./PubliqBlockHeader");
+var PubliqBlockHeaderResponse2 = /** @class */ (function (_super) {
+    __extends(PubliqBlockHeaderResponse2, _super);
+    function PubliqBlockHeaderResponse2(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.balance = new PubliqCoin_1.default(data.balance);
-            _this.spending = new PubliqCoin_1.default(data.spending);
+            _this.blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(function (d) { return new PubliqBlockHeader_1.default(d); }) : data.block_headers.map(function (d) { return new PubliqBlockHeader_1.default(d); });
         }
         return _this;
     }
-    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
+    Object.defineProperty(PubliqBlockHeaderResponse2, "PropertyMap", {
         get: function () {
             return {
-                balance: 'balance',
-                spending: 'spending',
+                blockHeaders: 'block_headers',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
+    Object.defineProperty(PubliqBlockHeaderResponse2, "Rtt", {
         get: function () {
-            return 49;
+            return 41;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqNotEnoughBalance;
+    return PubliqBlockHeaderResponse2;
 }(BaseModel_1.default));
-exports.default = PubliqNotEnoughBalance;
+exports.default = PubliqBlockHeaderResponse2;

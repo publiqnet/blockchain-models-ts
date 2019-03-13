@@ -38,6 +38,12 @@ var PubliqBlockHeaderRequest_1 = require("./models/PubliqBlockHeaderRequest");
 var PubliqBlockHeaderResponse_1 = require("./models/PubliqBlockHeaderResponse");
 var PubliqBlockchainRequest_1 = require("./models/PubliqBlockchainRequest");
 var PubliqBlockchainResponse_1 = require("./models/PubliqBlockchainResponse");
+var PubliqSyncRequest2_1 = require("./models/PubliqSyncRequest2");
+var PubliqSyncResponse2_1 = require("./models/PubliqSyncResponse2");
+var PubliqBlockHeaderRequest2_1 = require("./models/PubliqBlockHeaderRequest2");
+var PubliqBlockHeaderResponse2_1 = require("./models/PubliqBlockHeaderResponse2");
+var PubliqBlockchainRequest2_1 = require("./models/PubliqBlockchainRequest2");
+var PubliqBlockchainResponse2_1 = require("./models/PubliqBlockchainResponse2");
 var PubliqDone_1 = require("./models/PubliqDone");
 var PubliqInvalidPublicKey_1 = require("./models/PubliqInvalidPublicKey");
 var PubliqInvalidPrivateKey_1 = require("./models/PubliqInvalidPrivateKey");
@@ -95,6 +101,12 @@ var MODELS_TYPES = [
     PubliqBlockHeaderResponse_1.default,
     PubliqBlockchainRequest_1.default,
     PubliqBlockchainResponse_1.default,
+    PubliqSyncRequest2_1.default,
+    PubliqSyncResponse2_1.default,
+    PubliqBlockHeaderRequest2_1.default,
+    PubliqBlockHeaderResponse2_1.default,
+    PubliqBlockchainRequest2_1.default,
+    PubliqBlockchainResponse2_1.default,
     PubliqDone_1.default,
     PubliqInvalidPublicKey_1.default,
     PubliqInvalidPrivateKey_1.default,
