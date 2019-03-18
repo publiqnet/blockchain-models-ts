@@ -2,19 +2,20 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
+import PubliqSyncInfo from './PubliqSyncInfo';
 
 export default class PubliqSyncResponse extends BaseModel {
 
     number: number;
     cSum: number;
-    syncInfo: Object;
+    syncInfo: PubliqSyncInfo;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.number = data.number;
             this.cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
-            this.syncInfo = createInstanceFromJson(data.sync_info === undefined ?  data.syncInfo: data.sync_info);
+            this.syncInfo = new PubliqSyncInfo(data.sync_info === undefined ?  data.syncInfo: data.sync_info);
         }
     }
 

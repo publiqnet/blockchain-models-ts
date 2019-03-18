@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var ModelTypes_1 = require("../ModelTypes");
+var PubliqSyncInfo_1 = require("./PubliqSyncInfo");
 var PubliqSyncResponse = /** @class */ (function (_super) {
     __extends(PubliqSyncResponse, _super);
     function PubliqSyncResponse(data) {
@@ -22,7 +22,7 @@ var PubliqSyncResponse = /** @class */ (function (_super) {
         if (data !== undefined) {
             _this.number = data.number;
             _this.cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
-            _this.syncInfo = ModelTypes_1.createInstanceFromJson(data.sync_info === undefined ? data.syncInfo : data.sync_info);
+            _this.syncInfo = new PubliqSyncInfo_1.default(data.sync_info === undefined ? data.syncInfo : data.sync_info);
         }
         return _this;
     }

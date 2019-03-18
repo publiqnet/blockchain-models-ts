@@ -36,12 +36,6 @@ import PubliqBlockHeaderRequest from './models/PubliqBlockHeaderRequest';
 import PubliqBlockHeaderResponse from './models/PubliqBlockHeaderResponse';
 import PubliqBlockchainRequest from './models/PubliqBlockchainRequest';
 import PubliqBlockchainResponse from './models/PubliqBlockchainResponse';
-import PubliqSyncRequest2 from './models/PubliqSyncRequest2';
-import PubliqSyncResponse2 from './models/PubliqSyncResponse2';
-import PubliqBlockHeaderRequest2 from './models/PubliqBlockHeaderRequest2';
-import PubliqBlockHeaderResponse2 from './models/PubliqBlockHeaderResponse2';
-import PubliqBlockchainRequest2 from './models/PubliqBlockchainRequest2';
-import PubliqBlockchainResponse2 from './models/PubliqBlockchainResponse2';
 import PubliqDone from './models/PubliqDone';
 import PubliqInvalidPublicKey from './models/PubliqInvalidPublicKey';
 import PubliqInvalidPrivateKey from './models/PubliqInvalidPrivateKey';
@@ -101,12 +95,6 @@ const MODELS_TYPES = [
     PubliqBlockHeaderResponse,
     PubliqBlockchainRequest,
     PubliqBlockchainResponse,
-    PubliqSyncRequest2,
-    PubliqSyncResponse2,
-    PubliqBlockHeaderRequest2,
-    PubliqBlockHeaderResponse2,
-    PubliqBlockchainRequest2,
-    PubliqBlockchainResponse2,
     PubliqDone,
     PubliqInvalidPublicKey,
     PubliqInvalidPrivateKey,

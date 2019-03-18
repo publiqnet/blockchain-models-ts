@@ -18,7 +18,7 @@ export default class PubliqPing extends BaseModel {
     }
 
     static get Rtt () {
-        return 58;
+        return 52;
     }
 
 } 

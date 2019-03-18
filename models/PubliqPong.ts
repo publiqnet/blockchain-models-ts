@@ -27,7 +27,7 @@ export default class PubliqPong extends BaseModel {
     }
 
     static get Rtt () {
-        return 59;
+        return 53;
     }
 
 } 

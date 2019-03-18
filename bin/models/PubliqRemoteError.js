@@ -34,7 +34,7 @@ var PubliqRemoteError = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqRemoteError, "Rtt", {
         get: function () {
-            return 52;
+            return 46;
         },
         enumerable: true,
         configurable: true
