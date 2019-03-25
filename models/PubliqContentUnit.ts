@@ -7,7 +7,7 @@ export default class PubliqContentUnit extends BaseModel {
 
     uri: string;
     contentId: number;
-    authorAddress: string;
+    authorAddresses: Array<String>;
     channelAddress: string;
     fileUris: Array<String>;
 
@@ -16,7 +16,7 @@ export default class PubliqContentUnit extends BaseModel {
         if (data !== undefined) {
             this.uri = data.uri;
             this.contentId = data.content_id === undefined ?  data.contentId: data.content_id;
-            this.authorAddress = data.author_address === undefined ?  data.authorAddress: data.author_address;
+            this.authorAddresses = data.author_addresses === undefined ?  data.authorAddresses: data.author_addresses;
             this.channelAddress = data.channel_address === undefined ?  data.channelAddress: data.channel_address;
             this.fileUris = data.file_uris === undefined ?  data.fileUris: data.file_uris;
         }
@@ -26,14 +26,14 @@ export default class PubliqContentUnit extends BaseModel {
         return {
             uri : 'uri',
             contentId : 'content_id',
-            authorAddress : 'author_address',
+            authorAddresses : 'author_addresses',
             channelAddress : 'channel_address',
             fileUris : 'file_uris',
         }
     }
 
     static get Rtt () {
-        return 13;
+        return 20;
     }
 
 } 

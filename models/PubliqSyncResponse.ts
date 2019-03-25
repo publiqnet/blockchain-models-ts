@@ -2,33 +2,30 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqSyncInfo from './PubliqSyncInfo';
+import PubliqBlockHeaderExtended from './PubliqBlockHeaderExtended';
 
 export default class PubliqSyncResponse extends BaseModel {
 
-    number: number;
-    cSum: number;
-    syncInfo: PubliqSyncInfo;
+    ownHeader: PubliqBlockHeaderExtended;
+    promisedHeader: PubliqBlockHeaderExtended;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.number = data.number;
-            this.cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
-            this.syncInfo = new PubliqSyncInfo(data.sync_info === undefined ?  data.syncInfo: data.sync_info);
+            this.ownHeader = new PubliqBlockHeaderExtended(data.own_header === undefined ?  data.ownHeader: data.own_header);
+            this.promisedHeader = new PubliqBlockHeaderExtended(data.promised_header === undefined ?  data.promisedHeader: data.promised_header);
         }
     }
 
     static get PropertyMap () {
         return {
-            number : 'number',
-            cSum : 'c_sum',
-            syncInfo : 'sync_info',
+            ownHeader : 'own_header',
+            promisedHeader : 'promised_header',
         }
     }
 
     static get Rtt () {
-        return 33;
+        return 55;
     }
 
 } 

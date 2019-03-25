@@ -2,16 +2,16 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqBlockHeader from './PubliqBlockHeader';
+import PubliqBlockHeaderExtended from './PubliqBlockHeaderExtended';
 
 export default class PubliqBlockHeaderResponse extends BaseModel {
 
-    blockHeaders: Array<PubliqBlockHeader>;
+    blockHeaders: Array<PubliqBlockHeaderExtended>;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(d => new PubliqBlockHeader(d)) : data.block_headers.map(d => new PubliqBlockHeader(d));
+            this.blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(d => new PubliqBlockHeaderExtended(d)) : data.block_headers.map(d => new PubliqBlockHeaderExtended(d));
         }
     }
 
@@ -22,7 +22,7 @@ export default class PubliqBlockHeaderResponse extends BaseModel {
     }
 
     static get Rtt () {
-        return 35;
+        return 57;
     }
 
 } 

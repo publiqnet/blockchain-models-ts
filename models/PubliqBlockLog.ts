@@ -41,7 +41,7 @@ export default class PubliqBlockLog extends BaseModel {
     }
 
     static get Rtt () {
-        return 9;
+        return 11;
     }
 
 } 

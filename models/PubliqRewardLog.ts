@@ -29,7 +29,7 @@ export default class PubliqRewardLog extends BaseModel {
     }
 
     static get Rtt () {
-        return 7;
+        return 9;
     }
 
 } 

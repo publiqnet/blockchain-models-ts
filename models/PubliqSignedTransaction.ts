@@ -3,32 +3,30 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqTransaction from './PubliqTransaction';
+import PubliqAuthority from './PubliqAuthority';
 
 export default class PubliqSignedTransaction extends BaseModel {
 
     transactionDetails: PubliqTransaction;
-    authority: string;
-    signature: string;
+    authorizations: Array<PubliqAuthority>;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.transactionDetails = new PubliqTransaction(data.transaction_details === undefined ?  data.transactionDetails: data.transaction_details);
-            this.authority = data.authority;
-            this.signature = data.signature;
+            this.authorizations = data.authorizations.map(d => new PubliqAuthority(d));
         }
     }
 
     static get PropertyMap () {
         return {
             transactionDetails : 'transaction_details',
-            authority : 'authority',
-            signature : 'signature',
+            authorizations : 'authorizations',
         }
     }
 
     static get Rtt () {
-        return 3;
+        return 4;
     }
 
 } 
