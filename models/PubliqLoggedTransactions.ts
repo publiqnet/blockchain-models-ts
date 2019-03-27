@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqLoggedTransaction from './PubliqLoggedTransaction';
@@ -11,7 +14,14 @@ export default class PubliqLoggedTransactions extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.actions = data.actions.map(d => new PubliqLoggedTransaction(d));
+
+           const _actions = data.actions.map(d => new PubliqLoggedTransaction(d));
+           if(is<Array<PubliqLoggedTransaction>>(_actions)){
+               this.actions = _actions
+           } else {
+               throw new Error(`Type Error: PubliqLoggedTransactions actions is not a Array<PubliqLoggedTransaction>`)
+           }
+
         }
     }
 

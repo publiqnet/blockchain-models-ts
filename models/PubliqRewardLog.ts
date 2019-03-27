@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqCoin from './PubliqCoin';
@@ -14,9 +17,28 @@ export default class PubliqRewardLog extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.to = data.to;
-            this.amount = new PubliqCoin(data.amount);
-            this.rewardType = PubliqRewardType.toNumber(data.reward_type === undefined ?  data.rewardType: data.reward_type);
+
+           const _to = data.to;
+           if(is<string>(_to)){
+               this.to = _to
+           } else {
+               throw new Error(`Type Error: PubliqRewardLog to is not a string`)
+           }
+
+           const _amount = new PubliqCoin(data.amount);
+           if(is<PubliqCoin>(_amount)){
+               this.amount = _amount
+           } else {
+               throw new Error(`Type Error: PubliqRewardLog amount is not a PubliqCoin`)
+           }
+
+           const _rewardType = PubliqRewardType.toNumber(data.reward_type === undefined ?  data.rewardType: data.reward_type);
+           if(is<number>(_rewardType)){
+               this.rewardType = _rewardType
+           } else {
+               throw new Error(`Type Error: PubliqRewardLog rewardType is not a number`)
+           }
+
         }
     }
 

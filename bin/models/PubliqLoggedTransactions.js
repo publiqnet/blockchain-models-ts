@@ -14,13 +14,20 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqLoggedTransaction_1 = require("./PubliqLoggedTransaction");
 var PubliqLoggedTransactions = /** @class */ (function (_super) {
     __extends(PubliqLoggedTransactions, _super);
     function PubliqLoggedTransactions(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.actions = data.actions.map(function (d) { return new PubliqLoggedTransaction_1.default(d); });
+            var _actions = data.actions.map(function (d) { return new PubliqLoggedTransaction_1.default(d); });
+            if (typescript_is_1.is(_actions)) {
+                _this.actions = _actions;
+            }
+            else {
+                throw new Error("Type Error: PubliqLoggedTransactions actions is not a Array<PubliqLoggedTransaction>");
+            }
         }
         return _this;
     }

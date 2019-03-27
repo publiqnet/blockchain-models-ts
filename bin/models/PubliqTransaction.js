@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqCoin_1 = require("./PubliqCoin");
 var PubliqTransaction = /** @class */ (function (_super) {
@@ -21,10 +22,34 @@ var PubliqTransaction = /** @class */ (function (_super) {
     function PubliqTransaction(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.creation = new Date(data.creation);
-            _this.expiry = new Date(data.expiry);
-            _this.fee = new PubliqCoin_1.default(data.fee);
-            _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+            var _creation = new Date(data.creation);
+            if (typescript_is_1.is(_creation)) {
+                _this.creation = _creation;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransaction creation is not a Date");
+            }
+            var _expiry = new Date(data.expiry);
+            if (typescript_is_1.is(_expiry)) {
+                _this.expiry = _expiry;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransaction expiry is not a Date");
+            }
+            var _fee = new PubliqCoin_1.default(data.fee);
+            if (typescript_is_1.is(_fee)) {
+                _this.fee = _fee;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransaction fee is not a PubliqCoin");
+            }
+            var _action = ModelTypes_1.createInstanceFromJson(data.action);
+            if (typescript_is_1.is(_action)) {
+                _this.action = _action;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransaction action is not a Object");
+            }
         }
         return _this;
     }

@@ -14,13 +14,26 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqCoin = /** @class */ (function (_super) {
     __extends(PubliqCoin, _super);
     function PubliqCoin(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.whole = data.whole;
-            _this.fraction = data.fraction;
+            var _whole = data.whole;
+            if (typescript_is_1.is(_whole)) {
+                _this.whole = _whole;
+            }
+            else {
+                throw new Error("Type Error: PubliqCoin whole is not a number");
+            }
+            var _fraction = data.fraction;
+            if (typescript_is_1.is(_fraction)) {
+                _this.fraction = _fraction;
+            }
+            else {
+                throw new Error("Type Error: PubliqCoin fraction is not a number");
+            }
         }
         return _this;
     }

@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqIPType_1 = require("./PubliqIPType");
 var PubliqIPDestination_1 = require("./PubliqIPDestination");
 var PubliqIPAddress = /** @class */ (function (_super) {
@@ -21,9 +22,27 @@ var PubliqIPAddress = /** @class */ (function (_super) {
     function PubliqIPAddress(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.ipType = PubliqIPType_1.default.toNumber(data.ip_type === undefined ? data.ipType : data.ip_type);
-            _this.local = new PubliqIPDestination_1.default(data.local);
-            _this.remote = new PubliqIPDestination_1.default(data.remote);
+            var _ipType = PubliqIPType_1.default.toNumber(data.ip_type === undefined ? data.ipType : data.ip_type);
+            if (typescript_is_1.is(_ipType)) {
+                _this.ipType = _ipType;
+            }
+            else {
+                throw new Error("Type Error: PubliqIPAddress ipType is not a number");
+            }
+            var _local = new PubliqIPDestination_1.default(data.local);
+            if (typescript_is_1.is(_local)) {
+                _this.local = _local;
+            }
+            else {
+                throw new Error("Type Error: PubliqIPAddress local is not a PubliqIPDestination");
+            }
+            var _remote = new PubliqIPDestination_1.default(data.remote);
+            if (typescript_is_1.is(_remote)) {
+                _this.remote = _remote;
+            }
+            else {
+                throw new Error("Type Error: PubliqIPAddress remote is not a PubliqIPDestination");
+            }
         }
         return _this;
     }

@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -11,8 +14,21 @@ export default class PubliqStorageFile extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.mimeType = data.mime_type === undefined ?  data.mimeType: data.mime_type;
-            this.data = data.data;
+
+           const _mimeType = data.mime_type === undefined ?  data.mimeType: data.mime_type;
+           if(is<string>(_mimeType)){
+               this.mimeType = _mimeType
+           } else {
+               throw new Error(`Type Error: PubliqStorageFile mimeType is not a string`)
+           }
+
+           const _data = data.data;
+           if(is<string>(_data)){
+               this.data = _data
+           } else {
+               throw new Error(`Type Error: PubliqStorageFile data is not a string`)
+           }
+
         }
     }
 

@@ -14,14 +14,27 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqDigest = /** @class */ (function (_super) {
     __extends(PubliqDigest, _super);
     function PubliqDigest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.base58Hash = data.base58_hash === undefined ? data.base58Hash : data.base58_hash;
-            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            var _base58Hash = data.base58_hash === undefined ? data.base58Hash : data.base58_hash;
+            if (typescript_is_1.is(_base58Hash)) {
+                _this.base58Hash = _base58Hash;
+            }
+            else {
+                throw new Error("Type Error: PubliqDigest base58Hash is not a string");
+            }
+            var _package = ModelTypes_1.createInstanceFromJson(data.package);
+            if (typescript_is_1.is(_package)) {
+                _this.package = _package;
+            }
+            else {
+                throw new Error("Type Error: PubliqDigest package is not a Object");
+            }
         }
         return _this;
     }

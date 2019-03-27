@@ -14,12 +14,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqMasterKey = /** @class */ (function (_super) {
     __extends(PubliqMasterKey, _super);
     function PubliqMasterKey(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
+            var _masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
+            if (typescript_is_1.is(_masterKey)) {
+                _this.masterKey = _masterKey;
+            }
+            else {
+                throw new Error("Type Error: PubliqMasterKey masterKey is not a string");
+            }
         }
         return _this;
     }

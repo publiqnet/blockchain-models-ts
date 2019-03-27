@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqBlock_1 = require("./PubliqBlock");
 var PubliqAuthority_1 = require("./PubliqAuthority");
 var PubliqSignedBlock = /** @class */ (function (_super) {
@@ -21,8 +22,20 @@ var PubliqSignedBlock = /** @class */ (function (_super) {
     function PubliqSignedBlock(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.blockDetails = new PubliqBlock_1.default(data.block_details === undefined ? data.blockDetails : data.block_details);
-            _this.authorization = new PubliqAuthority_1.default(data.authorization);
+            var _blockDetails = new PubliqBlock_1.default(data.block_details === undefined ? data.blockDetails : data.block_details);
+            if (typescript_is_1.is(_blockDetails)) {
+                _this.blockDetails = _blockDetails;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignedBlock blockDetails is not a PubliqBlock");
+            }
+            var _authorization = new PubliqAuthority_1.default(data.authorization);
+            if (typescript_is_1.is(_authorization)) {
+                _this.authorization = _authorization;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignedBlock authorization is not a PubliqAuthority");
+            }
         }
         return _this;
     }

@@ -14,14 +14,27 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqTransaction_1 = require("./PubliqTransaction");
 var PubliqTransactionBroadcastRequest = /** @class */ (function (_super) {
     __extends(PubliqTransactionBroadcastRequest, _super);
     function PubliqTransactionBroadcastRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.transactionDetails = new PubliqTransaction_1.default(data.transaction_details === undefined ? data.transactionDetails : data.transaction_details);
-            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            var _transactionDetails = new PubliqTransaction_1.default(data.transaction_details === undefined ? data.transactionDetails : data.transaction_details);
+            if (typescript_is_1.is(_transactionDetails)) {
+                _this.transactionDetails = _transactionDetails;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransactionBroadcastRequest transactionDetails is not a PubliqTransaction");
+            }
+            var _privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            if (typescript_is_1.is(_privateKey)) {
+                _this.privateKey = _privateKey;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransactionBroadcastRequest privateKey is not a string");
+            }
         }
         return _this;
     }

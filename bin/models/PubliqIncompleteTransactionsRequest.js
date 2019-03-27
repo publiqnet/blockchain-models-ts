@@ -14,12 +14,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqIncompleteTransactionsRequest = /** @class */ (function (_super) {
     __extends(PubliqIncompleteTransactionsRequest, _super);
     function PubliqIncompleteTransactionsRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.address = data.address;
+            var _address = data.address;
+            if (typescript_is_1.is(_address)) {
+                _this.address = _address;
+            }
+            else {
+                throw new Error("Type Error: PubliqIncompleteTransactionsRequest address is not a string");
+            }
         }
         return _this;
     }

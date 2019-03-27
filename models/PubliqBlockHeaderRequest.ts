@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -11,8 +14,21 @@ export default class PubliqBlockHeaderRequest extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.blocksFrom = data.blocks_from === undefined ?  data.blocksFrom: data.blocks_from;
-            this.blocksTo = data.blocks_to === undefined ?  data.blocksTo: data.blocks_to;
+
+           const _blocksFrom = data.blocks_from === undefined ?  data.blocksFrom: data.blocks_from;
+           if(is<number>(_blocksFrom)){
+               this.blocksFrom = _blocksFrom
+           } else {
+               throw new Error(`Type Error: PubliqBlockHeaderRequest blocksFrom is not a number`)
+           }
+
+           const _blocksTo = data.blocks_to === undefined ?  data.blocksTo: data.blocks_to;
+           if(is<number>(_blocksTo)){
+               this.blocksTo = _blocksTo
+           } else {
+               throw new Error(`Type Error: PubliqBlockHeaderRequest blocksTo is not a number`)
+           }
+
         }
     }
 

@@ -14,15 +14,34 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqServiceStatisticsItem_1 = require("./PubliqServiceStatisticsItem");
 var PubliqServiceStatistics = /** @class */ (function (_super) {
     __extends(PubliqServiceStatistics, _super);
     function PubliqServiceStatistics(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.serverAddress = data.server_address === undefined ? data.serverAddress : data.server_address;
-            _this.fileUri = data.file_uri === undefined ? data.fileUri : data.file_uri;
-            _this.statItems = data.stat_items === undefined ? data.statItems.map(function (d) { return new PubliqServiceStatisticsItem_1.default(d); }) : data.stat_items.map(function (d) { return new PubliqServiceStatisticsItem_1.default(d); });
+            var _serverAddress = data.server_address === undefined ? data.serverAddress : data.server_address;
+            if (typescript_is_1.is(_serverAddress)) {
+                _this.serverAddress = _serverAddress;
+            }
+            else {
+                throw new Error("Type Error: PubliqServiceStatistics serverAddress is not a string");
+            }
+            var _fileUri = data.file_uri === undefined ? data.fileUri : data.file_uri;
+            if (typescript_is_1.is(_fileUri)) {
+                _this.fileUri = _fileUri;
+            }
+            else {
+                throw new Error("Type Error: PubliqServiceStatistics fileUri is not a string");
+            }
+            var _statItems = data.stat_items === undefined ? data.statItems.map(function (d) { return new PubliqServiceStatisticsItem_1.default(d); }) : data.stat_items.map(function (d) { return new PubliqServiceStatisticsItem_1.default(d); });
+            if (typescript_is_1.is(_statItems)) {
+                _this.statItems = _statItems;
+            }
+            else {
+                throw new Error("Type Error: PubliqServiceStatistics statItems is not a Array<PubliqServiceStatisticsItem>");
+            }
         }
         return _this;
     }

@@ -14,14 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqPong = /** @class */ (function (_super) {
     __extends(PubliqPong, _super);
     function PubliqPong(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
-            _this.stamp = new Date(data.stamp);
-            _this.signature = data.signature;
+            var _nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
+            if (typescript_is_1.is(_nodeAddress)) {
+                _this.nodeAddress = _nodeAddress;
+            }
+            else {
+                throw new Error("Type Error: PubliqPong nodeAddress is not a string");
+            }
+            var _stamp = new Date(data.stamp);
+            if (typescript_is_1.is(_stamp)) {
+                _this.stamp = _stamp;
+            }
+            else {
+                throw new Error("Type Error: PubliqPong stamp is not a Date");
+            }
+            var _signature = data.signature;
+            if (typescript_is_1.is(_signature)) {
+                _this.signature = _signature;
+            }
+            else {
+                throw new Error("Type Error: PubliqPong signature is not a string");
+            }
         }
         return _this;
     }

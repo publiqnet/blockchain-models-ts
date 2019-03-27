@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqTransaction_1 = require("./PubliqTransaction");
 var PubliqAuthority_1 = require("./PubliqAuthority");
 var PubliqSignedTransaction = /** @class */ (function (_super) {
@@ -21,8 +22,20 @@ var PubliqSignedTransaction = /** @class */ (function (_super) {
     function PubliqSignedTransaction(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.transactionDetails = new PubliqTransaction_1.default(data.transaction_details === undefined ? data.transactionDetails : data.transaction_details);
-            _this.authorizations = data.authorizations.map(function (d) { return new PubliqAuthority_1.default(d); });
+            var _transactionDetails = new PubliqTransaction_1.default(data.transaction_details === undefined ? data.transactionDetails : data.transaction_details);
+            if (typescript_is_1.is(_transactionDetails)) {
+                _this.transactionDetails = _transactionDetails;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignedTransaction transactionDetails is not a PubliqTransaction");
+            }
+            var _authorizations = data.authorizations.map(function (d) { return new PubliqAuthority_1.default(d); });
+            if (typescript_is_1.is(_authorizations)) {
+                _this.authorizations = _authorizations;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignedTransaction authorizations is not a Array<PubliqAuthority>");
+            }
         }
         return _this;
     }

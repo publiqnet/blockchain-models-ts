@@ -14,14 +14,27 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqBlockHeaderExtended_1 = require("./PubliqBlockHeaderExtended");
 var PubliqSyncResponse = /** @class */ (function (_super) {
     __extends(PubliqSyncResponse, _super);
     function PubliqSyncResponse(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.ownHeader = new PubliqBlockHeaderExtended_1.default(data.own_header === undefined ? data.ownHeader : data.own_header);
-            _this.promisedHeader = new PubliqBlockHeaderExtended_1.default(data.promised_header === undefined ? data.promisedHeader : data.promised_header);
+            var _ownHeader = new PubliqBlockHeaderExtended_1.default(data.own_header === undefined ? data.ownHeader : data.own_header);
+            if (typescript_is_1.is(_ownHeader)) {
+                _this.ownHeader = _ownHeader;
+            }
+            else {
+                throw new Error("Type Error: PubliqSyncResponse ownHeader is not a PubliqBlockHeaderExtended");
+            }
+            var _promisedHeader = new PubliqBlockHeaderExtended_1.default(data.promised_header === undefined ? data.promisedHeader : data.promised_header);
+            if (typescript_is_1.is(_promisedHeader)) {
+                _this.promisedHeader = _promisedHeader;
+            }
+            else {
+                throw new Error("Type Error: PubliqSyncResponse promisedHeader is not a PubliqBlockHeaderExtended");
+            }
         }
         return _this;
     }

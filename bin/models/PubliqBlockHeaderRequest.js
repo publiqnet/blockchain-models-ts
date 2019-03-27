@@ -14,13 +14,26 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqBlockHeaderRequest = /** @class */ (function (_super) {
     __extends(PubliqBlockHeaderRequest, _super);
     function PubliqBlockHeaderRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.blocksFrom = data.blocks_from === undefined ? data.blocksFrom : data.blocks_from;
-            _this.blocksTo = data.blocks_to === undefined ? data.blocksTo : data.blocks_to;
+            var _blocksFrom = data.blocks_from === undefined ? data.blocksFrom : data.blocks_from;
+            if (typescript_is_1.is(_blocksFrom)) {
+                _this.blocksFrom = _blocksFrom;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderRequest blocksFrom is not a number");
+            }
+            var _blocksTo = data.blocks_to === undefined ? data.blocksTo : data.blocks_to;
+            if (typescript_is_1.is(_blocksTo)) {
+                _this.blocksTo = _blocksTo;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderRequest blocksTo is not a number");
+            }
         }
         return _this;
     }

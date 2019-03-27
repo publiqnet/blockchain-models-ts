@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -11,8 +14,21 @@ export default class PubliqFile extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.uri = data.uri;
-            this.authorAddresses = data.author_addresses === undefined ?  data.authorAddresses: data.author_addresses;
+
+           const _uri = data.uri;
+           if(is<string>(_uri)){
+               this.uri = _uri
+           } else {
+               throw new Error(`Type Error: PubliqFile uri is not a string`)
+           }
+
+           const _authorAddresses = data.author_addresses === undefined ?  data.authorAddresses: data.author_addresses;
+           if(is<Array<String>>(_authorAddresses)){
+               this.authorAddresses = _authorAddresses
+           } else {
+               throw new Error(`Type Error: PubliqFile authorAddresses is not a Array<String>`)
+           }
+
         }
     }
 

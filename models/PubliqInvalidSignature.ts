@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqSignature from './PubliqSignature';
@@ -11,7 +14,14 @@ export default class PubliqInvalidSignature extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.details = new PubliqSignature(data.details);
+
+           const _details = new PubliqSignature(data.details);
+           if(is<PubliqSignature>(_details)){
+               this.details = _details
+           } else {
+               throw new Error(`Type Error: PubliqInvalidSignature details is not a PubliqSignature`)
+           }
+
         }
     }
 

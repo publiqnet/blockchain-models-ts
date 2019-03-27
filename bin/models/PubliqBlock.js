@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqBlockHeader_1 = require("./PubliqBlockHeader");
 var PubliqReward_1 = require("./PubliqReward");
 var PubliqSignedTransaction_1 = require("./PubliqSignedTransaction");
@@ -22,9 +23,27 @@ var PubliqBlock = /** @class */ (function (_super) {
     function PubliqBlock(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.header = new PubliqBlockHeader_1.default(data.header);
-            _this.rewards = data.rewards.map(function (d) { return new PubliqReward_1.default(d); });
-            _this.signedTransactions = data.signed_transactions === undefined ? data.signedTransactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); }) : data.signed_transactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); });
+            var _header = new PubliqBlockHeader_1.default(data.header);
+            if (typescript_is_1.is(_header)) {
+                _this.header = _header;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlock header is not a PubliqBlockHeader");
+            }
+            var _rewards = data.rewards.map(function (d) { return new PubliqReward_1.default(d); });
+            if (typescript_is_1.is(_rewards)) {
+                _this.rewards = _rewards;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlock rewards is not a Array<PubliqReward>");
+            }
+            var _signedTransactions = data.signed_transactions === undefined ? data.signedTransactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); }) : data.signed_transactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); });
+            if (typescript_is_1.is(_signedTransactions)) {
+                _this.signedTransactions = _signedTransactions;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlock signedTransactions is not a Array<PubliqSignedTransaction>");
+            }
         }
         return _this;
     }

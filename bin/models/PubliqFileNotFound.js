@@ -14,12 +14,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqFileNotFound = /** @class */ (function (_super) {
     __extends(PubliqFileNotFound, _super);
     function PubliqFileNotFound(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.uri = data.uri;
+            var _uri = data.uri;
+            if (typescript_is_1.is(_uri)) {
+                _this.uri = _uri;
+            }
+            else {
+                throw new Error("Type Error: PubliqFileNotFound uri is not a string");
+            }
         }
         return _this;
     }

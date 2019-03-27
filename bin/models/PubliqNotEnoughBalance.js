@@ -14,14 +14,27 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqCoin_1 = require("./PubliqCoin");
 var PubliqNotEnoughBalance = /** @class */ (function (_super) {
     __extends(PubliqNotEnoughBalance, _super);
     function PubliqNotEnoughBalance(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.balance = new PubliqCoin_1.default(data.balance);
-            _this.spending = new PubliqCoin_1.default(data.spending);
+            var _balance = new PubliqCoin_1.default(data.balance);
+            if (typescript_is_1.is(_balance)) {
+                _this.balance = _balance;
+            }
+            else {
+                throw new Error("Type Error: PubliqNotEnoughBalance balance is not a PubliqCoin");
+            }
+            var _spending = new PubliqCoin_1.default(data.spending);
+            if (typescript_is_1.is(_spending)) {
+                _this.spending = _spending;
+            }
+            else {
+                throw new Error("Type Error: PubliqNotEnoughBalance spending is not a PubliqCoin");
+            }
         }
         return _this;
     }

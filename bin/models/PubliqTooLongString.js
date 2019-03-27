@@ -14,13 +14,26 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqTooLongString = /** @class */ (function (_super) {
     __extends(PubliqTooLongString, _super);
     function PubliqTooLongString(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.usedString = data.used_string === undefined ? data.usedString : data.used_string;
-            _this.maxLength = data.max_length === undefined ? data.maxLength : data.max_length;
+            var _usedString = data.used_string === undefined ? data.usedString : data.used_string;
+            if (typescript_is_1.is(_usedString)) {
+                _this.usedString = _usedString;
+            }
+            else {
+                throw new Error("Type Error: PubliqTooLongString usedString is not a string");
+            }
+            var _maxLength = data.max_length === undefined ? data.maxLength : data.max_length;
+            if (typescript_is_1.is(_maxLength)) {
+                _this.maxLength = _maxLength;
+            }
+            else {
+                throw new Error("Type Error: PubliqTooLongString maxLength is not a number");
+            }
         }
         return _this;
     }

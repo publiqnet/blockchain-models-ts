@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -11,8 +14,21 @@ export default class PubliqTaskResponse extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.package = createInstanceFromJson(data.package);
-            this.taskId = data.task_id === undefined ?  data.taskId: data.task_id;
+
+           const _package = createInstanceFromJson(data.package);
+           if(is<Object>(_package)){
+               this.package = _package
+           } else {
+               throw new Error(`Type Error: PubliqTaskResponse package is not a Object`)
+           }
+
+           const _taskId = data.task_id === undefined ?  data.taskId: data.task_id;
+           if(is<number>(_taskId)){
+               this.taskId = _taskId
+           } else {
+               throw new Error(`Type Error: PubliqTaskResponse taskId is not a number`)
+           }
+
         }
     }
 

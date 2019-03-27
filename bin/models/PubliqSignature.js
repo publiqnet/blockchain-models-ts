@@ -14,15 +14,34 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqSignature = /** @class */ (function (_super) {
     __extends(PubliqSignature, _super);
     function PubliqSignature(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.publicKey = data.public_key === undefined ? data.publicKey : data.public_key;
-            _this.signature = data.signature;
-            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            var _publicKey = data.public_key === undefined ? data.publicKey : data.public_key;
+            if (typescript_is_1.is(_publicKey)) {
+                _this.publicKey = _publicKey;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignature publicKey is not a string");
+            }
+            var _signature = data.signature;
+            if (typescript_is_1.is(_signature)) {
+                _this.signature = _signature;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignature signature is not a string");
+            }
+            var _package = ModelTypes_1.createInstanceFromJson(data.package);
+            if (typescript_is_1.is(_package)) {
+                _this.package = _package;
+            }
+            else {
+                throw new Error("Type Error: PubliqSignature package is not a Object");
+            }
         }
         return _this;
     }

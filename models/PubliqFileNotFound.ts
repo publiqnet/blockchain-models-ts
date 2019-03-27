@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -10,7 +13,14 @@ export default class PubliqFileNotFound extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.uri = data.uri;
+
+           const _uri = data.uri;
+           if(is<string>(_uri)){
+               this.uri = _uri
+           } else {
+               throw new Error(`Type Error: PubliqFileNotFound uri is not a string`)
+           }
+
         }
     }
 

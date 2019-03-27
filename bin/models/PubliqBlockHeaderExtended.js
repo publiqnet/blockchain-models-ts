@@ -14,18 +14,61 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqBlockHeaderExtended = /** @class */ (function (_super) {
     __extends(PubliqBlockHeaderExtended, _super);
     function PubliqBlockHeaderExtended(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.blockNumber = data.block_number === undefined ? data.blockNumber : data.block_number;
-            _this.delta = data.delta;
-            _this.cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
-            _this.cConst = data.c_const === undefined ? data.cConst : data.c_const;
-            _this.prevHash = data.prev_hash === undefined ? data.prevHash : data.prev_hash;
-            _this.blockHash = data.block_hash === undefined ? data.blockHash : data.block_hash;
-            _this.timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
+            var _blockNumber = data.block_number === undefined ? data.blockNumber : data.block_number;
+            if (typescript_is_1.is(_blockNumber)) {
+                _this.blockNumber = _blockNumber;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended blockNumber is not a number");
+            }
+            var _delta = data.delta;
+            if (typescript_is_1.is(_delta)) {
+                _this.delta = _delta;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended delta is not a number");
+            }
+            var _cSum = data.c_sum === undefined ? data.cSum : data.c_sum;
+            if (typescript_is_1.is(_cSum)) {
+                _this.cSum = _cSum;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended cSum is not a number");
+            }
+            var _cConst = data.c_const === undefined ? data.cConst : data.c_const;
+            if (typescript_is_1.is(_cConst)) {
+                _this.cConst = _cConst;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended cConst is not a number");
+            }
+            var _prevHash = data.prev_hash === undefined ? data.prevHash : data.prev_hash;
+            if (typescript_is_1.is(_prevHash)) {
+                _this.prevHash = _prevHash;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended prevHash is not a string");
+            }
+            var _blockHash = data.block_hash === undefined ? data.blockHash : data.block_hash;
+            if (typescript_is_1.is(_blockHash)) {
+                _this.blockHash = _blockHash;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended blockHash is not a string");
+            }
+            var _timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
+            if (typescript_is_1.is(_timeSigned)) {
+                _this.timeSigned = _timeSigned;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderExtended timeSigned is not a Date");
+            }
         }
         return _this;
     }

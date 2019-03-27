@@ -14,14 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqContent = /** @class */ (function (_super) {
     __extends(PubliqContent, _super);
     function PubliqContent(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.contentId = data.content_id === undefined ? data.contentId : data.content_id;
-            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
-            _this.contentUnitUris = data.content_unit_uris === undefined ? data.contentUnitUris : data.content_unit_uris;
+            var _contentId = data.content_id === undefined ? data.contentId : data.content_id;
+            if (typescript_is_1.is(_contentId)) {
+                _this.contentId = _contentId;
+            }
+            else {
+                throw new Error("Type Error: PubliqContent contentId is not a number");
+            }
+            var _channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
+            if (typescript_is_1.is(_channelAddress)) {
+                _this.channelAddress = _channelAddress;
+            }
+            else {
+                throw new Error("Type Error: PubliqContent channelAddress is not a string");
+            }
+            var _contentUnitUris = data.content_unit_uris === undefined ? data.contentUnitUris : data.content_unit_uris;
+            if (typescript_is_1.is(_contentUnitUris)) {
+                _this.contentUnitUris = _contentUnitUris;
+            }
+            else {
+                throw new Error("Type Error: PubliqContent contentUnitUris is not a Array<String>");
+            }
         }
         return _this;
     }

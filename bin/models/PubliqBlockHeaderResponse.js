@@ -14,13 +14,20 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqBlockHeaderExtended_1 = require("./PubliqBlockHeaderExtended");
 var PubliqBlockHeaderResponse = /** @class */ (function (_super) {
     __extends(PubliqBlockHeaderResponse, _super);
     function PubliqBlockHeaderResponse(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(function (d) { return new PubliqBlockHeaderExtended_1.default(d); }) : data.block_headers.map(function (d) { return new PubliqBlockHeaderExtended_1.default(d); });
+            var _blockHeaders = data.block_headers === undefined ? data.blockHeaders.map(function (d) { return new PubliqBlockHeaderExtended_1.default(d); }) : data.block_headers.map(function (d) { return new PubliqBlockHeaderExtended_1.default(d); });
+            if (typescript_is_1.is(_blockHeaders)) {
+                _this.blockHeaders = _blockHeaders;
+            }
+            else {
+                throw new Error("Type Error: PubliqBlockHeaderResponse blockHeaders is not a Array<PubliqBlockHeaderExtended>");
+            }
         }
         return _this;
     }

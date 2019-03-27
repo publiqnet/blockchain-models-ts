@@ -14,13 +14,20 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqDigestRequest = /** @class */ (function (_super) {
     __extends(PubliqDigestRequest, _super);
     function PubliqDigestRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            var _package = ModelTypes_1.createInstanceFromJson(data.package);
+            if (typescript_is_1.is(_package)) {
+                _this.package = _package;
+            }
+            else {
+                throw new Error("Type Error: PubliqDigestRequest package is not a Object");
+            }
         }
         return _this;
     }

@@ -14,12 +14,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqTransactionDone = /** @class */ (function (_super) {
     __extends(PubliqTransactionDone, _super);
     function PubliqTransactionDone(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.transactionHash = data.transaction_hash === undefined ? data.transactionHash : data.transaction_hash;
+            var _transactionHash = data.transaction_hash === undefined ? data.transactionHash : data.transaction_hash;
+            if (typescript_is_1.is(_transactionHash)) {
+                _this.transactionHash = _transactionHash;
+            }
+            else {
+                throw new Error("Type Error: PubliqTransactionDone transactionHash is not a string");
+            }
         }
         return _this;
     }

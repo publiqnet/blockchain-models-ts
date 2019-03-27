@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqLoggingType_1 = require("./PubliqLoggingType");
 var PubliqLoggedTransaction = /** @class */ (function (_super) {
@@ -21,9 +22,27 @@ var PubliqLoggedTransaction = /** @class */ (function (_super) {
     function PubliqLoggedTransaction(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.loggingType = PubliqLoggingType_1.default.toNumber(data.logging_type === undefined ? data.loggingType : data.logging_type);
-            _this.index = data.index;
-            _this.action = ModelTypes_1.createInstanceFromJson(data.action);
+            var _loggingType = PubliqLoggingType_1.default.toNumber(data.logging_type === undefined ? data.loggingType : data.logging_type);
+            if (typescript_is_1.is(_loggingType)) {
+                _this.loggingType = _loggingType;
+            }
+            else {
+                throw new Error("Type Error: PubliqLoggedTransaction loggingType is not a number");
+            }
+            var _index = data.index;
+            if (typescript_is_1.is(_index)) {
+                _this.index = _index;
+            }
+            else {
+                throw new Error("Type Error: PubliqLoggedTransaction index is not a number");
+            }
+            var _action = ModelTypes_1.createInstanceFromJson(data.action);
+            if (typescript_is_1.is(_action)) {
+                _this.action = _action;
+            }
+            else {
+                throw new Error("Type Error: PubliqLoggedTransaction action is not a Object");
+            }
         }
         return _this;
     }

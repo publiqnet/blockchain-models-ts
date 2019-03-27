@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqTransaction from './PubliqTransaction';
@@ -13,8 +16,21 @@ export default class PubliqSignedTransaction extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.transactionDetails = new PubliqTransaction(data.transaction_details === undefined ?  data.transactionDetails: data.transaction_details);
-            this.authorizations = data.authorizations.map(d => new PubliqAuthority(d));
+
+           const _transactionDetails = new PubliqTransaction(data.transaction_details === undefined ?  data.transactionDetails: data.transaction_details);
+           if(is<PubliqTransaction>(_transactionDetails)){
+               this.transactionDetails = _transactionDetails
+           } else {
+               throw new Error(`Type Error: PubliqSignedTransaction transactionDetails is not a PubliqTransaction`)
+           }
+
+           const _authorizations = data.authorizations.map(d => new PubliqAuthority(d));
+           if(is<Array<PubliqAuthority>>(_authorizations)){
+               this.authorizations = _authorizations
+           } else {
+               throw new Error(`Type Error: PubliqSignedTransaction authorizations is not a Array<PubliqAuthority>`)
+           }
+
         }
     }
 

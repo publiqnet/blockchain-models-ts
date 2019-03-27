@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -10,7 +13,14 @@ export default class PubliqIncompleteTransactionsRequest extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.address = data.address;
+
+           const _address = data.address;
+           if(is<string>(_address)){
+               this.address = _address
+           } else {
+               throw new Error(`Type Error: PubliqIncompleteTransactionsRequest address is not a string`)
+           }
+
         }
     }
 

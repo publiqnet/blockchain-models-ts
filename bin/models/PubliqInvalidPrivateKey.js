@@ -14,12 +14,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqInvalidPrivateKey = /** @class */ (function (_super) {
     __extends(PubliqInvalidPrivateKey, _super);
     function PubliqInvalidPrivateKey(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            var _privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            if (typescript_is_1.is(_privateKey)) {
+                _this.privateKey = _privateKey;
+            }
+            else {
+                throw new Error("Type Error: PubliqInvalidPrivateKey privateKey is not a string");
+            }
         }
         return _this;
     }

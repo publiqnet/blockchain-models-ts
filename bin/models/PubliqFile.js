@@ -14,13 +14,26 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqFile = /** @class */ (function (_super) {
     __extends(PubliqFile, _super);
     function PubliqFile(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.uri = data.uri;
-            _this.authorAddresses = data.author_addresses === undefined ? data.authorAddresses : data.author_addresses;
+            var _uri = data.uri;
+            if (typescript_is_1.is(_uri)) {
+                _this.uri = _uri;
+            }
+            else {
+                throw new Error("Type Error: PubliqFile uri is not a string");
+            }
+            var _authorAddresses = data.author_addresses === undefined ? data.authorAddresses : data.author_addresses;
+            if (typescript_is_1.is(_authorAddresses)) {
+                _this.authorAddresses = _authorAddresses;
+            }
+            else {
+                throw new Error("Type Error: PubliqFile authorAddresses is not a Array<String>");
+            }
         }
         return _this;
     }

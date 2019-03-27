@@ -14,12 +14,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqRemoteError = /** @class */ (function (_super) {
     __extends(PubliqRemoteError, _super);
     function PubliqRemoteError(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.message = data.message;
+            var _message = data.message;
+            if (typescript_is_1.is(_message)) {
+                _this.message = _message;
+            }
+            else {
+                throw new Error("Type Error: PubliqRemoteError message is not a string");
+            }
         }
         return _this;
     }

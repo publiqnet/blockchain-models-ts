@@ -14,14 +14,27 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqBroadcast = /** @class */ (function (_super) {
     __extends(PubliqBroadcast, _super);
     function PubliqBroadcast(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.echoes = data.echoes;
-            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            var _echoes = data.echoes;
+            if (typescript_is_1.is(_echoes)) {
+                _this.echoes = _echoes;
+            }
+            else {
+                throw new Error("Type Error: PubliqBroadcast echoes is not a number");
+            }
+            var _package = ModelTypes_1.createInstanceFromJson(data.package);
+            if (typescript_is_1.is(_package)) {
+                _this.package = _package;
+            }
+            else {
+                throw new Error("Type Error: PubliqBroadcast package is not a Object");
+            }
         }
         return _this;
     }

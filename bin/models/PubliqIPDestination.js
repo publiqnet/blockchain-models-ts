@@ -14,13 +14,26 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var typescript_is_1 = require("typescript-is");
 var PubliqIPDestination = /** @class */ (function (_super) {
     __extends(PubliqIPDestination, _super);
     function PubliqIPDestination(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.port = data.port;
-            _this.address = data.address;
+            var _port = data.port;
+            if (typescript_is_1.is(_port)) {
+                _this.port = _port;
+            }
+            else {
+                throw new Error("Type Error: PubliqIPDestination port is not a number");
+            }
+            var _address = data.address;
+            if (typescript_is_1.is(_address)) {
+                _this.address = _address;
+            }
+            else {
+                throw new Error("Type Error: PubliqIPDestination address is not a string");
+            }
         }
         return _this;
     }

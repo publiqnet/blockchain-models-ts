@@ -1,5 +1,8 @@
 import BaseModel from '../BaseModel';
 
+import { is } from 'typescript-is';
+
+
 import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqSignedBlock from './PubliqSignedBlock';
@@ -11,7 +14,14 @@ export default class PubliqBlockchainResponse extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.signedBlocks = data.signed_blocks === undefined ? data.signedBlocks.map(d => new PubliqSignedBlock(d)) : data.signed_blocks.map(d => new PubliqSignedBlock(d));
+
+           const _signedBlocks = data.signed_blocks === undefined ? data.signedBlocks.map(d => new PubliqSignedBlock(d)) : data.signed_blocks.map(d => new PubliqSignedBlock(d));
+           if(is<Array<PubliqSignedBlock>>(_signedBlocks)){
+               this.signedBlocks = _signedBlocks
+           } else {
+               throw new Error(`Type Error: PubliqBlockchainResponse signedBlocks is not a Array<PubliqSignedBlock>`)
+           }
+
         }
     }
 
