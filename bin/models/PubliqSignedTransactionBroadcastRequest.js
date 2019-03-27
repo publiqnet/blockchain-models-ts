@@ -14,13 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqTransaction_1 = require("./PubliqTransaction");
+var PubliqSignedTransaction_1 = require("./PubliqSignedTransaction");
 var PubliqSignedTransactionBroadcastRequest = /** @class */ (function (_super) {
     __extends(PubliqSignedTransactionBroadcastRequest, _super);
     function PubliqSignedTransactionBroadcastRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.transactionDetails = new PubliqTransaction_1.default(data.transaction_details === undefined ? data.transactionDetails : data.transaction_details);
+            _this.signedTransaction = new PubliqSignedTransaction_1.default(data.signed_transaction === undefined ? data.signedTransaction : data.signed_transaction);
             _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
         }
         return _this;
@@ -28,7 +28,7 @@ var PubliqSignedTransactionBroadcastRequest = /** @class */ (function (_super) {
     Object.defineProperty(PubliqSignedTransactionBroadcastRequest, "PropertyMap", {
         get: function () {
             return {
-                transactionDetails: 'transaction_details',
+                signedTransaction: 'signed_transaction',
                 privateKey: 'private_key',
             };
         },
