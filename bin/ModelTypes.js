@@ -78,6 +78,7 @@ var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
 var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
 var PubliqTooLongString_1 = require("./models/PubliqTooLongString");
 var PubliqFileNotFound_1 = require("./models/PubliqFileNotFound");
+var PubliqUriError_1 = require("./models/PubliqUriError");
 var PubliqResponseCodeReserve1_1 = require("./models/PubliqResponseCodeReserve1");
 var PubliqResponseCodeReserve2_1 = require("./models/PubliqResponseCodeReserve2");
 var PubliqResponseCodeReserve3_1 = require("./models/PubliqResponseCodeReserve3");
@@ -188,6 +189,7 @@ var MODELS_TYPES = [
     PubliqNotEnoughBalance_1.default,
     PubliqTooLongString_1.default,
     PubliqFileNotFound_1.default,
+    PubliqUriError_1.default,
     PubliqResponseCodeReserve1_1.default,
     PubliqResponseCodeReserve2_1.default,
     PubliqResponseCodeReserve3_1.default,

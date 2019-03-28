@@ -38,7 +38,7 @@ var PubliqPong = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqPong, "Rtt", {
         get: function () {
-            return 106;
+            return 107;
         },
         enumerable: true,
         configurable: true

@@ -76,6 +76,7 @@ import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
 import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
 import PubliqTooLongString from './models/PubliqTooLongString';
 import PubliqFileNotFound from './models/PubliqFileNotFound';
+import PubliqUriError from './models/PubliqUriError';
 import PubliqResponseCodeReserve1 from './models/PubliqResponseCodeReserve1';
 import PubliqResponseCodeReserve2 from './models/PubliqResponseCodeReserve2';
 import PubliqResponseCodeReserve3 from './models/PubliqResponseCodeReserve3';
@@ -188,6 +189,7 @@ const MODELS_TYPES = [
     PubliqNotEnoughBalance,
     PubliqTooLongString,
     PubliqFileNotFound,
+    PubliqUriError,
     PubliqResponseCodeReserve1,
     PubliqResponseCodeReserve2,
     PubliqResponseCodeReserve3,

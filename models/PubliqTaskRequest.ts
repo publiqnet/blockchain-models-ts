@@ -30,7 +30,7 @@ export default class PubliqTaskRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 107;
+        return 108;
     }
 
 } 

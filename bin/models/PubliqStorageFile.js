@@ -36,7 +36,7 @@ var PubliqStorageFile = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqStorageFile, "Rtt", {
         get: function () {
-            return 89;
+            return 90;
         },
         enumerable: true,
         configurable: true

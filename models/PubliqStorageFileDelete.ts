@@ -21,7 +21,7 @@ export default class PubliqStorageFileDelete extends BaseModel {
     }
 
     static get Rtt () {
-        return 90;
+        return 91;
     }
 
 } 

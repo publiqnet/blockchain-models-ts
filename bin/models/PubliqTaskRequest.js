@@ -41,7 +41,7 @@ var PubliqTaskRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTaskRequest, "Rtt", {
         get: function () {
-            return 107;
+            return 108;
         },
         enumerable: true,
         configurable: true
