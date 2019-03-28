@@ -37,32 +37,53 @@ var BaseModel = /** @class */ (function () {
         return type.Rtt;
     };
     BaseModel.getDataWithRtt = function (data) {
-        var dataWithRtt = {};
-        if (BaseModel.hasRtt(data.constructor)) {
-            dataWithRtt['rtt'] = BaseModel.getRtt(data.constructor);
+        if (data.constructor === Date) {
+            return dateToFormatString(data);
         }
-        for (var i in data) {
-            var pv = data[i];
-            var constructor = pv.constructor;
-            var propertySetValue = void 0;
-            if (constructor === Function) {
-                continue;
-            }
-            else if (constructor === Array) {
-                propertySetValue = pv.map(function (d) { return BaseModel.getDataWithRtt(d); });
-            }
-            else if (BaseModel.hasRtt(constructor)) {
-                propertySetValue = BaseModel.getDataWithRtt(pv);
-            }
-            else if (constructor === Date) {
-                propertySetValue = dateToFormatString(pv);
-            }
-            else {
-                propertySetValue = pv;
-            }
-            BaseModel.setProperty(i, propertySetValue, dataWithRtt, data.constructor);
+        if (data.constructor === Array) {
+            return data.map(function (d) {
+                if (d.constructor !== Function) {
+                    return BaseModel.getDataWithRtt(d);
+                }
+            });
         }
-        return dataWithRtt;
+        // if(data.constructor("Publiq")){
+        //
+        // }
+        if (data instanceof Object) {
+            var dataWithRtt = {};
+            if (BaseModel.hasRtt(data.constructor)) {
+                dataWithRtt['rtt'] = BaseModel.getRtt(data.constructor);
+            }
+            for (var i in data) {
+                var pv = data[i];
+                var constructor = pv.constructor;
+                var propertySetValue = void 0;
+                if (constructor === Function) {
+                    continue;
+                }
+                // else if (constructor === Array){
+                //     propertySetValue = pv.map(d => {
+                //         if(d.constructor !== Function){
+                //             return  BaseModel.getDataWithRtt(d)
+                //         }
+                //     });
+                // }
+                // else if(BaseModel.hasRtt(constructor)){
+                //     propertySetValue = BaseModel.getDataWithRtt(pv);
+                //
+                // }
+                // else if(constructor === Date) {
+                //     propertySetValue = BaseModel.getDataWithRtt(pv);//dateToFormatString(pv);
+                // }
+                else {
+                    propertySetValue = BaseModel.getDataWithRtt(pv);
+                }
+                BaseModel.setProperty(i, propertySetValue, dataWithRtt, data.constructor);
+            }
+            return dataWithRtt;
+        }
+        return data;
     };
     BaseModel.prototype.toJson = function () {
         return BaseModel.getDataWithRtt(this);
