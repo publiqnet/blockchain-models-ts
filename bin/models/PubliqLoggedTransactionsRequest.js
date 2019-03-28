@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqLoggedTransactionsRequest = /** @class */ (function (_super) {
     __extends(PubliqLoggedTransactionsRequest, _super);
     function PubliqLoggedTransactionsRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _startIndex = data.start_index === undefined ? data.startIndex : data.start_index;
-            if (typescript_is_1.is(_startIndex)) {
-                _this.startIndex = _startIndex;
-            }
-            else {
-                throw new Error("Type Error: PubliqLoggedTransactionsRequest startIndex is not a number");
-            }
-            var _maxCount = data.max_count === undefined ? data.maxCount : data.max_count;
-            if (typescript_is_1.is(_maxCount)) {
-                _this.maxCount = _maxCount;
-            }
-            else {
-                throw new Error("Type Error: PubliqLoggedTransactionsRequest maxCount is not a number");
-            }
+            _this.startIndex = data.start_index === undefined ? data.startIndex : data.start_index;
+            _this.maxCount = data.max_count === undefined ? data.maxCount : data.max_count;
         }
         return _this;
     }

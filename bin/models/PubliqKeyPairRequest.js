@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqKeyPairRequest = /** @class */ (function (_super) {
     __extends(PubliqKeyPairRequest, _super);
     function PubliqKeyPairRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
-            if (typescript_is_1.is(_masterKey)) {
-                _this.masterKey = _masterKey;
-            }
-            else {
-                throw new Error("Type Error: PubliqKeyPairRequest masterKey is not a string");
-            }
-            var _index = data.index;
-            if (typescript_is_1.is(_index)) {
-                _this.index = _index;
-            }
-            else {
-                throw new Error("Type Error: PubliqKeyPairRequest index is not a number");
-            }
+            _this.masterKey = data.master_key === undefined ? data.masterKey : data.master_key;
+            _this.index = data.index;
         }
         return _this;
     }

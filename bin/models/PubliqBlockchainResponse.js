@@ -14,20 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqSignedBlock_1 = require("./PubliqSignedBlock");
 var PubliqBlockchainResponse = /** @class */ (function (_super) {
     __extends(PubliqBlockchainResponse, _super);
     function PubliqBlockchainResponse(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _signedBlocks = data.signed_blocks === undefined ? data.signedBlocks.map(function (d) { return new PubliqSignedBlock_1.default(d); }) : data.signed_blocks.map(function (d) { return new PubliqSignedBlock_1.default(d); });
-            if (typescript_is_1.is(_signedBlocks)) {
-                _this.signedBlocks = _signedBlocks;
-            }
-            else {
-                throw new Error("Type Error: PubliqBlockchainResponse signedBlocks is not a Array<PubliqSignedBlock>");
-            }
+            _this.signedBlocks = data.signed_blocks === undefined ? data.signedBlocks.map(function (d) { return new PubliqSignedBlock_1.default(d); }) : data.signed_blocks.map(function (d) { return new PubliqSignedBlock_1.default(d); });
         }
         return _this;
     }

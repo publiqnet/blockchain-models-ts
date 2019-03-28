@@ -14,27 +14,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var ModelTypes_1 = require("../ModelTypes");
 var PubliqTaskResponse = /** @class */ (function (_super) {
     __extends(PubliqTaskResponse, _super);
     function PubliqTaskResponse(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _package = ModelTypes_1.createInstanceFromJson(data.package);
-            if (typescript_is_1.is(_package)) {
-                _this.package = _package;
-            }
-            else {
-                throw new Error("Type Error: PubliqTaskResponse package is not a Object");
-            }
-            var _taskId = data.task_id === undefined ? data.taskId : data.task_id;
-            if (typescript_is_1.is(_taskId)) {
-                _this.taskId = _taskId;
-            }
-            else {
-                throw new Error("Type Error: PubliqTaskResponse taskId is not a number");
-            }
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
+            _this.taskId = data.task_id === undefined ? data.taskId : data.task_id;
         }
         return _this;
     }

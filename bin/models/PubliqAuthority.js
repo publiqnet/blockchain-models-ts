@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqAuthority = /** @class */ (function (_super) {
     __extends(PubliqAuthority, _super);
     function PubliqAuthority(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _address = data.address;
-            if (typescript_is_1.is(_address)) {
-                _this.address = _address;
-            }
-            else {
-                throw new Error("Type Error: PubliqAuthority address is not a string");
-            }
-            var _signature = data.signature;
-            if (typescript_is_1.is(_signature)) {
-                _this.signature = _signature;
-            }
-            else {
-                throw new Error("Type Error: PubliqAuthority signature is not a string");
-            }
+            _this.address = data.address;
+            _this.signature = data.signature;
         }
         return _this;
     }

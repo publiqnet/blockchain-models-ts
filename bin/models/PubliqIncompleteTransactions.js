@@ -14,20 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqIncompleteTransactionItem_1 = require("./PubliqIncompleteTransactionItem");
 var PubliqIncompleteTransactions = /** @class */ (function (_super) {
     __extends(PubliqIncompleteTransactions, _super);
     function PubliqIncompleteTransactions(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _incompleteSignedTransactions = data.incomplete_signed_transactions === undefined ? data.incompleteSignedTransactions.map(function (d) { return new PubliqIncompleteTransactionItem_1.default(d); }) : data.incomplete_signed_transactions.map(function (d) { return new PubliqIncompleteTransactionItem_1.default(d); });
-            if (typescript_is_1.is(_incompleteSignedTransactions)) {
-                _this.incompleteSignedTransactions = _incompleteSignedTransactions;
-            }
-            else {
-                throw new Error("Type Error: PubliqIncompleteTransactions incompleteSignedTransactions is not a Array<PubliqIncompleteTransactionItem>");
-            }
+            _this.incompleteSignedTransactions = data.incomplete_signed_transactions === undefined ? data.incompleteSignedTransactions.map(function (d) { return new PubliqIncompleteTransactionItem_1.default(d); }) : data.incomplete_signed_transactions.map(function (d) { return new PubliqIncompleteTransactionItem_1.default(d); });
         }
         return _this;
     }

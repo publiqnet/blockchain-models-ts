@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqStorageFileRequest = /** @class */ (function (_super) {
     __extends(PubliqStorageFileRequest, _super);
     function PubliqStorageFileRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _uri = data.uri;
-            if (typescript_is_1.is(_uri)) {
-                _this.uri = _uri;
-            }
-            else {
-                throw new Error("Type Error: PubliqStorageFileRequest uri is not a string");
-            }
-            var _channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
-            if (typescript_is_1.is(_channelAddress)) {
-                _this.channelAddress = _channelAddress;
-            }
-            else {
-                throw new Error("Type Error: PubliqStorageFileRequest channelAddress is not a string");
-            }
+            _this.uri = data.uri;
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
         }
         return _this;
     }

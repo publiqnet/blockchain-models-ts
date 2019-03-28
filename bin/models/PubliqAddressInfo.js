@@ -14,27 +14,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqIPAddress_1 = require("./PubliqIPAddress");
 var PubliqAddressInfo = /** @class */ (function (_super) {
     __extends(PubliqAddressInfo, _super);
     function PubliqAddressInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
-            if (typescript_is_1.is(_nodeAddress)) {
-                _this.nodeAddress = _nodeAddress;
-            }
-            else {
-                throw new Error("Type Error: PubliqAddressInfo nodeAddress is not a string");
-            }
-            var _ipAddress = new PubliqIPAddress_1.default(data.ip_address === undefined ? data.ipAddress : data.ip_address);
-            if (typescript_is_1.is(_ipAddress)) {
-                _this.ipAddress = _ipAddress;
-            }
-            else {
-                throw new Error("Type Error: PubliqAddressInfo ipAddress is not a PubliqIPAddress");
-            }
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
+            _this.ipAddress = new PubliqIPAddress_1.default(data.ip_address === undefined ? data.ipAddress : data.ip_address);
         }
         return _this;
     }

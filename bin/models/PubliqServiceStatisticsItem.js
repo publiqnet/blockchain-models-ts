@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqServiceStatisticsItem = /** @class */ (function (_super) {
     __extends(PubliqServiceStatisticsItem, _super);
     function PubliqServiceStatisticsItem(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _peerAddress = data.peer_address === undefined ? data.peerAddress : data.peer_address;
-            if (typescript_is_1.is(_peerAddress)) {
-                _this.peerAddress = _peerAddress;
-            }
-            else {
-                throw new Error("Type Error: PubliqServiceStatisticsItem peerAddress is not a string");
-            }
-            var _count = data.count;
-            if (typescript_is_1.is(_count)) {
-                _this.count = _count;
-            }
-            else {
-                throw new Error("Type Error: PubliqServiceStatisticsItem count is not a number");
-            }
+            _this.peerAddress = data.peer_address === undefined ? data.peerAddress : data.peer_address;
+            _this.count = data.count;
         }
         return _this;
     }

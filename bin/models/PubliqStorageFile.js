@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqStorageFile = /** @class */ (function (_super) {
     __extends(PubliqStorageFile, _super);
     function PubliqStorageFile(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _mimeType = data.mime_type === undefined ? data.mimeType : data.mime_type;
-            if (typescript_is_1.is(_mimeType)) {
-                _this.mimeType = _mimeType;
-            }
-            else {
-                throw new Error("Type Error: PubliqStorageFile mimeType is not a string");
-            }
-            var _data = data.data;
-            if (typescript_is_1.is(_data)) {
-                _this.data = _data;
-            }
-            else {
-                throw new Error("Type Error: PubliqStorageFile data is not a string");
-            }
+            _this.mimeType = data.mime_type === undefined ? data.mimeType : data.mime_type;
+            _this.data = data.data;
         }
         return _this;
     }

@@ -14,19 +14,12 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqStorageFileDelete = /** @class */ (function (_super) {
     __extends(PubliqStorageFileDelete, _super);
     function PubliqStorageFileDelete(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _uri = data.uri;
-            if (typescript_is_1.is(_uri)) {
-                _this.uri = _uri;
-            }
-            else {
-                throw new Error("Type Error: PubliqStorageFileDelete uri is not a string");
-            }
+            _this.uri = data.uri;
         }
         return _this;
     }

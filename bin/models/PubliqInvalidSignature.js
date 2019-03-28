@@ -14,20 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqSignature_1 = require("./PubliqSignature");
 var PubliqInvalidSignature = /** @class */ (function (_super) {
     __extends(PubliqInvalidSignature, _super);
     function PubliqInvalidSignature(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _details = new PubliqSignature_1.default(data.details);
-            if (typescript_is_1.is(_details)) {
-                _this.details = _details;
-            }
-            else {
-                throw new Error("Type Error: PubliqInvalidSignature details is not a PubliqSignature");
-            }
+            _this.details = new PubliqSignature_1.default(data.details);
         }
         return _this;
     }

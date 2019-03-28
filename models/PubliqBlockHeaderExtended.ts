@@ -1,8 +1,5 @@
 import BaseModel from '../BaseModel';
 
-import { is } from 'typescript-is';
-
-
 import {createInstanceFromJson} from '../ModelTypes'
 
 
@@ -19,56 +16,13 @@ export default class PubliqBlockHeaderExtended extends BaseModel {
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-
-           const _blockNumber = data.block_number === undefined ?  data.blockNumber: data.block_number;
-           if(is<number>(_blockNumber)){
-               this.blockNumber = _blockNumber
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended blockNumber is not a number`)
-           }
-
-           const _delta = data.delta;
-           if(is<number>(_delta)){
-               this.delta = _delta
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended delta is not a number`)
-           }
-
-           const _cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
-           if(is<number>(_cSum)){
-               this.cSum = _cSum
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended cSum is not a number`)
-           }
-
-           const _cConst = data.c_const === undefined ?  data.cConst: data.c_const;
-           if(is<number>(_cConst)){
-               this.cConst = _cConst
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended cConst is not a number`)
-           }
-
-           const _prevHash = data.prev_hash === undefined ?  data.prevHash: data.prev_hash;
-           if(is<string>(_prevHash)){
-               this.prevHash = _prevHash
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended prevHash is not a string`)
-           }
-
-           const _blockHash = data.block_hash === undefined ?  data.blockHash: data.block_hash;
-           if(is<string>(_blockHash)){
-               this.blockHash = _blockHash
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended blockHash is not a string`)
-           }
-
-           const _timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
-           if(is<Date>(_timeSigned)){
-               this.timeSigned = _timeSigned
-           } else {
-               throw new Error(`Type Error: PubliqBlockHeaderExtended timeSigned is not a Date`)
-           }
-
+            this.blockNumber = data.block_number === undefined ?  data.blockNumber: data.block_number;
+            this.delta = data.delta;
+            this.cSum = data.c_sum === undefined ?  data.cSum: data.c_sum;
+            this.cConst = data.c_const === undefined ?  data.cConst: data.c_const;
+            this.prevHash = data.prev_hash === undefined ?  data.prevHash: data.prev_hash;
+            this.blockHash = data.block_hash === undefined ?  data.blockHash: data.block_hash;
+            this.timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
         }
     }
 

@@ -14,20 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqSignedTransaction_1 = require("./PubliqSignedTransaction");
 var PubliqIncompleteTransactionItem = /** @class */ (function (_super) {
     __extends(PubliqIncompleteTransactionItem, _super);
     function PubliqIncompleteTransactionItem(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _signedTransaction = new PubliqSignedTransaction_1.default(data.signed_transaction === undefined ? data.signedTransaction : data.signed_transaction);
-            if (typescript_is_1.is(_signedTransaction)) {
-                _this.signedTransaction = _signedTransaction;
-            }
-            else {
-                throw new Error("Type Error: PubliqIncompleteTransactionItem signedTransaction is not a PubliqSignedTransaction");
-            }
+            _this.signedTransaction = new PubliqSignedTransaction_1.default(data.signed_transaction === undefined ? data.signedTransaction : data.signed_transaction);
         }
         return _this;
     }

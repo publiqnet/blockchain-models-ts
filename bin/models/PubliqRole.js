@@ -14,27 +14,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqNodeType_1 = require("./PubliqNodeType");
 var PubliqRole = /** @class */ (function (_super) {
     __extends(PubliqRole, _super);
     function PubliqRole(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
-            if (typescript_is_1.is(_nodeAddress)) {
-                _this.nodeAddress = _nodeAddress;
-            }
-            else {
-                throw new Error("Type Error: PubliqRole nodeAddress is not a string");
-            }
-            var _nodeType = PubliqNodeType_1.default.toNumber(data.node_type === undefined ? data.nodeType : data.node_type);
-            if (typescript_is_1.is(_nodeType)) {
-                _this.nodeType = _nodeType;
-            }
-            else {
-                throw new Error("Type Error: PubliqRole nodeType is not a number");
-            }
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
+            _this.nodeType = PubliqNodeType_1.default.toNumber(data.node_type === undefined ? data.nodeType : data.node_type);
         }
         return _this;
     }

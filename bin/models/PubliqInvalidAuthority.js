@@ -14,26 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var typescript_is_1 = require("typescript-is");
 var PubliqInvalidAuthority = /** @class */ (function (_super) {
     __extends(PubliqInvalidAuthority, _super);
     function PubliqInvalidAuthority(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            var _authorityProvided = data.authority_provided === undefined ? data.authorityProvided : data.authority_provided;
-            if (typescript_is_1.is(_authorityProvided)) {
-                _this.authorityProvided = _authorityProvided;
-            }
-            else {
-                throw new Error("Type Error: PubliqInvalidAuthority authorityProvided is not a string");
-            }
-            var _authorityRequired = data.authority_required === undefined ? data.authorityRequired : data.authority_required;
-            if (typescript_is_1.is(_authorityRequired)) {
-                _this.authorityRequired = _authorityRequired;
-            }
-            else {
-                throw new Error("Type Error: PubliqInvalidAuthority authorityRequired is not a string");
-            }
+            _this.authorityProvided = data.authority_provided === undefined ? data.authorityProvided : data.authority_provided;
+            _this.authorityRequired = data.authority_required === undefined ? data.authorityRequired : data.authority_required;
         }
         return _this;
     }
