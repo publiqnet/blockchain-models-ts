@@ -53,38 +53,50 @@ export default class BaseModel {
 
    static getDataWithRtt(data) {
 
-       let dataWithRtt = {};
-
-       if(BaseModel.hasRtt(data.constructor)){
-           dataWithRtt['rtt'] = BaseModel.getRtt(data.constructor);
+       if(data.constructor === Date) {
+           return dateToFormatString(data);
        }
 
-       for (let i in data) {
-           const pv = data[i];
-           const constructor = pv.constructor;
-           let propertySetValue;
+       if(data instanceof Object) {
+           let dataWithRtt = {};
 
-           if(constructor === Function){
-               continue;
-
-           } else if (constructor === Array){
-               propertySetValue = pv.map(d => BaseModel.getDataWithRtt(d));
-
-           } else if(BaseModel.hasRtt(constructor)){
-               propertySetValue = BaseModel.getDataWithRtt(pv);
-
-           } else if(constructor === Date) {
-               propertySetValue = dateToFormatString(pv);
-           }
-            else {
-               propertySetValue = pv;
+           if(BaseModel.hasRtt(data.constructor)){
+               dataWithRtt['rtt'] = BaseModel.getRtt(data.constructor);
            }
 
-           BaseModel.setProperty(i, propertySetValue, dataWithRtt, data.constructor);
+           for (let i in data) {
+               const pv = data[i];
+               const constructor = pv.constructor;
+               let propertySetValue;
+
+               if(constructor === Function){
+                   continue;
+               } else if (constructor === Array){
+                   propertySetValue = pv.map(d => {
+                       if(d.constructor !== Function){
+                           return  BaseModel.getDataWithRtt(d)
+                       }
+                   });
+               }
+               // else if(BaseModel.hasRtt(constructor)){
+               //     propertySetValue = BaseModel.getDataWithRtt(pv);
+               //
+               // }
+               // else if(constructor === Date) {
+               //     propertySetValue = BaseModel.getDataWithRtt(pv);//dateToFormatString(pv);
+               // }
+               else {
+                   propertySetValue = BaseModel.getDataWithRtt(pv);
+               }
+
+               BaseModel.setProperty(i, propertySetValue, dataWithRtt, data.constructor);
+           }
+
+           return dataWithRtt;
        }
 
+       return data;
 
-       return dataWithRtt;
    }
 
    toJson() {
