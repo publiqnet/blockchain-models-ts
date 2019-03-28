@@ -57,6 +57,18 @@ export default class BaseModel {
            return dateToFormatString(data);
        }
 
+       if (data.constructor === Array){
+           return data.map(d => {
+               if(d.constructor !== Function){
+                   return  BaseModel.getDataWithRtt(d)
+               }
+           });
+       }
+
+       // if(data.constructor("Publiq")){
+       //
+       // }
+
        if(data instanceof Object) {
            let dataWithRtt = {};
 
@@ -71,13 +83,14 @@ export default class BaseModel {
 
                if(constructor === Function){
                    continue;
-               } else if (constructor === Array){
-                   propertySetValue = pv.map(d => {
-                       if(d.constructor !== Function){
-                           return  BaseModel.getDataWithRtt(d)
-                       }
-                   });
                }
+               // else if (constructor === Array){
+               //     propertySetValue = pv.map(d => {
+               //         if(d.constructor !== Function){
+               //             return  BaseModel.getDataWithRtt(d)
+               //         }
+               //     });
+               // }
                // else if(BaseModel.hasRtt(constructor)){
                //     propertySetValue = BaseModel.getDataWithRtt(pv);
                //
