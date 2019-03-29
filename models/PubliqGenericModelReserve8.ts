@@ -18,7 +18,7 @@ export default class PubliqGenericModelReserve8 extends BaseModel {
     }
 
     static get Rtt () {
-        return 101;
+        return 100;
     }
 
 } 

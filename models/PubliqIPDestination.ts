@@ -24,7 +24,7 @@ export default class PubliqIPDestination extends BaseModel {
     }
 
     static get Rtt () {
-        return 104;
+        return 103;
     }
 
 } 

@@ -18,7 +18,7 @@ export default class PubliqResponseCodeReserve8 extends BaseModel {
     }
 
     static get Rtt () {
-        return 86;
+        return 85;
     }
 
 } 

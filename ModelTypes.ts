@@ -75,7 +75,6 @@ import PubliqInvalidSignature from './models/PubliqInvalidSignature';
 import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
 import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
 import PubliqTooLongString from './models/PubliqTooLongString';
-import PubliqFileNotFound from './models/PubliqFileNotFound';
 import PubliqUriError from './models/PubliqUriError';
 import PubliqResponseCodeReserve1 from './models/PubliqResponseCodeReserve1';
 import PubliqResponseCodeReserve2 from './models/PubliqResponseCodeReserve2';
@@ -106,8 +105,6 @@ import PubliqIPDestination from './models/PubliqIPDestination';
 import PubliqIPAddress from './models/PubliqIPAddress';
 import PubliqPing from './models/PubliqPing';
 import PubliqPong from './models/PubliqPong';
-import PubliqTaskRequest from './models/PubliqTaskRequest';
-import PubliqTaskResponse from './models/PubliqTaskResponse';
 
 
 const MODELS_TYPES = [ 
@@ -188,7 +185,6 @@ const MODELS_TYPES = [
     PubliqInvalidAuthority,
     PubliqNotEnoughBalance,
     PubliqTooLongString,
-    PubliqFileNotFound,
     PubliqUriError,
     PubliqResponseCodeReserve1,
     PubliqResponseCodeReserve2,
@@ -219,8 +215,6 @@ const MODELS_TYPES = [
     PubliqIPAddress,
     PubliqPing,
     PubliqPong,
-    PubliqTaskRequest,
-    PubliqTaskResponse,
 ];
 
 export const createInstanceFromJson = data => {

@@ -77,7 +77,6 @@ var PubliqInvalidSignature_1 = require("./models/PubliqInvalidSignature");
 var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
 var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
 var PubliqTooLongString_1 = require("./models/PubliqTooLongString");
-var PubliqFileNotFound_1 = require("./models/PubliqFileNotFound");
 var PubliqUriError_1 = require("./models/PubliqUriError");
 var PubliqResponseCodeReserve1_1 = require("./models/PubliqResponseCodeReserve1");
 var PubliqResponseCodeReserve2_1 = require("./models/PubliqResponseCodeReserve2");
@@ -108,8 +107,6 @@ var PubliqIPDestination_1 = require("./models/PubliqIPDestination");
 var PubliqIPAddress_1 = require("./models/PubliqIPAddress");
 var PubliqPing_1 = require("./models/PubliqPing");
 var PubliqPong_1 = require("./models/PubliqPong");
-var PubliqTaskRequest_1 = require("./models/PubliqTaskRequest");
-var PubliqTaskResponse_1 = require("./models/PubliqTaskResponse");
 var MODELS_TYPES = [
     PubliqCoin_1.default,
     PubliqBroadcast_1.default,
@@ -188,7 +185,6 @@ var MODELS_TYPES = [
     PubliqInvalidAuthority_1.default,
     PubliqNotEnoughBalance_1.default,
     PubliqTooLongString_1.default,
-    PubliqFileNotFound_1.default,
     PubliqUriError_1.default,
     PubliqResponseCodeReserve1_1.default,
     PubliqResponseCodeReserve2_1.default,
@@ -219,8 +215,6 @@ var MODELS_TYPES = [
     PubliqIPAddress_1.default,
     PubliqPing_1.default,
     PubliqPong_1.default,
-    PubliqTaskRequest_1.default,
-    PubliqTaskResponse_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
     if (data.constructor.Rtt !== undefined) {

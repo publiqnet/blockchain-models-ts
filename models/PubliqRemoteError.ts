@@ -21,7 +21,7 @@ export default class PubliqRemoteError extends BaseModel {
     }
 
     static get Rtt () {
-        return 89;
+        return 88;
     }
 
 } 

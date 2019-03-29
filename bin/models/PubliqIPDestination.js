@@ -36,7 +36,7 @@ var PubliqIPDestination = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqIPDestination, "Rtt", {
         get: function () {
-            return 104;
+            return 103;
         },
         enumerable: true,
         configurable: true
