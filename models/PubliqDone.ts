@@ -18,7 +18,7 @@ export default class PubliqDone extends BaseModel {
     }
 
     static get Rtt () {
-        return 70;
+        return 77;
     }
 
 } 

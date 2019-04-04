@@ -25,7 +25,7 @@ export default class PubliqSignedTransactionBroadcastRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 49;
+        return 53;
     }
 
 } 

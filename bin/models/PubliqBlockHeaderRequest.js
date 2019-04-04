@@ -36,7 +36,7 @@ var PubliqBlockHeaderRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqBlockHeaderRequest, "Rtt", {
         get: function () {
-            return 56;
+            return 60;
         },
         enumerable: true,
         configurable: true

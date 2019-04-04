@@ -31,7 +31,7 @@ var PubliqGenericModelReserve7 = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqGenericModelReserve7, "Rtt", {
         get: function () {
-            return 99;
+            return 106;
         },
         enumerable: true,
         configurable: true

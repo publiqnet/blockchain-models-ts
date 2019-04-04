@@ -37,7 +37,7 @@ var PubliqUriError = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqUriError, "Rtt", {
         get: function () {
-            return 77;
+            return 84;
         },
         enumerable: true,
         configurable: true

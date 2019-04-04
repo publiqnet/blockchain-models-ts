@@ -34,7 +34,7 @@ var PubliqInvalidPublicKey = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqInvalidPublicKey, "Rtt", {
         get: function () {
-            return 71;
+            return 78;
         },
         enumerable: true,
         configurable: true

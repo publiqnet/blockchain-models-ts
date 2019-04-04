@@ -14,34 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqNotEnoughBalance = /** @class */ (function (_super) {
-    __extends(PubliqNotEnoughBalance, _super);
-    function PubliqNotEnoughBalance(data) {
+var PubliqPublicAddressInfo_1 = require("./PubliqPublicAddressInfo");
+var PubliqPublicAddressesInfo = /** @class */ (function (_super) {
+    __extends(PubliqPublicAddressesInfo, _super);
+    function PubliqPublicAddressesInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.balance = new PubliqCoin_1.default(data.balance);
-            _this.spending = new PubliqCoin_1.default(data.spending);
+            _this.addressesInfo = data.addresses_info === undefined ? data.addressesInfo.map(function (d) { return new PubliqPublicAddressInfo_1.default(d); }) : data.addresses_info.map(function (d) { return new PubliqPublicAddressInfo_1.default(d); });
         }
         return _this;
     }
-    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
+    Object.defineProperty(PubliqPublicAddressesInfo, "PropertyMap", {
         get: function () {
             return {
-                balance: 'balance',
-                spending: 'spending',
+                addressesInfo: 'addresses_info',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
+    Object.defineProperty(PubliqPublicAddressesInfo, "Rtt", {
         get: function () {
-            return 82;
+            return 65;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqNotEnoughBalance;
+    return PubliqPublicAddressesInfo;
 }(BaseModel_1.default));
-exports.default = PubliqNotEnoughBalance;
+exports.default = PubliqPublicAddressesInfo;

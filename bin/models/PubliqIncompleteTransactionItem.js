@@ -35,7 +35,7 @@ var PubliqIncompleteTransactionItem = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqIncompleteTransactionItem, "Rtt", {
         get: function () {
-            return 53;
+            return 57;
         },
         enumerable: true,
         configurable: true

@@ -37,7 +37,7 @@ var PubliqTransactionBroadcastRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTransactionBroadcastRequest, "Rtt", {
         get: function () {
-            return 48;
+            return 52;
         },
         enumerable: true,
         configurable: true

@@ -24,7 +24,7 @@ export default class PubliqDigest extends BaseModel {
     }
 
     static get Rtt () {
-        return 38;
+        return 42;
     }
 
 } 

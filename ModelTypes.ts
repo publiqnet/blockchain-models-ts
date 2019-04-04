@@ -35,6 +35,10 @@ import PubliqTransactionReserve12 from './models/PubliqTransactionReserve12';
 import PubliqTransactionReserve13 from './models/PubliqTransactionReserve13';
 import PubliqTransactionReserve14 from './models/PubliqTransactionReserve14';
 import PubliqTransactionReserve15 from './models/PubliqTransactionReserve15';
+import PubliqIPDestination from './models/PubliqIPDestination';
+import PubliqIPAddress from './models/PubliqIPAddress';
+import PubliqPing from './models/PubliqPing';
+import PubliqPong from './models/PubliqPong';
 import PubliqDigestRequest from './models/PubliqDigestRequest';
 import PubliqDigest from './models/PubliqDigest';
 import PubliqLoggedTransactionsRequest from './models/PubliqLoggedTransactionsRequest';
@@ -58,6 +62,9 @@ import PubliqBlockHeaderRequest from './models/PubliqBlockHeaderRequest';
 import PubliqBlockHeaderResponse from './models/PubliqBlockHeaderResponse';
 import PubliqBlockchainRequest from './models/PubliqBlockchainRequest';
 import PubliqBlockchainResponse from './models/PubliqBlockchainResponse';
+import PubliqPublicAddressesRequest from './models/PubliqPublicAddressesRequest';
+import PubliqPublicAddressesInfo from './models/PubliqPublicAddressesInfo';
+import PubliqPublicAddressInfo from './models/PubliqPublicAddressInfo';
 import PubliqApiReserve1 from './models/PubliqApiReserve1';
 import PubliqApiReserve2 from './models/PubliqApiReserve2';
 import PubliqApiReserve3 from './models/PubliqApiReserve3';
@@ -101,10 +108,6 @@ import PubliqGenericModelReserve7 from './models/PubliqGenericModelReserve7';
 import PubliqGenericModelReserve8 from './models/PubliqGenericModelReserve8';
 import PubliqGenericModelReserve9 from './models/PubliqGenericModelReserve9';
 import PubliqGenericModelReserve10 from './models/PubliqGenericModelReserve10';
-import PubliqIPDestination from './models/PubliqIPDestination';
-import PubliqIPAddress from './models/PubliqIPAddress';
-import PubliqPing from './models/PubliqPing';
-import PubliqPong from './models/PubliqPong';
 
 
 const MODELS_TYPES = [ 
@@ -145,6 +148,10 @@ const MODELS_TYPES = [
     PubliqTransactionReserve13,
     PubliqTransactionReserve14,
     PubliqTransactionReserve15,
+    PubliqIPDestination,
+    PubliqIPAddress,
+    PubliqPing,
+    PubliqPong,
     PubliqDigestRequest,
     PubliqDigest,
     PubliqLoggedTransactionsRequest,
@@ -168,6 +175,9 @@ const MODELS_TYPES = [
     PubliqBlockHeaderResponse,
     PubliqBlockchainRequest,
     PubliqBlockchainResponse,
+    PubliqPublicAddressesRequest,
+    PubliqPublicAddressesInfo,
+    PubliqPublicAddressInfo,
     PubliqApiReserve1,
     PubliqApiReserve2,
     PubliqApiReserve3,
@@ -211,10 +221,6 @@ const MODELS_TYPES = [
     PubliqGenericModelReserve8,
     PubliqGenericModelReserve9,
     PubliqGenericModelReserve10,
-    PubliqIPDestination,
-    PubliqIPAddress,
-    PubliqPing,
-    PubliqPong,
 ];
 
 export const createInstanceFromJson = data => {

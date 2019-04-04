@@ -31,7 +31,7 @@ var PubliqApiReserve5 = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqApiReserve5, "Rtt", {
         get: function () {
-            return 64;
+            return 71;
         },
         enumerable: true,
         configurable: true

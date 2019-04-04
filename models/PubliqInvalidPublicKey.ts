@@ -21,7 +21,7 @@ export default class PubliqInvalidPublicKey extends BaseModel {
     }
 
     static get Rtt () {
-        return 71;
+        return 78;
     }
 
 } 

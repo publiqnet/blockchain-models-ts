@@ -37,6 +37,10 @@ var PubliqTransactionReserve12_1 = require("./models/PubliqTransactionReserve12"
 var PubliqTransactionReserve13_1 = require("./models/PubliqTransactionReserve13");
 var PubliqTransactionReserve14_1 = require("./models/PubliqTransactionReserve14");
 var PubliqTransactionReserve15_1 = require("./models/PubliqTransactionReserve15");
+var PubliqIPDestination_1 = require("./models/PubliqIPDestination");
+var PubliqIPAddress_1 = require("./models/PubliqIPAddress");
+var PubliqPing_1 = require("./models/PubliqPing");
+var PubliqPong_1 = require("./models/PubliqPong");
 var PubliqDigestRequest_1 = require("./models/PubliqDigestRequest");
 var PubliqDigest_1 = require("./models/PubliqDigest");
 var PubliqLoggedTransactionsRequest_1 = require("./models/PubliqLoggedTransactionsRequest");
@@ -60,6 +64,9 @@ var PubliqBlockHeaderRequest_1 = require("./models/PubliqBlockHeaderRequest");
 var PubliqBlockHeaderResponse_1 = require("./models/PubliqBlockHeaderResponse");
 var PubliqBlockchainRequest_1 = require("./models/PubliqBlockchainRequest");
 var PubliqBlockchainResponse_1 = require("./models/PubliqBlockchainResponse");
+var PubliqPublicAddressesRequest_1 = require("./models/PubliqPublicAddressesRequest");
+var PubliqPublicAddressesInfo_1 = require("./models/PubliqPublicAddressesInfo");
+var PubliqPublicAddressInfo_1 = require("./models/PubliqPublicAddressInfo");
 var PubliqApiReserve1_1 = require("./models/PubliqApiReserve1");
 var PubliqApiReserve2_1 = require("./models/PubliqApiReserve2");
 var PubliqApiReserve3_1 = require("./models/PubliqApiReserve3");
@@ -103,10 +110,6 @@ var PubliqGenericModelReserve7_1 = require("./models/PubliqGenericModelReserve7"
 var PubliqGenericModelReserve8_1 = require("./models/PubliqGenericModelReserve8");
 var PubliqGenericModelReserve9_1 = require("./models/PubliqGenericModelReserve9");
 var PubliqGenericModelReserve10_1 = require("./models/PubliqGenericModelReserve10");
-var PubliqIPDestination_1 = require("./models/PubliqIPDestination");
-var PubliqIPAddress_1 = require("./models/PubliqIPAddress");
-var PubliqPing_1 = require("./models/PubliqPing");
-var PubliqPong_1 = require("./models/PubliqPong");
 var MODELS_TYPES = [
     PubliqCoin_1.default,
     PubliqBroadcast_1.default,
@@ -145,6 +148,10 @@ var MODELS_TYPES = [
     PubliqTransactionReserve13_1.default,
     PubliqTransactionReserve14_1.default,
     PubliqTransactionReserve15_1.default,
+    PubliqIPDestination_1.default,
+    PubliqIPAddress_1.default,
+    PubliqPing_1.default,
+    PubliqPong_1.default,
     PubliqDigestRequest_1.default,
     PubliqDigest_1.default,
     PubliqLoggedTransactionsRequest_1.default,
@@ -168,6 +175,9 @@ var MODELS_TYPES = [
     PubliqBlockHeaderResponse_1.default,
     PubliqBlockchainRequest_1.default,
     PubliqBlockchainResponse_1.default,
+    PubliqPublicAddressesRequest_1.default,
+    PubliqPublicAddressesInfo_1.default,
+    PubliqPublicAddressInfo_1.default,
     PubliqApiReserve1_1.default,
     PubliqApiReserve2_1.default,
     PubliqApiReserve3_1.default,
@@ -211,10 +221,6 @@ var MODELS_TYPES = [
     PubliqGenericModelReserve8_1.default,
     PubliqGenericModelReserve9_1.default,
     PubliqGenericModelReserve10_1.default,
-    PubliqIPDestination_1.default,
-    PubliqIPAddress_1.default,
-    PubliqPing_1.default,
-    PubliqPong_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
     if (data.constructor.Rtt !== undefined) {

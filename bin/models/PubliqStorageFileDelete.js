@@ -34,7 +34,7 @@ var PubliqStorageFileDelete = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqStorageFileDelete, "Rtt", {
         get: function () {
-            return 90;
+            return 97;
         },
         enumerable: true,
         configurable: true

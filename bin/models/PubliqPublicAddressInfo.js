@@ -14,34 +14,36 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqNotEnoughBalance = /** @class */ (function (_super) {
-    __extends(PubliqNotEnoughBalance, _super);
-    function PubliqNotEnoughBalance(data) {
+var PubliqIPDestination_1 = require("./PubliqIPDestination");
+var PubliqPublicAddressInfo = /** @class */ (function (_super) {
+    __extends(PubliqPublicAddressInfo, _super);
+    function PubliqPublicAddressInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.balance = new PubliqCoin_1.default(data.balance);
-            _this.spending = new PubliqCoin_1.default(data.spending);
+            _this.ipDestination = new PubliqIPDestination_1.default(data.ip_destination === undefined ? data.ipDestination : data.ip_destination);
+            _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
+            _this.secondsSinceChecked = data.seconds_since_checked === undefined ? data.secondsSinceChecked : data.seconds_since_checked;
         }
         return _this;
     }
-    Object.defineProperty(PubliqNotEnoughBalance, "PropertyMap", {
+    Object.defineProperty(PubliqPublicAddressInfo, "PropertyMap", {
         get: function () {
             return {
-                balance: 'balance',
-                spending: 'spending',
+                ipDestination: 'ip_destination',
+                nodeAddress: 'node_address',
+                secondsSinceChecked: 'seconds_since_checked',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqNotEnoughBalance, "Rtt", {
+    Object.defineProperty(PubliqPublicAddressInfo, "Rtt", {
         get: function () {
-            return 82;
+            return 66;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqNotEnoughBalance;
+    return PubliqPublicAddressInfo;
 }(BaseModel_1.default));
-exports.default = PubliqNotEnoughBalance;
+exports.default = PubliqPublicAddressInfo;
