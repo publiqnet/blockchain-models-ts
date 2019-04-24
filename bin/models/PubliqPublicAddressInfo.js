@@ -14,13 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqIPDestination_1 = require("./PubliqIPDestination");
+var PubliqIPAddress_1 = require("./PubliqIPAddress");
 var PubliqPublicAddressInfo = /** @class */ (function (_super) {
     __extends(PubliqPublicAddressInfo, _super);
     function PubliqPublicAddressInfo(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.ipDestination = new PubliqIPDestination_1.default(data.ip_destination === undefined ? data.ipDestination : data.ip_destination);
+            _this.ipAddress = new PubliqIPAddress_1.default(data.ip_address === undefined ? data.ipAddress : data.ip_address);
             _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
             _this.secondsSinceChecked = data.seconds_since_checked === undefined ? data.secondsSinceChecked : data.seconds_since_checked;
         }
@@ -29,7 +29,7 @@ var PubliqPublicAddressInfo = /** @class */ (function (_super) {
     Object.defineProperty(PubliqPublicAddressInfo, "PropertyMap", {
         get: function () {
             return {
-                ipDestination: 'ip_destination',
+                ipAddress: 'ip_address',
                 nodeAddress: 'node_address',
                 secondsSinceChecked: 'seconds_since_checked',
             };

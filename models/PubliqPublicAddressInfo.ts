@@ -2,18 +2,18 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqIPDestination from './PubliqIPDestination';
+import PubliqIPAddress from './PubliqIPAddress';
 
 export default class PubliqPublicAddressInfo extends BaseModel {
 
-    ipDestination: PubliqIPDestination;
+    ipAddress: PubliqIPAddress;
     nodeAddress: string;
     secondsSinceChecked: number;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.ipDestination = new PubliqIPDestination(data.ip_destination === undefined ?  data.ipDestination: data.ip_destination);
+            this.ipAddress = new PubliqIPAddress(data.ip_address === undefined ?  data.ipAddress: data.ip_address);
             this.nodeAddress = data.node_address === undefined ?  data.nodeAddress: data.node_address;
             this.secondsSinceChecked = data.seconds_since_checked === undefined ?  data.secondsSinceChecked: data.seconds_since_checked;
         }
@@ -21,7 +21,7 @@ export default class PubliqPublicAddressInfo extends BaseModel {
 
     static get PropertyMap () {
         return {
-            ipDestination : 'ip_destination',
+            ipAddress : 'ip_address',
             nodeAddress : 'node_address',
             secondsSinceChecked : 'seconds_since_checked',
         }
