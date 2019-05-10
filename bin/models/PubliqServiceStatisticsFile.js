@@ -14,32 +14,36 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqSignedTransaction_1 = require("./PubliqSignedTransaction");
-var PubliqIncompleteTransactionItem = /** @class */ (function (_super) {
-    __extends(PubliqIncompleteTransactionItem, _super);
-    function PubliqIncompleteTransactionItem(data) {
+var PubliqServiceStatisticsCount_1 = require("./PubliqServiceStatisticsCount");
+var PubliqServiceStatisticsFile = /** @class */ (function (_super) {
+    __extends(PubliqServiceStatisticsFile, _super);
+    function PubliqServiceStatisticsFile(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.signedTransaction = new PubliqSignedTransaction_1.default(data.signed_transaction === undefined ? data.signedTransaction : data.signed_transaction);
+            _this.fileUri = data.file_uri === undefined ? data.fileUri : data.file_uri;
+            _this.unitUri = data.unit_uri === undefined ? data.unitUri : data.unit_uri;
+            _this.countItems = data.count_items === undefined ? data.countItems.map(function (d) { return new PubliqServiceStatisticsCount_1.default(d); }) : data.count_items.map(function (d) { return new PubliqServiceStatisticsCount_1.default(d); });
         }
         return _this;
     }
-    Object.defineProperty(PubliqIncompleteTransactionItem, "PropertyMap", {
+    Object.defineProperty(PubliqServiceStatisticsFile, "PropertyMap", {
         get: function () {
             return {
-                signedTransaction: 'signed_transaction',
+                fileUri: 'file_uri',
+                unitUri: 'unit_uri',
+                countItems: 'count_items',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqIncompleteTransactionItem, "Rtt", {
+    Object.defineProperty(PubliqServiceStatisticsFile, "Rtt", {
         get: function () {
-            return 57;
+            return 27;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqIncompleteTransactionItem;
+    return PubliqServiceStatisticsFile;
 }(BaseModel_1.default));
-exports.default = PubliqIncompleteTransactionItem;
+exports.default = PubliqServiceStatisticsFile;

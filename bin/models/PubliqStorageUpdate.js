@@ -21,7 +21,7 @@ var PubliqStorageUpdate = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.status = PubliqUpdateType_1.default.toNumber(data.status);
-            _this.uri = data.uri;
+            _this.fileUri = data.file_uri === undefined ? data.fileUri : data.file_uri;
             _this.storageAddress = data.storage_address === undefined ? data.storageAddress : data.storage_address;
         }
         return _this;
@@ -30,7 +30,7 @@ var PubliqStorageUpdate = /** @class */ (function (_super) {
         get: function () {
             return {
                 status: 'status',
-                uri: 'uri',
+                fileUri: 'file_uri',
                 storageAddress: 'storage_address',
             };
         },

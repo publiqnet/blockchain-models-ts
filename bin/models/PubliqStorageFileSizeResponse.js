@@ -14,33 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqServiceStatisticsItem = /** @class */ (function (_super) {
-    __extends(PubliqServiceStatisticsItem, _super);
-    function PubliqServiceStatisticsItem(data) {
+var PubliqStorageFileSizeResponse = /** @class */ (function (_super) {
+    __extends(PubliqStorageFileSizeResponse, _super);
+    function PubliqStorageFileSizeResponse(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.peerAddress = data.peer_address === undefined ? data.peerAddress : data.peer_address;
-            _this.count = data.count;
+            _this.uri = data.uri;
+            _this.size = data.size;
         }
         return _this;
     }
-    Object.defineProperty(PubliqServiceStatisticsItem, "PropertyMap", {
+    Object.defineProperty(PubliqStorageFileSizeResponse, "PropertyMap", {
         get: function () {
             return {
-                peerAddress: 'peer_address',
-                count: 'count',
+                uri: 'uri',
+                size: 'size',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqServiceStatisticsItem, "Rtt", {
+    Object.defineProperty(PubliqStorageFileSizeResponse, "Rtt", {
         get: function () {
-            return 26;
+            return 101;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqServiceStatisticsItem;
+    return PubliqStorageFileSizeResponse;
 }(BaseModel_1.default));
-exports.default = PubliqServiceStatisticsItem;
+exports.default = PubliqStorageFileSizeResponse;

@@ -14,28 +14,28 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqTransactionReserve7 = /** @class */ (function (_super) {
-    __extends(PubliqTransactionReserve7, _super);
-    function PubliqTransactionReserve7(data) {
+var PubliqApiReserve11 = /** @class */ (function (_super) {
+    __extends(PubliqApiReserve11, _super);
+    function PubliqApiReserve11(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
         }
         return _this;
     }
-    Object.defineProperty(PubliqTransactionReserve7, "PropertyMap", {
+    Object.defineProperty(PubliqApiReserve11, "PropertyMap", {
         get: function () {
             return {};
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqTransactionReserve7, "Rtt", {
+    Object.defineProperty(PubliqApiReserve11, "Rtt", {
         get: function () {
-            return 28;
+            return 76;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqTransactionReserve7;
+    return PubliqApiReserve11;
 }(BaseModel_1.default));
-exports.default = PubliqTransactionReserve7;
+exports.default = PubliqApiReserve11;

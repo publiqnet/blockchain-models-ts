@@ -23,10 +23,10 @@ import PubliqContent from './models/PubliqContent';
 import PubliqRole from './models/PubliqRole';
 import PubliqAddressInfo from './models/PubliqAddressInfo';
 import PubliqStorageUpdate from './models/PubliqStorageUpdate';
+import PubliqStatistics_del from './models/PubliqStatistics_del';
 import PubliqServiceStatistics from './models/PubliqServiceStatistics';
-import PubliqServiceStatisticsItem from './models/PubliqServiceStatisticsItem';
-import PubliqTransactionReserve6 from './models/PubliqTransactionReserve6';
-import PubliqTransactionReserve7 from './models/PubliqTransactionReserve7';
+import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
+import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
 import PubliqTransactionReserve8 from './models/PubliqTransactionReserve8';
 import PubliqTransactionReserve9 from './models/PubliqTransactionReserve9';
 import PubliqTransactionReserve10 from './models/PubliqTransactionReserve10';
@@ -51,11 +51,11 @@ import PubliqKeyPair from './models/PubliqKeyPair';
 import PubliqSignRequest from './models/PubliqSignRequest';
 import PubliqSignature from './models/PubliqSignature';
 import PubliqTransactionBroadcastRequest from './models/PubliqTransactionBroadcastRequest';
-import PubliqSignedTransactionBroadcastRequest from './models/PubliqSignedTransactionBroadcastRequest';
 import PubliqTransactionDone from './models/PubliqTransactionDone';
-import PubliqIncompleteTransactionsRequest from './models/PubliqIncompleteTransactionsRequest';
-import PubliqIncompleteTransactions from './models/PubliqIncompleteTransactions';
-import PubliqIncompleteTransactionItem from './models/PubliqIncompleteTransactionItem';
+import PubliqApiReserve1 from './models/PubliqApiReserve1';
+import PubliqApiReserve2 from './models/PubliqApiReserve2';
+import PubliqApiReserve3 from './models/PubliqApiReserve3';
+import PubliqApiReserve4 from './models/PubliqApiReserve4';
 import PubliqSyncRequest from './models/PubliqSyncRequest';
 import PubliqSyncResponse from './models/PubliqSyncResponse';
 import PubliqBlockHeaderRequest from './models/PubliqBlockHeaderRequest';
@@ -65,16 +65,16 @@ import PubliqBlockchainResponse from './models/PubliqBlockchainResponse';
 import PubliqPublicAddressesRequest from './models/PubliqPublicAddressesRequest';
 import PubliqPublicAddressesInfo from './models/PubliqPublicAddressesInfo';
 import PubliqPublicAddressInfo from './models/PubliqPublicAddressInfo';
-import PubliqApiReserve1 from './models/PubliqApiReserve1';
-import PubliqApiReserve2 from './models/PubliqApiReserve2';
-import PubliqApiReserve3 from './models/PubliqApiReserve3';
-import PubliqApiReserve4 from './models/PubliqApiReserve4';
+import PubliqIncompleteTransactionsRequest from './models/PubliqIncompleteTransactionsRequest';
+import PubliqIncompleteTransactions from './models/PubliqIncompleteTransactions';
+import PubliqServed from './models/PubliqServed';
 import PubliqApiReserve5 from './models/PubliqApiReserve5';
 import PubliqApiReserve6 from './models/PubliqApiReserve6';
 import PubliqApiReserve7 from './models/PubliqApiReserve7';
 import PubliqApiReserve8 from './models/PubliqApiReserve8';
 import PubliqApiReserve9 from './models/PubliqApiReserve9';
 import PubliqApiReserve10 from './models/PubliqApiReserve10';
+import PubliqApiReserve11 from './models/PubliqApiReserve11';
 import PubliqDone from './models/PubliqDone';
 import PubliqInvalidPublicKey from './models/PubliqInvalidPublicKey';
 import PubliqInvalidPrivateKey from './models/PubliqInvalidPrivateKey';
@@ -98,6 +98,8 @@ import PubliqStorageFile from './models/PubliqStorageFile';
 import PubliqStorageFileDelete from './models/PubliqStorageFileDelete';
 import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
 import PubliqStorageFileRequest from './models/PubliqStorageFileRequest';
+import PubliqStorageFileSize from './models/PubliqStorageFileSize';
+import PubliqStorageFileSizeResponse from './models/PubliqStorageFileSizeResponse';
 import PubliqGenericModelReserve1 from './models/PubliqGenericModelReserve1';
 import PubliqGenericModelReserve2 from './models/PubliqGenericModelReserve2';
 import PubliqGenericModelReserve3 from './models/PubliqGenericModelReserve3';
@@ -136,10 +138,10 @@ const MODELS_TYPES = [
     PubliqRole,
     PubliqAddressInfo,
     PubliqStorageUpdate,
+    PubliqStatistics_del,
     PubliqServiceStatistics,
-    PubliqServiceStatisticsItem,
-    PubliqTransactionReserve6,
-    PubliqTransactionReserve7,
+    PubliqServiceStatisticsFile,
+    PubliqServiceStatisticsCount,
     PubliqTransactionReserve8,
     PubliqTransactionReserve9,
     PubliqTransactionReserve10,
@@ -164,11 +166,11 @@ const MODELS_TYPES = [
     PubliqSignRequest,
     PubliqSignature,
     PubliqTransactionBroadcastRequest,
-    PubliqSignedTransactionBroadcastRequest,
     PubliqTransactionDone,
-    PubliqIncompleteTransactionsRequest,
-    PubliqIncompleteTransactions,
-    PubliqIncompleteTransactionItem,
+    PubliqApiReserve1,
+    PubliqApiReserve2,
+    PubliqApiReserve3,
+    PubliqApiReserve4,
     PubliqSyncRequest,
     PubliqSyncResponse,
     PubliqBlockHeaderRequest,
@@ -178,16 +180,16 @@ const MODELS_TYPES = [
     PubliqPublicAddressesRequest,
     PubliqPublicAddressesInfo,
     PubliqPublicAddressInfo,
-    PubliqApiReserve1,
-    PubliqApiReserve2,
-    PubliqApiReserve3,
-    PubliqApiReserve4,
+    PubliqIncompleteTransactionsRequest,
+    PubliqIncompleteTransactions,
+    PubliqServed,
     PubliqApiReserve5,
     PubliqApiReserve6,
     PubliqApiReserve7,
     PubliqApiReserve8,
     PubliqApiReserve9,
     PubliqApiReserve10,
+    PubliqApiReserve11,
     PubliqDone,
     PubliqInvalidPublicKey,
     PubliqInvalidPrivateKey,
@@ -211,6 +213,8 @@ const MODELS_TYPES = [
     PubliqStorageFileDelete,
     PubliqStorageFileAddress,
     PubliqStorageFileRequest,
+    PubliqStorageFileSize,
+    PubliqStorageFileSizeResponse,
     PubliqGenericModelReserve1,
     PubliqGenericModelReserve2,
     PubliqGenericModelReserve3,

@@ -3,22 +3,25 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqTransactionReserve7 extends BaseModel {
+export default class PubliqStorageFileSize extends BaseModel {
 
+    uri: string;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
+            this.uri = data.uri;
         }
     }
 
     static get PropertyMap () {
         return {
+            uri : 'uri',
         }
     }
 
     static get Rtt () {
-        return 28;
+        return 100;
     }
 
 } 

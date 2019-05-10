@@ -14,28 +14,35 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqTransactionReserve6 = /** @class */ (function (_super) {
-    __extends(PubliqTransactionReserve6, _super);
-    function PubliqTransactionReserve6(data) {
+var PubliqServed = /** @class */ (function (_super) {
+    __extends(PubliqServed, _super);
+    function PubliqServed(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.fileUri = data.file_uri === undefined ? data.fileUri : data.file_uri;
+            _this.contentUnitUri = data.content_unit_uri === undefined ? data.contentUnitUri : data.content_unit_uri;
+            _this.peerAddress = data.peer_address === undefined ? data.peerAddress : data.peer_address;
         }
         return _this;
     }
-    Object.defineProperty(PubliqTransactionReserve6, "PropertyMap", {
+    Object.defineProperty(PubliqServed, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                fileUri: 'file_uri',
+                contentUnitUri: 'content_unit_uri',
+                peerAddress: 'peer_address',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqTransactionReserve6, "Rtt", {
+    Object.defineProperty(PubliqServed, "Rtt", {
         get: function () {
-            return 27;
+            return 69;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqTransactionReserve6;
+    return PubliqServed;
 }(BaseModel_1.default));
-exports.default = PubliqTransactionReserve6;
+exports.default = PubliqServed;

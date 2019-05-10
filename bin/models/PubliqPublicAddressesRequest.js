@@ -14,17 +14,21 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
+var PubliqPublicAddressType_1 = require("./PubliqPublicAddressType");
 var PubliqPublicAddressesRequest = /** @class */ (function (_super) {
     __extends(PubliqPublicAddressesRequest, _super);
     function PubliqPublicAddressesRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.addressType = PubliqPublicAddressType_1.default.toNumber(data.address_type === undefined ? data.addressType : data.address_type);
         }
         return _this;
     }
     Object.defineProperty(PubliqPublicAddressesRequest, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                addressType: 'address_type',
+            };
         },
         enumerable: true,
         configurable: true

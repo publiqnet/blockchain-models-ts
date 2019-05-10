@@ -25,10 +25,10 @@ var PubliqContent_1 = require("./models/PubliqContent");
 var PubliqRole_1 = require("./models/PubliqRole");
 var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
 var PubliqStorageUpdate_1 = require("./models/PubliqStorageUpdate");
+var PubliqStatistics_del_1 = require("./models/PubliqStatistics_del");
 var PubliqServiceStatistics_1 = require("./models/PubliqServiceStatistics");
-var PubliqServiceStatisticsItem_1 = require("./models/PubliqServiceStatisticsItem");
-var PubliqTransactionReserve6_1 = require("./models/PubliqTransactionReserve6");
-var PubliqTransactionReserve7_1 = require("./models/PubliqTransactionReserve7");
+var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFile");
+var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
 var PubliqTransactionReserve8_1 = require("./models/PubliqTransactionReserve8");
 var PubliqTransactionReserve9_1 = require("./models/PubliqTransactionReserve9");
 var PubliqTransactionReserve10_1 = require("./models/PubliqTransactionReserve10");
@@ -53,11 +53,11 @@ var PubliqKeyPair_1 = require("./models/PubliqKeyPair");
 var PubliqSignRequest_1 = require("./models/PubliqSignRequest");
 var PubliqSignature_1 = require("./models/PubliqSignature");
 var PubliqTransactionBroadcastRequest_1 = require("./models/PubliqTransactionBroadcastRequest");
-var PubliqSignedTransactionBroadcastRequest_1 = require("./models/PubliqSignedTransactionBroadcastRequest");
 var PubliqTransactionDone_1 = require("./models/PubliqTransactionDone");
-var PubliqIncompleteTransactionsRequest_1 = require("./models/PubliqIncompleteTransactionsRequest");
-var PubliqIncompleteTransactions_1 = require("./models/PubliqIncompleteTransactions");
-var PubliqIncompleteTransactionItem_1 = require("./models/PubliqIncompleteTransactionItem");
+var PubliqApiReserve1_1 = require("./models/PubliqApiReserve1");
+var PubliqApiReserve2_1 = require("./models/PubliqApiReserve2");
+var PubliqApiReserve3_1 = require("./models/PubliqApiReserve3");
+var PubliqApiReserve4_1 = require("./models/PubliqApiReserve4");
 var PubliqSyncRequest_1 = require("./models/PubliqSyncRequest");
 var PubliqSyncResponse_1 = require("./models/PubliqSyncResponse");
 var PubliqBlockHeaderRequest_1 = require("./models/PubliqBlockHeaderRequest");
@@ -67,16 +67,16 @@ var PubliqBlockchainResponse_1 = require("./models/PubliqBlockchainResponse");
 var PubliqPublicAddressesRequest_1 = require("./models/PubliqPublicAddressesRequest");
 var PubliqPublicAddressesInfo_1 = require("./models/PubliqPublicAddressesInfo");
 var PubliqPublicAddressInfo_1 = require("./models/PubliqPublicAddressInfo");
-var PubliqApiReserve1_1 = require("./models/PubliqApiReserve1");
-var PubliqApiReserve2_1 = require("./models/PubliqApiReserve2");
-var PubliqApiReserve3_1 = require("./models/PubliqApiReserve3");
-var PubliqApiReserve4_1 = require("./models/PubliqApiReserve4");
+var PubliqIncompleteTransactionsRequest_1 = require("./models/PubliqIncompleteTransactionsRequest");
+var PubliqIncompleteTransactions_1 = require("./models/PubliqIncompleteTransactions");
+var PubliqServed_1 = require("./models/PubliqServed");
 var PubliqApiReserve5_1 = require("./models/PubliqApiReserve5");
 var PubliqApiReserve6_1 = require("./models/PubliqApiReserve6");
 var PubliqApiReserve7_1 = require("./models/PubliqApiReserve7");
 var PubliqApiReserve8_1 = require("./models/PubliqApiReserve8");
 var PubliqApiReserve9_1 = require("./models/PubliqApiReserve9");
 var PubliqApiReserve10_1 = require("./models/PubliqApiReserve10");
+var PubliqApiReserve11_1 = require("./models/PubliqApiReserve11");
 var PubliqDone_1 = require("./models/PubliqDone");
 var PubliqInvalidPublicKey_1 = require("./models/PubliqInvalidPublicKey");
 var PubliqInvalidPrivateKey_1 = require("./models/PubliqInvalidPrivateKey");
@@ -100,6 +100,8 @@ var PubliqStorageFile_1 = require("./models/PubliqStorageFile");
 var PubliqStorageFileDelete_1 = require("./models/PubliqStorageFileDelete");
 var PubliqStorageFileAddress_1 = require("./models/PubliqStorageFileAddress");
 var PubliqStorageFileRequest_1 = require("./models/PubliqStorageFileRequest");
+var PubliqStorageFileSize_1 = require("./models/PubliqStorageFileSize");
+var PubliqStorageFileSizeResponse_1 = require("./models/PubliqStorageFileSizeResponse");
 var PubliqGenericModelReserve1_1 = require("./models/PubliqGenericModelReserve1");
 var PubliqGenericModelReserve2_1 = require("./models/PubliqGenericModelReserve2");
 var PubliqGenericModelReserve3_1 = require("./models/PubliqGenericModelReserve3");
@@ -136,10 +138,10 @@ var MODELS_TYPES = [
     PubliqRole_1.default,
     PubliqAddressInfo_1.default,
     PubliqStorageUpdate_1.default,
+    PubliqStatistics_del_1.default,
     PubliqServiceStatistics_1.default,
-    PubliqServiceStatisticsItem_1.default,
-    PubliqTransactionReserve6_1.default,
-    PubliqTransactionReserve7_1.default,
+    PubliqServiceStatisticsFile_1.default,
+    PubliqServiceStatisticsCount_1.default,
     PubliqTransactionReserve8_1.default,
     PubliqTransactionReserve9_1.default,
     PubliqTransactionReserve10_1.default,
@@ -164,11 +166,11 @@ var MODELS_TYPES = [
     PubliqSignRequest_1.default,
     PubliqSignature_1.default,
     PubliqTransactionBroadcastRequest_1.default,
-    PubliqSignedTransactionBroadcastRequest_1.default,
     PubliqTransactionDone_1.default,
-    PubliqIncompleteTransactionsRequest_1.default,
-    PubliqIncompleteTransactions_1.default,
-    PubliqIncompleteTransactionItem_1.default,
+    PubliqApiReserve1_1.default,
+    PubliqApiReserve2_1.default,
+    PubliqApiReserve3_1.default,
+    PubliqApiReserve4_1.default,
     PubliqSyncRequest_1.default,
     PubliqSyncResponse_1.default,
     PubliqBlockHeaderRequest_1.default,
@@ -178,16 +180,16 @@ var MODELS_TYPES = [
     PubliqPublicAddressesRequest_1.default,
     PubliqPublicAddressesInfo_1.default,
     PubliqPublicAddressInfo_1.default,
-    PubliqApiReserve1_1.default,
-    PubliqApiReserve2_1.default,
-    PubliqApiReserve3_1.default,
-    PubliqApiReserve4_1.default,
+    PubliqIncompleteTransactionsRequest_1.default,
+    PubliqIncompleteTransactions_1.default,
+    PubliqServed_1.default,
     PubliqApiReserve5_1.default,
     PubliqApiReserve6_1.default,
     PubliqApiReserve7_1.default,
     PubliqApiReserve8_1.default,
     PubliqApiReserve9_1.default,
     PubliqApiReserve10_1.default,
+    PubliqApiReserve11_1.default,
     PubliqDone_1.default,
     PubliqInvalidPublicKey_1.default,
     PubliqInvalidPrivateKey_1.default,
@@ -211,6 +213,8 @@ var MODELS_TYPES = [
     PubliqStorageFileDelete_1.default,
     PubliqStorageFileAddress_1.default,
     PubliqStorageFileRequest_1.default,
+    PubliqStorageFileSize_1.default,
+    PubliqStorageFileSizeResponse_1.default,
     PubliqGenericModelReserve1_1.default,
     PubliqGenericModelReserve2_1.default,
     PubliqGenericModelReserve3_1.default,

@@ -21,7 +21,7 @@ export default class PubliqIncompleteTransactionsRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 55;
+        return 67;
     }
 
 } 

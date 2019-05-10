@@ -2,16 +2,16 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqIncompleteTransactionItem from './PubliqIncompleteTransactionItem';
+import PubliqSignedTransaction from './PubliqSignedTransaction';
 
 export default class PubliqIncompleteTransactions extends BaseModel {
 
-    incompleteSignedTransactions: Array<PubliqIncompleteTransactionItem>;
+    incompleteSignedTransactions: Array<PubliqSignedTransaction>;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.incompleteSignedTransactions = data.incomplete_signed_transactions === undefined ? data.incompleteSignedTransactions.map(d => new PubliqIncompleteTransactionItem(d)) : data.incomplete_signed_transactions.map(d => new PubliqIncompleteTransactionItem(d));
+            this.incompleteSignedTransactions = data.incomplete_signed_transactions === undefined ? data.incompleteSignedTransactions.map(d => new PubliqSignedTransaction(d)) : data.incomplete_signed_transactions.map(d => new PubliqSignedTransaction(d));
         }
     }
 
@@ -22,7 +22,7 @@ export default class PubliqIncompleteTransactions extends BaseModel {
     }
 
     static get Rtt () {
-        return 56;
+        return 68;
     }
 
 } 

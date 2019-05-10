@@ -18,7 +18,7 @@ export default class PubliqApiReserve10 extends BaseModel {
     }
 
     static get Rtt () {
-        return 76;
+        return 75;
     }
 
 } 

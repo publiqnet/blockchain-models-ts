@@ -14,34 +14,31 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqSignedTransaction_1 = require("./PubliqSignedTransaction");
-var PubliqSignedTransactionBroadcastRequest = /** @class */ (function (_super) {
-    __extends(PubliqSignedTransactionBroadcastRequest, _super);
-    function PubliqSignedTransactionBroadcastRequest(data) {
+var PubliqStorageFileSize = /** @class */ (function (_super) {
+    __extends(PubliqStorageFileSize, _super);
+    function PubliqStorageFileSize(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.signedTransaction = new PubliqSignedTransaction_1.default(data.signed_transaction === undefined ? data.signedTransaction : data.signed_transaction);
-            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            _this.uri = data.uri;
         }
         return _this;
     }
-    Object.defineProperty(PubliqSignedTransactionBroadcastRequest, "PropertyMap", {
+    Object.defineProperty(PubliqStorageFileSize, "PropertyMap", {
         get: function () {
             return {
-                signedTransaction: 'signed_transaction',
-                privateKey: 'private_key',
+                uri: 'uri',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqSignedTransactionBroadcastRequest, "Rtt", {
+    Object.defineProperty(PubliqStorageFileSize, "Rtt", {
         get: function () {
-            return 53;
+            return 100;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqSignedTransactionBroadcastRequest;
+    return PubliqStorageFileSize;
 }(BaseModel_1.default));
-exports.default = PubliqSignedTransactionBroadcastRequest;
+exports.default = PubliqStorageFileSize;

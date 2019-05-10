@@ -3,28 +3,31 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqServiceStatisticsItem extends BaseModel {
+export default class PubliqServed extends BaseModel {
 
+    fileUri: string;
+    contentUnitUri: string;
     peerAddress: string;
-    count: number;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
+            this.fileUri = data.file_uri === undefined ?  data.fileUri: data.file_uri;
+            this.contentUnitUri = data.content_unit_uri === undefined ?  data.contentUnitUri: data.content_unit_uri;
             this.peerAddress = data.peer_address === undefined ?  data.peerAddress: data.peer_address;
-            this.count = data.count;
         }
     }
 
     static get PropertyMap () {
         return {
+            fileUri : 'file_uri',
+            contentUnitUri : 'content_unit_uri',
             peerAddress : 'peer_address',
-            count : 'count',
         }
     }
 
     static get Rtt () {
-        return 26;
+        return 69;
     }
 
 } 

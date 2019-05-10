@@ -14,13 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqIncompleteTransactionItem_1 = require("./PubliqIncompleteTransactionItem");
+var PubliqSignedTransaction_1 = require("./PubliqSignedTransaction");
 var PubliqIncompleteTransactions = /** @class */ (function (_super) {
     __extends(PubliqIncompleteTransactions, _super);
     function PubliqIncompleteTransactions(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.incompleteSignedTransactions = data.incomplete_signed_transactions === undefined ? data.incompleteSignedTransactions.map(function (d) { return new PubliqIncompleteTransactionItem_1.default(d); }) : data.incomplete_signed_transactions.map(function (d) { return new PubliqIncompleteTransactionItem_1.default(d); });
+            _this.incompleteSignedTransactions = data.incomplete_signed_transactions === undefined ? data.incompleteSignedTransactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); }) : data.incomplete_signed_transactions.map(function (d) { return new PubliqSignedTransaction_1.default(d); });
         }
         return _this;
     }
@@ -35,7 +35,7 @@ var PubliqIncompleteTransactions = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqIncompleteTransactions, "Rtt", {
         get: function () {
-            return 56;
+            return 68;
         },
         enumerable: true,
         configurable: true
