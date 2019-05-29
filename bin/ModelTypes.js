@@ -25,10 +25,10 @@ var PubliqContent_1 = require("./models/PubliqContent");
 var PubliqRole_1 = require("./models/PubliqRole");
 var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
 var PubliqStorageUpdate_1 = require("./models/PubliqStorageUpdate");
-var PubliqStatistics_del_1 = require("./models/PubliqStatistics_del");
 var PubliqServiceStatistics_1 = require("./models/PubliqServiceStatistics");
 var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFile");
 var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
+var PubliqTransactionReserve7_1 = require("./models/PubliqTransactionReserve7");
 var PubliqTransactionReserve8_1 = require("./models/PubliqTransactionReserve8");
 var PubliqTransactionReserve9_1 = require("./models/PubliqTransactionReserve9");
 var PubliqTransactionReserve10_1 = require("./models/PubliqTransactionReserve10");
@@ -138,10 +138,10 @@ var MODELS_TYPES = [
     PubliqRole_1.default,
     PubliqAddressInfo_1.default,
     PubliqStorageUpdate_1.default,
-    PubliqStatistics_del_1.default,
     PubliqServiceStatistics_1.default,
     PubliqServiceStatisticsFile_1.default,
     PubliqServiceStatisticsCount_1.default,
+    PubliqTransactionReserve7_1.default,
     PubliqTransactionReserve8_1.default,
     PubliqTransactionReserve9_1.default,
     PubliqTransactionReserve10_1.default,

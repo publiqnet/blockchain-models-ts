@@ -14,32 +14,28 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqServiceStatistics_1 = require("./PubliqServiceStatistics");
-var PubliqStatistics_del = /** @class */ (function (_super) {
-    __extends(PubliqStatistics_del, _super);
-    function PubliqStatistics_del(data) {
+var PubliqTransactionReserve7 = /** @class */ (function (_super) {
+    __extends(PubliqTransactionReserve7, _super);
+    function PubliqTransactionReserve7(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.data = new PubliqServiceStatistics_1.default(data.data);
         }
         return _this;
     }
-    Object.defineProperty(PubliqStatistics_del, "PropertyMap", {
+    Object.defineProperty(PubliqTransactionReserve7, "PropertyMap", {
         get: function () {
-            return {
-                data: 'data',
-            };
+            return {};
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqStatistics_del, "Rtt", {
+    Object.defineProperty(PubliqTransactionReserve7, "Rtt", {
         get: function () {
-            return 25;
+            return 28;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqStatistics_del;
+    return PubliqTransactionReserve7;
 }(BaseModel_1.default));
-exports.default = PubliqStatistics_del;
+exports.default = PubliqTransactionReserve7;

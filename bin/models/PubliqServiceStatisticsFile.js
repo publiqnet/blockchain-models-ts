@@ -39,7 +39,7 @@ var PubliqServiceStatisticsFile = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqServiceStatisticsFile, "Rtt", {
         get: function () {
-            return 27;
+            return 26;
         },
         enumerable: true,
         configurable: true

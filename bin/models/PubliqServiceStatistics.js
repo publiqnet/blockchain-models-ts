@@ -20,7 +20,6 @@ var PubliqServiceStatistics = /** @class */ (function (_super) {
     function PubliqServiceStatistics(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.blockNumber = data.block_number === undefined ? data.blockNumber : data.block_number;
             _this.serverAddress = data.server_address === undefined ? data.serverAddress : data.server_address;
             _this.fileItems = data.file_items === undefined ? data.fileItems.map(function (d) { return new PubliqServiceStatisticsFile_1.default(d); }) : data.file_items.map(function (d) { return new PubliqServiceStatisticsFile_1.default(d); });
         }
@@ -29,7 +28,6 @@ var PubliqServiceStatistics = /** @class */ (function (_super) {
     Object.defineProperty(PubliqServiceStatistics, "PropertyMap", {
         get: function () {
             return {
-                blockNumber: 'block_number',
                 serverAddress: 'server_address',
                 fileItems: 'file_items',
             };
@@ -39,7 +37,7 @@ var PubliqServiceStatistics = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqServiceStatistics, "Rtt", {
         get: function () {
-            return 26;
+            return 25;
         },
         enumerable: true,
         configurable: true

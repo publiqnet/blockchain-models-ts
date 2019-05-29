@@ -23,10 +23,10 @@ import PubliqContent from './models/PubliqContent';
 import PubliqRole from './models/PubliqRole';
 import PubliqAddressInfo from './models/PubliqAddressInfo';
 import PubliqStorageUpdate from './models/PubliqStorageUpdate';
-import PubliqStatistics_del from './models/PubliqStatistics_del';
 import PubliqServiceStatistics from './models/PubliqServiceStatistics';
 import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
 import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
+import PubliqTransactionReserve7 from './models/PubliqTransactionReserve7';
 import PubliqTransactionReserve8 from './models/PubliqTransactionReserve8';
 import PubliqTransactionReserve9 from './models/PubliqTransactionReserve9';
 import PubliqTransactionReserve10 from './models/PubliqTransactionReserve10';
@@ -138,10 +138,10 @@ const MODELS_TYPES = [
     PubliqRole,
     PubliqAddressInfo,
     PubliqStorageUpdate,
-    PubliqStatistics_del,
     PubliqServiceStatistics,
     PubliqServiceStatisticsFile,
     PubliqServiceStatisticsCount,
+    PubliqTransactionReserve7,
     PubliqTransactionReserve8,
     PubliqTransactionReserve9,
     PubliqTransactionReserve10,
