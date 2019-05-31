@@ -28,7 +28,7 @@ export default class PubliqLoggedTransaction extends BaseModel {
     }
 
     static get Rtt () {
-        return 45;
+        return 56;
     }
 
 } 

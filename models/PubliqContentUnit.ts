@@ -33,7 +33,7 @@ export default class PubliqContentUnit extends BaseModel {
     }
 
     static get Rtt () {
-        return 20;
+        return 30;
     }
 
 } 

@@ -18,7 +18,7 @@ export default class PubliqTransactionReserve10 extends BaseModel {
     }
 
     static get Rtt () {
-        return 31;
+        return 23;
     }
 
 } 

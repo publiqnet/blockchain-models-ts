@@ -39,7 +39,7 @@ var PubliqStorageUpdate = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqStorageUpdate, "Rtt", {
         get: function () {
-            return 24;
+            return 34;
         },
         enumerable: true,
         configurable: true

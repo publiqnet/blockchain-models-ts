@@ -37,7 +37,7 @@ var PubliqDigest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqDigest, "Rtt", {
         get: function () {
-            return 42;
+            return 53;
         },
         enumerable: true,
         configurable: true

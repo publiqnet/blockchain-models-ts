@@ -36,7 +36,7 @@ var PubliqServiceStatisticsCount = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqServiceStatisticsCount, "Rtt", {
         get: function () {
-            return 27;
+            return 37;
         },
         enumerable: true,
         configurable: true

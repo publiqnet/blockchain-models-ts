@@ -42,7 +42,7 @@ var PubliqContentUnit = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqContentUnit, "Rtt", {
         get: function () {
-            return 20;
+            return 30;
         },
         enumerable: true,
         configurable: true

@@ -31,7 +31,7 @@ var PubliqTransactionReserve7 = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTransactionReserve7, "Rtt", {
         get: function () {
-            return 28;
+            return 20;
         },
         enumerable: true,
         configurable: true

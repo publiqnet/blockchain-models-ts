@@ -31,7 +31,7 @@ var PubliqResponseCodeReserve10 = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqResponseCodeReserve10, "Rtt", {
         get: function () {
-            return 94;
+            return 105;
         },
         enumerable: true,
         configurable: true

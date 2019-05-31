@@ -25,7 +25,7 @@ export default class PubliqNotEnoughBalance extends BaseModel {
     }
 
     static get Rtt () {
-        return 82;
+        return 93;
     }
 
 } 

@@ -17,15 +17,7 @@ import PubliqTransactionReserve2 from './models/PubliqTransactionReserve2';
 import PubliqTransactionReserve3 from './models/PubliqTransactionReserve3';
 import PubliqTransactionReserve4 from './models/PubliqTransactionReserve4';
 import PubliqTransactionReserve5 from './models/PubliqTransactionReserve5';
-import PubliqFile from './models/PubliqFile';
-import PubliqContentUnit from './models/PubliqContentUnit';
-import PubliqContent from './models/PubliqContent';
-import PubliqRole from './models/PubliqRole';
-import PubliqAddressInfo from './models/PubliqAddressInfo';
-import PubliqStorageUpdate from './models/PubliqStorageUpdate';
-import PubliqServiceStatistics from './models/PubliqServiceStatistics';
-import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
-import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
+import PubliqTransactionReserve6 from './models/PubliqTransactionReserve6';
 import PubliqTransactionReserve7 from './models/PubliqTransactionReserve7';
 import PubliqTransactionReserve8 from './models/PubliqTransactionReserve8';
 import PubliqTransactionReserve9 from './models/PubliqTransactionReserve9';
@@ -35,6 +27,25 @@ import PubliqTransactionReserve12 from './models/PubliqTransactionReserve12';
 import PubliqTransactionReserve13 from './models/PubliqTransactionReserve13';
 import PubliqTransactionReserve14 from './models/PubliqTransactionReserve14';
 import PubliqTransactionReserve15 from './models/PubliqTransactionReserve15';
+import PubliqFile from './models/PubliqFile';
+import PubliqContentUnit from './models/PubliqContentUnit';
+import PubliqContent from './models/PubliqContent';
+import PubliqRole from './models/PubliqRole';
+import PubliqAddressInfo from './models/PubliqAddressInfo';
+import PubliqStorageUpdate from './models/PubliqStorageUpdate';
+import PubliqServiceStatistics from './models/PubliqServiceStatistics';
+import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
+import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
+import PubliqTransactionReserve16 from './models/PubliqTransactionReserve16';
+import PubliqTransactionReserve17 from './models/PubliqTransactionReserve17';
+import PubliqTransactionReserve18 from './models/PubliqTransactionReserve18';
+import PubliqTransactionReserve19 from './models/PubliqTransactionReserve19';
+import PubliqTransactionReserve20 from './models/PubliqTransactionReserve20';
+import PubliqTransactionReserve21 from './models/PubliqTransactionReserve21';
+import PubliqTransactionReserve22 from './models/PubliqTransactionReserve22';
+import PubliqTransactionReserve23 from './models/PubliqTransactionReserve23';
+import PubliqTransactionReserve24 from './models/PubliqTransactionReserve24';
+import PubliqTransactionReserve25 from './models/PubliqTransactionReserve25';
 import PubliqIPDestination from './models/PubliqIPDestination';
 import PubliqIPAddress from './models/PubliqIPAddress';
 import PubliqPing from './models/PubliqPing';
@@ -132,15 +143,7 @@ const MODELS_TYPES = [
     PubliqTransactionReserve3,
     PubliqTransactionReserve4,
     PubliqTransactionReserve5,
-    PubliqFile,
-    PubliqContentUnit,
-    PubliqContent,
-    PubliqRole,
-    PubliqAddressInfo,
-    PubliqStorageUpdate,
-    PubliqServiceStatistics,
-    PubliqServiceStatisticsFile,
-    PubliqServiceStatisticsCount,
+    PubliqTransactionReserve6,
     PubliqTransactionReserve7,
     PubliqTransactionReserve8,
     PubliqTransactionReserve9,
@@ -150,6 +153,25 @@ const MODELS_TYPES = [
     PubliqTransactionReserve13,
     PubliqTransactionReserve14,
     PubliqTransactionReserve15,
+    PubliqFile,
+    PubliqContentUnit,
+    PubliqContent,
+    PubliqRole,
+    PubliqAddressInfo,
+    PubliqStorageUpdate,
+    PubliqServiceStatistics,
+    PubliqServiceStatisticsFile,
+    PubliqServiceStatisticsCount,
+    PubliqTransactionReserve16,
+    PubliqTransactionReserve17,
+    PubliqTransactionReserve18,
+    PubliqTransactionReserve19,
+    PubliqTransactionReserve20,
+    PubliqTransactionReserve21,
+    PubliqTransactionReserve22,
+    PubliqTransactionReserve23,
+    PubliqTransactionReserve24,
+    PubliqTransactionReserve25,
     PubliqIPDestination,
     PubliqIPAddress,
     PubliqPing,

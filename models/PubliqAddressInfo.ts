@@ -25,7 +25,7 @@ export default class PubliqAddressInfo extends BaseModel {
     }
 
     static get Rtt () {
-        return 23;
+        return 33;
     }
 
 } 

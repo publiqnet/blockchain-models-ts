@@ -22,7 +22,7 @@ export default class PubliqPublicAddressesRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 64;
+        return 75;
     }
 
 } 

@@ -22,7 +22,7 @@ export default class PubliqPublicAddressesInfo extends BaseModel {
     }
 
     static get Rtt () {
-        return 65;
+        return 76;
     }
 
 } 

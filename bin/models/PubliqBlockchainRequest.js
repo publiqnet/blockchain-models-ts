@@ -36,7 +36,7 @@ var PubliqBlockchainRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqBlockchainRequest, "Rtt", {
         get: function () {
-            return 62;
+            return 73;
         },
         enumerable: true,
         configurable: true

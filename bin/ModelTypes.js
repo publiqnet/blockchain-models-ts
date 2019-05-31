@@ -19,15 +19,7 @@ var PubliqTransactionReserve2_1 = require("./models/PubliqTransactionReserve2");
 var PubliqTransactionReserve3_1 = require("./models/PubliqTransactionReserve3");
 var PubliqTransactionReserve4_1 = require("./models/PubliqTransactionReserve4");
 var PubliqTransactionReserve5_1 = require("./models/PubliqTransactionReserve5");
-var PubliqFile_1 = require("./models/PubliqFile");
-var PubliqContentUnit_1 = require("./models/PubliqContentUnit");
-var PubliqContent_1 = require("./models/PubliqContent");
-var PubliqRole_1 = require("./models/PubliqRole");
-var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
-var PubliqStorageUpdate_1 = require("./models/PubliqStorageUpdate");
-var PubliqServiceStatistics_1 = require("./models/PubliqServiceStatistics");
-var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFile");
-var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
+var PubliqTransactionReserve6_1 = require("./models/PubliqTransactionReserve6");
 var PubliqTransactionReserve7_1 = require("./models/PubliqTransactionReserve7");
 var PubliqTransactionReserve8_1 = require("./models/PubliqTransactionReserve8");
 var PubliqTransactionReserve9_1 = require("./models/PubliqTransactionReserve9");
@@ -37,6 +29,25 @@ var PubliqTransactionReserve12_1 = require("./models/PubliqTransactionReserve12"
 var PubliqTransactionReserve13_1 = require("./models/PubliqTransactionReserve13");
 var PubliqTransactionReserve14_1 = require("./models/PubliqTransactionReserve14");
 var PubliqTransactionReserve15_1 = require("./models/PubliqTransactionReserve15");
+var PubliqFile_1 = require("./models/PubliqFile");
+var PubliqContentUnit_1 = require("./models/PubliqContentUnit");
+var PubliqContent_1 = require("./models/PubliqContent");
+var PubliqRole_1 = require("./models/PubliqRole");
+var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
+var PubliqStorageUpdate_1 = require("./models/PubliqStorageUpdate");
+var PubliqServiceStatistics_1 = require("./models/PubliqServiceStatistics");
+var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFile");
+var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
+var PubliqTransactionReserve16_1 = require("./models/PubliqTransactionReserve16");
+var PubliqTransactionReserve17_1 = require("./models/PubliqTransactionReserve17");
+var PubliqTransactionReserve18_1 = require("./models/PubliqTransactionReserve18");
+var PubliqTransactionReserve19_1 = require("./models/PubliqTransactionReserve19");
+var PubliqTransactionReserve20_1 = require("./models/PubliqTransactionReserve20");
+var PubliqTransactionReserve21_1 = require("./models/PubliqTransactionReserve21");
+var PubliqTransactionReserve22_1 = require("./models/PubliqTransactionReserve22");
+var PubliqTransactionReserve23_1 = require("./models/PubliqTransactionReserve23");
+var PubliqTransactionReserve24_1 = require("./models/PubliqTransactionReserve24");
+var PubliqTransactionReserve25_1 = require("./models/PubliqTransactionReserve25");
 var PubliqIPDestination_1 = require("./models/PubliqIPDestination");
 var PubliqIPAddress_1 = require("./models/PubliqIPAddress");
 var PubliqPing_1 = require("./models/PubliqPing");
@@ -132,15 +143,7 @@ var MODELS_TYPES = [
     PubliqTransactionReserve3_1.default,
     PubliqTransactionReserve4_1.default,
     PubliqTransactionReserve5_1.default,
-    PubliqFile_1.default,
-    PubliqContentUnit_1.default,
-    PubliqContent_1.default,
-    PubliqRole_1.default,
-    PubliqAddressInfo_1.default,
-    PubliqStorageUpdate_1.default,
-    PubliqServiceStatistics_1.default,
-    PubliqServiceStatisticsFile_1.default,
-    PubliqServiceStatisticsCount_1.default,
+    PubliqTransactionReserve6_1.default,
     PubliqTransactionReserve7_1.default,
     PubliqTransactionReserve8_1.default,
     PubliqTransactionReserve9_1.default,
@@ -150,6 +153,25 @@ var MODELS_TYPES = [
     PubliqTransactionReserve13_1.default,
     PubliqTransactionReserve14_1.default,
     PubliqTransactionReserve15_1.default,
+    PubliqFile_1.default,
+    PubliqContentUnit_1.default,
+    PubliqContent_1.default,
+    PubliqRole_1.default,
+    PubliqAddressInfo_1.default,
+    PubliqStorageUpdate_1.default,
+    PubliqServiceStatistics_1.default,
+    PubliqServiceStatisticsFile_1.default,
+    PubliqServiceStatisticsCount_1.default,
+    PubliqTransactionReserve16_1.default,
+    PubliqTransactionReserve17_1.default,
+    PubliqTransactionReserve18_1.default,
+    PubliqTransactionReserve19_1.default,
+    PubliqTransactionReserve20_1.default,
+    PubliqTransactionReserve21_1.default,
+    PubliqTransactionReserve22_1.default,
+    PubliqTransactionReserve23_1.default,
+    PubliqTransactionReserve24_1.default,
+    PubliqTransactionReserve25_1.default,
     PubliqIPDestination_1.default,
     PubliqIPAddress_1.default,
     PubliqPing_1.default,

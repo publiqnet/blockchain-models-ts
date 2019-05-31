@@ -29,7 +29,7 @@ export default class PubliqIPAddress extends BaseModel {
     }
 
     static get Rtt () {
-        return 38;
+        return 49;
     }
 
 } 

@@ -36,7 +36,7 @@ var PubliqTooLongString = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqTooLongString, "Rtt", {
         get: function () {
-            return 83;
+            return 94;
         },
         enumerable: true,
         configurable: true

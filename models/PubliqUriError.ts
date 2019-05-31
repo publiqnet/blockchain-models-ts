@@ -25,7 +25,7 @@ export default class PubliqUriError extends BaseModel {
     }
 
     static get Rtt () {
-        return 84;
+        return 95;
     }
 
 } 

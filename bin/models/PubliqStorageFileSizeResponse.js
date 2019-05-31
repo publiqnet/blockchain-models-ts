@@ -36,7 +36,7 @@ var PubliqStorageFileSizeResponse = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqStorageFileSizeResponse, "Rtt", {
         get: function () {
-            return 101;
+            return 112;
         },
         enumerable: true,
         configurable: true

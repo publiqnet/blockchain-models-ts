@@ -24,7 +24,7 @@ export default class PubliqKeyPairRequest extends BaseModel {
     }
 
     static get Rtt () {
-        return 48;
+        return 59;
     }
 
 } 

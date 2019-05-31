@@ -24,7 +24,7 @@ export default class PubliqTooLongString extends BaseModel {
     }
 
     static get Rtt () {
-        return 83;
+        return 94;
     }
 
 } 

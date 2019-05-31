@@ -35,7 +35,7 @@ var PubliqInvalidSignature = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqInvalidSignature, "Rtt", {
         get: function () {
-            return 80;
+            return 91;
         },
         enumerable: true,
         configurable: true

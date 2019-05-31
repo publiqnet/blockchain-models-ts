@@ -35,7 +35,7 @@ var PubliqPublicAddressesRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqPublicAddressesRequest, "Rtt", {
         get: function () {
-            return 64;
+            return 75;
         },
         enumerable: true,
         configurable: true

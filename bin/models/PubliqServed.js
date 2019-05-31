@@ -38,7 +38,7 @@ var PubliqServed = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqServed, "Rtt", {
         get: function () {
-            return 69;
+            return 80;
         },
         enumerable: true,
         configurable: true
