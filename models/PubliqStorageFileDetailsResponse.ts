@@ -3,15 +3,17 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqStorageFileSizeResponse extends BaseModel {
+export default class PubliqStorageFileDetailsResponse extends BaseModel {
 
     uri: string;
+    mimeType: string;
     size: number;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.uri = data.uri;
+            this.mimeType = data.mime_type === undefined ?  data.mimeType: data.mime_type;
             this.size = data.size;
         }
     }
@@ -19,6 +21,7 @@ export default class PubliqStorageFileSizeResponse extends BaseModel {
     static get PropertyMap () {
         return {
             uri : 'uri',
+            mimeType : 'mime_type',
             size : 'size',
         }
     }

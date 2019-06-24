@@ -38,7 +38,7 @@ var PubliqStorageUpdate_1 = require("./models/PubliqStorageUpdate");
 var PubliqServiceStatistics_1 = require("./models/PubliqServiceStatistics");
 var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFile");
 var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
-var PubliqTransactionReserve16_1 = require("./models/PubliqTransactionReserve16");
+var PubliqSponsorContentUnit_1 = require("./models/PubliqSponsorContentUnit");
 var PubliqTransactionReserve17_1 = require("./models/PubliqTransactionReserve17");
 var PubliqTransactionReserve18_1 = require("./models/PubliqTransactionReserve18");
 var PubliqTransactionReserve19_1 = require("./models/PubliqTransactionReserve19");
@@ -111,8 +111,8 @@ var PubliqStorageFile_1 = require("./models/PubliqStorageFile");
 var PubliqStorageFileDelete_1 = require("./models/PubliqStorageFileDelete");
 var PubliqStorageFileAddress_1 = require("./models/PubliqStorageFileAddress");
 var PubliqStorageFileRequest_1 = require("./models/PubliqStorageFileRequest");
-var PubliqStorageFileSize_1 = require("./models/PubliqStorageFileSize");
-var PubliqStorageFileSizeResponse_1 = require("./models/PubliqStorageFileSizeResponse");
+var PubliqStorageFileDetails_1 = require("./models/PubliqStorageFileDetails");
+var PubliqStorageFileDetailsResponse_1 = require("./models/PubliqStorageFileDetailsResponse");
 var PubliqGenericModelReserve1_1 = require("./models/PubliqGenericModelReserve1");
 var PubliqGenericModelReserve2_1 = require("./models/PubliqGenericModelReserve2");
 var PubliqGenericModelReserve3_1 = require("./models/PubliqGenericModelReserve3");
@@ -162,7 +162,7 @@ var MODELS_TYPES = [
     PubliqServiceStatistics_1.default,
     PubliqServiceStatisticsFile_1.default,
     PubliqServiceStatisticsCount_1.default,
-    PubliqTransactionReserve16_1.default,
+    PubliqSponsorContentUnit_1.default,
     PubliqTransactionReserve17_1.default,
     PubliqTransactionReserve18_1.default,
     PubliqTransactionReserve19_1.default,
@@ -235,8 +235,8 @@ var MODELS_TYPES = [
     PubliqStorageFileDelete_1.default,
     PubliqStorageFileAddress_1.default,
     PubliqStorageFileRequest_1.default,
-    PubliqStorageFileSize_1.default,
-    PubliqStorageFileSizeResponse_1.default,
+    PubliqStorageFileDetails_1.default,
+    PubliqStorageFileDetailsResponse_1.default,
     PubliqGenericModelReserve1_1.default,
     PubliqGenericModelReserve2_1.default,
     PubliqGenericModelReserve3_1.default,

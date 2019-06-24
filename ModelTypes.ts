@@ -36,7 +36,7 @@ import PubliqStorageUpdate from './models/PubliqStorageUpdate';
 import PubliqServiceStatistics from './models/PubliqServiceStatistics';
 import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
 import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
-import PubliqTransactionReserve16 from './models/PubliqTransactionReserve16';
+import PubliqSponsorContentUnit from './models/PubliqSponsorContentUnit';
 import PubliqTransactionReserve17 from './models/PubliqTransactionReserve17';
 import PubliqTransactionReserve18 from './models/PubliqTransactionReserve18';
 import PubliqTransactionReserve19 from './models/PubliqTransactionReserve19';
@@ -109,8 +109,8 @@ import PubliqStorageFile from './models/PubliqStorageFile';
 import PubliqStorageFileDelete from './models/PubliqStorageFileDelete';
 import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
 import PubliqStorageFileRequest from './models/PubliqStorageFileRequest';
-import PubliqStorageFileSize from './models/PubliqStorageFileSize';
-import PubliqStorageFileSizeResponse from './models/PubliqStorageFileSizeResponse';
+import PubliqStorageFileDetails from './models/PubliqStorageFileDetails';
+import PubliqStorageFileDetailsResponse from './models/PubliqStorageFileDetailsResponse';
 import PubliqGenericModelReserve1 from './models/PubliqGenericModelReserve1';
 import PubliqGenericModelReserve2 from './models/PubliqGenericModelReserve2';
 import PubliqGenericModelReserve3 from './models/PubliqGenericModelReserve3';
@@ -162,7 +162,7 @@ const MODELS_TYPES = [
     PubliqServiceStatistics,
     PubliqServiceStatisticsFile,
     PubliqServiceStatisticsCount,
-    PubliqTransactionReserve16,
+    PubliqSponsorContentUnit,
     PubliqTransactionReserve17,
     PubliqTransactionReserve18,
     PubliqTransactionReserve19,
@@ -235,8 +235,8 @@ const MODELS_TYPES = [
     PubliqStorageFileDelete,
     PubliqStorageFileAddress,
     PubliqStorageFileRequest,
-    PubliqStorageFileSize,
-    PubliqStorageFileSizeResponse,
+    PubliqStorageFileDetails,
+    PubliqStorageFileDetailsResponse,
     PubliqGenericModelReserve1,
     PubliqGenericModelReserve2,
     PubliqGenericModelReserve3,

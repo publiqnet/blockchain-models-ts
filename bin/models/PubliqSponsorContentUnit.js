@@ -14,38 +14,40 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqServiceStatisticsFile_1 = require("./PubliqServiceStatisticsFile");
-var PubliqServiceStatistics = /** @class */ (function (_super) {
-    __extends(PubliqServiceStatistics, _super);
-    function PubliqServiceStatistics(data) {
+var PubliqCoin_1 = require("./PubliqCoin");
+var PubliqSponsorContentUnit = /** @class */ (function (_super) {
+    __extends(PubliqSponsorContentUnit, _super);
+    function PubliqSponsorContentUnit(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.serverAddress = data.server_address === undefined ? data.serverAddress : data.server_address;
+            _this.sponsorAddress = data.sponsor_address === undefined ? data.sponsorAddress : data.sponsor_address;
+            _this.uri = data.uri;
             _this.startTimePoint = new Date(data.start_time_point === undefined ? data.startTimePoint : data.start_time_point);
-            _this.endTimePoint = new Date(data.end_time_point === undefined ? data.endTimePoint : data.end_time_point);
-            _this.fileItems = data.file_items === undefined ? data.fileItems.map(function (d) { return new PubliqServiceStatisticsFile_1.default(d); }) : data.file_items.map(function (d) { return new PubliqServiceStatisticsFile_1.default(d); });
+            _this.hours = data.hours;
+            _this.amount = new PubliqCoin_1.default(data.amount);
         }
         return _this;
     }
-    Object.defineProperty(PubliqServiceStatistics, "PropertyMap", {
+    Object.defineProperty(PubliqSponsorContentUnit, "PropertyMap", {
         get: function () {
             return {
-                serverAddress: 'server_address',
+                sponsorAddress: 'sponsor_address',
+                uri: 'uri',
                 startTimePoint: 'start_time_point',
-                endTimePoint: 'end_time_point',
-                fileItems: 'file_items',
+                hours: 'hours',
+                amount: 'amount',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqServiceStatistics, "Rtt", {
+    Object.defineProperty(PubliqSponsorContentUnit, "Rtt", {
         get: function () {
-            return 35;
+            return 38;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqServiceStatistics;
+    return PubliqSponsorContentUnit;
 }(BaseModel_1.default));
-exports.default = PubliqServiceStatistics;
+exports.default = PubliqSponsorContentUnit;

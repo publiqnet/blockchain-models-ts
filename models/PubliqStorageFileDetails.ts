@@ -3,7 +3,7 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqStorageFileSize extends BaseModel {
+export default class PubliqStorageFileDetails extends BaseModel {
 
     uri: string;
 
