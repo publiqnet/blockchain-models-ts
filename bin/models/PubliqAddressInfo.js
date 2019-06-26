@@ -22,6 +22,7 @@ var PubliqAddressInfo = /** @class */ (function (_super) {
         if (data !== undefined) {
             _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
             _this.ipAddress = new PubliqIPAddress_1.default(data.ip_address === undefined ? data.ipAddress : data.ip_address);
+            _this.sslIpAddress = new PubliqIPAddress_1.default(data.ssl_ip_address === undefined ? data.sslIpAddress : data.ssl_ip_address);
         }
         return _this;
     }
@@ -30,6 +31,7 @@ var PubliqAddressInfo = /** @class */ (function (_super) {
             return {
                 nodeAddress: 'node_address',
                 ipAddress: 'ip_address',
+                sslIpAddress: 'ssl_ip_address',
             };
         },
         enumerable: true,

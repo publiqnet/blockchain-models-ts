@@ -21,6 +21,7 @@ var PubliqPublicAddressInfo = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.ipAddress = new PubliqIPAddress_1.default(data.ip_address === undefined ? data.ipAddress : data.ip_address);
+            _this.sslIpAddress = new PubliqIPAddress_1.default(data.ssl_ip_address === undefined ? data.sslIpAddress : data.ssl_ip_address);
             _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
             _this.secondsSinceChecked = data.seconds_since_checked === undefined ? data.secondsSinceChecked : data.seconds_since_checked;
         }
@@ -30,6 +31,7 @@ var PubliqPublicAddressInfo = /** @class */ (function (_super) {
         get: function () {
             return {
                 ipAddress: 'ip_address',
+                sslIpAddress: 'ssl_ip_address',
                 nodeAddress: 'node_address',
                 secondsSinceChecked: 'seconds_since_checked',
             };
