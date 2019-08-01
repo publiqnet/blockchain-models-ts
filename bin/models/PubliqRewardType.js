@@ -10,6 +10,7 @@ var PubliqRewardType = /** @class */ (function () {
             case 2: return "author";
             case 3: return "channel";
             case 4: return "storage";
+            case 5: return "sponsoredReturn";
         }
     };
     PubliqRewardType.toNumber = function (param) {
@@ -19,6 +20,7 @@ var PubliqRewardType = /** @class */ (function () {
             case "author": return 2;
             case "channel": return 3;
             case "storage": return 4;
+            case "sponsoredReturn": return 5;
         }
     };
     PubliqRewardType.initial = 0;
@@ -26,6 +28,7 @@ var PubliqRewardType = /** @class */ (function () {
     PubliqRewardType.author = 2;
     PubliqRewardType.channel = 3;
     PubliqRewardType.storage = 4;
+    PubliqRewardType.sponsored_return = 5;
     return PubliqRewardType;
 }());
 exports.default = PubliqRewardType;

@@ -5,6 +5,7 @@ export default class PubliqRewardType {
     public static readonly author = 2;
     public static readonly channel = 3;
     public static readonly storage = 4;
+    public static readonly sponsored_return = 5;
 
     static toString(param: number): string {
 
@@ -14,6 +15,7 @@ export default class PubliqRewardType {
             case 2: return "author";
             case 3: return "channel";
             case 4: return "storage";
+            case 5: return "sponsoredReturn";
         }
     } 
 
@@ -25,6 +27,7 @@ export default class PubliqRewardType {
             case "author": return 2;
             case "channel": return 3;
             case "storage": return 4;
+            case "sponsoredReturn": return 5;
         }
     } 
 
