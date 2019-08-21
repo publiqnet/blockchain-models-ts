@@ -16,6 +16,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqRewardLog_1 = require("./PubliqRewardLog");
 var PubliqTransactionLog_1 = require("./PubliqTransactionLog");
+var PubliqContentUnitImpactLog_1 = require("./PubliqContentUnitImpactLog");
 var PubliqBlockLog = /** @class */ (function (_super) {
     __extends(PubliqBlockLog, _super);
     function PubliqBlockLog(data) {
@@ -28,6 +29,7 @@ var PubliqBlockLog = /** @class */ (function (_super) {
             _this.timeSigned = new Date(data.time_signed === undefined ? data.timeSigned : data.time_signed);
             _this.rewards = data.rewards.map(function (d) { return new PubliqRewardLog_1.default(d); });
             _this.transactions = data.transactions.map(function (d) { return new PubliqTransactionLog_1.default(d); });
+            _this.unitUriImpacts = data.unit_uri_impacts === undefined ? data.unitUriImpacts.map(function (d) { return new PubliqContentUnitImpactLog_1.default(d); }) : data.unit_uri_impacts.map(function (d) { return new PubliqContentUnitImpactLog_1.default(d); });
         }
         return _this;
     }
@@ -41,6 +43,7 @@ var PubliqBlockLog = /** @class */ (function (_super) {
                 timeSigned: 'time_signed',
                 rewards: 'rewards',
                 transactions: 'transactions',
+                unitUriImpacts: 'unit_uri_impacts',
             };
         },
         enumerable: true,

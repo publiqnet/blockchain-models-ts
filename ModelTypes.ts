@@ -79,7 +79,7 @@ import PubliqPublicAddressInfo from './models/PubliqPublicAddressInfo';
 import PubliqIncompleteTransactionsRequest from './models/PubliqIncompleteTransactionsRequest';
 import PubliqIncompleteTransactions from './models/PubliqIncompleteTransactions';
 import PubliqServed from './models/PubliqServed';
-import PubliqApiReserve5 from './models/PubliqApiReserve5';
+import PubliqContentUnitImpactLog from './models/PubliqContentUnitImpactLog';
 import PubliqApiReserve6 from './models/PubliqApiReserve6';
 import PubliqApiReserve7 from './models/PubliqApiReserve7';
 import PubliqApiReserve8 from './models/PubliqApiReserve8';
@@ -205,7 +205,7 @@ const MODELS_TYPES = [
     PubliqIncompleteTransactionsRequest,
     PubliqIncompleteTransactions,
     PubliqServed,
-    PubliqApiReserve5,
+    PubliqContentUnitImpactLog,
     PubliqApiReserve6,
     PubliqApiReserve7,
     PubliqApiReserve8,

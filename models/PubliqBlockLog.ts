@@ -4,6 +4,7 @@ import {createInstanceFromJson} from '../ModelTypes'
 
 import PubliqRewardLog from './PubliqRewardLog';
 import PubliqTransactionLog from './PubliqTransactionLog';
+import PubliqContentUnitImpactLog from './PubliqContentUnitImpactLog';
 
 export default class PubliqBlockLog extends BaseModel {
 
@@ -14,6 +15,7 @@ export default class PubliqBlockLog extends BaseModel {
     timeSigned: Date;
     rewards: Array<PubliqRewardLog>;
     transactions: Array<PubliqTransactionLog>;
+    unitUriImpacts: Array<PubliqContentUnitImpactLog>;
 
     constructor(data?: any) { 
         super();
@@ -25,6 +27,7 @@ export default class PubliqBlockLog extends BaseModel {
             this.timeSigned = new Date(data.time_signed === undefined ?  data.timeSigned: data.time_signed);
             this.rewards = data.rewards.map(d => new PubliqRewardLog(d));
             this.transactions = data.transactions.map(d => new PubliqTransactionLog(d));
+            this.unitUriImpacts = data.unit_uri_impacts === undefined ? data.unitUriImpacts.map(d => new PubliqContentUnitImpactLog(d)) : data.unit_uri_impacts.map(d => new PubliqContentUnitImpactLog(d));
         }
     }
 
@@ -37,6 +40,7 @@ export default class PubliqBlockLog extends BaseModel {
             timeSigned : 'time_signed',
             rewards : 'rewards',
             transactions : 'transactions',
+            unitUriImpacts : 'unit_uri_impacts',
         }
     }
 

@@ -81,7 +81,7 @@ var PubliqPublicAddressInfo_1 = require("./models/PubliqPublicAddressInfo");
 var PubliqIncompleteTransactionsRequest_1 = require("./models/PubliqIncompleteTransactionsRequest");
 var PubliqIncompleteTransactions_1 = require("./models/PubliqIncompleteTransactions");
 var PubliqServed_1 = require("./models/PubliqServed");
-var PubliqApiReserve5_1 = require("./models/PubliqApiReserve5");
+var PubliqContentUnitImpactLog_1 = require("./models/PubliqContentUnitImpactLog");
 var PubliqApiReserve6_1 = require("./models/PubliqApiReserve6");
 var PubliqApiReserve7_1 = require("./models/PubliqApiReserve7");
 var PubliqApiReserve8_1 = require("./models/PubliqApiReserve8");
@@ -205,7 +205,7 @@ var MODELS_TYPES = [
     PubliqIncompleteTransactionsRequest_1.default,
     PubliqIncompleteTransactions_1.default,
     PubliqServed_1.default,
-    PubliqApiReserve5_1.default,
+    PubliqContentUnitImpactLog_1.default,
     PubliqApiReserve6_1.default,
     PubliqApiReserve7_1.default,
     PubliqApiReserve8_1.default,
