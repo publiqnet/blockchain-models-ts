@@ -14,34 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqContentUnitImpactPerChannel_1 = require("./PubliqContentUnitImpactPerChannel");
-var PubliqContentUnitImpactLog = /** @class */ (function (_super) {
-    __extends(PubliqContentUnitImpactLog, _super);
-    function PubliqContentUnitImpactLog(data) {
+var PubliqContentUnitImpactPerChannel = /** @class */ (function (_super) {
+    __extends(PubliqContentUnitImpactPerChannel, _super);
+    function PubliqContentUnitImpactPerChannel(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.contentUnitUri = data.content_unit_uri === undefined ? data.contentUnitUri : data.content_unit_uri;
-            _this.viewsPerChannel = data.views_per_channel === undefined ? data.viewsPerChannel.map(function (d) { return new PubliqContentUnitImpactPerChannel_1.default(d); }) : data.views_per_channel.map(function (d) { return new PubliqContentUnitImpactPerChannel_1.default(d); });
+            _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;
+            _this.viewCount = data.view_count === undefined ? data.viewCount : data.view_count;
         }
         return _this;
     }
-    Object.defineProperty(PubliqContentUnitImpactLog, "PropertyMap", {
+    Object.defineProperty(PubliqContentUnitImpactPerChannel, "PropertyMap", {
         get: function () {
             return {
-                contentUnitUri: 'content_unit_uri',
-                viewsPerChannel: 'views_per_channel',
+                channelAddress: 'channel_address',
+                viewCount: 'view_count',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqContentUnitImpactLog, "Rtt", {
+    Object.defineProperty(PubliqContentUnitImpactPerChannel, "Rtt", {
         get: function () {
-            return 81;
+            return 82;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqContentUnitImpactLog;
+    return PubliqContentUnitImpactPerChannel;
 }(BaseModel_1.default));
-exports.default = PubliqContentUnitImpactLog;
+exports.default = PubliqContentUnitImpactPerChannel;

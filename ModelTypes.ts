@@ -80,7 +80,7 @@ import PubliqIncompleteTransactionsRequest from './models/PubliqIncompleteTransa
 import PubliqIncompleteTransactions from './models/PubliqIncompleteTransactions';
 import PubliqServed from './models/PubliqServed';
 import PubliqContentUnitImpactLog from './models/PubliqContentUnitImpactLog';
-import PubliqApiReserve6 from './models/PubliqApiReserve6';
+import PubliqContentUnitImpactPerChannel from './models/PubliqContentUnitImpactPerChannel';
 import PubliqApiReserve7 from './models/PubliqApiReserve7';
 import PubliqApiReserve8 from './models/PubliqApiReserve8';
 import PubliqApiReserve9 from './models/PubliqApiReserve9';
@@ -206,7 +206,7 @@ const MODELS_TYPES = [
     PubliqIncompleteTransactions,
     PubliqServed,
     PubliqContentUnitImpactLog,
-    PubliqApiReserve6,
+    PubliqContentUnitImpactPerChannel,
     PubliqApiReserve7,
     PubliqApiReserve8,
     PubliqApiReserve9,

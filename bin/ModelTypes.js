@@ -82,7 +82,7 @@ var PubliqIncompleteTransactionsRequest_1 = require("./models/PubliqIncompleteTr
 var PubliqIncompleteTransactions_1 = require("./models/PubliqIncompleteTransactions");
 var PubliqServed_1 = require("./models/PubliqServed");
 var PubliqContentUnitImpactLog_1 = require("./models/PubliqContentUnitImpactLog");
-var PubliqApiReserve6_1 = require("./models/PubliqApiReserve6");
+var PubliqContentUnitImpactPerChannel_1 = require("./models/PubliqContentUnitImpactPerChannel");
 var PubliqApiReserve7_1 = require("./models/PubliqApiReserve7");
 var PubliqApiReserve8_1 = require("./models/PubliqApiReserve8");
 var PubliqApiReserve9_1 = require("./models/PubliqApiReserve9");
@@ -206,7 +206,7 @@ var MODELS_TYPES = [
     PubliqIncompleteTransactions_1.default,
     PubliqServed_1.default,
     PubliqContentUnitImpactLog_1.default,
-    PubliqApiReserve6_1.default,
+    PubliqContentUnitImpactPerChannel_1.default,
     PubliqApiReserve7_1.default,
     PubliqApiReserve8_1.default,
     PubliqApiReserve9_1.default,
