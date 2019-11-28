@@ -24,7 +24,7 @@ export default class PubliqAuthority extends BaseModel {
     }
 
     static get Rtt () {
-        return 3;
+        return 2;
     }
 
 } 

@@ -15,33 +15,34 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqStorageOrder_1 = require("./PubliqStorageOrder");
-var PubliqSignRequest = /** @class */ (function (_super) {
-    __extends(PubliqSignRequest, _super);
-    function PubliqSignRequest(data) {
+var PubliqAuthority_1 = require("./PubliqAuthority");
+var PubliqSignedStorageOrder = /** @class */ (function (_super) {
+    __extends(PubliqSignedStorageOrder, _super);
+    function PubliqSignedStorageOrder(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
             _this.order = new PubliqStorageOrder_1.default(data.order);
+            _this.authorization = new PubliqAuthority_1.default(data.authorization);
         }
         return _this;
     }
-    Object.defineProperty(PubliqSignRequest, "PropertyMap", {
+    Object.defineProperty(PubliqSignedStorageOrder, "PropertyMap", {
         get: function () {
             return {
-                privateKey: 'private_key',
                 order: 'order',
+                authorization: 'authorization',
             };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqSignRequest, "Rtt", {
+    Object.defineProperty(PubliqSignedStorageOrder, "Rtt", {
         get: function () {
-            return 3;
+            return 1;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqSignRequest;
+    return PubliqSignedStorageOrder;
 }(BaseModel_1.default));
-exports.default = PubliqSignRequest;
+exports.default = PubliqSignedStorageOrder;
