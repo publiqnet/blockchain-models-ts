@@ -2,30 +2,29 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqStorageOrder from './PubliqStorageOrder';
 
 export default class PubliqSignRequest extends BaseModel {
 
     privateKey: string;
-    order: PubliqStorageOrder;
+    package: Object;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.privateKey = data.private_key === undefined ?  data.privateKey: data.private_key;
-            this.order = new PubliqStorageOrder(data.order);
+            this.package = createInstanceFromJson(data.package);
         }
     }
 
     static get PropertyMap () {
         return {
             privateKey : 'private_key',
-            order : 'order',
+            package : 'package',
         }
     }
 
     static get Rtt () {
-        return 3;
+        return 61;
     }
 
 } 

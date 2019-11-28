@@ -14,14 +14,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqStorageOrder_1 = require("./PubliqStorageOrder");
+var ModelTypes_1 = require("../ModelTypes");
 var PubliqSignRequest = /** @class */ (function (_super) {
     __extends(PubliqSignRequest, _super);
     function PubliqSignRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
-            _this.order = new PubliqStorageOrder_1.default(data.order);
+            _this.package = ModelTypes_1.createInstanceFromJson(data.package);
         }
         return _this;
     }
@@ -29,7 +29,7 @@ var PubliqSignRequest = /** @class */ (function (_super) {
         get: function () {
             return {
                 privateKey: 'private_key',
-                order: 'order',
+                package: 'package',
             };
         },
         enumerable: true,
@@ -37,7 +37,7 @@ var PubliqSignRequest = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqSignRequest, "Rtt", {
         get: function () {
-            return 3;
+            return 61;
         },
         enumerable: true,
         configurable: true

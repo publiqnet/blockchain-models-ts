@@ -36,7 +36,7 @@ var PubliqAuthority = /** @class */ (function (_super) {
     });
     Object.defineProperty(PubliqAuthority, "Rtt", {
         get: function () {
-            return 2;
+            return 3;
         },
         enumerable: true,
         configurable: true
