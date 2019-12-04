@@ -1,5 +1,5 @@
 {
-  "name": "blockchain-models-ts",
+  "name": "publiq-models-ts",
   "version": "1.0.0",
   "description": "Models for request to blockchain",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PUBLIQNetwork/blockchain-models-ts.git"
+    "url": "git+https://github.com/publiqnet/publiq-models-ts.git"
   },
   "author": "PUBLIQ",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PUBLIQNetwork/blockchain-models-ts/issues"
+    "url": "https://github.com/publiqnet/publiq-models-ts/issues"
   },
-  "homepage": "https://github.com/PUBLIQNetwork/blockchain-models-ts#readme",
+  "homepage": "https://github.com/publiqnet/publiq-models-ts#readme",
   "devDependencies": {
     "ttypescript": "^1.5.6",
     "typescript": "^3.0.3"

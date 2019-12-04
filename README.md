@@ -1,2 +1,2 @@
-# blockchain-models-ts
-Models for request to blockchain
+# publiq-models-ts
+Publiq Models
