@@ -1,6 +1,6 @@
 import MODELS_TYPES from './ModelTypes';
 
-export const parceToModel = jsonData => {
+export const parceToModel = jsonData =>  {
      const data = JSON.parse(jsonData);
      const ModelClass = MODELS_TYPES[data.rtt];
      if(!ModelClass){
