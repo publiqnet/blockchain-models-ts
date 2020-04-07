@@ -40,7 +40,7 @@ var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFil
 var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
 var PubliqSponsorContentUnit_1 = require("./models/PubliqSponsorContentUnit");
 var PubliqCancelSponsorContentUnit_1 = require("./models/PubliqCancelSponsorContentUnit");
-var PubliqTransactionReserve18_1 = require("./models/PubliqTransactionReserve18");
+var PubliqSponsorContentUnitEx_1 = require("./models/PubliqSponsorContentUnitEx");
 var PubliqTransactionReserve19_1 = require("./models/PubliqTransactionReserve19");
 var PubliqTransactionReserve20_1 = require("./models/PubliqTransactionReserve20");
 var PubliqTransactionReserve21_1 = require("./models/PubliqTransactionReserve21");
@@ -168,7 +168,7 @@ var MODELS_TYPES = [
     PubliqServiceStatisticsCount_1.default,
     PubliqSponsorContentUnit_1.default,
     PubliqCancelSponsorContentUnit_1.default,
-    PubliqTransactionReserve18_1.default,
+    PubliqSponsorContentUnitEx_1.default,
     PubliqTransactionReserve19_1.default,
     PubliqTransactionReserve20_1.default,
     PubliqTransactionReserve21_1.default,

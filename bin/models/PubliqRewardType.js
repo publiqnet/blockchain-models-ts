@@ -11,6 +11,7 @@ var PubliqRewardType = /** @class */ (function () {
             case 3: return "channel";
             case 4: return "storage";
             case 5: return "sponsoredReturn";
+            case 6: return "sponsoredGrant";
         }
     };
     PubliqRewardType.toNumber = function (param) {
@@ -21,6 +22,7 @@ var PubliqRewardType = /** @class */ (function () {
             case "channel": return 3;
             case "storage": return 4;
             case "sponsoredReturn": return 5;
+            case "sponsoredGrant": return 6;
         }
     };
     PubliqRewardType.initial = 0;
@@ -29,6 +31,7 @@ var PubliqRewardType = /** @class */ (function () {
     PubliqRewardType.channel = 3;
     PubliqRewardType.storage = 4;
     PubliqRewardType.sponsored_return = 5;
+    PubliqRewardType.sponsored_grant = 6;
     return PubliqRewardType;
 }());
 exports.default = PubliqRewardType;
