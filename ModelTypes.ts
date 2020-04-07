@@ -38,7 +38,7 @@ import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
 import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
 import PubliqSponsorContentUnit from './models/PubliqSponsorContentUnit';
 import PubliqCancelSponsorContentUnit from './models/PubliqCancelSponsorContentUnit';
-import PubliqSponsorContentUnitEx from './models/PubliqSponsorContentUnitEx';
+import PubliqTransactionReserve18 from './models/PubliqTransactionReserve18';
 import PubliqTransactionReserve19 from './models/PubliqTransactionReserve19';
 import PubliqTransactionReserve20 from './models/PubliqTransactionReserve20';
 import PubliqTransactionReserve21 from './models/PubliqTransactionReserve21';
@@ -168,7 +168,7 @@ const MODELS_TYPES = [
     PubliqServiceStatisticsCount,
     PubliqSponsorContentUnit,
     PubliqCancelSponsorContentUnit,
-    PubliqSponsorContentUnitEx,
+    PubliqTransactionReserve18,
     PubliqTransactionReserve19,
     PubliqTransactionReserve20,
     PubliqTransactionReserve21,
