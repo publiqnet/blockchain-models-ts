@@ -3,7 +3,7 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqGenericModelReserve2 extends BaseModel {
+export default class PubliqCheckInbox extends BaseModel {
 
 
     constructor(data?: any) { 
@@ -18,7 +18,7 @@ export default class PubliqGenericModelReserve2 extends BaseModel {
     }
 
     static get Rtt () {
-        return 118;
+        return 115;
     }
 
 } 

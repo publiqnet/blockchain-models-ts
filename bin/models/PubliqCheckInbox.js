@@ -14,28 +14,28 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqGenericModelReserve3 = /** @class */ (function (_super) {
-    __extends(PubliqGenericModelReserve3, _super);
-    function PubliqGenericModelReserve3(data) {
+var PubliqCheckInbox = /** @class */ (function (_super) {
+    __extends(PubliqCheckInbox, _super);
+    function PubliqCheckInbox(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
         }
         return _this;
     }
-    Object.defineProperty(PubliqGenericModelReserve3, "PropertyMap", {
+    Object.defineProperty(PubliqCheckInbox, "PropertyMap", {
         get: function () {
             return {};
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqGenericModelReserve3, "Rtt", {
+    Object.defineProperty(PubliqCheckInbox, "Rtt", {
         get: function () {
-            return 119;
+            return 115;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqGenericModelReserve3;
+    return PubliqCheckInbox;
 }(BaseModel_1.default));
-exports.default = PubliqGenericModelReserve3;
+exports.default = PubliqCheckInbox;

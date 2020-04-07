@@ -14,28 +14,31 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqGenericModelReserve3 = /** @class */ (function (_super) {
-    __extends(PubliqGenericModelReserve3, _super);
-    function PubliqGenericModelReserve3(data) {
+var PubliqFileUris = /** @class */ (function (_super) {
+    __extends(PubliqFileUris, _super);
+    function PubliqFileUris(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.fileUris = data.file_uris === undefined ? data.fileUris : data.file_uris;
         }
         return _this;
     }
-    Object.defineProperty(PubliqGenericModelReserve3, "PropertyMap", {
+    Object.defineProperty(PubliqFileUris, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                fileUris: 'file_uris',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqGenericModelReserve3, "Rtt", {
+    Object.defineProperty(PubliqFileUris, "Rtt", {
         get: function () {
-            return 119;
+            return 85;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqGenericModelReserve3;
+    return PubliqFileUris;
 }(BaseModel_1.default));
-exports.default = PubliqGenericModelReserve3;
+exports.default = PubliqFileUris;

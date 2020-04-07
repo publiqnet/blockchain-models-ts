@@ -14,28 +14,32 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqGenericModelReserve3 = /** @class */ (function (_super) {
-    __extends(PubliqGenericModelReserve3, _super);
-    function PubliqGenericModelReserve3(data) {
+var PubliqLetter_1 = require("./PubliqLetter");
+var PubliqInbox = /** @class */ (function (_super) {
+    __extends(PubliqInbox, _super);
+    function PubliqInbox(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.items = data.items.map(function (d) { return new PubliqLetter_1.default(d); });
         }
         return _this;
     }
-    Object.defineProperty(PubliqGenericModelReserve3, "PropertyMap", {
+    Object.defineProperty(PubliqInbox, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                items: 'items',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqGenericModelReserve3, "Rtt", {
+    Object.defineProperty(PubliqInbox, "Rtt", {
         get: function () {
-            return 119;
+            return 116;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqGenericModelReserve3;
+    return PubliqInbox;
 }(BaseModel_1.default));
-exports.default = PubliqGenericModelReserve3;
+exports.default = PubliqInbox;

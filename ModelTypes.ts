@@ -38,7 +38,7 @@ import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
 import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
 import PubliqSponsorContentUnit from './models/PubliqSponsorContentUnit';
 import PubliqCancelSponsorContentUnit from './models/PubliqCancelSponsorContentUnit';
-import PubliqTransactionReserve18 from './models/PubliqTransactionReserve18';
+import PubliqSponsorContentUnitEx from './models/PubliqSponsorContentUnitEx';
 import PubliqTransactionReserve19 from './models/PubliqTransactionReserve19';
 import PubliqTransactionReserve20 from './models/PubliqTransactionReserve20';
 import PubliqTransactionReserve21 from './models/PubliqTransactionReserve21';
@@ -82,8 +82,8 @@ import PubliqServed from './models/PubliqServed';
 import PubliqContentUnitImpactLog from './models/PubliqContentUnitImpactLog';
 import PubliqContentUnitImpactPerChannel from './models/PubliqContentUnitImpactPerChannel';
 import PubliqSponsorContentUnitApplied from './models/PubliqSponsorContentUnitApplied';
-import PubliqApiReserve8 from './models/PubliqApiReserve8';
-import PubliqApiReserve9 from './models/PubliqApiReserve9';
+import PubliqFileUrisRequest from './models/PubliqFileUrisRequest';
+import PubliqFileUris from './models/PubliqFileUris';
 import PubliqApiReserve10 from './models/PubliqApiReserve10';
 import PubliqApiReserve11 from './models/PubliqApiReserve11';
 import PubliqDone from './models/PubliqDone';
@@ -94,7 +94,7 @@ import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
 import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
 import PubliqTooLongString from './models/PubliqTooLongString';
 import PubliqUriError from './models/PubliqUriError';
-import PubliqResponseCodeReserve1 from './models/PubliqResponseCodeReserve1';
+import PubliqTransactionPoolFull from './models/PubliqTransactionPoolFull';
 import PubliqResponseCodeReserve2 from './models/PubliqResponseCodeReserve2';
 import PubliqResponseCodeReserve3 from './models/PubliqResponseCodeReserve3';
 import PubliqResponseCodeReserve4 from './models/PubliqResponseCodeReserve4';
@@ -111,6 +111,10 @@ import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
 import PubliqStorageFileRequest from './models/PubliqStorageFileRequest';
 import PubliqStorageFileDetails from './models/PubliqStorageFileDetails';
 import PubliqStorageFileDetailsResponse from './models/PubliqStorageFileDetailsResponse';
+import PubliqStorageUpdateCommand from './models/PubliqStorageUpdateCommand';
+import PubliqLetter from './models/PubliqLetter';
+import PubliqCheckInbox from './models/PubliqCheckInbox';
+import PubliqInbox from './models/PubliqInbox';
 import PubliqGenericModelReserve1 from './models/PubliqGenericModelReserve1';
 import PubliqGenericModelReserve2 from './models/PubliqGenericModelReserve2';
 import PubliqGenericModelReserve3 from './models/PubliqGenericModelReserve3';
@@ -164,7 +168,7 @@ const MODELS_TYPES = [
     PubliqServiceStatisticsCount,
     PubliqSponsorContentUnit,
     PubliqCancelSponsorContentUnit,
-    PubliqTransactionReserve18,
+    PubliqSponsorContentUnitEx,
     PubliqTransactionReserve19,
     PubliqTransactionReserve20,
     PubliqTransactionReserve21,
@@ -208,8 +212,8 @@ const MODELS_TYPES = [
     PubliqContentUnitImpactLog,
     PubliqContentUnitImpactPerChannel,
     PubliqSponsorContentUnitApplied,
-    PubliqApiReserve8,
-    PubliqApiReserve9,
+    PubliqFileUrisRequest,
+    PubliqFileUris,
     PubliqApiReserve10,
     PubliqApiReserve11,
     PubliqDone,
@@ -220,7 +224,7 @@ const MODELS_TYPES = [
     PubliqNotEnoughBalance,
     PubliqTooLongString,
     PubliqUriError,
-    PubliqResponseCodeReserve1,
+    PubliqTransactionPoolFull,
     PubliqResponseCodeReserve2,
     PubliqResponseCodeReserve3,
     PubliqResponseCodeReserve4,
@@ -237,6 +241,10 @@ const MODELS_TYPES = [
     PubliqStorageFileRequest,
     PubliqStorageFileDetails,
     PubliqStorageFileDetailsResponse,
+    PubliqStorageUpdateCommand,
+    PubliqLetter,
+    PubliqCheckInbox,
+    PubliqInbox,
     PubliqGenericModelReserve1,
     PubliqGenericModelReserve2,
     PubliqGenericModelReserve3,

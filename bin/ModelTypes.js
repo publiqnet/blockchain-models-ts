@@ -40,7 +40,7 @@ var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFil
 var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
 var PubliqSponsorContentUnit_1 = require("./models/PubliqSponsorContentUnit");
 var PubliqCancelSponsorContentUnit_1 = require("./models/PubliqCancelSponsorContentUnit");
-var PubliqTransactionReserve18_1 = require("./models/PubliqTransactionReserve18");
+var PubliqSponsorContentUnitEx_1 = require("./models/PubliqSponsorContentUnitEx");
 var PubliqTransactionReserve19_1 = require("./models/PubliqTransactionReserve19");
 var PubliqTransactionReserve20_1 = require("./models/PubliqTransactionReserve20");
 var PubliqTransactionReserve21_1 = require("./models/PubliqTransactionReserve21");
@@ -84,8 +84,8 @@ var PubliqServed_1 = require("./models/PubliqServed");
 var PubliqContentUnitImpactLog_1 = require("./models/PubliqContentUnitImpactLog");
 var PubliqContentUnitImpactPerChannel_1 = require("./models/PubliqContentUnitImpactPerChannel");
 var PubliqSponsorContentUnitApplied_1 = require("./models/PubliqSponsorContentUnitApplied");
-var PubliqApiReserve8_1 = require("./models/PubliqApiReserve8");
-var PubliqApiReserve9_1 = require("./models/PubliqApiReserve9");
+var PubliqFileUrisRequest_1 = require("./models/PubliqFileUrisRequest");
+var PubliqFileUris_1 = require("./models/PubliqFileUris");
 var PubliqApiReserve10_1 = require("./models/PubliqApiReserve10");
 var PubliqApiReserve11_1 = require("./models/PubliqApiReserve11");
 var PubliqDone_1 = require("./models/PubliqDone");
@@ -96,7 +96,7 @@ var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
 var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
 var PubliqTooLongString_1 = require("./models/PubliqTooLongString");
 var PubliqUriError_1 = require("./models/PubliqUriError");
-var PubliqResponseCodeReserve1_1 = require("./models/PubliqResponseCodeReserve1");
+var PubliqTransactionPoolFull_1 = require("./models/PubliqTransactionPoolFull");
 var PubliqResponseCodeReserve2_1 = require("./models/PubliqResponseCodeReserve2");
 var PubliqResponseCodeReserve3_1 = require("./models/PubliqResponseCodeReserve3");
 var PubliqResponseCodeReserve4_1 = require("./models/PubliqResponseCodeReserve4");
@@ -113,6 +113,10 @@ var PubliqStorageFileAddress_1 = require("./models/PubliqStorageFileAddress");
 var PubliqStorageFileRequest_1 = require("./models/PubliqStorageFileRequest");
 var PubliqStorageFileDetails_1 = require("./models/PubliqStorageFileDetails");
 var PubliqStorageFileDetailsResponse_1 = require("./models/PubliqStorageFileDetailsResponse");
+var PubliqStorageUpdateCommand_1 = require("./models/PubliqStorageUpdateCommand");
+var PubliqLetter_1 = require("./models/PubliqLetter");
+var PubliqCheckInbox_1 = require("./models/PubliqCheckInbox");
+var PubliqInbox_1 = require("./models/PubliqInbox");
 var PubliqGenericModelReserve1_1 = require("./models/PubliqGenericModelReserve1");
 var PubliqGenericModelReserve2_1 = require("./models/PubliqGenericModelReserve2");
 var PubliqGenericModelReserve3_1 = require("./models/PubliqGenericModelReserve3");
@@ -164,7 +168,7 @@ var MODELS_TYPES = [
     PubliqServiceStatisticsCount_1.default,
     PubliqSponsorContentUnit_1.default,
     PubliqCancelSponsorContentUnit_1.default,
-    PubliqTransactionReserve18_1.default,
+    PubliqSponsorContentUnitEx_1.default,
     PubliqTransactionReserve19_1.default,
     PubliqTransactionReserve20_1.default,
     PubliqTransactionReserve21_1.default,
@@ -208,8 +212,8 @@ var MODELS_TYPES = [
     PubliqContentUnitImpactLog_1.default,
     PubliqContentUnitImpactPerChannel_1.default,
     PubliqSponsorContentUnitApplied_1.default,
-    PubliqApiReserve8_1.default,
-    PubliqApiReserve9_1.default,
+    PubliqFileUrisRequest_1.default,
+    PubliqFileUris_1.default,
     PubliqApiReserve10_1.default,
     PubliqApiReserve11_1.default,
     PubliqDone_1.default,
@@ -220,7 +224,7 @@ var MODELS_TYPES = [
     PubliqNotEnoughBalance_1.default,
     PubliqTooLongString_1.default,
     PubliqUriError_1.default,
-    PubliqResponseCodeReserve1_1.default,
+    PubliqTransactionPoolFull_1.default,
     PubliqResponseCodeReserve2_1.default,
     PubliqResponseCodeReserve3_1.default,
     PubliqResponseCodeReserve4_1.default,
@@ -237,6 +241,10 @@ var MODELS_TYPES = [
     PubliqStorageFileRequest_1.default,
     PubliqStorageFileDetails_1.default,
     PubliqStorageFileDetailsResponse_1.default,
+    PubliqStorageUpdateCommand_1.default,
+    PubliqLetter_1.default,
+    PubliqCheckInbox_1.default,
+    PubliqInbox_1.default,
     PubliqGenericModelReserve1_1.default,
     PubliqGenericModelReserve2_1.default,
     PubliqGenericModelReserve3_1.default,
