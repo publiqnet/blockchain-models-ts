@@ -5,21 +5,18 @@ var PubliqSponsorType = /** @class */ (function () {
     }
     PubliqSponsorType.toString = function (param) {
         switch (param) {
-            case 0: return "all";
-            case 1: return "global";
-            case 2: return "article";
+            case 0: return "global";
+            case 1: return "article";
         }
     };
     PubliqSponsorType.toNumber = function (param) {
         switch (param) {
-            case "all": return 0;
-            case "global": return 1;
-            case "article": return 2;
+            case "global": return 0;
+            case "article": return 1;
         }
     };
-    PubliqSponsorType.all = 0;
-    PubliqSponsorType.global = 1;
-    PubliqSponsorType.article = 2;
+    PubliqSponsorType.global = 0;
+    PubliqSponsorType.article = 1;
     return PubliqSponsorType;
 }());
 exports.default = PubliqSponsorType;
