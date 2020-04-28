@@ -1,3 +1,4 @@
+import PubliqNodeType from './models/PubliqNodeType';
 
 const dateToFormatString = d => {
 
@@ -64,6 +65,10 @@ export default class BaseModel {
                }
            });
        }
+
+        if(data.constructor.name === 'PubliqRole'){
+            data.nodeType = PubliqNodeType.toString(data.nodeType);
+        }
 
        // if(data.constructor("Publiq")){
        //

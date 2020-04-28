@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var PubliqNodeType_1 = require("./models/PubliqNodeType");
 var dateToFormatString = function (d) {
     var addZero = function (d) {
         return d.length == 2 ? d : "0" + d;
@@ -46,6 +47,9 @@ var BaseModel = /** @class */ (function () {
                     return BaseModel.getDataWithRtt(d);
                 }
             });
+        }
+        if (data.constructor.name === 'PubliqRole') {
+            data.nodeType = PubliqNodeType_1.default.toString(data.nodeType);
         }
         // if(data.constructor("Publiq")){
         //
