@@ -66,10 +66,6 @@ export default class BaseModel {
            });
        }
 
-        if(data.constructor.name === 'PubliqRole'){
-            data.nodeType = PubliqNodeType.toString(data.nodeType);
-        }
-
        // if(data.constructor("Publiq")){
        //
        // }
@@ -84,11 +80,14 @@ export default class BaseModel {
            for (let i in data) {
                const pv = data[i];
                const constructor = pv.constructor;
-               let propertySetValue;
+                let propertySetValue;
 
-               if(constructor === Function){
-                   continue;
-               }
+                if(constructor === Function){
+                    continue;
+                } else if (constructor.name === 'PubliqRole' && !isNaN(pv.nodeType)) {
+                    pv.nodeType = PubliqNodeType.toString(pv.nodeType);
+                    propertySetValue = pv;
+                }
                // else if (constructor === Array){
                //     propertySetValue = pv.map(d => {
                //         if(d.constructor !== Function){
