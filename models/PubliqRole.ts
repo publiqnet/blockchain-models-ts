@@ -7,7 +7,7 @@ import PubliqNodeType from './PubliqNodeType';
 export default class PubliqRole extends BaseModel {
 
     nodeAddress: string;
-    nodeType: number;
+    nodeType: number | string;
 
     constructor(data?: any) { 
         super();
