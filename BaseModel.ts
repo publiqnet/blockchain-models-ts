@@ -1,4 +1,3 @@
-import PubliqNodeType from './models/PubliqNodeType';
 
 const dateToFormatString = d => {
 
@@ -84,10 +83,8 @@ export default class BaseModel {
 
                 if(constructor === Function){
                     continue;
-                } else if (constructor.name === 'PubliqRole' && !isNaN(pv.nodeType)) {
-                    pv.nodeType = PubliqNodeType.toString(pv.nodeType);
-                    propertySetValue = pv;
                 }
+
                // else if (constructor === Array){
                //     propertySetValue = pv.map(d => {
                //         if(d.constructor !== Function){

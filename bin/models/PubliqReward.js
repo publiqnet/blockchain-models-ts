@@ -15,7 +15,6 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var PubliqCoin_1 = require("./PubliqCoin");
-var PubliqRewardType_1 = require("./PubliqRewardType");
 var PubliqReward = /** @class */ (function (_super) {
     __extends(PubliqReward, _super);
     function PubliqReward(data) {
@@ -23,7 +22,7 @@ var PubliqReward = /** @class */ (function (_super) {
         if (data !== undefined) {
             _this.to = data.to;
             _this.amount = new PubliqCoin_1.default(data.amount);
-            _this.rewardType = PubliqRewardType_1.default.toNumber(data.reward_type === undefined ? data.rewardType : data.reward_type);
+            _this.rewardType = data.reward_type === undefined ? data.rewardType : data.reward_type;
         }
         return _this;
     }

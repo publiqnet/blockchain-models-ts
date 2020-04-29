@@ -2,18 +2,18 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqUriProblemType from './PubliqUriProblemType';
+import { PubliqUriProblemType } from './PubliqUriProblemType';
 
 export default class PubliqUriError extends BaseModel {
 
     uri: string;
-    uriProblemType: number;
+    uriProblemType: PubliqUriProblemType;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.uri = data.uri;
-            this.uriProblemType = PubliqUriProblemType.toNumber(data.uri_problem_type === undefined ?  data.uriProblemType: data.uri_problem_type);
+            this.uriProblemType = data.uri_problem_type === undefined ?  data.uriProblemType: data.uri_problem_type;
         }
     }
 

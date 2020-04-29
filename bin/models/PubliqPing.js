@@ -19,12 +19,17 @@ var PubliqPing = /** @class */ (function (_super) {
     function PubliqPing(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            if (data.address !== undefined) {
+                _this.address = data.address;
+            }
         }
         return _this;
     }
     Object.defineProperty(PubliqPing, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                address: 'address',
+            };
         },
         enumerable: true,
         configurable: true

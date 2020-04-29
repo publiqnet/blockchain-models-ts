@@ -2,18 +2,18 @@ import BaseModel from '../BaseModel';
 
 import {createInstanceFromJson} from '../ModelTypes'
 
-import PubliqNodeType from './PubliqNodeType';
+import { PubliqNodeType } from './PubliqNodeType';
 
 export default class PubliqRole extends BaseModel {
 
     nodeAddress: string;
-    nodeType: number | string;
+    nodeType: PubliqNodeType;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
             this.nodeAddress = data.node_address === undefined ?  data.nodeAddress: data.node_address;
-            this.nodeType = PubliqNodeType.toNumber(data.node_type === undefined ?  data.nodeType: data.node_type);
+            this.nodeType = data.node_type === undefined ?  data.nodeType: data.node_type;
         }
     }
 

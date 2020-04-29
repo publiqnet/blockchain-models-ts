@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var PubliqNodeType_1 = require("./models/PubliqNodeType");
 var dateToFormatString = function (d) {
     var addZero = function (d) {
         return d.length == 2 ? d : "0" + d;
@@ -62,10 +61,6 @@ var BaseModel = /** @class */ (function () {
                 var propertySetValue = void 0;
                 if (constructor === Function) {
                     continue;
-                }
-                else if (constructor.name === 'PubliqRole' && !isNaN(pv.nodeType)) {
-                    pv.nodeType = PubliqNodeType_1.default.toString(pv.nodeType);
-                    propertySetValue = pv;
                 }
                 // else if (constructor === Array){
                 //     propertySetValue = pv.map(d => {

@@ -15,13 +15,12 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
 var ModelTypes_1 = require("../ModelTypes");
-var PubliqLoggingType_1 = require("./PubliqLoggingType");
 var PubliqLoggedTransaction = /** @class */ (function (_super) {
     __extends(PubliqLoggedTransaction, _super);
     function PubliqLoggedTransaction(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.loggingType = PubliqLoggingType_1.default.toNumber(data.logging_type === undefined ? data.loggingType : data.logging_type);
+            _this.loggingType = data.logging_type === undefined ? data.loggingType : data.logging_type;
             _this.index = data.index;
             _this.action = ModelTypes_1.createInstanceFromJson(data.action);
         }

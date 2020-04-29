@@ -14,13 +14,12 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqUpdateType_1 = require("./PubliqUpdateType");
 var PubliqStorageUpdateCommand = /** @class */ (function (_super) {
     __extends(PubliqStorageUpdateCommand, _super);
     function PubliqStorageUpdateCommand(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.status = PubliqUpdateType_1.default.toNumber(data.status);
+            _this.status = data.status;
             _this.fileUri = data.file_uri === undefined ? data.fileUri : data.file_uri;
             _this.storageAddress = data.storage_address === undefined ? data.storageAddress : data.storage_address;
             _this.channelAddress = data.channel_address === undefined ? data.channelAddress : data.channel_address;

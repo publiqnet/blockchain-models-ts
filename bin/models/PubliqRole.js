@@ -14,14 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqNodeType_1 = require("./PubliqNodeType");
 var PubliqRole = /** @class */ (function (_super) {
     __extends(PubliqRole, _super);
     function PubliqRole(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
             _this.nodeAddress = data.node_address === undefined ? data.nodeAddress : data.node_address;
-            _this.nodeType = PubliqNodeType_1.default.toNumber(data.node_type === undefined ? data.nodeType : data.node_type);
+            _this.nodeType = data.node_type === undefined ? data.nodeType : data.node_type;
         }
         return _this;
     }

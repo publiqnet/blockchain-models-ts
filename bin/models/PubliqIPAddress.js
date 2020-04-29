@@ -14,14 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqIPType_1 = require("./PubliqIPType");
 var PubliqIPDestination_1 = require("./PubliqIPDestination");
 var PubliqIPAddress = /** @class */ (function (_super) {
     __extends(PubliqIPAddress, _super);
     function PubliqIPAddress(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
-            _this.ipType = PubliqIPType_1.default.toNumber(data.ip_type === undefined ? data.ipType : data.ip_type);
+            _this.ipType = data.ip_type === undefined ? data.ipType : data.ip_type;
             _this.local = new PubliqIPDestination_1.default(data.local);
             _this.remote = new PubliqIPDestination_1.default(data.remote);
         }
