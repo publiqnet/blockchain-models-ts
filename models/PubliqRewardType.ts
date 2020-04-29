@@ -4,5 +4,5 @@ export enum PubliqRewardType {
     author,
     channel,
     storage,
-    sponsoredReturn,
+    sponsoredReturn
 } 
