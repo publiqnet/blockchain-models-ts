@@ -14,28 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqApiReserve8 = /** @class */ (function (_super) {
-    __extends(PubliqApiReserve8, _super);
-    function PubliqApiReserve8(data) {
+var PubliqConfigKeyUpdate = /** @class */ (function (_super) {
+    __extends(PubliqConfigKeyUpdate, _super);
+    function PubliqConfigKeyUpdate(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
+            _this.updateType = data.update_type === undefined ? data.updateType : data.update_type;
         }
         return _this;
     }
-    Object.defineProperty(PubliqApiReserve8, "PropertyMap", {
+    Object.defineProperty(PubliqConfigKeyUpdate, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                privateKey: 'private_key',
+                updateType: 'update_type',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqApiReserve8, "Rtt", {
+    Object.defineProperty(PubliqConfigKeyUpdate, "Rtt", {
         get: function () {
-            return 84;
+            return 118;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqApiReserve8;
+    return PubliqConfigKeyUpdate;
 }(BaseModel_1.default));
-exports.default = PubliqApiReserve8;
+exports.default = PubliqConfigKeyUpdate;

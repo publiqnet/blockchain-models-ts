@@ -117,6 +117,8 @@ var PubliqStorageUpdateCommand_1 = require("./models/PubliqStorageUpdateCommand"
 var PubliqLetter_1 = require("./models/PubliqLetter");
 var PubliqCheckInbox_1 = require("./models/PubliqCheckInbox");
 var PubliqInbox_1 = require("./models/PubliqInbox");
+var PubliqConfig_1 = require("./models/PubliqConfig");
+var PubliqConfigKeyUpdate_1 = require("./models/PubliqConfigKeyUpdate");
 var PubliqGenericModelReserve1_1 = require("./models/PubliqGenericModelReserve1");
 var PubliqGenericModelReserve2_1 = require("./models/PubliqGenericModelReserve2");
 var PubliqGenericModelReserve3_1 = require("./models/PubliqGenericModelReserve3");
@@ -245,6 +247,8 @@ var MODELS_TYPES = [
     PubliqLetter_1.default,
     PubliqCheckInbox_1.default,
     PubliqInbox_1.default,
+    PubliqConfig_1.default,
+    PubliqConfigKeyUpdate_1.default,
     PubliqGenericModelReserve1_1.default,
     PubliqGenericModelReserve2_1.default,
     PubliqGenericModelReserve3_1.default,

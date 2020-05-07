@@ -115,6 +115,8 @@ import PubliqStorageUpdateCommand from './models/PubliqStorageUpdateCommand';
 import PubliqLetter from './models/PubliqLetter';
 import PubliqCheckInbox from './models/PubliqCheckInbox';
 import PubliqInbox from './models/PubliqInbox';
+import PubliqConfig from './models/PubliqConfig';
+import PubliqConfigKeyUpdate from './models/PubliqConfigKeyUpdate';
 import PubliqGenericModelReserve1 from './models/PubliqGenericModelReserve1';
 import PubliqGenericModelReserve2 from './models/PubliqGenericModelReserve2';
 import PubliqGenericModelReserve3 from './models/PubliqGenericModelReserve3';
@@ -245,6 +247,8 @@ const MODELS_TYPES = [
     PubliqLetter,
     PubliqCheckInbox,
     PubliqInbox,
+    PubliqConfig,
+    PubliqConfigKeyUpdate,
     PubliqGenericModelReserve1,
     PubliqGenericModelReserve2,
     PubliqGenericModelReserve3,
