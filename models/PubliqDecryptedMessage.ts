@@ -3,25 +3,25 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqFileUris extends BaseModel {
+export default class PubliqDecryptedMessage extends BaseModel {
 
-    fileUris: Array<string>;
+    plainB64Msg: string;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.fileUris = data.file_uris === undefined ?  data.fileUris: data.file_uris;
+            this.plainB64Msg = data.plain_b64_msg === undefined ?  data.plainB64Msg: data.plain_b64_msg;
         }
     }
 
     static get PropertyMap () {
         return {
-            fileUris : 'file_uris',
+            plainB64Msg : 'plain_b64_msg',
         }
     }
 
     static get Rtt () {
-        return 85;
+        return 124;
     }
 
 } 

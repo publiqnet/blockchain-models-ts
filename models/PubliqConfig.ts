@@ -15,7 +15,7 @@ export default class PubliqConfig extends BaseModel {
     publicAddress?: PubliqIPAddress;
     publicSslAddress?: PubliqIPAddress;
     privateKey?: string;
-    privateKeys?: Array<String>;
+    privateKeys?: Array<string>;
     managerAddress?: string;
     nodeType?: PubliqNodeType;
     automaticFee?: PubliqCoin;

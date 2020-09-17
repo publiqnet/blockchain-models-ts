@@ -14,28 +14,31 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqTransactionReserve1 = /** @class */ (function (_super) {
-    __extends(PubliqTransactionReserve1, _super);
-    function PubliqTransactionReserve1(data) {
+var PubliqPublicKeyRequest = /** @class */ (function (_super) {
+    __extends(PubliqPublicKeyRequest, _super);
+    function PubliqPublicKeyRequest(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
         }
         return _this;
     }
-    Object.defineProperty(PubliqTransactionReserve1, "PropertyMap", {
+    Object.defineProperty(PubliqPublicKeyRequest, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                privateKey: 'private_key',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqTransactionReserve1, "Rtt", {
+    Object.defineProperty(PubliqPublicKeyRequest, "Rtt", {
         get: function () {
-            return 14;
+            return 119;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqTransactionReserve1;
+    return PubliqPublicKeyRequest;
 }(BaseModel_1.default));
-exports.default = PubliqTransactionReserve1;
+exports.default = PubliqPublicKeyRequest;

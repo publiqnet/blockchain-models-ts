@@ -14,28 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqGenericModelReserve5 = /** @class */ (function (_super) {
-    __extends(PubliqGenericModelReserve5, _super);
-    function PubliqGenericModelReserve5(data) {
+var PubliqEncrypt = /** @class */ (function (_super) {
+    __extends(PubliqEncrypt, _super);
+    function PubliqEncrypt(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.plainB64Msg = data.plain_b64_msg === undefined ? data.plainB64Msg : data.plain_b64_msg;
+            _this.publicKey = data.public_key === undefined ? data.publicKey : data.public_key;
         }
         return _this;
     }
-    Object.defineProperty(PubliqGenericModelReserve5, "PropertyMap", {
+    Object.defineProperty(PubliqEncrypt, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                plainB64Msg: 'plain_b64_msg',
+                publicKey: 'public_key',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqGenericModelReserve5, "Rtt", {
+    Object.defineProperty(PubliqEncrypt, "Rtt", {
         get: function () {
-            return 129;
+            return 121;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqGenericModelReserve5;
+    return PubliqEncrypt;
 }(BaseModel_1.default));
-exports.default = PubliqGenericModelReserve5;
+exports.default = PubliqEncrypt;

@@ -6,7 +6,7 @@ import {createInstanceFromJson} from '../ModelTypes'
 export default class PubliqFile extends BaseModel {
 
     uri: string;
-    authorAddresses: Array<String>;
+    authorAddresses: Array<string>;
 
     constructor(data?: any) { 
         super();

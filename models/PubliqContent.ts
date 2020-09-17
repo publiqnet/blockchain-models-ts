@@ -7,7 +7,7 @@ export default class PubliqContent extends BaseModel {
 
     contentId: number;
     channelAddress: string;
-    contentUnitUris: Array<String>;
+    contentUnitUris: Array<string>;
 
     constructor(data?: any) { 
         super();

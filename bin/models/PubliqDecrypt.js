@@ -14,28 +14,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqGenericModelReserve5 = /** @class */ (function (_super) {
-    __extends(PubliqGenericModelReserve5, _super);
-    function PubliqGenericModelReserve5(data) {
+var PubliqDecrypt = /** @class */ (function (_super) {
+    __extends(PubliqDecrypt, _super);
+    function PubliqDecrypt(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.cipherB64Msg = data.cipher_b64_msg === undefined ? data.cipherB64Msg : data.cipher_b64_msg;
+            _this.privateKey = data.private_key === undefined ? data.privateKey : data.private_key;
         }
         return _this;
     }
-    Object.defineProperty(PubliqGenericModelReserve5, "PropertyMap", {
+    Object.defineProperty(PubliqDecrypt, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                cipherB64Msg: 'cipher_b64_msg',
+                privateKey: 'private_key',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqGenericModelReserve5, "Rtt", {
+    Object.defineProperty(PubliqDecrypt, "Rtt", {
         get: function () {
-            return 129;
+            return 123;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqGenericModelReserve5;
+    return PubliqDecrypt;
 }(BaseModel_1.default));
-exports.default = PubliqGenericModelReserve5;
+exports.default = PubliqDecrypt;

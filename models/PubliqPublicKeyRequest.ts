@@ -3,25 +3,25 @@ import BaseModel from '../BaseModel';
 import {createInstanceFromJson} from '../ModelTypes'
 
 
-export default class PubliqFileUris extends BaseModel {
+export default class PubliqPublicKeyRequest extends BaseModel {
 
-    fileUris: Array<string>;
+    privateKey: string;
 
     constructor(data?: any) { 
         super();
         if (data !== undefined) {
-            this.fileUris = data.file_uris === undefined ?  data.fileUris: data.file_uris;
+            this.privateKey = data.private_key === undefined ?  data.privateKey: data.private_key;
         }
     }
 
     static get PropertyMap () {
         return {
-            fileUris : 'file_uris',
+            privateKey : 'private_key',
         }
     }
 
     static get Rtt () {
-        return 85;
+        return 119;
     }
 
 } 

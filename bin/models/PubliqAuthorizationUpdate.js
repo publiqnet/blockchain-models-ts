@@ -14,28 +14,37 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseModel_1 = require("../BaseModel");
-var PubliqGenericModelReserve5 = /** @class */ (function (_super) {
-    __extends(PubliqGenericModelReserve5, _super);
-    function PubliqGenericModelReserve5(data) {
+var PubliqAuthorizationUpdate = /** @class */ (function (_super) {
+    __extends(PubliqAuthorizationUpdate, _super);
+    function PubliqAuthorizationUpdate(data) {
         var _this = _super.call(this) || this;
         if (data !== undefined) {
+            _this.updateType = data.update_type === undefined ? data.updateType : data.update_type;
+            _this.owner = data.owner;
+            _this.actor = data.actor;
+            _this.actionIds = data.action_ids === undefined ? data.actionIds : data.action_ids;
         }
         return _this;
     }
-    Object.defineProperty(PubliqGenericModelReserve5, "PropertyMap", {
+    Object.defineProperty(PubliqAuthorizationUpdate, "PropertyMap", {
         get: function () {
-            return {};
+            return {
+                updateType: 'update_type',
+                owner: 'owner',
+                actor: 'actor',
+                actionIds: 'action_ids',
+            };
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(PubliqGenericModelReserve5, "Rtt", {
+    Object.defineProperty(PubliqAuthorizationUpdate, "Rtt", {
         get: function () {
-            return 129;
+            return 14;
         },
         enumerable: true,
         configurable: true
     });
-    return PubliqGenericModelReserve5;
+    return PubliqAuthorizationUpdate;
 }(BaseModel_1.default));
-exports.default = PubliqGenericModelReserve5;
+exports.default = PubliqAuthorizationUpdate;

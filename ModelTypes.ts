@@ -12,7 +12,7 @@ import PubliqTransactionLog from './models/PubliqTransactionLog';
 import PubliqBlockLog from './models/PubliqBlockLog';
 import PubliqReward from './models/PubliqReward';
 import PubliqTransfer from './models/PubliqTransfer';
-import PubliqTransactionReserve1 from './models/PubliqTransactionReserve1';
+import PubliqAuthorizationUpdate from './models/PubliqAuthorizationUpdate';
 import PubliqTransactionReserve2 from './models/PubliqTransactionReserve2';
 import PubliqTransactionReserve3 from './models/PubliqTransactionReserve3';
 import PubliqTransactionReserve4 from './models/PubliqTransactionReserve4';
@@ -117,6 +117,12 @@ import PubliqCheckInbox from './models/PubliqCheckInbox';
 import PubliqInbox from './models/PubliqInbox';
 import PubliqConfig from './models/PubliqConfig';
 import PubliqConfigKeyUpdate from './models/PubliqConfigKeyUpdate';
+import PubliqPublicKeyRequest from './models/PubliqPublicKeyRequest';
+import PubliqPublicKeyResponse from './models/PubliqPublicKeyResponse';
+import PubliqEncrypt from './models/PubliqEncrypt';
+import PubliqEncryptedMessage from './models/PubliqEncryptedMessage';
+import PubliqDecrypt from './models/PubliqDecrypt';
+import PubliqDecryptedMessage from './models/PubliqDecryptedMessage';
 import PubliqGenericModelReserve1 from './models/PubliqGenericModelReserve1';
 import PubliqGenericModelReserve2 from './models/PubliqGenericModelReserve2';
 import PubliqGenericModelReserve3 from './models/PubliqGenericModelReserve3';
@@ -144,7 +150,7 @@ const MODELS_TYPES = [
     PubliqBlockLog,
     PubliqReward,
     PubliqTransfer,
-    PubliqTransactionReserve1,
+    PubliqAuthorizationUpdate,
     PubliqTransactionReserve2,
     PubliqTransactionReserve3,
     PubliqTransactionReserve4,
@@ -249,6 +255,12 @@ const MODELS_TYPES = [
     PubliqInbox,
     PubliqConfig,
     PubliqConfigKeyUpdate,
+    PubliqPublicKeyRequest,
+    PubliqPublicKeyResponse,
+    PubliqEncrypt,
+    PubliqEncryptedMessage,
+    PubliqDecrypt,
+    PubliqDecryptedMessage,
     PubliqGenericModelReserve1,
     PubliqGenericModelReserve2,
     PubliqGenericModelReserve3,

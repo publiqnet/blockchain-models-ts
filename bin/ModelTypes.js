@@ -14,7 +14,7 @@ var PubliqTransactionLog_1 = require("./models/PubliqTransactionLog");
 var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
 var PubliqReward_1 = require("./models/PubliqReward");
 var PubliqTransfer_1 = require("./models/PubliqTransfer");
-var PubliqTransactionReserve1_1 = require("./models/PubliqTransactionReserve1");
+var PubliqAuthorizationUpdate_1 = require("./models/PubliqAuthorizationUpdate");
 var PubliqTransactionReserve2_1 = require("./models/PubliqTransactionReserve2");
 var PubliqTransactionReserve3_1 = require("./models/PubliqTransactionReserve3");
 var PubliqTransactionReserve4_1 = require("./models/PubliqTransactionReserve4");
@@ -119,6 +119,12 @@ var PubliqCheckInbox_1 = require("./models/PubliqCheckInbox");
 var PubliqInbox_1 = require("./models/PubliqInbox");
 var PubliqConfig_1 = require("./models/PubliqConfig");
 var PubliqConfigKeyUpdate_1 = require("./models/PubliqConfigKeyUpdate");
+var PubliqPublicKeyRequest_1 = require("./models/PubliqPublicKeyRequest");
+var PubliqPublicKeyResponse_1 = require("./models/PubliqPublicKeyResponse");
+var PubliqEncrypt_1 = require("./models/PubliqEncrypt");
+var PubliqEncryptedMessage_1 = require("./models/PubliqEncryptedMessage");
+var PubliqDecrypt_1 = require("./models/PubliqDecrypt");
+var PubliqDecryptedMessage_1 = require("./models/PubliqDecryptedMessage");
 var PubliqGenericModelReserve1_1 = require("./models/PubliqGenericModelReserve1");
 var PubliqGenericModelReserve2_1 = require("./models/PubliqGenericModelReserve2");
 var PubliqGenericModelReserve3_1 = require("./models/PubliqGenericModelReserve3");
@@ -144,7 +150,7 @@ var MODELS_TYPES = [
     PubliqBlockLog_1.default,
     PubliqReward_1.default,
     PubliqTransfer_1.default,
-    PubliqTransactionReserve1_1.default,
+    PubliqAuthorizationUpdate_1.default,
     PubliqTransactionReserve2_1.default,
     PubliqTransactionReserve3_1.default,
     PubliqTransactionReserve4_1.default,
@@ -249,6 +255,12 @@ var MODELS_TYPES = [
     PubliqInbox_1.default,
     PubliqConfig_1.default,
     PubliqConfigKeyUpdate_1.default,
+    PubliqPublicKeyRequest_1.default,
+    PubliqPublicKeyResponse_1.default,
+    PubliqEncrypt_1.default,
+    PubliqEncryptedMessage_1.default,
+    PubliqDecrypt_1.default,
+    PubliqDecryptedMessage_1.default,
     PubliqGenericModelReserve1_1.default,
     PubliqGenericModelReserve2_1.default,
     PubliqGenericModelReserve3_1.default,
