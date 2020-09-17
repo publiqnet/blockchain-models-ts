@@ -1,276 +1,264 @@
-import PubliqAPICoin from './models/PubliqAPICoin';
-import PubliqAPIBroadcast from './models/PubliqAPIBroadcast';
-import PubliqAPITransaction from './models/PubliqAPITransaction';
-import PubliqAPIAuthority from './models/PubliqAPIAuthority';
-import PubliqAPISignedTransaction from './models/PubliqAPISignedTransaction';
-import PubliqAPIBlockHeader from './models/PubliqAPIBlockHeader';
-import PubliqAPIBlockHeaderExtended from './models/PubliqAPIBlockHeaderExtended';
-import PubliqAPIBlock from './models/PubliqAPIBlock';
-import PubliqAPISignedBlock from './models/PubliqAPISignedBlock';
-import PubliqAPIRewardLog from './models/PubliqAPIRewardLog';
-import PubliqAPITransactionLog from './models/PubliqAPITransactionLog';
-import PubliqAPIBlockLog from './models/PubliqAPIBlockLog';
-import PubliqAPIReward from './models/PubliqAPIReward';
-import PubliqAPITransfer from './models/PubliqAPITransfer';
-import PubliqAPIAuthorizationUpdate from './models/PubliqAPIAuthorizationUpdate';
-import PubliqAPITransactionReserve2 from './models/PubliqAPITransactionReserve2';
-import PubliqAPITransactionReserve3 from './models/PubliqAPITransactionReserve3';
-import PubliqAPITransactionReserve4 from './models/PubliqAPITransactionReserve4';
-import PubliqAPITransactionReserve5 from './models/PubliqAPITransactionReserve5';
-import PubliqAPITransactionReserve6 from './models/PubliqAPITransactionReserve6';
-import PubliqAPITransactionReserve7 from './models/PubliqAPITransactionReserve7';
-import PubliqAPITransactionReserve8 from './models/PubliqAPITransactionReserve8';
-import PubliqAPITransactionReserve9 from './models/PubliqAPITransactionReserve9';
-import PubliqAPITransactionReserve10 from './models/PubliqAPITransactionReserve10';
-import PubliqAPITransactionReserve11 from './models/PubliqAPITransactionReserve11';
-import PubliqAPITransactionReserve12 from './models/PubliqAPITransactionReserve12';
-import PubliqAPITransactionReserve13 from './models/PubliqAPITransactionReserve13';
-import PubliqAPITransactionReserve14 from './models/PubliqAPITransactionReserve14';
-import PubliqAPITransactionReserve15 from './models/PubliqAPITransactionReserve15';
-import PubliqAPIFile from './models/PubliqAPIFile';
-import PubliqAPIContentUnit from './models/PubliqAPIContentUnit';
-import PubliqAPIContent from './models/PubliqAPIContent';
-import PubliqAPIRole from './models/PubliqAPIRole';
-import PubliqAPIAddressInfo from './models/PubliqAPIAddressInfo';
-import PubliqAPIStorageUpdate from './models/PubliqAPIStorageUpdate';
-import PubliqAPIServiceStatistics from './models/PubliqAPIServiceStatistics';
-import PubliqAPIServiceStatisticsFile from './models/PubliqAPIServiceStatisticsFile';
-import PubliqAPIServiceStatisticsCount from './models/PubliqAPIServiceStatisticsCount';
-import PubliqAPISponsorContentUnit from './models/PubliqAPISponsorContentUnit';
-import PubliqAPICancelSponsorContentUnit from './models/PubliqAPICancelSponsorContentUnit';
-import PubliqAPITransactionReserve18 from './models/PubliqAPITransactionReserve18';
-import PubliqAPITransactionReserve19 from './models/PubliqAPITransactionReserve19';
-import PubliqAPITransactionReserve20 from './models/PubliqAPITransactionReserve20';
-import PubliqAPITransactionReserve21 from './models/PubliqAPITransactionReserve21';
-import PubliqAPITransactionReserve22 from './models/PubliqAPITransactionReserve22';
-import PubliqAPITransactionReserve23 from './models/PubliqAPITransactionReserve23';
-import PubliqAPITransactionReserve24 from './models/PubliqAPITransactionReserve24';
-import PubliqAPITransactionReserve25 from './models/PubliqAPITransactionReserve25';
-import PubliqAPIIPDestination from './models/PubliqAPIIPDestination';
-import PubliqAPIIPAddress from './models/PubliqAPIIPAddress';
-import PubliqAPIPing from './models/PubliqAPIPing';
-import PubliqAPIPong from './models/PubliqAPIPong';
-import PubliqAPIDigestRequest from './models/PubliqAPIDigestRequest';
-import PubliqAPIDigest from './models/PubliqAPIDigest';
-import PubliqAPILoggedTransactionsRequest from './models/PubliqAPILoggedTransactionsRequest';
-import PubliqAPILoggedTransactions from './models/PubliqAPILoggedTransactions';
-import PubliqAPILoggedTransaction from './models/PubliqAPILoggedTransaction';
-import PubliqAPIMasterKeyRequest from './models/PubliqAPIMasterKeyRequest';
-import PubliqAPIMasterKey from './models/PubliqAPIMasterKey';
-import PubliqAPIKeyPairRequest from './models/PubliqAPIKeyPairRequest';
-import PubliqAPIKeyPair from './models/PubliqAPIKeyPair';
-import PubliqAPISignRequest from './models/PubliqAPISignRequest';
-import PubliqAPISignature from './models/PubliqAPISignature';
-import PubliqAPITransactionBroadcastRequest from './models/PubliqAPITransactionBroadcastRequest';
-import PubliqAPITransactionDone from './models/PubliqAPITransactionDone';
-import PubliqAPIApiReserve1 from './models/PubliqAPIApiReserve1';
-import PubliqAPIApiReserve2 from './models/PubliqAPIApiReserve2';
-import PubliqAPIApiReserve3 from './models/PubliqAPIApiReserve3';
-import PubliqAPIApiReserve4 from './models/PubliqAPIApiReserve4';
-import PubliqAPISyncRequest from './models/PubliqAPISyncRequest';
-import PubliqAPISyncResponse from './models/PubliqAPISyncResponse';
-import PubliqAPIBlockHeaderRequest from './models/PubliqAPIBlockHeaderRequest';
-import PubliqAPIBlockHeaderResponse from './models/PubliqAPIBlockHeaderResponse';
-import PubliqAPIBlockchainRequest from './models/PubliqAPIBlockchainRequest';
-import PubliqAPIBlockchainResponse from './models/PubliqAPIBlockchainResponse';
-import PubliqAPIPublicAddressesRequest from './models/PubliqAPIPublicAddressesRequest';
-import PubliqAPIPublicAddressesInfo from './models/PubliqAPIPublicAddressesInfo';
-import PubliqAPIPublicAddressInfo from './models/PubliqAPIPublicAddressInfo';
-import PubliqAPIIncompleteTransactionsRequest from './models/PubliqAPIIncompleteTransactionsRequest';
-import PubliqAPIIncompleteTransactions from './models/PubliqAPIIncompleteTransactions';
-import PubliqAPIServed from './models/PubliqAPIServed';
-import PubliqAPIContentUnitImpactLog from './models/PubliqAPIContentUnitImpactLog';
-import PubliqAPIContentUnitImpactPerChannel from './models/PubliqAPIContentUnitImpactPerChannel';
-import PubliqAPISponsorContentUnitApplied from './models/PubliqAPISponsorContentUnitApplied';
-import PubliqAPIFileUrisRequest from './models/PubliqAPIFileUrisRequest';
-import PubliqAPIFileUris from './models/PubliqAPIFileUris';
-import PubliqAPIApiReserve10 from './models/PubliqAPIApiReserve10';
-import PubliqAPIApiReserve11 from './models/PubliqAPIApiReserve11';
-import PubliqAPIDone from './models/PubliqAPIDone';
-import PubliqAPIInvalidPublicKey from './models/PubliqAPIInvalidPublicKey';
-import PubliqAPIInvalidPrivateKey from './models/PubliqAPIInvalidPrivateKey';
-import PubliqAPIInvalidSignature from './models/PubliqAPIInvalidSignature';
-import PubliqAPIInvalidAuthority from './models/PubliqAPIInvalidAuthority';
-import PubliqAPINotEnoughBalance from './models/PubliqAPINotEnoughBalance';
-import PubliqAPITooLongString from './models/PubliqAPITooLongString';
-import PubliqAPIUriError from './models/PubliqAPIUriError';
-import PubliqAPITransactionPoolFull from './models/PubliqAPITransactionPoolFull';
-import PubliqAPIResponseCodeReserve2 from './models/PubliqAPIResponseCodeReserve2';
-import PubliqAPIResponseCodeReserve3 from './models/PubliqAPIResponseCodeReserve3';
-import PubliqAPIResponseCodeReserve4 from './models/PubliqAPIResponseCodeReserve4';
-import PubliqAPIResponseCodeReserve5 from './models/PubliqAPIResponseCodeReserve5';
-import PubliqAPIResponseCodeReserve6 from './models/PubliqAPIResponseCodeReserve6';
-import PubliqAPIResponseCodeReserve7 from './models/PubliqAPIResponseCodeReserve7';
-import PubliqAPIResponseCodeReserve8 from './models/PubliqAPIResponseCodeReserve8';
-import PubliqAPIResponseCodeReserve9 from './models/PubliqAPIResponseCodeReserve9';
-import PubliqAPIResponseCodeReserve10 from './models/PubliqAPIResponseCodeReserve10';
-import PubliqAPIRemoteError from './models/PubliqAPIRemoteError';
-import PubliqAPIStorageFile from './models/PubliqAPIStorageFile';
-import PubliqAPIStorageFileDelete from './models/PubliqAPIStorageFileDelete';
-import PubliqAPIStorageFileAddress from './models/PubliqAPIStorageFileAddress';
-import PubliqAPIStorageFileRequest from './models/PubliqAPIStorageFileRequest';
-import PubliqAPIStorageFileDetails from './models/PubliqAPIStorageFileDetails';
-import PubliqAPIStorageFileDetailsResponse from './models/PubliqAPIStorageFileDetailsResponse';
-import PubliqAPIStorageUpdateCommand from './models/PubliqAPIStorageUpdateCommand';
-import PubliqAPILetter from './models/PubliqAPILetter';
-import PubliqAPICheckInbox from './models/PubliqAPICheckInbox';
-import PubliqAPIInbox from './models/PubliqAPIInbox';
-import PubliqAPIConfig from './models/PubliqAPIConfig';
-import PubliqAPIConfigKeyUpdate from './models/PubliqAPIConfigKeyUpdate';
-import PubliqAPIPublicKeyRequest from './models/PubliqAPIPublicKeyRequest';
-import PubliqAPIPublicKeyResponse from './models/PubliqAPIPublicKeyResponse';
-import PubliqAPIEncrypt from './models/PubliqAPIEncrypt';
-import PubliqAPIEncryptedMessage from './models/PubliqAPIEncryptedMessage';
-import PubliqAPIDecrypt from './models/PubliqAPIDecrypt';
-import PubliqAPIDecryptedMessage from './models/PubliqAPIDecryptedMessage';
-import PubliqAPIGenericModelReserve1 from './models/PubliqAPIGenericModelReserve1';
-import PubliqAPIGenericModelReserve2 from './models/PubliqAPIGenericModelReserve2';
-import PubliqAPIGenericModelReserve3 from './models/PubliqAPIGenericModelReserve3';
-import PubliqAPIGenericModelReserve4 from './models/PubliqAPIGenericModelReserve4';
-import PubliqAPIGenericModelReserve5 from './models/PubliqAPIGenericModelReserve5';
-import PubliqAPIGenericModelReserve6 from './models/PubliqAPIGenericModelReserve6';
-import PubliqAPIGenericModelReserve7 from './models/PubliqAPIGenericModelReserve7';
-import PubliqAPIGenericModelReserve8 from './models/PubliqAPIGenericModelReserve8';
-import PubliqAPIGenericModelReserve9 from './models/PubliqAPIGenericModelReserve9';
-import PubliqAPIGenericModelReserve10 from './models/PubliqAPIGenericModelReserve10';
+import PubliqCoin from './models/PubliqCoin';
+import PubliqBroadcast from './models/PubliqBroadcast';
+import PubliqTransaction from './models/PubliqTransaction';
+import PubliqAuthority from './models/PubliqAuthority';
+import PubliqSignedTransaction from './models/PubliqSignedTransaction';
+import PubliqBlockHeader from './models/PubliqBlockHeader';
+import PubliqBlockHeaderExtended from './models/PubliqBlockHeaderExtended';
+import PubliqBlock from './models/PubliqBlock';
+import PubliqSignedBlock from './models/PubliqSignedBlock';
+import PubliqRewardLog from './models/PubliqRewardLog';
+import PubliqTransactionLog from './models/PubliqTransactionLog';
+import PubliqBlockLog from './models/PubliqBlockLog';
+import PubliqReward from './models/PubliqReward';
+import PubliqTransfer from './models/PubliqTransfer';
+import PubliqTransactionReserve1 from './models/PubliqTransactionReserve1';
+import PubliqTransactionReserve2 from './models/PubliqTransactionReserve2';
+import PubliqTransactionReserve3 from './models/PubliqTransactionReserve3';
+import PubliqTransactionReserve4 from './models/PubliqTransactionReserve4';
+import PubliqTransactionReserve5 from './models/PubliqTransactionReserve5';
+import PubliqTransactionReserve6 from './models/PubliqTransactionReserve6';
+import PubliqTransactionReserve7 from './models/PubliqTransactionReserve7';
+import PubliqTransactionReserve8 from './models/PubliqTransactionReserve8';
+import PubliqTransactionReserve9 from './models/PubliqTransactionReserve9';
+import PubliqTransactionReserve10 from './models/PubliqTransactionReserve10';
+import PubliqTransactionReserve11 from './models/PubliqTransactionReserve11';
+import PubliqTransactionReserve12 from './models/PubliqTransactionReserve12';
+import PubliqTransactionReserve13 from './models/PubliqTransactionReserve13';
+import PubliqTransactionReserve14 from './models/PubliqTransactionReserve14';
+import PubliqTransactionReserve15 from './models/PubliqTransactionReserve15';
+import PubliqFile from './models/PubliqFile';
+import PubliqContentUnit from './models/PubliqContentUnit';
+import PubliqContent from './models/PubliqContent';
+import PubliqRole from './models/PubliqRole';
+import PubliqAddressInfo from './models/PubliqAddressInfo';
+import PubliqStorageUpdate from './models/PubliqStorageUpdate';
+import PubliqServiceStatistics from './models/PubliqServiceStatistics';
+import PubliqServiceStatisticsFile from './models/PubliqServiceStatisticsFile';
+import PubliqServiceStatisticsCount from './models/PubliqServiceStatisticsCount';
+import PubliqSponsorContentUnit from './models/PubliqSponsorContentUnit';
+import PubliqCancelSponsorContentUnit from './models/PubliqCancelSponsorContentUnit';
+import PubliqTransactionReserve18 from './models/PubliqTransactionReserve18';
+import PubliqTransactionReserve19 from './models/PubliqTransactionReserve19';
+import PubliqTransactionReserve20 from './models/PubliqTransactionReserve20';
+import PubliqTransactionReserve21 from './models/PubliqTransactionReserve21';
+import PubliqTransactionReserve22 from './models/PubliqTransactionReserve22';
+import PubliqTransactionReserve23 from './models/PubliqTransactionReserve23';
+import PubliqTransactionReserve24 from './models/PubliqTransactionReserve24';
+import PubliqTransactionReserve25 from './models/PubliqTransactionReserve25';
+import PubliqIPDestination from './models/PubliqIPDestination';
+import PubliqIPAddress from './models/PubliqIPAddress';
+import PubliqPing from './models/PubliqPing';
+import PubliqPong from './models/PubliqPong';
+import PubliqDigestRequest from './models/PubliqDigestRequest';
+import PubliqDigest from './models/PubliqDigest';
+import PubliqLoggedTransactionsRequest from './models/PubliqLoggedTransactionsRequest';
+import PubliqLoggedTransactions from './models/PubliqLoggedTransactions';
+import PubliqLoggedTransaction from './models/PubliqLoggedTransaction';
+import PubliqMasterKeyRequest from './models/PubliqMasterKeyRequest';
+import PubliqMasterKey from './models/PubliqMasterKey';
+import PubliqKeyPairRequest from './models/PubliqKeyPairRequest';
+import PubliqKeyPair from './models/PubliqKeyPair';
+import PubliqSignRequest from './models/PubliqSignRequest';
+import PubliqSignature from './models/PubliqSignature';
+import PubliqTransactionBroadcastRequest from './models/PubliqTransactionBroadcastRequest';
+import PubliqTransactionDone from './models/PubliqTransactionDone';
+import PubliqApiReserve1 from './models/PubliqApiReserve1';
+import PubliqApiReserve2 from './models/PubliqApiReserve2';
+import PubliqApiReserve3 from './models/PubliqApiReserve3';
+import PubliqApiReserve4 from './models/PubliqApiReserve4';
+import PubliqSyncRequest from './models/PubliqSyncRequest';
+import PubliqSyncResponse from './models/PubliqSyncResponse';
+import PubliqBlockHeaderRequest from './models/PubliqBlockHeaderRequest';
+import PubliqBlockHeaderResponse from './models/PubliqBlockHeaderResponse';
+import PubliqBlockchainRequest from './models/PubliqBlockchainRequest';
+import PubliqBlockchainResponse from './models/PubliqBlockchainResponse';
+import PubliqPublicAddressesRequest from './models/PubliqPublicAddressesRequest';
+import PubliqPublicAddressesInfo from './models/PubliqPublicAddressesInfo';
+import PubliqPublicAddressInfo from './models/PubliqPublicAddressInfo';
+import PubliqIncompleteTransactionsRequest from './models/PubliqIncompleteTransactionsRequest';
+import PubliqIncompleteTransactions from './models/PubliqIncompleteTransactions';
+import PubliqServed from './models/PubliqServed';
+import PubliqContentUnitImpactLog from './models/PubliqContentUnitImpactLog';
+import PubliqContentUnitImpactPerChannel from './models/PubliqContentUnitImpactPerChannel';
+import PubliqSponsorContentUnitApplied from './models/PubliqSponsorContentUnitApplied';
+import PubliqFileUrisRequest from './models/PubliqFileUrisRequest';
+import PubliqFileUris from './models/PubliqFileUris';
+import PubliqApiReserve10 from './models/PubliqApiReserve10';
+import PubliqApiReserve11 from './models/PubliqApiReserve11';
+import PubliqDone from './models/PubliqDone';
+import PubliqInvalidPublicKey from './models/PubliqInvalidPublicKey';
+import PubliqInvalidPrivateKey from './models/PubliqInvalidPrivateKey';
+import PubliqInvalidSignature from './models/PubliqInvalidSignature';
+import PubliqInvalidAuthority from './models/PubliqInvalidAuthority';
+import PubliqNotEnoughBalance from './models/PubliqNotEnoughBalance';
+import PubliqTooLongString from './models/PubliqTooLongString';
+import PubliqUriError from './models/PubliqUriError';
+import PubliqTransactionPoolFull from './models/PubliqTransactionPoolFull';
+import PubliqResponseCodeReserve2 from './models/PubliqResponseCodeReserve2';
+import PubliqResponseCodeReserve3 from './models/PubliqResponseCodeReserve3';
+import PubliqResponseCodeReserve4 from './models/PubliqResponseCodeReserve4';
+import PubliqResponseCodeReserve5 from './models/PubliqResponseCodeReserve5';
+import PubliqResponseCodeReserve6 from './models/PubliqResponseCodeReserve6';
+import PubliqResponseCodeReserve7 from './models/PubliqResponseCodeReserve7';
+import PubliqResponseCodeReserve8 from './models/PubliqResponseCodeReserve8';
+import PubliqResponseCodeReserve9 from './models/PubliqResponseCodeReserve9';
+import PubliqResponseCodeReserve10 from './models/PubliqResponseCodeReserve10';
+import PubliqRemoteError from './models/PubliqRemoteError';
+import PubliqStorageFile from './models/PubliqStorageFile';
+import PubliqStorageFileDelete from './models/PubliqStorageFileDelete';
+import PubliqStorageFileAddress from './models/PubliqStorageFileAddress';
+import PubliqStorageFileRequest from './models/PubliqStorageFileRequest';
+import PubliqStorageFileDetails from './models/PubliqStorageFileDetails';
+import PubliqStorageFileDetailsResponse from './models/PubliqStorageFileDetailsResponse';
+import PubliqStorageUpdateCommand from './models/PubliqStorageUpdateCommand';
+import PubliqLetter from './models/PubliqLetter';
+import PubliqCheckInbox from './models/PubliqCheckInbox';
+import PubliqInbox from './models/PubliqInbox';
+import PubliqConfig from './models/PubliqConfig';
+import PubliqConfigKeyUpdate from './models/PubliqConfigKeyUpdate';
+import PubliqGenericModelReserve1 from './models/PubliqGenericModelReserve1';
+import PubliqGenericModelReserve2 from './models/PubliqGenericModelReserve2';
+import PubliqGenericModelReserve3 from './models/PubliqGenericModelReserve3';
+import PubliqGenericModelReserve4 from './models/PubliqGenericModelReserve4';
+import PubliqGenericModelReserve5 from './models/PubliqGenericModelReserve5';
+import PubliqGenericModelReserve6 from './models/PubliqGenericModelReserve6';
+import PubliqGenericModelReserve7 from './models/PubliqGenericModelReserve7';
+import PubliqGenericModelReserve8 from './models/PubliqGenericModelReserve8';
+import PubliqGenericModelReserve9 from './models/PubliqGenericModelReserve9';
+import PubliqGenericModelReserve10 from './models/PubliqGenericModelReserve10';
 
 
 const MODELS_TYPES = [ 
-    PubliqAPICoin,
-    PubliqAPIBroadcast,
-    PubliqAPITransaction,
-    PubliqAPIAuthority,
-    PubliqAPISignedTransaction,
-    PubliqAPIBlockHeader,
-    PubliqAPIBlockHeaderExtended,
-    PubliqAPIBlock,
-    PubliqAPISignedBlock,
-    PubliqAPIRewardLog,
-    PubliqAPITransactionLog,
-    PubliqAPIBlockLog,
-    PubliqAPIReward,
-    PubliqAPITransfer,
-    PubliqAPIAuthorizationUpdate,
-    PubliqAPITransactionReserve2,
-    PubliqAPITransactionReserve3,
-    PubliqAPITransactionReserve4,
-    PubliqAPITransactionReserve5,
-    PubliqAPITransactionReserve6,
-    PubliqAPITransactionReserve7,
-    PubliqAPITransactionReserve8,
-    PubliqAPITransactionReserve9,
-    PubliqAPITransactionReserve10,
-    PubliqAPITransactionReserve11,
-    PubliqAPITransactionReserve12,
-    PubliqAPITransactionReserve13,
-    PubliqAPITransactionReserve14,
-    PubliqAPITransactionReserve15,
-    PubliqAPIFile,
-    PubliqAPIContentUnit,
-    PubliqAPIContent,
-    PubliqAPIRole,
-    PubliqAPIAddressInfo,
-    PubliqAPIStorageUpdate,
-    PubliqAPIServiceStatistics,
-    PubliqAPIServiceStatisticsFile,
-    PubliqAPIServiceStatisticsCount,
-    PubliqAPISponsorContentUnit,
-    PubliqAPICancelSponsorContentUnit,
-    PubliqAPITransactionReserve18,
-    PubliqAPITransactionReserve19,
-    PubliqAPITransactionReserve20,
-    PubliqAPITransactionReserve21,
-    PubliqAPITransactionReserve22,
-    PubliqAPITransactionReserve23,
-    PubliqAPITransactionReserve24,
-    PubliqAPITransactionReserve25,
-    PubliqAPIIPDestination,
-    PubliqAPIIPAddress,
-    PubliqAPIPing,
-    PubliqAPIPong,
-    PubliqAPIDigestRequest,
-    PubliqAPIDigest,
-    PubliqAPILoggedTransactionsRequest,
-    PubliqAPILoggedTransactions,
-    PubliqAPILoggedTransaction,
-    PubliqAPIMasterKeyRequest,
-    PubliqAPIMasterKey,
-    PubliqAPIKeyPairRequest,
-    PubliqAPIKeyPair,
-    PubliqAPISignRequest,
-    PubliqAPISignature,
-    PubliqAPITransactionBroadcastRequest,
-    PubliqAPITransactionDone,
-    PubliqAPIApiReserve1,
-    PubliqAPIApiReserve2,
-    PubliqAPIApiReserve3,
-    PubliqAPIApiReserve4,
-    PubliqAPISyncRequest,
-    PubliqAPISyncResponse,
-    PubliqAPIBlockHeaderRequest,
-    PubliqAPIBlockHeaderResponse,
-    PubliqAPIBlockchainRequest,
-    PubliqAPIBlockchainResponse,
-    PubliqAPIPublicAddressesRequest,
-    PubliqAPIPublicAddressesInfo,
-    PubliqAPIPublicAddressInfo,
-    PubliqAPIIncompleteTransactionsRequest,
-    PubliqAPIIncompleteTransactions,
-    PubliqAPIServed,
-    PubliqAPIContentUnitImpactLog,
-    PubliqAPIContentUnitImpactPerChannel,
-    PubliqAPISponsorContentUnitApplied,
-    PubliqAPIFileUrisRequest,
-    PubliqAPIFileUris,
-    PubliqAPIApiReserve10,
-    PubliqAPIApiReserve11,
-    PubliqAPIDone,
-    PubliqAPIInvalidPublicKey,
-    PubliqAPIInvalidPrivateKey,
-    PubliqAPIInvalidSignature,
-    PubliqAPIInvalidAuthority,
-    PubliqAPINotEnoughBalance,
-    PubliqAPITooLongString,
-    PubliqAPIUriError,
-    PubliqAPITransactionPoolFull,
-    PubliqAPIResponseCodeReserve2,
-    PubliqAPIResponseCodeReserve3,
-    PubliqAPIResponseCodeReserve4,
-    PubliqAPIResponseCodeReserve5,
-    PubliqAPIResponseCodeReserve6,
-    PubliqAPIResponseCodeReserve7,
-    PubliqAPIResponseCodeReserve8,
-    PubliqAPIResponseCodeReserve9,
-    PubliqAPIResponseCodeReserve10,
-    PubliqAPIRemoteError,
-    PubliqAPIStorageFile,
-    PubliqAPIStorageFileDelete,
-    PubliqAPIStorageFileAddress,
-    PubliqAPIStorageFileRequest,
-    PubliqAPIStorageFileDetails,
-    PubliqAPIStorageFileDetailsResponse,
-    PubliqAPIStorageUpdateCommand,
-    PubliqAPILetter,
-    PubliqAPICheckInbox,
-    PubliqAPIInbox,
-    PubliqAPIConfig,
-    PubliqAPIConfigKeyUpdate,
-    PubliqAPIPublicKeyRequest,
-    PubliqAPIPublicKeyResponse,
-    PubliqAPIEncrypt,
-    PubliqAPIEncryptedMessage,
-    PubliqAPIDecrypt,
-    PubliqAPIDecryptedMessage,
-    PubliqAPIGenericModelReserve1,
-    PubliqAPIGenericModelReserve2,
-    PubliqAPIGenericModelReserve3,
-    PubliqAPIGenericModelReserve4,
-    PubliqAPIGenericModelReserve5,
-    PubliqAPIGenericModelReserve6,
-    PubliqAPIGenericModelReserve7,
-    PubliqAPIGenericModelReserve8,
-    PubliqAPIGenericModelReserve9,
-    PubliqAPIGenericModelReserve10,
+    PubliqCoin,
+    PubliqBroadcast,
+    PubliqTransaction,
+    PubliqAuthority,
+    PubliqSignedTransaction,
+    PubliqBlockHeader,
+    PubliqBlockHeaderExtended,
+    PubliqBlock,
+    PubliqSignedBlock,
+    PubliqRewardLog,
+    PubliqTransactionLog,
+    PubliqBlockLog,
+    PubliqReward,
+    PubliqTransfer,
+    PubliqTransactionReserve1,
+    PubliqTransactionReserve2,
+    PubliqTransactionReserve3,
+    PubliqTransactionReserve4,
+    PubliqTransactionReserve5,
+    PubliqTransactionReserve6,
+    PubliqTransactionReserve7,
+    PubliqTransactionReserve8,
+    PubliqTransactionReserve9,
+    PubliqTransactionReserve10,
+    PubliqTransactionReserve11,
+    PubliqTransactionReserve12,
+    PubliqTransactionReserve13,
+    PubliqTransactionReserve14,
+    PubliqTransactionReserve15,
+    PubliqFile,
+    PubliqContentUnit,
+    PubliqContent,
+    PubliqRole,
+    PubliqAddressInfo,
+    PubliqStorageUpdate,
+    PubliqServiceStatistics,
+    PubliqServiceStatisticsFile,
+    PubliqServiceStatisticsCount,
+    PubliqSponsorContentUnit,
+    PubliqCancelSponsorContentUnit,
+    PubliqTransactionReserve18,
+    PubliqTransactionReserve19,
+    PubliqTransactionReserve20,
+    PubliqTransactionReserve21,
+    PubliqTransactionReserve22,
+    PubliqTransactionReserve23,
+    PubliqTransactionReserve24,
+    PubliqTransactionReserve25,
+    PubliqIPDestination,
+    PubliqIPAddress,
+    PubliqPing,
+    PubliqPong,
+    PubliqDigestRequest,
+    PubliqDigest,
+    PubliqLoggedTransactionsRequest,
+    PubliqLoggedTransactions,
+    PubliqLoggedTransaction,
+    PubliqMasterKeyRequest,
+    PubliqMasterKey,
+    PubliqKeyPairRequest,
+    PubliqKeyPair,
+    PubliqSignRequest,
+    PubliqSignature,
+    PubliqTransactionBroadcastRequest,
+    PubliqTransactionDone,
+    PubliqApiReserve1,
+    PubliqApiReserve2,
+    PubliqApiReserve3,
+    PubliqApiReserve4,
+    PubliqSyncRequest,
+    PubliqSyncResponse,
+    PubliqBlockHeaderRequest,
+    PubliqBlockHeaderResponse,
+    PubliqBlockchainRequest,
+    PubliqBlockchainResponse,
+    PubliqPublicAddressesRequest,
+    PubliqPublicAddressesInfo,
+    PubliqPublicAddressInfo,
+    PubliqIncompleteTransactionsRequest,
+    PubliqIncompleteTransactions,
+    PubliqServed,
+    PubliqContentUnitImpactLog,
+    PubliqContentUnitImpactPerChannel,
+    PubliqSponsorContentUnitApplied,
+    PubliqFileUrisRequest,
+    PubliqFileUris,
+    PubliqApiReserve10,
+    PubliqApiReserve11,
+    PubliqDone,
+    PubliqInvalidPublicKey,
+    PubliqInvalidPrivateKey,
+    PubliqInvalidSignature,
+    PubliqInvalidAuthority,
+    PubliqNotEnoughBalance,
+    PubliqTooLongString,
+    PubliqUriError,
+    PubliqTransactionPoolFull,
+    PubliqResponseCodeReserve2,
+    PubliqResponseCodeReserve3,
+    PubliqResponseCodeReserve4,
+    PubliqResponseCodeReserve5,
+    PubliqResponseCodeReserve6,
+    PubliqResponseCodeReserve7,
+    PubliqResponseCodeReserve8,
+    PubliqResponseCodeReserve9,
+    PubliqResponseCodeReserve10,
+    PubliqRemoteError,
+    PubliqStorageFile,
+    PubliqStorageFileDelete,
+    PubliqStorageFileAddress,
+    PubliqStorageFileRequest,
+    PubliqStorageFileDetails,
+    PubliqStorageFileDetailsResponse,
+    PubliqStorageUpdateCommand,
+    PubliqLetter,
+    PubliqCheckInbox,
+    PubliqInbox,
+    PubliqConfig,
+    PubliqConfigKeyUpdate,
+    PubliqGenericModelReserve1,
+    PubliqGenericModelReserve2,
+    PubliqGenericModelReserve3,
+    PubliqGenericModelReserve4,
+    PubliqGenericModelReserve5,
+    PubliqGenericModelReserve6,
+    PubliqGenericModelReserve7,
+    PubliqGenericModelReserve8,
+    PubliqGenericModelReserve9,
+    PubliqGenericModelReserve10,
 ];
 
 export const createInstanceFromJson = data => {
