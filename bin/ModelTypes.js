@@ -1,264 +1,276 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var PubliqCoin_1 = require("./models/PubliqCoin");
-var PubliqBroadcast_1 = require("./models/PubliqBroadcast");
-var PubliqTransaction_1 = require("./models/PubliqTransaction");
-var PubliqAuthority_1 = require("./models/PubliqAuthority");
-var PubliqSignedTransaction_1 = require("./models/PubliqSignedTransaction");
-var PubliqBlockHeader_1 = require("./models/PubliqBlockHeader");
-var PubliqBlockHeaderExtended_1 = require("./models/PubliqBlockHeaderExtended");
-var PubliqBlock_1 = require("./models/PubliqBlock");
-var PubliqSignedBlock_1 = require("./models/PubliqSignedBlock");
-var PubliqRewardLog_1 = require("./models/PubliqRewardLog");
-var PubliqTransactionLog_1 = require("./models/PubliqTransactionLog");
-var PubliqBlockLog_1 = require("./models/PubliqBlockLog");
-var PubliqReward_1 = require("./models/PubliqReward");
-var PubliqTransfer_1 = require("./models/PubliqTransfer");
-var PubliqTransactionReserve1_1 = require("./models/PubliqTransactionReserve1");
-var PubliqTransactionReserve2_1 = require("./models/PubliqTransactionReserve2");
-var PubliqTransactionReserve3_1 = require("./models/PubliqTransactionReserve3");
-var PubliqTransactionReserve4_1 = require("./models/PubliqTransactionReserve4");
-var PubliqTransactionReserve5_1 = require("./models/PubliqTransactionReserve5");
-var PubliqTransactionReserve6_1 = require("./models/PubliqTransactionReserve6");
-var PubliqTransactionReserve7_1 = require("./models/PubliqTransactionReserve7");
-var PubliqTransactionReserve8_1 = require("./models/PubliqTransactionReserve8");
-var PubliqTransactionReserve9_1 = require("./models/PubliqTransactionReserve9");
-var PubliqTransactionReserve10_1 = require("./models/PubliqTransactionReserve10");
-var PubliqTransactionReserve11_1 = require("./models/PubliqTransactionReserve11");
-var PubliqTransactionReserve12_1 = require("./models/PubliqTransactionReserve12");
-var PubliqTransactionReserve13_1 = require("./models/PubliqTransactionReserve13");
-var PubliqTransactionReserve14_1 = require("./models/PubliqTransactionReserve14");
-var PubliqTransactionReserve15_1 = require("./models/PubliqTransactionReserve15");
-var PubliqFile_1 = require("./models/PubliqFile");
-var PubliqContentUnit_1 = require("./models/PubliqContentUnit");
-var PubliqContent_1 = require("./models/PubliqContent");
-var PubliqRole_1 = require("./models/PubliqRole");
-var PubliqAddressInfo_1 = require("./models/PubliqAddressInfo");
-var PubliqStorageUpdate_1 = require("./models/PubliqStorageUpdate");
-var PubliqServiceStatistics_1 = require("./models/PubliqServiceStatistics");
-var PubliqServiceStatisticsFile_1 = require("./models/PubliqServiceStatisticsFile");
-var PubliqServiceStatisticsCount_1 = require("./models/PubliqServiceStatisticsCount");
-var PubliqSponsorContentUnit_1 = require("./models/PubliqSponsorContentUnit");
-var PubliqCancelSponsorContentUnit_1 = require("./models/PubliqCancelSponsorContentUnit");
-var PubliqTransactionReserve18_1 = require("./models/PubliqTransactionReserve18");
-var PubliqTransactionReserve19_1 = require("./models/PubliqTransactionReserve19");
-var PubliqTransactionReserve20_1 = require("./models/PubliqTransactionReserve20");
-var PubliqTransactionReserve21_1 = require("./models/PubliqTransactionReserve21");
-var PubliqTransactionReserve22_1 = require("./models/PubliqTransactionReserve22");
-var PubliqTransactionReserve23_1 = require("./models/PubliqTransactionReserve23");
-var PubliqTransactionReserve24_1 = require("./models/PubliqTransactionReserve24");
-var PubliqTransactionReserve25_1 = require("./models/PubliqTransactionReserve25");
-var PubliqIPDestination_1 = require("./models/PubliqIPDestination");
-var PubliqIPAddress_1 = require("./models/PubliqIPAddress");
-var PubliqPing_1 = require("./models/PubliqPing");
-var PubliqPong_1 = require("./models/PubliqPong");
-var PubliqDigestRequest_1 = require("./models/PubliqDigestRequest");
-var PubliqDigest_1 = require("./models/PubliqDigest");
-var PubliqLoggedTransactionsRequest_1 = require("./models/PubliqLoggedTransactionsRequest");
-var PubliqLoggedTransactions_1 = require("./models/PubliqLoggedTransactions");
-var PubliqLoggedTransaction_1 = require("./models/PubliqLoggedTransaction");
-var PubliqMasterKeyRequest_1 = require("./models/PubliqMasterKeyRequest");
-var PubliqMasterKey_1 = require("./models/PubliqMasterKey");
-var PubliqKeyPairRequest_1 = require("./models/PubliqKeyPairRequest");
-var PubliqKeyPair_1 = require("./models/PubliqKeyPair");
-var PubliqSignRequest_1 = require("./models/PubliqSignRequest");
-var PubliqSignature_1 = require("./models/PubliqSignature");
-var PubliqTransactionBroadcastRequest_1 = require("./models/PubliqTransactionBroadcastRequest");
-var PubliqTransactionDone_1 = require("./models/PubliqTransactionDone");
-var PubliqApiReserve1_1 = require("./models/PubliqApiReserve1");
-var PubliqApiReserve2_1 = require("./models/PubliqApiReserve2");
-var PubliqApiReserve3_1 = require("./models/PubliqApiReserve3");
-var PubliqApiReserve4_1 = require("./models/PubliqApiReserve4");
-var PubliqSyncRequest_1 = require("./models/PubliqSyncRequest");
-var PubliqSyncResponse_1 = require("./models/PubliqSyncResponse");
-var PubliqBlockHeaderRequest_1 = require("./models/PubliqBlockHeaderRequest");
-var PubliqBlockHeaderResponse_1 = require("./models/PubliqBlockHeaderResponse");
-var PubliqBlockchainRequest_1 = require("./models/PubliqBlockchainRequest");
-var PubliqBlockchainResponse_1 = require("./models/PubliqBlockchainResponse");
-var PubliqPublicAddressesRequest_1 = require("./models/PubliqPublicAddressesRequest");
-var PubliqPublicAddressesInfo_1 = require("./models/PubliqPublicAddressesInfo");
-var PubliqPublicAddressInfo_1 = require("./models/PubliqPublicAddressInfo");
-var PubliqIncompleteTransactionsRequest_1 = require("./models/PubliqIncompleteTransactionsRequest");
-var PubliqIncompleteTransactions_1 = require("./models/PubliqIncompleteTransactions");
-var PubliqServed_1 = require("./models/PubliqServed");
-var PubliqContentUnitImpactLog_1 = require("./models/PubliqContentUnitImpactLog");
-var PubliqContentUnitImpactPerChannel_1 = require("./models/PubliqContentUnitImpactPerChannel");
-var PubliqSponsorContentUnitApplied_1 = require("./models/PubliqSponsorContentUnitApplied");
-var PubliqFileUrisRequest_1 = require("./models/PubliqFileUrisRequest");
-var PubliqFileUris_1 = require("./models/PubliqFileUris");
-var PubliqApiReserve10_1 = require("./models/PubliqApiReserve10");
-var PubliqApiReserve11_1 = require("./models/PubliqApiReserve11");
-var PubliqDone_1 = require("./models/PubliqDone");
-var PubliqInvalidPublicKey_1 = require("./models/PubliqInvalidPublicKey");
-var PubliqInvalidPrivateKey_1 = require("./models/PubliqInvalidPrivateKey");
-var PubliqInvalidSignature_1 = require("./models/PubliqInvalidSignature");
-var PubliqInvalidAuthority_1 = require("./models/PubliqInvalidAuthority");
-var PubliqNotEnoughBalance_1 = require("./models/PubliqNotEnoughBalance");
-var PubliqTooLongString_1 = require("./models/PubliqTooLongString");
-var PubliqUriError_1 = require("./models/PubliqUriError");
-var PubliqTransactionPoolFull_1 = require("./models/PubliqTransactionPoolFull");
-var PubliqResponseCodeReserve2_1 = require("./models/PubliqResponseCodeReserve2");
-var PubliqResponseCodeReserve3_1 = require("./models/PubliqResponseCodeReserve3");
-var PubliqResponseCodeReserve4_1 = require("./models/PubliqResponseCodeReserve4");
-var PubliqResponseCodeReserve5_1 = require("./models/PubliqResponseCodeReserve5");
-var PubliqResponseCodeReserve6_1 = require("./models/PubliqResponseCodeReserve6");
-var PubliqResponseCodeReserve7_1 = require("./models/PubliqResponseCodeReserve7");
-var PubliqResponseCodeReserve8_1 = require("./models/PubliqResponseCodeReserve8");
-var PubliqResponseCodeReserve9_1 = require("./models/PubliqResponseCodeReserve9");
-var PubliqResponseCodeReserve10_1 = require("./models/PubliqResponseCodeReserve10");
-var PubliqRemoteError_1 = require("./models/PubliqRemoteError");
-var PubliqStorageFile_1 = require("./models/PubliqStorageFile");
-var PubliqStorageFileDelete_1 = require("./models/PubliqStorageFileDelete");
-var PubliqStorageFileAddress_1 = require("./models/PubliqStorageFileAddress");
-var PubliqStorageFileRequest_1 = require("./models/PubliqStorageFileRequest");
-var PubliqStorageFileDetails_1 = require("./models/PubliqStorageFileDetails");
-var PubliqStorageFileDetailsResponse_1 = require("./models/PubliqStorageFileDetailsResponse");
-var PubliqStorageUpdateCommand_1 = require("./models/PubliqStorageUpdateCommand");
-var PubliqLetter_1 = require("./models/PubliqLetter");
-var PubliqCheckInbox_1 = require("./models/PubliqCheckInbox");
-var PubliqInbox_1 = require("./models/PubliqInbox");
-var PubliqConfig_1 = require("./models/PubliqConfig");
-var PubliqConfigKeyUpdate_1 = require("./models/PubliqConfigKeyUpdate");
-var PubliqGenericModelReserve1_1 = require("./models/PubliqGenericModelReserve1");
-var PubliqGenericModelReserve2_1 = require("./models/PubliqGenericModelReserve2");
-var PubliqGenericModelReserve3_1 = require("./models/PubliqGenericModelReserve3");
-var PubliqGenericModelReserve4_1 = require("./models/PubliqGenericModelReserve4");
-var PubliqGenericModelReserve5_1 = require("./models/PubliqGenericModelReserve5");
-var PubliqGenericModelReserve6_1 = require("./models/PubliqGenericModelReserve6");
-var PubliqGenericModelReserve7_1 = require("./models/PubliqGenericModelReserve7");
-var PubliqGenericModelReserve8_1 = require("./models/PubliqGenericModelReserve8");
-var PubliqGenericModelReserve9_1 = require("./models/PubliqGenericModelReserve9");
-var PubliqGenericModelReserve10_1 = require("./models/PubliqGenericModelReserve10");
+var PubliqAPICoin_1 = require("./models/PubliqAPICoin");
+var PubliqAPIBroadcast_1 = require("./models/PubliqAPIBroadcast");
+var PubliqAPITransaction_1 = require("./models/PubliqAPITransaction");
+var PubliqAPIAuthority_1 = require("./models/PubliqAPIAuthority");
+var PubliqAPISignedTransaction_1 = require("./models/PubliqAPISignedTransaction");
+var PubliqAPIBlockHeader_1 = require("./models/PubliqAPIBlockHeader");
+var PubliqAPIBlockHeaderExtended_1 = require("./models/PubliqAPIBlockHeaderExtended");
+var PubliqAPIBlock_1 = require("./models/PubliqAPIBlock");
+var PubliqAPISignedBlock_1 = require("./models/PubliqAPISignedBlock");
+var PubliqAPIRewardLog_1 = require("./models/PubliqAPIRewardLog");
+var PubliqAPITransactionLog_1 = require("./models/PubliqAPITransactionLog");
+var PubliqAPIBlockLog_1 = require("./models/PubliqAPIBlockLog");
+var PubliqAPIReward_1 = require("./models/PubliqAPIReward");
+var PubliqAPITransfer_1 = require("./models/PubliqAPITransfer");
+var PubliqAPIAuthorizationUpdate_1 = require("./models/PubliqAPIAuthorizationUpdate");
+var PubliqAPITransactionReserve2_1 = require("./models/PubliqAPITransactionReserve2");
+var PubliqAPITransactionReserve3_1 = require("./models/PubliqAPITransactionReserve3");
+var PubliqAPITransactionReserve4_1 = require("./models/PubliqAPITransactionReserve4");
+var PubliqAPITransactionReserve5_1 = require("./models/PubliqAPITransactionReserve5");
+var PubliqAPITransactionReserve6_1 = require("./models/PubliqAPITransactionReserve6");
+var PubliqAPITransactionReserve7_1 = require("./models/PubliqAPITransactionReserve7");
+var PubliqAPITransactionReserve8_1 = require("./models/PubliqAPITransactionReserve8");
+var PubliqAPITransactionReserve9_1 = require("./models/PubliqAPITransactionReserve9");
+var PubliqAPITransactionReserve10_1 = require("./models/PubliqAPITransactionReserve10");
+var PubliqAPITransactionReserve11_1 = require("./models/PubliqAPITransactionReserve11");
+var PubliqAPITransactionReserve12_1 = require("./models/PubliqAPITransactionReserve12");
+var PubliqAPITransactionReserve13_1 = require("./models/PubliqAPITransactionReserve13");
+var PubliqAPITransactionReserve14_1 = require("./models/PubliqAPITransactionReserve14");
+var PubliqAPITransactionReserve15_1 = require("./models/PubliqAPITransactionReserve15");
+var PubliqAPIFile_1 = require("./models/PubliqAPIFile");
+var PubliqAPIContentUnit_1 = require("./models/PubliqAPIContentUnit");
+var PubliqAPIContent_1 = require("./models/PubliqAPIContent");
+var PubliqAPIRole_1 = require("./models/PubliqAPIRole");
+var PubliqAPIAddressInfo_1 = require("./models/PubliqAPIAddressInfo");
+var PubliqAPIStorageUpdate_1 = require("./models/PubliqAPIStorageUpdate");
+var PubliqAPIServiceStatistics_1 = require("./models/PubliqAPIServiceStatistics");
+var PubliqAPIServiceStatisticsFile_1 = require("./models/PubliqAPIServiceStatisticsFile");
+var PubliqAPIServiceStatisticsCount_1 = require("./models/PubliqAPIServiceStatisticsCount");
+var PubliqAPISponsorContentUnit_1 = require("./models/PubliqAPISponsorContentUnit");
+var PubliqAPICancelSponsorContentUnit_1 = require("./models/PubliqAPICancelSponsorContentUnit");
+var PubliqAPITransactionReserve18_1 = require("./models/PubliqAPITransactionReserve18");
+var PubliqAPITransactionReserve19_1 = require("./models/PubliqAPITransactionReserve19");
+var PubliqAPITransactionReserve20_1 = require("./models/PubliqAPITransactionReserve20");
+var PubliqAPITransactionReserve21_1 = require("./models/PubliqAPITransactionReserve21");
+var PubliqAPITransactionReserve22_1 = require("./models/PubliqAPITransactionReserve22");
+var PubliqAPITransactionReserve23_1 = require("./models/PubliqAPITransactionReserve23");
+var PubliqAPITransactionReserve24_1 = require("./models/PubliqAPITransactionReserve24");
+var PubliqAPITransactionReserve25_1 = require("./models/PubliqAPITransactionReserve25");
+var PubliqAPIIPDestination_1 = require("./models/PubliqAPIIPDestination");
+var PubliqAPIIPAddress_1 = require("./models/PubliqAPIIPAddress");
+var PubliqAPIPing_1 = require("./models/PubliqAPIPing");
+var PubliqAPIPong_1 = require("./models/PubliqAPIPong");
+var PubliqAPIDigestRequest_1 = require("./models/PubliqAPIDigestRequest");
+var PubliqAPIDigest_1 = require("./models/PubliqAPIDigest");
+var PubliqAPILoggedTransactionsRequest_1 = require("./models/PubliqAPILoggedTransactionsRequest");
+var PubliqAPILoggedTransactions_1 = require("./models/PubliqAPILoggedTransactions");
+var PubliqAPILoggedTransaction_1 = require("./models/PubliqAPILoggedTransaction");
+var PubliqAPIMasterKeyRequest_1 = require("./models/PubliqAPIMasterKeyRequest");
+var PubliqAPIMasterKey_1 = require("./models/PubliqAPIMasterKey");
+var PubliqAPIKeyPairRequest_1 = require("./models/PubliqAPIKeyPairRequest");
+var PubliqAPIKeyPair_1 = require("./models/PubliqAPIKeyPair");
+var PubliqAPISignRequest_1 = require("./models/PubliqAPISignRequest");
+var PubliqAPISignature_1 = require("./models/PubliqAPISignature");
+var PubliqAPITransactionBroadcastRequest_1 = require("./models/PubliqAPITransactionBroadcastRequest");
+var PubliqAPITransactionDone_1 = require("./models/PubliqAPITransactionDone");
+var PubliqAPIApiReserve1_1 = require("./models/PubliqAPIApiReserve1");
+var PubliqAPIApiReserve2_1 = require("./models/PubliqAPIApiReserve2");
+var PubliqAPIApiReserve3_1 = require("./models/PubliqAPIApiReserve3");
+var PubliqAPIApiReserve4_1 = require("./models/PubliqAPIApiReserve4");
+var PubliqAPISyncRequest_1 = require("./models/PubliqAPISyncRequest");
+var PubliqAPISyncResponse_1 = require("./models/PubliqAPISyncResponse");
+var PubliqAPIBlockHeaderRequest_1 = require("./models/PubliqAPIBlockHeaderRequest");
+var PubliqAPIBlockHeaderResponse_1 = require("./models/PubliqAPIBlockHeaderResponse");
+var PubliqAPIBlockchainRequest_1 = require("./models/PubliqAPIBlockchainRequest");
+var PubliqAPIBlockchainResponse_1 = require("./models/PubliqAPIBlockchainResponse");
+var PubliqAPIPublicAddressesRequest_1 = require("./models/PubliqAPIPublicAddressesRequest");
+var PubliqAPIPublicAddressesInfo_1 = require("./models/PubliqAPIPublicAddressesInfo");
+var PubliqAPIPublicAddressInfo_1 = require("./models/PubliqAPIPublicAddressInfo");
+var PubliqAPIIncompleteTransactionsRequest_1 = require("./models/PubliqAPIIncompleteTransactionsRequest");
+var PubliqAPIIncompleteTransactions_1 = require("./models/PubliqAPIIncompleteTransactions");
+var PubliqAPIServed_1 = require("./models/PubliqAPIServed");
+var PubliqAPIContentUnitImpactLog_1 = require("./models/PubliqAPIContentUnitImpactLog");
+var PubliqAPIContentUnitImpactPerChannel_1 = require("./models/PubliqAPIContentUnitImpactPerChannel");
+var PubliqAPISponsorContentUnitApplied_1 = require("./models/PubliqAPISponsorContentUnitApplied");
+var PubliqAPIFileUrisRequest_1 = require("./models/PubliqAPIFileUrisRequest");
+var PubliqAPIFileUris_1 = require("./models/PubliqAPIFileUris");
+var PubliqAPIApiReserve10_1 = require("./models/PubliqAPIApiReserve10");
+var PubliqAPIApiReserve11_1 = require("./models/PubliqAPIApiReserve11");
+var PubliqAPIDone_1 = require("./models/PubliqAPIDone");
+var PubliqAPIInvalidPublicKey_1 = require("./models/PubliqAPIInvalidPublicKey");
+var PubliqAPIInvalidPrivateKey_1 = require("./models/PubliqAPIInvalidPrivateKey");
+var PubliqAPIInvalidSignature_1 = require("./models/PubliqAPIInvalidSignature");
+var PubliqAPIInvalidAuthority_1 = require("./models/PubliqAPIInvalidAuthority");
+var PubliqAPINotEnoughBalance_1 = require("./models/PubliqAPINotEnoughBalance");
+var PubliqAPITooLongString_1 = require("./models/PubliqAPITooLongString");
+var PubliqAPIUriError_1 = require("./models/PubliqAPIUriError");
+var PubliqAPITransactionPoolFull_1 = require("./models/PubliqAPITransactionPoolFull");
+var PubliqAPIResponseCodeReserve2_1 = require("./models/PubliqAPIResponseCodeReserve2");
+var PubliqAPIResponseCodeReserve3_1 = require("./models/PubliqAPIResponseCodeReserve3");
+var PubliqAPIResponseCodeReserve4_1 = require("./models/PubliqAPIResponseCodeReserve4");
+var PubliqAPIResponseCodeReserve5_1 = require("./models/PubliqAPIResponseCodeReserve5");
+var PubliqAPIResponseCodeReserve6_1 = require("./models/PubliqAPIResponseCodeReserve6");
+var PubliqAPIResponseCodeReserve7_1 = require("./models/PubliqAPIResponseCodeReserve7");
+var PubliqAPIResponseCodeReserve8_1 = require("./models/PubliqAPIResponseCodeReserve8");
+var PubliqAPIResponseCodeReserve9_1 = require("./models/PubliqAPIResponseCodeReserve9");
+var PubliqAPIResponseCodeReserve10_1 = require("./models/PubliqAPIResponseCodeReserve10");
+var PubliqAPIRemoteError_1 = require("./models/PubliqAPIRemoteError");
+var PubliqAPIStorageFile_1 = require("./models/PubliqAPIStorageFile");
+var PubliqAPIStorageFileDelete_1 = require("./models/PubliqAPIStorageFileDelete");
+var PubliqAPIStorageFileAddress_1 = require("./models/PubliqAPIStorageFileAddress");
+var PubliqAPIStorageFileRequest_1 = require("./models/PubliqAPIStorageFileRequest");
+var PubliqAPIStorageFileDetails_1 = require("./models/PubliqAPIStorageFileDetails");
+var PubliqAPIStorageFileDetailsResponse_1 = require("./models/PubliqAPIStorageFileDetailsResponse");
+var PubliqAPIStorageUpdateCommand_1 = require("./models/PubliqAPIStorageUpdateCommand");
+var PubliqAPILetter_1 = require("./models/PubliqAPILetter");
+var PubliqAPICheckInbox_1 = require("./models/PubliqAPICheckInbox");
+var PubliqAPIInbox_1 = require("./models/PubliqAPIInbox");
+var PubliqAPIConfig_1 = require("./models/PubliqAPIConfig");
+var PubliqAPIConfigKeyUpdate_1 = require("./models/PubliqAPIConfigKeyUpdate");
+var PubliqAPIPublicKeyRequest_1 = require("./models/PubliqAPIPublicKeyRequest");
+var PubliqAPIPublicKeyResponse_1 = require("./models/PubliqAPIPublicKeyResponse");
+var PubliqAPIEncrypt_1 = require("./models/PubliqAPIEncrypt");
+var PubliqAPIEncryptedMessage_1 = require("./models/PubliqAPIEncryptedMessage");
+var PubliqAPIDecrypt_1 = require("./models/PubliqAPIDecrypt");
+var PubliqAPIDecryptedMessage_1 = require("./models/PubliqAPIDecryptedMessage");
+var PubliqAPIGenericModelReserve1_1 = require("./models/PubliqAPIGenericModelReserve1");
+var PubliqAPIGenericModelReserve2_1 = require("./models/PubliqAPIGenericModelReserve2");
+var PubliqAPIGenericModelReserve3_1 = require("./models/PubliqAPIGenericModelReserve3");
+var PubliqAPIGenericModelReserve4_1 = require("./models/PubliqAPIGenericModelReserve4");
+var PubliqAPIGenericModelReserve5_1 = require("./models/PubliqAPIGenericModelReserve5");
+var PubliqAPIGenericModelReserve6_1 = require("./models/PubliqAPIGenericModelReserve6");
+var PubliqAPIGenericModelReserve7_1 = require("./models/PubliqAPIGenericModelReserve7");
+var PubliqAPIGenericModelReserve8_1 = require("./models/PubliqAPIGenericModelReserve8");
+var PubliqAPIGenericModelReserve9_1 = require("./models/PubliqAPIGenericModelReserve9");
+var PubliqAPIGenericModelReserve10_1 = require("./models/PubliqAPIGenericModelReserve10");
 var MODELS_TYPES = [
-    PubliqCoin_1.default,
-    PubliqBroadcast_1.default,
-    PubliqTransaction_1.default,
-    PubliqAuthority_1.default,
-    PubliqSignedTransaction_1.default,
-    PubliqBlockHeader_1.default,
-    PubliqBlockHeaderExtended_1.default,
-    PubliqBlock_1.default,
-    PubliqSignedBlock_1.default,
-    PubliqRewardLog_1.default,
-    PubliqTransactionLog_1.default,
-    PubliqBlockLog_1.default,
-    PubliqReward_1.default,
-    PubliqTransfer_1.default,
-    PubliqTransactionReserve1_1.default,
-    PubliqTransactionReserve2_1.default,
-    PubliqTransactionReserve3_1.default,
-    PubliqTransactionReserve4_1.default,
-    PubliqTransactionReserve5_1.default,
-    PubliqTransactionReserve6_1.default,
-    PubliqTransactionReserve7_1.default,
-    PubliqTransactionReserve8_1.default,
-    PubliqTransactionReserve9_1.default,
-    PubliqTransactionReserve10_1.default,
-    PubliqTransactionReserve11_1.default,
-    PubliqTransactionReserve12_1.default,
-    PubliqTransactionReserve13_1.default,
-    PubliqTransactionReserve14_1.default,
-    PubliqTransactionReserve15_1.default,
-    PubliqFile_1.default,
-    PubliqContentUnit_1.default,
-    PubliqContent_1.default,
-    PubliqRole_1.default,
-    PubliqAddressInfo_1.default,
-    PubliqStorageUpdate_1.default,
-    PubliqServiceStatistics_1.default,
-    PubliqServiceStatisticsFile_1.default,
-    PubliqServiceStatisticsCount_1.default,
-    PubliqSponsorContentUnit_1.default,
-    PubliqCancelSponsorContentUnit_1.default,
-    PubliqTransactionReserve18_1.default,
-    PubliqTransactionReserve19_1.default,
-    PubliqTransactionReserve20_1.default,
-    PubliqTransactionReserve21_1.default,
-    PubliqTransactionReserve22_1.default,
-    PubliqTransactionReserve23_1.default,
-    PubliqTransactionReserve24_1.default,
-    PubliqTransactionReserve25_1.default,
-    PubliqIPDestination_1.default,
-    PubliqIPAddress_1.default,
-    PubliqPing_1.default,
-    PubliqPong_1.default,
-    PubliqDigestRequest_1.default,
-    PubliqDigest_1.default,
-    PubliqLoggedTransactionsRequest_1.default,
-    PubliqLoggedTransactions_1.default,
-    PubliqLoggedTransaction_1.default,
-    PubliqMasterKeyRequest_1.default,
-    PubliqMasterKey_1.default,
-    PubliqKeyPairRequest_1.default,
-    PubliqKeyPair_1.default,
-    PubliqSignRequest_1.default,
-    PubliqSignature_1.default,
-    PubliqTransactionBroadcastRequest_1.default,
-    PubliqTransactionDone_1.default,
-    PubliqApiReserve1_1.default,
-    PubliqApiReserve2_1.default,
-    PubliqApiReserve3_1.default,
-    PubliqApiReserve4_1.default,
-    PubliqSyncRequest_1.default,
-    PubliqSyncResponse_1.default,
-    PubliqBlockHeaderRequest_1.default,
-    PubliqBlockHeaderResponse_1.default,
-    PubliqBlockchainRequest_1.default,
-    PubliqBlockchainResponse_1.default,
-    PubliqPublicAddressesRequest_1.default,
-    PubliqPublicAddressesInfo_1.default,
-    PubliqPublicAddressInfo_1.default,
-    PubliqIncompleteTransactionsRequest_1.default,
-    PubliqIncompleteTransactions_1.default,
-    PubliqServed_1.default,
-    PubliqContentUnitImpactLog_1.default,
-    PubliqContentUnitImpactPerChannel_1.default,
-    PubliqSponsorContentUnitApplied_1.default,
-    PubliqFileUrisRequest_1.default,
-    PubliqFileUris_1.default,
-    PubliqApiReserve10_1.default,
-    PubliqApiReserve11_1.default,
-    PubliqDone_1.default,
-    PubliqInvalidPublicKey_1.default,
-    PubliqInvalidPrivateKey_1.default,
-    PubliqInvalidSignature_1.default,
-    PubliqInvalidAuthority_1.default,
-    PubliqNotEnoughBalance_1.default,
-    PubliqTooLongString_1.default,
-    PubliqUriError_1.default,
-    PubliqTransactionPoolFull_1.default,
-    PubliqResponseCodeReserve2_1.default,
-    PubliqResponseCodeReserve3_1.default,
-    PubliqResponseCodeReserve4_1.default,
-    PubliqResponseCodeReserve5_1.default,
-    PubliqResponseCodeReserve6_1.default,
-    PubliqResponseCodeReserve7_1.default,
-    PubliqResponseCodeReserve8_1.default,
-    PubliqResponseCodeReserve9_1.default,
-    PubliqResponseCodeReserve10_1.default,
-    PubliqRemoteError_1.default,
-    PubliqStorageFile_1.default,
-    PubliqStorageFileDelete_1.default,
-    PubliqStorageFileAddress_1.default,
-    PubliqStorageFileRequest_1.default,
-    PubliqStorageFileDetails_1.default,
-    PubliqStorageFileDetailsResponse_1.default,
-    PubliqStorageUpdateCommand_1.default,
-    PubliqLetter_1.default,
-    PubliqCheckInbox_1.default,
-    PubliqInbox_1.default,
-    PubliqConfig_1.default,
-    PubliqConfigKeyUpdate_1.default,
-    PubliqGenericModelReserve1_1.default,
-    PubliqGenericModelReserve2_1.default,
-    PubliqGenericModelReserve3_1.default,
-    PubliqGenericModelReserve4_1.default,
-    PubliqGenericModelReserve5_1.default,
-    PubliqGenericModelReserve6_1.default,
-    PubliqGenericModelReserve7_1.default,
-    PubliqGenericModelReserve8_1.default,
-    PubliqGenericModelReserve9_1.default,
-    PubliqGenericModelReserve10_1.default,
+    PubliqAPICoin_1.default,
+    PubliqAPIBroadcast_1.default,
+    PubliqAPITransaction_1.default,
+    PubliqAPIAuthority_1.default,
+    PubliqAPISignedTransaction_1.default,
+    PubliqAPIBlockHeader_1.default,
+    PubliqAPIBlockHeaderExtended_1.default,
+    PubliqAPIBlock_1.default,
+    PubliqAPISignedBlock_1.default,
+    PubliqAPIRewardLog_1.default,
+    PubliqAPITransactionLog_1.default,
+    PubliqAPIBlockLog_1.default,
+    PubliqAPIReward_1.default,
+    PubliqAPITransfer_1.default,
+    PubliqAPIAuthorizationUpdate_1.default,
+    PubliqAPITransactionReserve2_1.default,
+    PubliqAPITransactionReserve3_1.default,
+    PubliqAPITransactionReserve4_1.default,
+    PubliqAPITransactionReserve5_1.default,
+    PubliqAPITransactionReserve6_1.default,
+    PubliqAPITransactionReserve7_1.default,
+    PubliqAPITransactionReserve8_1.default,
+    PubliqAPITransactionReserve9_1.default,
+    PubliqAPITransactionReserve10_1.default,
+    PubliqAPITransactionReserve11_1.default,
+    PubliqAPITransactionReserve12_1.default,
+    PubliqAPITransactionReserve13_1.default,
+    PubliqAPITransactionReserve14_1.default,
+    PubliqAPITransactionReserve15_1.default,
+    PubliqAPIFile_1.default,
+    PubliqAPIContentUnit_1.default,
+    PubliqAPIContent_1.default,
+    PubliqAPIRole_1.default,
+    PubliqAPIAddressInfo_1.default,
+    PubliqAPIStorageUpdate_1.default,
+    PubliqAPIServiceStatistics_1.default,
+    PubliqAPIServiceStatisticsFile_1.default,
+    PubliqAPIServiceStatisticsCount_1.default,
+    PubliqAPISponsorContentUnit_1.default,
+    PubliqAPICancelSponsorContentUnit_1.default,
+    PubliqAPITransactionReserve18_1.default,
+    PubliqAPITransactionReserve19_1.default,
+    PubliqAPITransactionReserve20_1.default,
+    PubliqAPITransactionReserve21_1.default,
+    PubliqAPITransactionReserve22_1.default,
+    PubliqAPITransactionReserve23_1.default,
+    PubliqAPITransactionReserve24_1.default,
+    PubliqAPITransactionReserve25_1.default,
+    PubliqAPIIPDestination_1.default,
+    PubliqAPIIPAddress_1.default,
+    PubliqAPIPing_1.default,
+    PubliqAPIPong_1.default,
+    PubliqAPIDigestRequest_1.default,
+    PubliqAPIDigest_1.default,
+    PubliqAPILoggedTransactionsRequest_1.default,
+    PubliqAPILoggedTransactions_1.default,
+    PubliqAPILoggedTransaction_1.default,
+    PubliqAPIMasterKeyRequest_1.default,
+    PubliqAPIMasterKey_1.default,
+    PubliqAPIKeyPairRequest_1.default,
+    PubliqAPIKeyPair_1.default,
+    PubliqAPISignRequest_1.default,
+    PubliqAPISignature_1.default,
+    PubliqAPITransactionBroadcastRequest_1.default,
+    PubliqAPITransactionDone_1.default,
+    PubliqAPIApiReserve1_1.default,
+    PubliqAPIApiReserve2_1.default,
+    PubliqAPIApiReserve3_1.default,
+    PubliqAPIApiReserve4_1.default,
+    PubliqAPISyncRequest_1.default,
+    PubliqAPISyncResponse_1.default,
+    PubliqAPIBlockHeaderRequest_1.default,
+    PubliqAPIBlockHeaderResponse_1.default,
+    PubliqAPIBlockchainRequest_1.default,
+    PubliqAPIBlockchainResponse_1.default,
+    PubliqAPIPublicAddressesRequest_1.default,
+    PubliqAPIPublicAddressesInfo_1.default,
+    PubliqAPIPublicAddressInfo_1.default,
+    PubliqAPIIncompleteTransactionsRequest_1.default,
+    PubliqAPIIncompleteTransactions_1.default,
+    PubliqAPIServed_1.default,
+    PubliqAPIContentUnitImpactLog_1.default,
+    PubliqAPIContentUnitImpactPerChannel_1.default,
+    PubliqAPISponsorContentUnitApplied_1.default,
+    PubliqAPIFileUrisRequest_1.default,
+    PubliqAPIFileUris_1.default,
+    PubliqAPIApiReserve10_1.default,
+    PubliqAPIApiReserve11_1.default,
+    PubliqAPIDone_1.default,
+    PubliqAPIInvalidPublicKey_1.default,
+    PubliqAPIInvalidPrivateKey_1.default,
+    PubliqAPIInvalidSignature_1.default,
+    PubliqAPIInvalidAuthority_1.default,
+    PubliqAPINotEnoughBalance_1.default,
+    PubliqAPITooLongString_1.default,
+    PubliqAPIUriError_1.default,
+    PubliqAPITransactionPoolFull_1.default,
+    PubliqAPIResponseCodeReserve2_1.default,
+    PubliqAPIResponseCodeReserve3_1.default,
+    PubliqAPIResponseCodeReserve4_1.default,
+    PubliqAPIResponseCodeReserve5_1.default,
+    PubliqAPIResponseCodeReserve6_1.default,
+    PubliqAPIResponseCodeReserve7_1.default,
+    PubliqAPIResponseCodeReserve8_1.default,
+    PubliqAPIResponseCodeReserve9_1.default,
+    PubliqAPIResponseCodeReserve10_1.default,
+    PubliqAPIRemoteError_1.default,
+    PubliqAPIStorageFile_1.default,
+    PubliqAPIStorageFileDelete_1.default,
+    PubliqAPIStorageFileAddress_1.default,
+    PubliqAPIStorageFileRequest_1.default,
+    PubliqAPIStorageFileDetails_1.default,
+    PubliqAPIStorageFileDetailsResponse_1.default,
+    PubliqAPIStorageUpdateCommand_1.default,
+    PubliqAPILetter_1.default,
+    PubliqAPICheckInbox_1.default,
+    PubliqAPIInbox_1.default,
+    PubliqAPIConfig_1.default,
+    PubliqAPIConfigKeyUpdate_1.default,
+    PubliqAPIPublicKeyRequest_1.default,
+    PubliqAPIPublicKeyResponse_1.default,
+    PubliqAPIEncrypt_1.default,
+    PubliqAPIEncryptedMessage_1.default,
+    PubliqAPIDecrypt_1.default,
+    PubliqAPIDecryptedMessage_1.default,
+    PubliqAPIGenericModelReserve1_1.default,
+    PubliqAPIGenericModelReserve2_1.default,
+    PubliqAPIGenericModelReserve3_1.default,
+    PubliqAPIGenericModelReserve4_1.default,
+    PubliqAPIGenericModelReserve5_1.default,
+    PubliqAPIGenericModelReserve6_1.default,
+    PubliqAPIGenericModelReserve7_1.default,
+    PubliqAPIGenericModelReserve8_1.default,
+    PubliqAPIGenericModelReserve9_1.default,
+    PubliqAPIGenericModelReserve10_1.default,
 ];
 exports.createInstanceFromJson = function (data) {
     if (data.constructor.Rtt !== undefined) {
